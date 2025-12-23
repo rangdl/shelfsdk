@@ -1,7 +1,7 @@
-import 'package:http/http.dart' as http;
+import 'package:shelfsdk/src/audiobookshelf_api_base.dart';
 
 typedef ResponseErrorHandler = void Function(
-  http.Response response, [
+  ApiResponse response, [
   Object? error,
 ]);
 

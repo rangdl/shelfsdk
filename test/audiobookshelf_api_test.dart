@@ -3,8 +3,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 import 'package:shelfsdk/audiobookshelf_api.dart';
+import 'package:shelfsdk/src/audiobookshelf_api_http.dart';
 import 'package:test/test.dart';
 
+typedef Api = HttpAudiobookshelfApi;
 void main() {
   group('AudiobookshelfApi', () {
     const token = 'test-token';
@@ -14,7 +16,7 @@ void main() {
     final baseUrl = Uri.https('abs.example.com');
 
     final mockClient = MockHttpClient();
-    late AudiobookshelfApi abs;
+    late Api abs;
 
     void mockClientSend([
       int statusCode = 200,
@@ -43,7 +45,7 @@ void main() {
 
     setUp(() {
       mockClientSend();
-      abs = AudiobookshelfApi(
+      abs = Api(
         baseUrl: baseUrl,
         token: token,
         client: mockClient,
@@ -79,7 +81,7 @@ void main() {
 
     test('token from query param', () {
       final baseUrl = Uri.https('abs.example.com', '', {'token': token});
-      final api = AudiobookshelfApi(baseUrl: baseUrl);
+      final api = Api(baseUrl: baseUrl);
       expect(api.token, token);
       expect(
         api.baseUrl,
@@ -94,12 +96,12 @@ void main() {
     });
 
     test('default client', () {
-      expect(AudiobookshelfApi(baseUrl: baseUrl).client, isA<http.Client>());
+      expect(Api(baseUrl: baseUrl).client, isA<http.Client>());
     });
 
     test('unsupported scheme throws UnsupportedSchemeError', () {
       expect(
-        () => AudiobookshelfApi(baseUrl: Uri.parse('ssh://abs.example.com')),
+        () => Api(baseUrl: Uri.parse('ssh://abs.example.com')),
         throwsA(isA<UnsupportedSchemeError>()),
       );
     });
@@ -132,7 +134,7 @@ void main() {
       const testMap = {'test': 'test'};
 
       void testRequest(
-        http.BaseRequest baseRequest, {
+        ApiRequest baseRequest, {
         Map<String, dynamic>? queryParameters,
         Map<String, String> headers = const {},
         String body = '',
@@ -152,7 +154,7 @@ void main() {
       }
 
       void testMultipartRequest(
-        http.BaseRequest baseRequest, {
+        ApiRequest baseRequest, {
         Map<String, dynamic>? queryParameters,
         Map<String, String> headers = const {},
         Map<String, String> fields = const {},

@@ -1,7 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
-import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:mime/mime.dart';
 
@@ -31,7 +32,8 @@ import 'utils/error_with_message.dart';
 import 'utils/exception_with_message.dart';
 import 'utils/typedefs.dart';
 
-class AudiobookshelfApi {
+/// 抽象的 API 基类，定义所有 API 方法
+abstract class AudiobookshelfApi {
   /// A header identifying the request data as JSON.
   static const jsonHeader = {
     'Content-Type': 'application/json',
@@ -69,25 +71,22 @@ class AudiobookshelfApi {
   late final socket = SocketService(this);
 
   final Uri baseUrl;
-  final http.Client client;
-
   String? token;
   String? userId;
 
-  /// [baseUrl] must have scheme `HTTP` or `HTTPS`.
   AudiobookshelfApi({
-    required Uri baseUrl,
+    required this.baseUrl,
     String? token,
-    http.Client? client,
-  })  : baseUrl = baseUrl.queryParameters.containsKey('token')
-            ? baseUrl.replace(
-                queryParameters: {...baseUrl.queryParameters}..remove('token'),
-              )
-            : baseUrl,
-        token = token ?? baseUrl.queryParameters['token'],
-        client = client ?? http.Client() {
+  }) : token = token ?? baseUrl.queryParameters['token'] {
     if (!baseUrl.isScheme('HTTPS') && !baseUrl.isScheme('HTTP')) {
       throw UnsupportedSchemeError('Unsupported scheme from URL: $baseUrl');
+    }
+
+    // 移除 URL 中的 token 参数
+    if (baseUrl.queryParameters.containsKey('token')) {
+      baseUrl.replace(
+        queryParameters: {...baseUrl.queryParameters}..remove('token'),
+      );
     }
   }
 
@@ -114,11 +113,12 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a GET HTTP request. See [request] for details.
-  Future<http.Response> get({
+  // 抽象的 HTTP 方法，由子类实现
+  Future<ApiResponse> get({
     required String path,
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
+    Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
   }) {
@@ -127,13 +127,13 @@ class AudiobookshelfApi {
       path: path,
       queryParameters: queryParameters,
       requiresAuth: requiresAuth,
+      cookie: cookie,
       responseErrorHandler: responseErrorHandler,
       followRedirects: followRedirects,
     );
   }
 
-  /// Makes a GET HTTP request and handles returned JSON.
-  /// See [requestJson] for details.
+  // 抽象的 HTTP 方法，由子类实现
   Future<T?> getJson<T>({
     required String path,
     Map<String, dynamic>? queryParameters,
@@ -153,8 +153,7 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a POST HTTP request. See [request] for details.
-  Future<http.Response> post({
+  Future<ApiResponse> post({
     required String path,
     Map<String, dynamic>? queryParameters,
     Object? jsonObject,
@@ -175,8 +174,6 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a POST HTTP request and handles returned JSON.
-  /// See [requestJson] for details.
   Future<T?> postJson<T>({
     required String path,
     Map<String, dynamic>? queryParameters,
@@ -200,8 +197,7 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a PATCH HTTP request. See [request] for details.
-  Future<http.Response> patch({
+  Future<ApiResponse> patch({
     required String path,
     Map<String, dynamic>? queryParameters,
     Object? jsonObject,
@@ -222,8 +218,6 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a PATCH HTTP request and handles returned JSON.
-  /// See [requestJson] for details.
   Future<T?> patchJson<T>({
     required String path,
     Map<String, dynamic>? queryParameters,
@@ -247,8 +241,7 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a DELETE HTTP request. See [request] for details.
-  Future<http.Response> delete({
+  Future<ApiResponse> delete({
     required String path,
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
@@ -263,8 +256,6 @@ class AudiobookshelfApi {
     );
   }
 
-  /// Makes a DELETE HTTP request and handles returned JSON.
-  /// See [requestJson] for details.
   Future<T?> deleteJson<T>({
     required String path,
     Map<String, dynamic>? queryParameters,
@@ -282,18 +273,20 @@ class AudiobookshelfApi {
     );
   }
 
+  Future<ApiResponse> request({
+    required String method,
+    required String path,
+    Map<String, dynamic>? queryParameters,
+    Object? jsonObject,
+    Map<String, String>? formData,
+    Map<String, FileUpload>? files,
+    bool requiresAuth = false,
+    ResponseErrorHandler? responseErrorHandler,
+    bool followRedirects = true,
+    Cookie? cookie,
+  });
+
   /// Makes an HTTP request and handles returned JSON.
-  ///
-  /// [responseErrorHandler] is called if a non-successful response status code
-  /// or [TypeError] (such as when converting JSON) occurs.
-  /// `null` is returned in those cases.
-  /// No other types of errors or exceptions are caught.
-  ///
-  /// [fromJson] converts the returned JSON
-  /// (which may be [Map<String, dynamic>] or [List<dynamic>],
-  /// see [JsonCodec.decode]) to [T].
-  ///
-  /// See [request] for other parameters and more details.
   Future<T?> requestJson<T>({
     required String method,
     required String path,
@@ -325,175 +318,103 @@ class AudiobookshelfApi {
     try {
       return fromJson(json.decode(response.body));
     } on TypeError catch (e) {
-      if (responseErrorHandler != null) responseErrorHandler(response, e);
+      if (responseErrorHandler != null) {
+        responseErrorHandler(response, e);
+      }
     }
 
     return null;
   }
 
-  /// Makes an HTTP request to the [baseUrl] and returns the response.
-  ///
-  /// [method] is the HTTP method to use for the request.
-  ///
-  /// [path] is the URL path (after the [baseUrl]) to request from.
-  ///
-  /// [queryParameters] are the **unencoded** URL query parameters. Values will
-  /// be coerced to a [String] or an [Iterable] of [String] by calling
-  /// `toString()`.
-  ///
-  /// See the [Uri] constructor for details.
-  ///
-  /// [jsonObject] will be JSON encoded (see [JsonCodec.encode])
-  /// for the request body.
-  ///
-  /// [formData] will be encoded as form fields (see [http.Request.bodyFields])
-  /// for the request body.
-  ///
-  /// Each key in [files] will be the form field name, with the value as the
-  /// file to upload.
-  ///
-  /// If [formData] or [files] is non-null, [jsonObject] must be null.
-  ///
-  /// [requiresAuth] is whether the request requires the authorization header.
-  /// [token] must be non-null if [requiresAuth] is `true`.
-  ///
-  /// [responseErrorHandler] is called when a non-successful status code occurs.
-  Future<http.Response> request({
-    required String method,
+  /// 构建完整的 URL
+  Uri buildUrl({
     required String path,
     Map<String, dynamic>? queryParameters,
+  }) {
+    if (path.startsWith('/')) path = path.substring(1);
+
+    // 转换 queryParameters 为字符串类型
+    final processedQueryParameters = queryParameters?.map((key, value) {
+      if (value is String || value is Iterable<String>) {
+        return MapEntry(key, value);
+      }
+      if (value is Iterable<dynamic>) {
+        return MapEntry(key, value.map((e) => e.toString()));
+      }
+      return MapEntry(key, value.toString());
+    });
+
+    return baseUrl.replace(
+      path: '${baseUrl.path}/$path',
+      queryParameters: processedQueryParameters != null
+          ? {...baseUrl.queryParameters, ...processedQueryParameters}
+          : null,
+    );
+  }
+
+  /// 获取文件的 MIME 类型
+  MediaType getMimeType(String filename) {
+    final mimeType = mimeTypeResolver.lookup(filename);
+    if (mimeType == null) {
+      throw RequestException('Invalid MIME type for file: $filename');
+    }
+    return MediaType.parse(mimeType);
+  }
+
+  /// 验证请求参数
+  void validateRequestParameters({
     Object? jsonObject,
     Map<String, String>? formData,
     Map<String, FileUpload>? files,
-    bool requiresAuth = false,
-    ResponseErrorHandler? responseErrorHandler,
-    bool followRedirects = true,
-    Cookie? cookie,
-  }) async {
+  }) {
     if (jsonObject != null && (formData != null || files != null)) {
       throw RequestError(
         'Cannot put jsonData and formData/files in the same request.',
       );
     }
-
-    if (path.startsWith('/')) path = path.substring(1);
-    // Coerce queryParameters' values to `String` or `Iterable<String>` as is
-    // required by `Uri`.
-    if (queryParameters != null &&
-        queryParameters.isNotEmpty &&
-        queryParameters is! Map<String, String> &&
-        queryParameters is! Map<String, Iterable<String>>) {
-      queryParameters = queryParameters.map((key, value) {
-        if (value is String || value is Iterable<String>) {
-          return MapEntry(key, value);
-        }
-        if (value is Iterable<dynamic>) {
-          return MapEntry(key, value.map((e) => e.toString()));
-        }
-        return MapEntry(key, value.toString());
-      });
-    }
-    final url = baseUrl.replace(
-      path: '${baseUrl.path}/$path',
-      queryParameters: queryParameters != null
-          ? {...baseUrl.queryParameters, ...queryParameters}
-          : null,
-    );
-
-    final http.BaseRequest baseRequest;
-
-    if (formData != null || files != null) {
-      final multiRequest = http.MultipartRequest(method, url);
-
-      if (formData != null && formData.isNotEmpty) {
-        multiRequest.fields.addAll(formData);
-      }
-
-      if (files != null && files.isNotEmpty) {
-        await Future.wait(files.entries.map((entry) async {
-          final field = entry.key;
-          final file = entry.value;
-
-          final mimeType = mimeTypeResolver.lookup(file.filename);
-          if (mimeType == null) {
-            throw RequestException(
-              'Invalid MIME type for file: ${file.filename}',
-            );
-          }
-          final mediaType = MediaType.parse(mimeType);
-
-          multiRequest.files.add(await file.map(
-            (file) {
-              return http.MultipartFile(
-                field,
-                file.byteStream,
-                file.length,
-                filename: file.filename,
-                contentType: mediaType,
-              );
-            },
-            fromBytes: (file) {
-              return http.MultipartFile.fromBytes(
-                field,
-                file.bytes,
-                filename: file.filename,
-                contentType: mediaType,
-              );
-            },
-            fromPath: (file) {
-              return http.MultipartFile.fromPath(
-                field,
-                file.filePath,
-                filename: file.filename,
-                contentType: mediaType,
-              );
-            },
-          ));
-        }), eagerError: true);
-      }
-
-      baseRequest = multiRequest;
-    } else {
-      final request = http.Request(method, url);
-
-      if (jsonObject != null) {
-        request.headers.addAll(jsonHeader);
-        request.body = json.encode(jsonObject);
-      }
-
-      baseRequest = request;
-    }
-
-    if (requiresAuth) {
-      baseRequest.headers.addAll(authHeader);
-    }
-
-    if (cookie != null) {
-      baseRequest.headers['cookie'] = "${cookie.name}=${cookie.value}";
-    }
-
-    baseRequest.followRedirects = followRedirects;
-
-    final response = await http.Response.fromStream(
-      await client.send(baseRequest),
-    );
-
-    if (responseErrorHandler != null) {
-      responseErrorHandler(response);
-    }
-
-    return response;
   }
 
   /// Cleans up this AudiobookshelfAPI instance.
-  /// No methods of this instance should be called after disposing.
-  void dispose() {
-    token = null;
-    client.close();
-    socket.dispose();
-  }
+  void dispose();
 }
 
+class ApiRequest {
+  final String method;
+  final Uri url;
+  ApiRequest({
+    required this.method,
+    required this.url,
+  });
+}
+
+// 抽象的响应类型
+abstract class ApiResponse {
+  late final ApiRequest request;
+  int get statusCode;
+  String get body;
+  Map<String, String> get headers;
+  Uint8List get bodyBytes;
+}
+
+class BaseResponse extends ApiResponse {
+  @override
+  final int statusCode;
+  @override
+  final String body;
+  @override
+  late final Map<String, String> headers;
+  BaseResponse(
+    this.statusCode,
+    this.body, {
+    ApiRequest? request,
+    Map<String, String> headers = const {},
+  });
+
+  @override
+  Uint8List get bodyBytes => Uint8List.fromList(utf8.encode(body));
+}
+
+// 错误类
 class AuthError extends ErrorWithMessage {
   AuthError(super.message);
 }

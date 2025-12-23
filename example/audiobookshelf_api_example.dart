@@ -1,7 +1,7 @@
-import 'package:shelfsdk/audiobookshelf_api.dart';
+import 'package:shelfsdk/src/audiobookshelf_api_http.dart';
 
 void main() async {
-  final api = AudiobookshelfApi(baseUrl: Uri.https('abs.example.com'));
+  final api = HttpAudiobookshelfApi(baseUrl: Uri.https('abs.example.com'));
 
   final loginResponse =
       await api.login(username: 'username', password: 'password');

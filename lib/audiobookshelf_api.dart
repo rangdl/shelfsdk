@@ -1,4 +1,6 @@
 export 'src/audiobookshelf_api_base.dart';
+export 'src/audiobookshelf_api_dio.dart';
+export 'src/audiobookshelf_api_http.dart';
 export 'src/models/enums/enums.dart';
 export 'src/models/request_parameters/request_parameters.dart';
 export 'src/models/responses/responses.dart';

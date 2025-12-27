@@ -38,6 +38,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    bool bytes = false,
   }) async {
     validateRequestParameters(
       jsonObject: jsonObject,
@@ -57,7 +58,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
     }
 
     try {
-      late Response<dynamic> response;
+      dynamic formData2;
 
       if (formData != null || files != null) {
         // 处理表单数据和文件上传
@@ -112,42 +113,24 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
           }));
         }
 
-        response = await _client.request(
-          url.toString(),
-          data: formDataObj,
-          options: Options(
-            method: method,
-            headers: headers,
-            followRedirects: followRedirects,
-          ),
-          cancelToken: _cancelToken,
-        );
+        formData2 = formDataObj;
       } else if (jsonObject != null) {
         // 处理 JSON 数据
         headers.addAll(AudiobookshelfApi.jsonHeader);
 
-        response = await _client.request(
-          url.toString(),
-          data: jsonObject,
-          options: Options(
-            method: method,
-            headers: headers,
-            followRedirects: followRedirects,
-          ),
-          cancelToken: _cancelToken,
-        );
-      } else {
-        // 无请求体
-        response = await _client.request(
-          url.toString(),
-          options: Options(
-            method: method,
-            headers: headers,
-            followRedirects: followRedirects,
-          ),
-          cancelToken: _cancelToken,
-        );
+        formData2 = jsonObject;
       }
+      final response = await _client.request(
+        url.toString(),
+        data: formData2,
+        options: Options(
+          responseType: bytes ? ResponseType.bytes : null,
+          method: method,
+          headers: headers,
+          followRedirects: followRedirects,
+        ),
+        cancelToken: _cancelToken,
+      );
 
       final dioResponse = DioResponse(response);
 

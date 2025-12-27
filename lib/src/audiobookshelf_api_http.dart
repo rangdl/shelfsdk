@@ -30,6 +30,7 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    bool bytes = false,
   }) async {
     validateRequestParameters(
       jsonObject: jsonObject,

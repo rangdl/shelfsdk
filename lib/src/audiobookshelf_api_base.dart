@@ -121,6 +121,7 @@ abstract class AudiobookshelfApi {
     Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
+    bool bytes = false,
   }) {
     return request(
       method: 'GET',
@@ -284,6 +285,7 @@ abstract class AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    bool bytes = false,
   });
 
   /// Makes an HTTP request and handles returned JSON.

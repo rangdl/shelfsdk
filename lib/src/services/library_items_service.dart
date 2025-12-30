@@ -97,6 +97,7 @@ class LibraryItemsService extends Service {
       queryParameters: parameters?.toJson(),
       requiresAuth: true,
       responseErrorHandler: responseErrorHandler,
+      bytes: true,
     );
     if (response.statusCode >= 300) return null;
     return response.bodyBytes;

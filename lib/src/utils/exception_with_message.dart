@@ -8,3 +8,7 @@ abstract class ExceptionWithMessage implements Exception {
     return "$runtimeType(message: '$message')";
   }
 }
+
+class RequestException extends ExceptionWithMessage {
+  RequestException(super.message);
+}

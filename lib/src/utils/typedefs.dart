@@ -1,4 +1,4 @@
-import 'package:shelfsdk/src/audiobookshelf_api_base.dart';
+import 'package:shelfsdk/src/utils/response.dart';
 
 typedef ResponseErrorHandler = void Function(
   ApiResponse response, [

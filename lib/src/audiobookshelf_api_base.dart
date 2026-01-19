@@ -1,10 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 import 'dart:io';
-import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:mime/mime.dart';
+import 'package:shelfsdk/src/utils/response.dart';
 
 import 'models/responses/login_response.dart';
 import 'models/utils/file_upload.dart';
@@ -121,7 +122,7 @@ abstract class AudiobookshelfApi {
     Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
-    bool bytes = false,
+    ResponseType? responseType,
   }) {
     return request(
       method: 'GET',
@@ -131,6 +132,7 @@ abstract class AudiobookshelfApi {
       cookie: cookie,
       responseErrorHandler: responseErrorHandler,
       followRedirects: followRedirects,
+      responseType: responseType,
     );
   }
 
@@ -285,7 +287,7 @@ abstract class AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
-    bool bytes = false,
+    ResponseType? responseType,
   });
 
   /// Makes an HTTP request and handles returned JSON.
@@ -378,57 +380,4 @@ abstract class AudiobookshelfApi {
 
   /// Cleans up this AudiobookshelfAPI instance.
   void dispose();
-}
-
-class ApiRequest {
-  final String method;
-  final Uri url;
-  ApiRequest({
-    required this.method,
-    required this.url,
-  });
-}
-
-// 抽象的响应类型
-abstract class ApiResponse {
-  late final ApiRequest request;
-  int get statusCode;
-  String get body;
-  Map<String, String> get headers;
-  Uint8List get bodyBytes;
-}
-
-class BaseResponse extends ApiResponse {
-  @override
-  final int statusCode;
-  @override
-  final String body;
-  @override
-  late final Map<String, String> headers;
-  BaseResponse(
-    this.statusCode,
-    this.body, {
-    ApiRequest? request,
-    Map<String, String> headers = const {},
-  });
-
-  @override
-  Uint8List get bodyBytes => Uint8List.fromList(utf8.encode(body));
-}
-
-// 错误类
-class AuthError extends ErrorWithMessage {
-  AuthError(super.message);
-}
-
-class UnsupportedSchemeError extends ErrorWithMessage {
-  UnsupportedSchemeError(super.message);
-}
-
-class RequestError extends ErrorWithMessage {
-  RequestError(super.message);
-}
-
-class RequestException extends ExceptionWithMessage {
-  RequestException(super.message);
 }

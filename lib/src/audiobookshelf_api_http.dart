@@ -2,7 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
+import 'package:shelfsdk/src/utils/request.dart';
+import 'package:shelfsdk/src/utils/response.dart';
 
 import 'audiobookshelf_api_base.dart';
 import 'models/utils/file_upload.dart';
@@ -30,7 +33,7 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
-    bool bytes = false,
+    ResponseType? responseType,
   }) async {
     validateRequestParameters(
       jsonObject: jsonObject,

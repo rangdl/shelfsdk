@@ -8,3 +8,15 @@ abstract class ErrorWithMessage extends Error {
     return "$runtimeType(message: '$message')";
   }
 }
+
+class AuthError extends ErrorWithMessage {
+  AuthError(super.message);
+}
+
+class UnsupportedSchemeError extends ErrorWithMessage {
+  UnsupportedSchemeError(super.message);
+}
+
+class RequestError extends ErrorWithMessage {
+  RequestError(super.message);
+}

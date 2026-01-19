@@ -358,7 +358,7 @@
 //   /// [token] must be non-null if [requiresAuth] is `true`.
 //   ///
 //   /// [responseErrorHandler] is called when a non-successful status code occurs.
-//   Future<http.Response> request({
+//   Future<ApiResponse> request({
 //     required String method,
 //     required String path,
 //     Map<String, dynamic>? queryParameters,

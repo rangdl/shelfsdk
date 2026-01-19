@@ -1,5 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
+
 import '../models/request_parameters/batch_match_items_req_params.dart';
 import '../models/request_parameters/get_image_req_params.dart';
 import '../models/request_parameters/get_item_req_params.dart';
@@ -97,7 +99,7 @@ class LibraryItemsService extends Service {
       queryParameters: parameters?.toJson(),
       requiresAuth: true,
       responseErrorHandler: responseErrorHandler,
-      bytes: true,
+      responseType: ResponseType.bytes,
     );
     if (response.statusCode >= 300) return null;
     return response.bodyBytes;

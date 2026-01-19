@@ -3,6 +3,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
+import 'package:shelfsdk/src/utils/request.dart';
+import 'package:shelfsdk/src/utils/response.dart';
 
 import 'audiobookshelf_api_base.dart';
 import 'models/utils/file_upload.dart';
@@ -38,7 +40,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
-    bool bytes = false,
+    ResponseType? responseType,
   }) async {
     validateRequestParameters(
       jsonObject: jsonObject,
@@ -124,7 +126,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
         url.toString(),
         data: formData2,
         options: Options(
-          responseType: bytes ? ResponseType.bytes : null,
+          responseType: responseType,
           method: method,
           headers: headers,
           followRedirects: followRedirects,

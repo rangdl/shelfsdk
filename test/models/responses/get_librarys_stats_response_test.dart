@@ -8,8 +8,9 @@ void main() {
     const totalGenres = 0;
     const totalDuration = Duration.zero;
     const longestItems = <LibraryItemStats>[];
-    const numAudioTrack = 0;
+    const numAudioTracks = 0;
     const totalSize = 0;
+    const largestItems = <LibraryItemSizeStats>[];
     const authorsWithCount = <AuthorStats>[];
     const genresWithCount = <GenreStats>[];
 
@@ -19,7 +20,7 @@ void main() {
       'totalGenres': totalGenres,
       'totalDuration': 0.0,
       'longestItems': longestItems,
-      'numAudioTrack': numAudioTrack,
+      'numAudioTracks': numAudioTracks,
       'totalSize': totalSize,
       'authorsWithCount': authorsWithCount,
       'genresWithCount': genresWithCount,
@@ -34,8 +35,9 @@ void main() {
         totalGenres: totalGenres,
         totalDuration: totalDuration,
         longestItems: longestItems,
-        numAudioTrack: numAudioTrack,
+        numAudioTracks: numAudioTracks,
         totalSize: totalSize,
+        largestItems: largestItems,
         authorsWithCount: authorsWithCount,
         genresWithCount: genresWithCount,
       );

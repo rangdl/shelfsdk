@@ -6,9 +6,9 @@ part of '../get_librarys_stats_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetLibrarysStatsResponseImpl _$$GetLibrarysStatsResponseImplFromJson(
+_GetLibrarysStatsResponse _$GetLibrarysStatsResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetLibrarysStatsResponseImpl(
+    _GetLibrarysStatsResponse(
       totalItems: (json['totalItems'] as num).toInt(),
       totalAuthors: (json['totalAuthors'] as num).toInt(),
       totalGenres: (json['totalGenres'] as num).toInt(),
@@ -17,8 +17,11 @@ _$GetLibrarysStatsResponseImpl _$$GetLibrarysStatsResponseImplFromJson(
       longestItems: (json['longestItems'] as List<dynamic>)
           .map((e) => LibraryItemStats.fromJson(e as Map<String, dynamic>))
           .toList(),
-      numAudioTrack: (json['numAudioTrack'] as num).toInt(),
+      numAudioTracks: (json['numAudioTracks'] as num).toInt(),
       totalSize: (json['totalSize'] as num).toInt(),
+      largestItems: (json['largestItems'] as List<dynamic>)
+          .map((e) => LibraryItemSizeStats.fromJson(e as Map<String, dynamic>))
+          .toList(),
       authorsWithCount: (json['authorsWithCount'] as List<dynamic>)
           .map((e) => AuthorStats.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -27,8 +30,8 @@ _$GetLibrarysStatsResponseImpl _$$GetLibrarysStatsResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$GetLibrarysStatsResponseImplToJson(
-        _$GetLibrarysStatsResponseImpl instance) =>
+Map<String, dynamic> _$GetLibrarysStatsResponseToJson(
+        _GetLibrarysStatsResponse instance) =>
     <String, dynamic>{
       'totalItems': instance.totalItems,
       'totalAuthors': instance.totalAuthors,
@@ -36,25 +39,24 @@ Map<String, dynamic> _$$GetLibrarysStatsResponseImplToJson(
       'totalDuration': const DurationPreciseSecondsConverter()
           .toJson(instance.totalDuration),
       'longestItems': instance.longestItems.map((e) => e.toJson()).toList(),
-      'numAudioTrack': instance.numAudioTrack,
+      'numAudioTracks': instance.numAudioTracks,
       'totalSize': instance.totalSize,
+      'largestItems': instance.largestItems.map((e) => e.toJson()).toList(),
       'authorsWithCount':
           instance.authorsWithCount.map((e) => e.toJson()).toList(),
       'genresWithCount':
           instance.genresWithCount.map((e) => e.toJson()).toList(),
     };
 
-_$LibraryItemStatsImpl _$$LibraryItemStatsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LibraryItemStatsImpl(
+_LibraryItemStats _$LibraryItemStatsFromJson(Map<String, dynamic> json) =>
+    _LibraryItemStats(
       id: json['id'] as String,
       title: json['title'] as String,
       duration: const DurationPreciseSecondsConverter()
           .fromJson(json['duration'] as num),
     );
 
-Map<String, dynamic> _$$LibraryItemStatsImplToJson(
-        _$LibraryItemStatsImpl instance) =>
+Map<String, dynamic> _$LibraryItemStatsToJson(_LibraryItemStats instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
@@ -62,27 +64,41 @@ Map<String, dynamic> _$$LibraryItemStatsImplToJson(
           const DurationPreciseSecondsConverter().toJson(instance.duration),
     };
 
-_$AuthorStatsImpl _$$AuthorStatsImplFromJson(Map<String, dynamic> json) =>
-    _$AuthorStatsImpl(
+_LibraryItemSizeStats _$LibraryItemSizeStatsFromJson(
+        Map<String, dynamic> json) =>
+    _LibraryItemSizeStats(
+      id: json['id'] as String,
+      title: json['title'] as String,
+      size: (json['size'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$LibraryItemSizeStatsToJson(
+        _LibraryItemSizeStats instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'size': instance.size,
+    };
+
+_AuthorStats _$AuthorStatsFromJson(Map<String, dynamic> json) => _AuthorStats(
       id: json['id'] as String,
       name: json['name'] as String,
       count: (json['count'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$AuthorStatsImplToJson(_$AuthorStatsImpl instance) =>
+Map<String, dynamic> _$AuthorStatsToJson(_AuthorStats instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'count': instance.count,
     };
 
-_$GenreStatsImpl _$$GenreStatsImplFromJson(Map<String, dynamic> json) =>
-    _$GenreStatsImpl(
+_GenreStats _$GenreStatsFromJson(Map<String, dynamic> json) => _GenreStats(
       genre: json['genre'] as String,
       count: (json['count'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$GenreStatsImplToJson(_$GenreStatsImpl instance) =>
+Map<String, dynamic> _$GenreStatsToJson(_GenreStats instance) =>
     <String, dynamic>{
       'genre': instance.genre,
       'count': instance.count,

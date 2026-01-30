@@ -7,7 +7,7 @@ part 'generated/get_librarys_stats_response.g.dart';
 
 /// See [Get a Library's Stats](https://api.audiobookshelf.org/#get-a-library-39-s-stats)
 @freezed
-class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
+sealed class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
   @jsonConverters
   const factory GetLibrarysStatsResponse({
     required int totalItems,
@@ -15,8 +15,9 @@ class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
     required int totalGenres,
     required Duration totalDuration,
     required List<LibraryItemStats> longestItems,
-    required int numAudioTrack,
+    required int numAudioTracks,
     required int totalSize,
+    required List<LibraryItemSizeStats> largestItems,
     required List<AuthorStats> authorsWithCount,
     required List<GenreStats> genresWithCount,
   }) = _GetLibrarysStatsResponse;
@@ -26,7 +27,7 @@ class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
 }
 
 @freezed
-class LibraryItemStats with _$LibraryItemStats {
+sealed class LibraryItemStats with _$LibraryItemStats {
   @jsonConverters
   const factory LibraryItemStats({
     required String id,
@@ -39,7 +40,20 @@ class LibraryItemStats with _$LibraryItemStats {
 }
 
 @freezed
-class AuthorStats with _$AuthorStats {
+sealed class LibraryItemSizeStats with _$LibraryItemSizeStats {
+  @jsonConverters
+  const factory LibraryItemSizeStats({
+    required String id,
+    required String title,
+    required int size,
+  }) = _LibraryItemSizeStats;
+
+  factory LibraryItemSizeStats.fromJson(Map<String, dynamic> json) =>
+      _$LibraryItemSizeStatsFromJson(json);
+}
+
+@freezed
+sealed class AuthorStats with _$AuthorStats {
   const factory AuthorStats({
     required String id,
     required String name,
@@ -51,7 +65,7 @@ class AuthorStats with _$AuthorStats {
 }
 
 @freezed
-class GenreStats with _$GenreStats {
+sealed class GenreStats with _$GenreStats {
   const factory GenreStats({
     required String genre,
     required int count,

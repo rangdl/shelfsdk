@@ -193,7 +193,7 @@ void main() {
       test('request', () async {
         final response = await abs.request(method: method, path: path);
         verifyMockClientSend();
-        testRequest(response.request!);
+        testRequest(response.request);
       });
 
       test('queryParameters', () async {
@@ -203,7 +203,7 @@ void main() {
           queryParameters: testMap,
         );
         verifyMockClientSend();
-        testRequest(response.request!, queryParameters: testMap);
+        testRequest(response.request, queryParameters: testMap);
       });
 
       test('queryParameters\' values to String or Iterable<String>', () async {
@@ -219,7 +219,7 @@ void main() {
         );
         verifyMockClientSend();
         testRequest(
-          response.request!,
+          response.request,
           queryParameters: {
             'test1': '1',
             'test2': ['2'],
@@ -236,7 +236,7 @@ void main() {
         );
         verifyMockClientSend();
         testRequest(
-          response.request!,
+          response.request,
           headers: {'Content-Type': 'application/json; charset=utf-8'},
           body: json.encode(testMap),
         );
@@ -249,7 +249,7 @@ void main() {
           formData: testMap,
         );
         verifyMockClientSend();
-        testMultipartRequest(response.request!, fields: testMap);
+        testMultipartRequest(response.request, fields: testMap);
       });
 
       test('files', () async {
@@ -267,7 +267,7 @@ void main() {
           files: files,
         );
         verifyMockClientSend();
-        testMultipartRequest(response.request!, files: files);
+        testMultipartRequest(response.request, files: files);
       });
 
       test('files: mime lookup failure throws RequestException', () {
@@ -314,7 +314,7 @@ void main() {
           requiresAuth: true,
         );
         verifyMockClientSend();
-        testRequest(response.request!, headers: abs.authHeader);
+        testRequest(response.request, headers: abs.authHeader);
       });
 
       test('responseErrorHandler', () async {
@@ -326,7 +326,7 @@ void main() {
           responseErrorHandler: (_, [__]) => errorHandled = true,
         );
         verifyMockClientSend();
-        testRequest(response.request!);
+        testRequest(response.request);
         expect(errorHandled, isTrue, reason: 'responseErrorHandler not called');
       });
     });
@@ -374,7 +374,7 @@ void main() {
 
     test('get', () async {
       final response = await abs.get(path: path);
-      expect(response.request!.method, 'GET');
+      expect(response.request.method, 'GET');
     });
 
     test('getJson', () async {
@@ -384,7 +384,7 @@ void main() {
 
     test('post', () async {
       final response = await abs.post(path: path);
-      expect(response.request!.method, 'POST');
+      expect(response.request.method, 'POST');
     });
 
     test('postJson', () async {
@@ -394,7 +394,7 @@ void main() {
 
     test('patch', () async {
       final response = await abs.patch(path: path);
-      expect(response.request!.method, 'PATCH');
+      expect(response.request.method, 'PATCH');
     });
 
     test('patchJson', () async {
@@ -404,7 +404,7 @@ void main() {
 
     test('delete', () async {
       final response = await abs.delete(path: path);
-      expect(response.request!.method, 'DELETE');
+      expect(response.request.method, 'DELETE');
     });
 
     test('deleteJson', () async {

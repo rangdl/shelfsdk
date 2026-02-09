@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/change_password_response.freezed.dart';
-part 'generated/change_password_response.g.dart';
+part 'change_password_response.freezed.dart';
+part 'change_password_response.g.dart';
 
 /// See [Change Your Password](https://api.audiobookshelf.org/#change-your-password)
 @freezed

@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../schemas/playback_session.dart';
 import '../schemas/user.dart';
 
-part 'generated/get_online_users_response.freezed.dart';
-part 'generated/get_online_users_response.g.dart';
+part 'get_online_users_response.freezed.dart';
+part 'get_online_users_response.g.dart';
 
 /// See [Get Online Users](https://api.audiobookshelf.org/#get-online-users)
 @freezed

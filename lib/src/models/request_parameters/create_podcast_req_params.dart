@@ -3,7 +3,7 @@ import '../../utils/json_remove_defaults.dart';
 import '../schemas/podcast_episode_enclosure.dart';
 import '../utils/cron_expression.dart';
 
-part 'generated/create_podcast_req_params.g.dart';
+part 'create_podcast_req_params.g.dart';
 
 @requestToJson
 class CreatePodcastReqParams {
@@ -27,9 +27,7 @@ class CreatePodcastReqParams {
 
 @requestToJsonRemoveNull
 class NewPodcastReqParams {
-  static const defaults = {
-    'autoDownloadEpisodes': false,
-  };
+  static const defaults = {'autoDownloadEpisodes': false};
 
   final NewPodcastMetadataReqParams? metadata;
   final String? coverPath;
@@ -50,9 +48,7 @@ class NewPodcastReqParams {
 
 @requestToJsonRemoveNull
 class NewPodcastMetadataReqParams {
-  static const defaults = {
-    'explicit': false,
-  };
+  static const defaults = {'explicit': false};
 
   final String? title;
   final String? author;

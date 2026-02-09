@@ -4,7 +4,7 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../utils/filter.dart';
 
-part 'generated/get_librarys_series_req_params.g.dart';
+part 'get_librarys_series_req_params.g.dart';
 
 @requestToJsonRemoveNull
 @BoolBinaryConverter()

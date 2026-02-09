@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/audio_bookmark.freezed.dart';
-part 'generated/audio_bookmark.g.dart';
+part 'audio_bookmark.freezed.dart';
+part 'audio_bookmark.g.dart';
 
 /// See [Audio Bookmark](https://api.audiobookshelf.org/#audio-bookmark)
 @freezed

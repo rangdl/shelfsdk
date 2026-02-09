@@ -3,14 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/get_sessions_req_params.g.dart';
+part 'get_sessions_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class GetSessionsReqParams {
-  static const defaults = {
-    'itemsPerPage': 10,
-    'page': 0,
-  };
+  static const defaults = {'itemsPerPage': 10, 'page': 0};
 
   @JsonKey(name: 'user')
   final String? userId;

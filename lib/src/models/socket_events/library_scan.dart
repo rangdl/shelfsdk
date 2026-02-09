@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/library_scan.freezed.dart';
-part 'generated/library_scan.g.dart';
+part 'library_scan.freezed.dart';
+part 'library_scan.g.dart';
 
 /// See [Library Scan](https://api.audiobookshelf.org/#library-scan)
 @freezed

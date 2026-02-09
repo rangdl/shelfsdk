@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/audio_meta_tags.freezed.dart';
-part 'generated/audio_meta_tags.g.dart';
+part 'audio_meta_tags.freezed.dart';
+part 'audio_meta_tags.g.dart';
 
 /// See [Audio Meta Tags](https://api.audiobookshelf.org/#audio-meta-tags)
 @freezed

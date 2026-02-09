@@ -5,7 +5,7 @@ import '../enums/metadata_provider.dart';
 import '../utils/cron_expression.dart';
 import 'new_folder.dart';
 
-part 'generated/create_library_req_params.g.dart';
+part 'create_library_req_params.g.dart';
 
 @requestToJson
 class CreateLibraryReqParams {

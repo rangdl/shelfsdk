@@ -4,7 +4,7 @@ import '../enums/log_level.dart';
 import '../enums/metadata_provider.dart';
 import '../utils/cron_expression.dart';
 
-part 'generated/update_server_settings_req_params.g.dart';
+part 'update_server_settings_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class UpdateServerSettingsReqParams {

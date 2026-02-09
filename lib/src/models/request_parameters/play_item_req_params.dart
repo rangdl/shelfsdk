@@ -1,7 +1,7 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/play_item_req_params.g.dart';
+part 'play_item_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class PlayItemReqParams {
@@ -29,7 +29,6 @@ class PlayItemReqParams {
   Map<String, dynamic>? toJson() =>
       _$PlayItemReqParamsToJson(this).removeDefaults(defaults);
 }
-
 
 @requestToJsonRemoveNull
 class DeviceInfoReqParams {

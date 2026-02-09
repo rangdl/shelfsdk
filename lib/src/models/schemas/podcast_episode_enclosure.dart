@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/podcast_episode_enclosure.freezed.dart';
-part 'generated/podcast_episode_enclosure.g.dart';
+part 'podcast_episode_enclosure.freezed.dart';
+part 'podcast_episode_enclosure.g.dart';
 
 /// See [Podcast Episode Enclosure](https://api.audiobookshelf.org/#podcast-episode-enclosure)
 @freezed

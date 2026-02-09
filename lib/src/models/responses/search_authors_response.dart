@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/search_authors_response.freezed.dart';
-part 'generated/search_authors_response.g.dart';
+part 'search_authors_response.freezed.dart';
+part 'search_authors_response.g.dart';
 
 /// See [Search for an Author](https://api.audiobookshelf.org/#search-for-an-author)
 @freezed

@@ -11,8 +11,8 @@ import 'library_item.dart';
 import 'media_metadata.dart';
 import 'session_user.dart';
 
-part 'generated/playback_session.freezed.dart';
-part 'generated/playback_session.g.dart';
+part 'playback_session.freezed.dart';
+part 'playback_session.g.dart';
 
 /// See [Playback Session](https://api.audiobookshelf.org/#playback-session)
 @freezed

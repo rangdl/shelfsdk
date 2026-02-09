@@ -6,8 +6,8 @@ import '../enums/media_type.dart';
 import 'folder.dart';
 import 'library_settings.dart';
 
-part 'generated/library.freezed.dart';
-part 'generated/library.g.dart';
+part 'library.freezed.dart';
+part 'library.g.dart';
 
 /// See [Library](https://api.audiobookshelf.org/#library)
 @freezed

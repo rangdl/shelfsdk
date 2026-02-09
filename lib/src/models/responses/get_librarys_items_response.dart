@@ -4,8 +4,8 @@ import '../enums/media_type.dart';
 import '../schemas/library_item.dart';
 import '../utils/filter.dart';
 
-part 'generated/get_librarys_items_response.freezed.dart';
-part 'generated/get_librarys_items_response.g.dart';
+part 'get_librarys_items_response.freezed.dart';
+part 'get_librarys_items_response.g.dart';
 
 /// See [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
 @freezed

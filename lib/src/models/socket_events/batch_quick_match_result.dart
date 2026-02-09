@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/batch_quick_match_result.freezed.dart';
-part 'generated/batch_quick_match_result.g.dart';
+part 'batch_quick_match_result.freezed.dart';
+part 'batch_quick_match_result.g.dart';
 
 /// See [Batch Quick Match Result](https://api.audiobookshelf.org/#batch-quick-match-result)
 @freezed

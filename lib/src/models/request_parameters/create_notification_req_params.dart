@@ -1,13 +1,11 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/create_notification_req_params.g.dart';
+part 'create_notification_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class CreateNotificationReqParams {
-  static const defaults = {
-    'enabled': false,
-  };
+  static const defaults = {'enabled': false};
 
   final String? libraryId;
   final String eventName;

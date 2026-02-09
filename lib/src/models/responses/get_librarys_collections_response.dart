@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/collection.dart';
 
-part 'generated/get_librarys_collections_response.freezed.dart';
-part 'generated/get_librarys_collections_response.g.dart';
+part 'get_librarys_collections_response.freezed.dart';
+part 'get_librarys_collections_response.g.dart';
 
 /// See [Get a Library's Collections](https://api.audiobookshelf.org/#get-a-library-39-s-collections)
 @freezed

@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'author.dart';
 import 'series.dart';
 
-part 'generated/library_filter_data.freezed.dart';
-part 'generated/library_filter_data.g.dart';
+part 'library_filter_data.freezed.dart';
+part 'library_filter_data.g.dart';
 
 /// See [Library Filter Data](https://api.audiobookshelf.org/#library-filter-data)
 @freezed

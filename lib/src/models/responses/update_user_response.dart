@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/user.dart';
 
-part 'generated/update_user_response.freezed.dart';
-part 'generated/update_user_response.g.dart';
+part 'update_user_response.freezed.dart';
+part 'update_user_response.g.dart';
 
 /// See [Update a User](https://api.audiobookshelf.org/#update-a-user)
 @freezed

@@ -4,8 +4,8 @@ import '../../utils/json_converters.dart';
 import 'library_item.dart';
 import 'podcast_episode.dart';
 
-part 'generated/stream_schema.freezed.dart';
-part 'generated/stream_schema.g.dart';
+part 'stream_schema.freezed.dart';
+part 'stream_schema.g.dart';
 
 /// See [Stream Schema](https://api.audiobookshelf.org/#stream)
 @freezed

@@ -5,8 +5,8 @@ import 'library_item.dart';
 import 'rss_feed.dart';
 import 'series_progress.dart';
 
-part 'generated/series.freezed.dart';
-part 'generated/series.g.dart';
+part 'series.freezed.dart';
+part 'series.g.dart';
 
 /// See [Series](https://api.audiobookshelf.org/#series)
 @freezed

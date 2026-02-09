@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/book_chapter.freezed.dart';
-part 'generated/book_chapter.g.dart';
+part 'book_chapter.freezed.dart';
+part 'book_chapter.g.dart';
 
 /// See [Book Chapter](https://api.audiobookshelf.org/#book-chapter)
 @freezed

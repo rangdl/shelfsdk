@@ -4,8 +4,8 @@ import 'author.dart';
 import 'library_item.dart';
 import 'series.dart';
 
-part 'generated/shelf.freezed.dart';
-part 'generated/shelf.g.dart';
+part 'shelf.freezed.dart';
+part 'shelf.g.dart';
 
 /// See [Get a Library's Personalized View](https://api.audiobookshelf.org/#get-a-library-39-s-personalized-view)
 @freezed

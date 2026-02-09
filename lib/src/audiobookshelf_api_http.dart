@@ -33,6 +33,7 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    Map<String, String>? headers,
     ResponseType? responseType,
   }) async {
     validateRequestParameters(
@@ -52,34 +53,39 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
       }
 
       if (files != null && files.isNotEmpty) {
-        await Future.wait(files.entries.map((entry) async {
-          final field = entry.key;
-          final file = entry.value;
+        await Future.wait(
+          files.entries.map((entry) async {
+            final field = entry.key;
+            final file = entry.value;
 
-          final contentType = getMimeType(file.filename);
+            final contentType = getMimeType(file.filename);
 
-          multiRequest.files.add(await file.map(
-            (file) => http.MultipartFile(
-              field,
-              file.byteStream,
-              file.length,
-              filename: file.filename,
-              contentType: contentType,
-            ),
-            fromBytes: (file) => http.MultipartFile.fromBytes(
-              field,
-              file.bytes,
-              filename: file.filename,
-              contentType: contentType,
-            ),
-            fromPath: (file) => http.MultipartFile.fromPath(
-              field,
-              file.filePath,
-              filename: file.filename,
-              contentType: contentType,
-            ),
-          ));
-        }), eagerError: true);
+            multiRequest.files.add(
+              await file.map(
+                (file) => http.MultipartFile(
+                  field,
+                  file.byteStream,
+                  file.length,
+                  filename: file.filename,
+                  contentType: contentType,
+                ),
+                fromBytes: (file) => http.MultipartFile.fromBytes(
+                  field,
+                  file.bytes,
+                  filename: file.filename,
+                  contentType: contentType,
+                ),
+                fromPath: (file) => http.MultipartFile.fromPath(
+                  field,
+                  file.filePath,
+                  filename: file.filename,
+                  contentType: contentType,
+                ),
+              ),
+            );
+          }),
+          eagerError: true,
+        );
       }
 
       baseRequest = multiRequest;
@@ -100,6 +106,9 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
 
     if (cookie != null) {
       baseRequest.headers['cookie'] = "${cookie.name}=${cookie.value}";
+    }
+    if (headers != null) {
+      baseRequest.headers.addAll(headers);
     }
 
     baseRequest.followRedirects = followRedirects;

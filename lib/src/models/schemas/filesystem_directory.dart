@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/filesystem_directory.freezed.dart';
-part 'generated/filesystem_directory.g.dart';
+part 'filesystem_directory.freezed.dart';
+part 'filesystem_directory.g.dart';
 
 /// See [Get All Filesystem Paths](https://api.audiobookshelf.org/#get-all-filesystem-paths)
 @freezed

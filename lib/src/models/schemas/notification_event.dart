@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/media_type.dart';
 
-part 'generated/notification_event.freezed.dart';
-part 'generated/notification_event.g.dart';
+part 'notification_event.freezed.dart';
+part 'notification_event.g.dart';
 
 /// See [Notification Event](https://api.audiobookshelf.org/#notification-event)
 @freezed

@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'notification.dart';
 
-part 'generated/notification_settings.freezed.dart';
-part 'generated/notification_settings.g.dart';
+part 'notification_settings.freezed.dart';
+part 'notification_settings.g.dart';
 
 /// See [Notification Settings](https://api.audiobookshelf.org/#notification-settings)
 @freezed

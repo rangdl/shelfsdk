@@ -2,7 +2,7 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../schemas/podcast_episode_enclosure.dart';
 
-part 'generated/download_podcast_episodes_req_params.g.dart';
+part 'download_podcast_episodes_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class DownloadPodcastEpisodesReqParams {

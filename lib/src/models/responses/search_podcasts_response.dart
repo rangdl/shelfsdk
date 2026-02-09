@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/search_podcasts_response.freezed.dart';
-part 'generated/search_podcasts_response.g.dart';
+part 'search_podcasts_response.freezed.dart';
+part 'search_podcasts_response.g.dart';
 
 /// See [Search for Podcasts](https://api.audiobookshelf.org/#search-for-podcasts)
 @freezed

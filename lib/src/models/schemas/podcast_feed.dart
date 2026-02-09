@@ -4,8 +4,8 @@ import '../enums/schema_variant.dart';
 import 'podcast_feed_episode.dart';
 import 'podcast_feed_metadata.dart';
 
-part 'generated/podcast_feed.freezed.dart';
-part 'generated/podcast_feed.g.dart';
+part 'podcast_feed.freezed.dart';
+part 'podcast_feed.g.dart';
 
 /// See [Podcast Feed](https://api.audiobookshelf.org/#podcast-feed)
 @freezed

@@ -1,14 +1,11 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/get_image_req_params.g.dart';
+part 'get_image_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class GetImageReqParams {
-  static const defaults = {
-    'width': 400,
-    'raw': 0,
-  };
+  static const defaults = {'width': 400, 'raw': 0};
 
   final int width;
   final int? height;

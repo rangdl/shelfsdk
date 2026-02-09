@@ -1,7 +1,7 @@
 import '../../utils/json_converters.dart';
 import '../schemas/playlist_item.dart';
 
-part 'generated/create_playlist_req_params.g.dart';
+part 'create_playlist_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class CreatePlaylistReqParams {

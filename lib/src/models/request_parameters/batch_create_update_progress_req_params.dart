@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'create_update_progress_req_params.dart';
 
-part 'generated/batch_create_update_progress_req_params.g.dart';
+part 'batch_create_update_progress_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class BatchCreateUpdateProgressReqParams {

@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../schemas/server_settings.dart';
 import '../schemas/user.dart';
 
-part 'generated/login_response.freezed.dart';
-part 'generated/login_response.g.dart';
+part 'login_response.freezed.dart';
+part 'login_response.g.dart';
 
 /// See [Login](https://api.audiobookshelf.org/#login)
 @freezed

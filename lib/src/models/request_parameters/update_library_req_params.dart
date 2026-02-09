@@ -7,7 +7,7 @@ import '../schemas/folder.dart';
 import '../utils/cron_expression.dart';
 import 'new_folder.dart';
 
-part 'generated/update_library_req_params.g.dart';
+part 'update_library_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class UpdateLibraryReqParams {

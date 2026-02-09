@@ -7,8 +7,8 @@ import 'audio_track.dart';
 import 'media.dart';
 import 'podcast_episode_enclosure.dart';
 
-part 'generated/podcast_episode.freezed.dart';
-part 'generated/podcast_episode.g.dart';
+part 'podcast_episode.freezed.dart';
+part 'podcast_episode.g.dart';
 
 /// See [Podcast Episode](https://api.audiobookshelf.org/#podcast-episode)
 @freezed

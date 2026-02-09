@@ -5,8 +5,8 @@ import '../enums/schema_variant.dart';
 import 'library_item.dart';
 import 'series.dart';
 
-part 'generated/author.freezed.dart';
-part 'generated/author.g.dart';
+part 'author.freezed.dart';
+part 'author.g.dart';
 
 /// See [Author](https://api.audiobookshelf.org/#author)
 @freezed

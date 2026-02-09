@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'playlist_item.dart';
 
-part 'generated/playlist.freezed.dart';
-part 'generated/playlist.g.dart';
+part 'playlist.freezed.dart';
+part 'playlist.g.dart';
 
 /// See [Playlist](https://api.audiobookshelf.org/#playlist)
 @freezed

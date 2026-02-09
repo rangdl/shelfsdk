@@ -5,8 +5,8 @@ import '../enums/schema_variant.dart';
 import 'author.dart';
 import 'series.dart';
 
-part 'generated/media_metadata.freezed.dart';
-part 'generated/media_metadata.g.dart';
+part 'media_metadata.freezed.dart';
+part 'media_metadata.g.dart';
 
 /// See [Book Metadata](https://api.audiobookshelf.org/#book-metadata)
 /// and [Podcast Metadata](https://api.audiobookshelf.org/#podcast-metadata)

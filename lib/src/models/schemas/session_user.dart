@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/session_user.freezed.dart';
-part 'generated/session_user.g.dart';
+part 'session_user.freezed.dart';
+part 'session_user.g.dart';
 
 /// See [Get All Sessions](https://api.audiobookshelf.org/#get-all-sessions)
 @freezed

@@ -1,15 +1,11 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/encode_m4b_req_params.g.dart';
+part 'encode_m4b_req_params.g.dart';
 
 @requestToJson
 class EncodeM4bReqParams {
-  static const defaults = {
-    'bitrate': '64k',
-    'codec': 'aac',
-    'channels': 2,
-  };
+  static const defaults = {'bitrate': '64k', 'codec': 'aac', 'channels': 2};
 
   final String bitrate;
   final String codec;

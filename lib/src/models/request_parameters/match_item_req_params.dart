@@ -2,14 +2,11 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../enums/metadata_provider.dart';
 
-part 'generated/match_item_req_params.g.dart';
+part 'match_item_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class MatchItemReqParams {
-  static const defaults = {
-    'provider': 'google',
-    'overrideDefaults': false,
-  };
+  static const defaults = {'provider': 'google', 'overrideDefaults': false};
 
   final MetadataProvider provider;
   final String? title;

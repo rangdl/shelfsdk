@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/user.dart';
 
-part 'generated/init_event.freezed.dart';
-part 'generated/init_event.g.dart';
+part 'init_event.freezed.dart';
+part 'init_event.g.dart';
 
 @freezed
 abstract class InitEvent with _$InitEvent {

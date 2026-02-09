@@ -4,8 +4,8 @@ import '../../utils/json_converters.dart';
 import '../enums/file_type.dart';
 import 'file_metadata.dart';
 
-part 'generated/library_file.freezed.dart';
-part 'generated/library_file.g.dart';
+part 'library_file.freezed.dart';
+part 'library_file.g.dart';
 
 /// See [Library File](https://api.audiobookshelf.org/#library-file)
 @freezed

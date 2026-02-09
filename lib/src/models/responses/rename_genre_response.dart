@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/rename_genre_response.freezed.dart';
-part 'generated/rename_genre_response.g.dart';
+part 'rename_genre_response.freezed.dart';
+part 'rename_genre_response.g.dart';
 
 /// See [Rename a Genre](https://api.audiobookshelf.org/#rename-a-genre)
 @freezed

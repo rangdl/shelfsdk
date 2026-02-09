@@ -4,8 +4,8 @@ import '../../utils/json_converters.dart';
 import '../enums/log_level.dart';
 import '../enums/metadata_provider.dart';
 
-part 'generated/server_settings.freezed.dart';
-part 'generated/server_settings.g.dart';
+part 'server_settings.freezed.dart';
+part 'server_settings.g.dart';
 
 /// See [Server Settings](https://api.audiobookshelf.org/#server-settings)
 @freezed

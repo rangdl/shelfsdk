@@ -6,8 +6,8 @@ import '../schemas/author.dart';
 import '../schemas/library_item.dart';
 import '../schemas/series.dart';
 
-part 'generated/library_search_response.freezed.dart';
-part 'generated/library_search_response.g.dart';
+part 'library_search_response.freezed.dart';
+part 'library_search_response.g.dart';
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed

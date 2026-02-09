@@ -11,8 +11,8 @@ import 'podcast_episode_download.dart';
 import 'rss_feed.dart';
 import 'series.dart';
 
-part 'generated/library_item.freezed.dart';
-part 'generated/library_item.g.dart';
+part 'library_item.freezed.dart';
+part 'library_item.g.dart';
 
 /// See [Library Item](https://api.audiobookshelf.org/#library-item)
 @freezed

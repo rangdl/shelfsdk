@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/backup.freezed.dart';
-part 'generated/backup.g.dart';
+part 'backup.freezed.dart';
+part 'backup.g.dart';
 
 /// See [Backup](https://api.audiobookshelf.org/#backup)
 @freezed

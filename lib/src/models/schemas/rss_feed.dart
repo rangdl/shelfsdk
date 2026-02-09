@@ -5,8 +5,8 @@ import '../enums/schema_variant.dart';
 import 'rss_feed_episode.dart';
 import 'rss_feed_metadata.dart';
 
-part 'generated/rss_feed.freezed.dart';
-part 'generated/rss_feed.g.dart';
+part 'rss_feed.freezed.dart';
+part 'rss_feed.g.dart';
 
 /// See [RSS Feed](https://api.audiobookshelf.org/#rss-feed)
 @freezed

@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/log_level.dart';
 
-part 'generated/log_event.freezed.dart';
-part 'generated/log_event.g.dart';
+part 'log_event.freezed.dart';
+part 'log_event.g.dart';
 
 @freezed
 abstract class LogEvent with _$LogEvent {

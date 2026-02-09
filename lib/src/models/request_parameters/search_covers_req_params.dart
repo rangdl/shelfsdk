@@ -2,14 +2,11 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../enums/metadata_provider.dart';
 
-part 'generated/search_covers_req_params.g.dart';
+part 'search_covers_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class SearchCoversReqParams {
-  static const defaults = {
-    'podcast': 0,
-    'provider': 'google',
-  };
+  static const defaults = {'podcast': 0, 'provider': 'google'};
 
   @BoolBinaryConverter()
   final bool podcast;

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/stream_error_event.freezed.dart';
-part 'generated/stream_error_event.g.dart';
+part 'stream_error_event.freezed.dart';
+part 'stream_error_event.g.dart';
 
 /// See [Stream Error Event](https://api.audiobookshelf.org/#stream-error-event)
 @freezed

@@ -3,7 +3,7 @@ import '../../utils/json_remove_defaults.dart';
 import '../schemas/audio_file.dart';
 import '../schemas/podcast_episode_enclosure.dart';
 
-part 'generated/update_podcast_episode_req_params.g.dart';
+part 'update_podcast_episode_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class UpdatePodcastEpisodeReqParams {

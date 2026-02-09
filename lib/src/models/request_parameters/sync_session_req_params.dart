@@ -1,6 +1,6 @@
 import '../../utils/json_converters.dart';
 
-part 'generated/sync_session_req_params.g.dart';
+part 'sync_session_req_params.g.dart';
 
 @requestToJson
 class SyncSessionReqParams {

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/narrator.freezed.dart';
-part 'generated/narrator.g.dart';
+part 'narrator.freezed.dart';
+part 'narrator.g.dart';
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed

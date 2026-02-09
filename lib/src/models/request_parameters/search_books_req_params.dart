@@ -2,15 +2,11 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../enums/metadata_provider.dart';
 
-part 'generated/search_books_req_params.g.dart';
+part 'search_books_req_params.g.dart';
 
 @requestToJson
 class SearchBooksReqParams {
-  static const defaults = {
-    'title': '',
-    'author': '',
-    'provider': 'google',
-  };
+  static const defaults = {'title': '', 'author': '', 'provider': 'google'};
 
   final String title;
   final String author;

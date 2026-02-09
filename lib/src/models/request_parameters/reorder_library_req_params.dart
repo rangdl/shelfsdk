@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/reorder_library_req_params.g.dart';
+part 'reorder_library_req_params.g.dart';
 
 @requestToJson
 class ReorderLibraryReqParams {

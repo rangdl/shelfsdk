@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/series_progress.freezed.dart';
-part 'generated/series_progress.g.dart';
+part 'series_progress.freezed.dart';
+part 'series_progress.g.dart';
 
 /// See [Get a Series](https://api.audiobookshelf.org/#get-a-series)
 @freezed

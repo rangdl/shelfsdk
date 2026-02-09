@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/tag.freezed.dart';
-part 'generated/tag.g.dart';
+part 'tag.freezed.dart';
+part 'tag.g.dart';
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed

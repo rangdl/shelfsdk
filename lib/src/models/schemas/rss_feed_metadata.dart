@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/rss_feed_metadata.freezed.dart';
-part 'generated/rss_feed_metadata.g.dart';
+part 'rss_feed_metadata.freezed.dart';
+part 'rss_feed_metadata.g.dart';
 
 /// See [RSS Feed Metadata](https://api.audiobookshelf.org/#rss-feed-metadata)
 @freezed

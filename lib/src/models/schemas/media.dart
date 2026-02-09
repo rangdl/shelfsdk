@@ -11,8 +11,8 @@ import 'ebook_file.dart';
 import 'media_metadata.dart';
 import 'podcast_episode.dart';
 
-part 'generated/media.freezed.dart';
-part 'generated/media.g.dart';
+part 'media.freezed.dart';
+part 'media.g.dart';
 
 /// See [Book](https://api.audiobookshelf.org/#book)
 /// and [Podcast](https://api.audiobookshelf.org/#podcast)

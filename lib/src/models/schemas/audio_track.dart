@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'file_metadata.dart';
 
-part 'generated/audio_track.freezed.dart';
-part 'generated/audio_track.g.dart';
+part 'audio_track.freezed.dart';
+part 'audio_track.g.dart';
 
 /// See [Audio Track](https://api.audiobookshelf.org/#audio-track)
 @freezed

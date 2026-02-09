@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/update_author_req_params.g.dart';
+part 'update_author_req_params.g.dart';
 
 @requestToJson
 class UpdateAuthorReqParams {

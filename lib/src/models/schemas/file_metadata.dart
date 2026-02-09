@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/file_metadata.freezed.dart';
-part 'generated/file_metadata.g.dart';
+part 'file_metadata.freezed.dart';
+part 'file_metadata.g.dart';
 
 /// See [File Metadata](https://api.audiobookshelf.org/#file-metadata)
 @freezed

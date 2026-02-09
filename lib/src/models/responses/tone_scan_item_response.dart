@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/tone_scan_item_response.freezed.dart';
-part 'generated/tone_scan_item_response.g.dart';
+part 'tone_scan_item_response.freezed.dart';
+part 'tone_scan_item_response.g.dart';
 
 /// See [Tone Scan a Library Item](https://api.audiobookshelf.org/#tone-scan-a-library-item)
 @freezed

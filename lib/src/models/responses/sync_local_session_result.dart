@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/sync_local_session_result.freezed.dart';
-part 'generated/sync_local_session_result.g.dart';
+part 'sync_local_session_result.freezed.dart';
+part 'sync_local_session_result.g.dart';
 
 /// See [Sync Local Sessions](https://api.audiobookshelf.org/#sync-local-sessions)
 @freezed

@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/search_books_response.freezed.dart';
-part 'generated/search_books_response.g.dart';
+part 'search_books_response.freezed.dart';
+part 'search_books_response.g.dart';
 
 /// See [Search for Books](https://api.audiobookshelf.org/#search-for-books)
 @freezed

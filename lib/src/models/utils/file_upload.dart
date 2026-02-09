@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/file_upload.freezed.dart';
+part 'file_upload.freezed.dart';
 
 @freezed
 abstract class FileUpload with _$FileUpload {

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/user_permissions.freezed.dart';
-part 'generated/user_permissions.g.dart';
+part 'user_permissions.freezed.dart';
+part 'user_permissions.g.dart';
 
 /// See [User Permissions](https://api.audiobookshelf.org/#user-permissions)
 @freezed

@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/podcast_feed.dart';
 
-part 'generated/get_opml_feeds_response.freezed.dart';
-part 'generated/get_opml_feeds_response.g.dart';
+part 'get_opml_feeds_response.freezed.dart';
+part 'get_opml_feeds_response.g.dart';
 
 /// See [Get Podcast Feeds From OPML](https://api.audiobookshelf.org/#get-podcast-feeds-from-opml)
 @freezed

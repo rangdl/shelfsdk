@@ -4,8 +4,8 @@ import '../enums/schema_variant.dart';
 import 'library_item.dart';
 import 'podcast_episode.dart';
 
-part 'generated/playlist_item.freezed.dart';
-part 'generated/playlist_item.g.dart';
+part 'playlist_item.freezed.dart';
+part 'playlist_item.g.dart';
 
 /// See [Playlist Item](https://api.audiobookshelf.org/#playlist-item)
 @freezed

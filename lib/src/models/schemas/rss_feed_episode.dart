@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'rss_feed_episode_enclosure.dart';
 
-part 'generated/rss_feed_episode.freezed.dart';
-part 'generated/rss_feed_episode.g.dart';
+part 'rss_feed_episode.freezed.dart';
+part 'rss_feed_episode.g.dart';
 
 /// See [RSS Feed Episode](https://api.audiobookshelf.org/#rss-feed-episode)
 @freezed

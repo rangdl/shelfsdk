@@ -4,14 +4,11 @@ import '../enums/user_type.dart';
 import '../schemas/audio_bookmark.dart';
 import '../schemas/media_progress.dart';
 
-part 'generated/create_user_req_params.g.dart';
+part 'create_user_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class CreateUserReqParams {
-  static const defaults = {
-    'isActive': true,
-    'isLocked': false,
-  };
+  static const defaults = {'isActive': true, 'isLocked': false};
 
   final String username;
   final String password;

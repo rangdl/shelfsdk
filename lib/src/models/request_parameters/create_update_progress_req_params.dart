@@ -1,7 +1,7 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/create_update_progress_req_params.g.dart';
+part 'create_update_progress_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class CreateUpdateProgressReqParams {

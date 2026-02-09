@@ -5,8 +5,8 @@ import '../schemas/media_metadata.dart';
 import '../schemas/playback_session.dart';
 import '../utils/day_of_the_week.dart';
 
-part 'generated/get_user_stats_response.freezed.dart';
-part 'generated/get_user_stats_response.g.dart';
+part 'get_user_stats_response.freezed.dart';
+part 'get_user_stats_response.g.dart';
 
 /// See [Get a User's Listening Stats](https://api.audiobookshelf.org/#get-a-user-39-s-listening-stats)
 @freezed

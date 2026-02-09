@@ -1,6 +1,6 @@
 import '../../utils/json_converters.dart';
 
-part 'generated/create_collection_req_params.g.dart';
+part 'create_collection_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class CreateCollectionReqParams {

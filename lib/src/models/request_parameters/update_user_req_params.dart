@@ -2,7 +2,7 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../enums/user_type.dart';
 
-part 'generated/update_user_req_params.g.dart';
+part 'update_user_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class UpdateUserReqParams {

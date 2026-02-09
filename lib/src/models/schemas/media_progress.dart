@@ -4,8 +4,8 @@ import '../../utils/json_converters.dart';
 import 'media.dart';
 import 'podcast_episode.dart';
 
-part 'generated/media_progress.freezed.dart';
-part 'generated/media_progress.g.dart';
+part 'media_progress.freezed.dart';
+part 'media_progress.g.dart';
 
 /// See [Media Progress](https://api.audiobookshelf.org/#media-progress)
 @freezed

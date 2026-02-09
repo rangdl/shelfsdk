@@ -1,7 +1,7 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/update_notification_settings_req_params.g.dart';
+part 'update_notification_settings_req_params.g.dart';
 
 @requestToJson
 class UpdateNotificationSettingsReqParams {
@@ -22,7 +22,7 @@ class UpdateNotificationSettingsReqParams {
     this.maxNotificationQueue = 20,
   });
 
-  Map<String, dynamic>? toJson() =>
-      _$UpdateNotificationSettingsReqParamsToJson(this)
-          .removeDefaults(defaults);
+  Map<String, dynamic>? toJson() => _$UpdateNotificationSettingsReqParamsToJson(
+    this,
+  ).removeDefaults(defaults);
 }

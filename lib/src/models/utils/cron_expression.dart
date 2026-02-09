@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'day_of_the_week.dart';
 import 'month.dart';
 
-part 'generated/cron_expression.freezed.dart';
+part 'cron_expression.freezed.dart';
 
 /// A representation of a [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression).
 ///

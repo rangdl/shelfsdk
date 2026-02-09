@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/folder.freezed.dart';
-part 'generated/folder.g.dart';
+part 'folder.freezed.dart';
+part 'folder.g.dart';
 
 /// See [Folder](https://api.audiobookshelf.org/#folder)
 @freezed

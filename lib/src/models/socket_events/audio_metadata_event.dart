@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import 'audio_file_metadata_event.dart';
 
-part 'generated/audio_metadata_event.freezed.dart';
-part 'generated/audio_metadata_event.g.dart';
+part 'audio_metadata_event.freezed.dart';
+part 'audio_metadata_event.g.dart';
 
 /// See [Audio Metadata Event](https://api.audiobookshelf.org/#audio-metadata-started-event)
 @freezed

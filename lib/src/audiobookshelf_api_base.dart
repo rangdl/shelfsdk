@@ -36,9 +36,7 @@ import 'utils/typedefs.dart';
 /// 抽象的 API 基类，定义所有 API 方法
 abstract class AudiobookshelfApi {
   /// A header identifying the request data as JSON.
-  static const jsonHeader = {
-    'Content-Type': 'application/json',
-  };
+  static const jsonHeader = {'Content-Type': 'application/json'};
 
   static final mimeTypeResolver = MimeTypeResolver()
     ..addExtension('m4b', 'audio/mp4')
@@ -75,10 +73,8 @@ abstract class AudiobookshelfApi {
   String? token;
   String? userId;
 
-  AudiobookshelfApi({
-    required this.baseUrl,
-    String? token,
-  }) : token = token ?? baseUrl.queryParameters['token'] {
+  AudiobookshelfApi({required this.baseUrl, String? token})
+    : token = token ?? baseUrl.queryParameters['token'] {
     if (!baseUrl.isScheme('HTTPS') && !baseUrl.isScheme('HTTP')) {
       throw UnsupportedSchemeError('Unsupported scheme from URL: $baseUrl');
     }
@@ -122,6 +118,7 @@ abstract class AudiobookshelfApi {
     Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
+    Map<String, String>? headers,
     ResponseType? responseType,
   }) {
     return request(
@@ -132,6 +129,7 @@ abstract class AudiobookshelfApi {
       cookie: cookie,
       responseErrorHandler: responseErrorHandler,
       followRedirects: followRedirects,
+      headers: headers,
       responseType: responseType,
     );
   }
@@ -143,6 +141,7 @@ abstract class AudiobookshelfApi {
     bool requiresAuth = false,
     Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
     required FromJson<T> fromJson,
   }) {
     return requestJson(
@@ -152,6 +151,7 @@ abstract class AudiobookshelfApi {
       requiresAuth: requiresAuth,
       cookie: cookie,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
       fromJson: fromJson,
     );
   }
@@ -164,6 +164,7 @@ abstract class AudiobookshelfApi {
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
   }) {
     return request(
       method: 'POST',
@@ -174,6 +175,7 @@ abstract class AudiobookshelfApi {
       files: files,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
     );
   }
 
@@ -185,6 +187,7 @@ abstract class AudiobookshelfApi {
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
     required FromJson<T> fromJson,
   }) {
     return requestJson(
@@ -196,6 +199,7 @@ abstract class AudiobookshelfApi {
       files: files,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
       fromJson: fromJson,
     );
   }
@@ -208,6 +212,7 @@ abstract class AudiobookshelfApi {
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
   }) {
     return request(
       method: 'PATCH',
@@ -218,6 +223,7 @@ abstract class AudiobookshelfApi {
       files: files,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
     );
   }
 
@@ -229,6 +235,7 @@ abstract class AudiobookshelfApi {
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
     required FromJson<T> fromJson,
   }) {
     return requestJson(
@@ -240,6 +247,7 @@ abstract class AudiobookshelfApi {
       files: files,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
       fromJson: fromJson,
     );
   }
@@ -249,6 +257,7 @@ abstract class AudiobookshelfApi {
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
   }) {
     return request(
       method: 'DELETE',
@@ -256,6 +265,7 @@ abstract class AudiobookshelfApi {
       queryParameters: queryParameters,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
     );
   }
 
@@ -264,6 +274,7 @@ abstract class AudiobookshelfApi {
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
     required FromJson<T> fromJson,
   }) {
     return requestJson(
@@ -272,6 +283,7 @@ abstract class AudiobookshelfApi {
       queryParameters: queryParameters,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
       fromJson: fromJson,
     );
   }
@@ -287,6 +299,7 @@ abstract class AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    Map<String, String>? headers,
     ResponseType? responseType,
   });
 
@@ -301,6 +314,7 @@ abstract class AudiobookshelfApi {
     bool requiresAuth = false,
     Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
+    Map<String, String>? headers,
     required FromJson<T> fromJson,
   }) async {
     final response = await request(
@@ -313,6 +327,7 @@ abstract class AudiobookshelfApi {
       requiresAuth: requiresAuth,
       cookie: cookie,
       responseErrorHandler: responseErrorHandler,
+      headers: headers,
     );
 
     if (response.statusCode >= 300) {
@@ -331,10 +346,7 @@ abstract class AudiobookshelfApi {
   }
 
   /// 构建完整的 URL
-  Uri buildUrl({
-    required String path,
-    Map<String, dynamic>? queryParameters,
-  }) {
+  Uri buildUrl({required String path, Map<String, dynamic>? queryParameters}) {
     if (path.startsWith('/')) path = path.substring(1);
 
     // 转换 queryParameters 为字符串类型

@@ -5,8 +5,8 @@ import 'audio_meta_tags.dart';
 import 'book_chapter.dart';
 import 'file_metadata.dart';
 
-part 'generated/audio_file.freezed.dart';
-part 'generated/audio_file.g.dart';
+part 'audio_file.freezed.dart';
+part 'audio_file.g.dart';
 
 /// See [Audio File](https://api.audiobookshelf.org/#audio-file)
 @freezed

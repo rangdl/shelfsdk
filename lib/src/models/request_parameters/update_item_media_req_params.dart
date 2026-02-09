@@ -5,7 +5,7 @@ import '../../utils/json_remove_defaults.dart';
 import '../schemas/book_chapter.dart';
 import '../utils/cron_expression.dart';
 
-part 'generated/update_item_media_req_params.g.dart';
+part 'update_item_media_req_params.g.dart';
 
 /// See [Update a Library Item's Media](https://api.audiobookshelf.org/#update-a-library-item-39-s-media)
 ///
@@ -16,10 +16,7 @@ abstract class UpdateItemMediaReqParams {
   @JsonKey(includeIfNull: false)
   final List<String>? tags;
 
-  const UpdateItemMediaReqParams({
-    this.coverPath = '',
-    this.tags,
-  });
+  const UpdateItemMediaReqParams({this.coverPath = '', this.tags});
 
   UpdateMediaMetadataReqParams? get metadata;
 
@@ -127,10 +124,7 @@ class UpdateBookSeriesReqParams {
   @JsonKey(includeToJson: false)
   final String? sequence;
 
-  const UpdateBookSeriesReqParams({
-    required this.name,
-    this.sequence = '',
-  });
+  const UpdateBookSeriesReqParams({required this.name, this.sequence = ''});
 
   Map<String, dynamic> toJson() {
     final json = _$UpdateBookSeriesReqParamsToJson(this);

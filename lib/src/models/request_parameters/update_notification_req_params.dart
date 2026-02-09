@@ -3,14 +3,11 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 
-part 'generated/update_notification_req_params.g.dart';
+part 'update_notification_req_params.g.dart';
 
 @requestToJsonRemoveNull
 class UpdateNotificationReqParams {
-  static const defaults = {
-    'libraryId': '',
-    'type': '',
-  };
+  static const defaults = {'libraryId': '', 'type': ''};
 
   final String id;
   @JsonKey(includeIfNull: true)

@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/media_progress.dart';
 
-part 'generated/user_item_progress_updated_event.freezed.dart';
-part 'generated/user_item_progress_updated_event.g.dart';
+part 'user_item_progress_updated_event.freezed.dart';
+part 'user_item_progress_updated_event.g.dart';
 
 /// See [User Item Progress Updated Event](https://api.audiobookshelf.org/#user-item-progress-updated-event)
 @freezed

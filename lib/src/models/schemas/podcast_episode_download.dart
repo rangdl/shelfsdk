@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
 
-part 'generated/podcast_episode_download.freezed.dart';
-part 'generated/podcast_episode_download.g.dart';
+part 'podcast_episode_download.freezed.dart';
+part 'podcast_episode_download.g.dart';
 
 /// See [Podcast Episode Download](https://api.audiobookshelf.org/#podcast-episode-download)
 @freezed

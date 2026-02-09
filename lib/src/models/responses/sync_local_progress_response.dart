@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../schemas/media_progress.dart';
 
-part 'generated/sync_local_progress_response.freezed.dart';
-part 'generated/sync_local_progress_response.g.dart';
+part 'sync_local_progress_response.freezed.dart';
+part 'sync_local_progress_response.g.dart';
 
 /// See [Sync Local Media Progress](https://api.audiobookshelf.org/#sync-local-media-progress)
 @freezed

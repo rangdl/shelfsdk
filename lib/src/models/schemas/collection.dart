@@ -4,8 +4,8 @@ import '../../utils/json_converters.dart';
 import 'library_item.dart';
 import 'rss_feed.dart';
 
-part 'generated/collection.freezed.dart';
-part 'generated/collection.g.dart';
+part 'collection.freezed.dart';
+part 'collection.g.dart';
 
 /// See [Collection](https://api.audiobookshelf.org/#collection)
 @freezed

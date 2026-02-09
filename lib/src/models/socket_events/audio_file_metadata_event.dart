@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/audio_file_metadata_event.freezed.dart';
-part 'generated/audio_file_metadata_event.g.dart';
+part 'audio_file_metadata_event.freezed.dart';
+part 'audio_file_metadata_event.g.dart';
 
 /// See [Audio File Metadata Event](https://api.audiobookshelf.org/#audio-file-metadata-started-event)
 @freezed

@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../schemas/library.dart';
 import '../schemas/library_filter_data.dart';
 
-part 'generated/get_library_response.freezed.dart';
-part 'generated/get_library_response.g.dart';
+part 'get_library_response.freezed.dart';
+part 'get_library_response.g.dart';
 
 /// See [Get a Library](https://api.audiobookshelf.org/#get-a-library)
 @freezed

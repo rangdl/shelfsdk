@@ -15,11 +15,8 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
   final Dio _client;
   final CancelToken _cancelToken = CancelToken();
 
-  DioAudiobookshelfApi({
-    required super.baseUrl,
-    super.token,
-    Dio? client,
-  }) : _client = client ?? Dio() {
+  DioAudiobookshelfApi({required super.baseUrl, super.token, Dio? client})
+    : _client = client ?? Dio() {
     // 配置 dio 默认选项
     _client.options.baseUrl =
         '${baseUrl.scheme}://${baseUrl.host}:${baseUrl.port}';
@@ -40,6 +37,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
     ResponseErrorHandler? responseErrorHandler,
     bool followRedirects = true,
     Cookie? cookie,
+    Map<String, String>? headers,
     ResponseType? responseType,
   }) async {
     validateRequestParameters(
@@ -49,7 +47,7 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
     );
 
     final url = buildUrl(path: path, queryParameters: queryParameters);
-    final headers = <String, dynamic>{};
+    headers ??= <String, String>{};
 
     if (requiresAuth) {
       headers.addAll(authHeader);
@@ -73,46 +71,50 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
         }
 
         if (files != null) {
-          await Future.wait(files.entries.map((entry) async {
-            final field = entry.key;
-            final file = entry.value;
+          await Future.wait(
+            files.entries.map((entry) async {
+              final field = entry.key;
+              final file = entry.value;
 
-            final contentType = getMimeType(file.filename);
+              final contentType = getMimeType(file.filename);
 
-            formDataObj.files.add(await file.map(
-              (file) async {
-                return MapEntry(
-                  field,
-                  MultipartFile.fromStream(
-                    () => file.byteStream,
-                    file.length,
-                    filename: file.filename,
-                    contentType: contentType,
-                  ),
-                );
-              },
-              fromBytes: (file) async {
-                return MapEntry(
-                  field,
-                  MultipartFile.fromBytes(
-                    file.bytes,
-                    filename: file.filename,
-                    contentType: contentType,
-                  ),
-                );
-              },
-              fromPath: (file) async {
-                return MapEntry(
-                  field,
-                  await MultipartFile.fromFile(
-                    file.filePath,
-                    filename: file.filename,
-                    contentType: contentType,
-                  ),
-                );
-              },
-            ));
-          }));
+              formDataObj.files.add(
+                await file.map(
+                  (file) async {
+                    return MapEntry(
+                      field,
+                      MultipartFile.fromStream(
+                        () => file.byteStream,
+                        file.length,
+                        filename: file.filename,
+                        contentType: contentType,
+                      ),
+                    );
+                  },
+                  fromBytes: (file) async {
+                    return MapEntry(
+                      field,
+                      MultipartFile.fromBytes(
+                        file.bytes,
+                        filename: file.filename,
+                        contentType: contentType,
+                      ),
+                    );
+                  },
+                  fromPath: (file) async {
+                    return MapEntry(
+                      field,
+                      await MultipartFile.fromFile(
+                        file.filePath,
+                        filename: file.filename,
+                        contentType: contentType,
+                      ),
+                    );
+                  },
+                ),
+              );
+            }),
+          );
         }
 
         formData2 = formDataObj;
@@ -154,11 +156,13 @@ class DioAudiobookshelfApi extends AudiobookshelfApi {
       // 处理其他 Dio 错误
       if (responseErrorHandler != null) {
         responseErrorHandler(
-          DioResponse(Response(
-            requestOptions: RequestOptions(path: path),
-            statusCode: 500,
-            statusMessage: e.message,
-          )),
+          DioResponse(
+            Response(
+              requestOptions: RequestOptions(path: path),
+              statusCode: 500,
+              statusMessage: e.message,
+            ),
+          ),
           e.error,
         );
       }

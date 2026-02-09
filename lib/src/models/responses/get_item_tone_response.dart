@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/get_item_tone_response.freezed.dart';
-part 'generated/get_item_tone_response.g.dart';
+part 'get_item_tone_response.freezed.dart';
+part 'get_item_tone_response.g.dart';
 
 /// See [Get a Library Item's Tone Metadata Object](https://api.audiobookshelf.org/#get-a-library-item-39-s-tone-metadata-object)
 @freezed

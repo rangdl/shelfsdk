@@ -4,7 +4,7 @@ import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
 import '../utils/include.dart';
 
-part 'generated/get_item_req_params.g.dart';
+part 'get_item_req_params.g.dart';
 
 @requestToJsonRemoveNull
 @BoolBinaryConverter()
@@ -18,11 +18,7 @@ class GetItemReqParams {
   final String? episodeId;
 
   /// See [Get a Library Item](https://api.audiobookshelf.org/#get-a-library-item)
-  const GetItemReqParams({
-    this.expanded,
-    this.include,
-    this.episodeId,
-  });
+  const GetItemReqParams({this.expanded, this.include, this.episodeId});
 
   Map<String, dynamic>? toJson() => _$GetItemReqParamsToJson(this).nullIfEmpty;
 }

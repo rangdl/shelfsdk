@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'generated/rss_feed_episode_enclosure.freezed.dart';
-part 'generated/rss_feed_episode_enclosure.g.dart';
+part 'rss_feed_episode_enclosure.freezed.dart';
+part 'rss_feed_episode_enclosure.g.dart';
 
 @freezed
 abstract class RssFeedEpisodeEnclosure with _$RssFeedEpisodeEnclosure {

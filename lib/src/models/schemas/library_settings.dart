@@ -8,7 +8,7 @@ part 'generated/library_settings.g.dart';
 
 /// See [Library Settings](https://api.audiobookshelf.org/#library-settings)
 @freezed
-class LibrarySettings with _$LibrarySettings {
+abstract class LibrarySettings with _$LibrarySettings {
   @jsonConverters
   const factory LibrarySettings({
     required int coverAspectRatio,

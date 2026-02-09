@@ -10,7 +10,7 @@ part 'generated/author.g.dart';
 
 /// See [Author](https://api.audiobookshelf.org/#author)
 @freezed
-class Author with _$Author {
+abstract class Author with _$Author {
   const Author._();
 
   @jsonConverters
@@ -24,13 +24,11 @@ class Author with _$Author {
     required DateTime updatedAt,
     List<LibraryItem>? libraryItems,
     List<Series>? series,
-  }) = _Author;
+  }) = AuthorBase;
 
   @jsonConverters
-  const factory Author.minified({
-    required String id,
-    required String name,
-  }) = AuthorMinified;
+  const factory Author.minified({required String id, required String name}) =
+      AuthorMinified;
 
   @jsonConverters
   const factory Author.expanded({
@@ -74,7 +72,7 @@ class AuthorConverter implements JsonConverter<Author, Map<String, dynamic>> {
 
     switch (variant) {
       case SchemaVariant.base:
-        return _Author.fromJson(json);
+        return AuthorBase.fromJson(json);
       case SchemaVariant.minified:
         return AuthorMinified.fromJson(json);
       case SchemaVariant.expanded:

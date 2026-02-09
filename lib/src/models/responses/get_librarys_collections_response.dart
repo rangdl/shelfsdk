@@ -7,7 +7,8 @@ part 'generated/get_librarys_collections_response.g.dart';
 
 /// See [Get a Library's Collections](https://api.audiobookshelf.org/#get-a-library-39-s-collections)
 @freezed
-class GetLibrarysCollectionsResponse with _$GetLibrarysCollectionsResponse {
+abstract class GetLibrarysCollectionsResponse
+    with _$GetLibrarysCollectionsResponse {
   const factory GetLibrarysCollectionsResponse({
     required List<Collection> results,
     required int total,

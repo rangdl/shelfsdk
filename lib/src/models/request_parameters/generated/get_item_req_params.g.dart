@@ -8,17 +8,15 @@ part of '../get_item_req_params.dart';
 
 Map<String, dynamic> _$GetItemReqParamsToJson(GetItemReqParams instance) =>
     <String, dynamic>{
-      if (_$JsonConverterToJson<int, bool>(
-              instance.expanded, const BoolBinaryConverter().toJson)
-          case final value?)
-        'expanded': value,
-      if (includeListToString(instance.include) case final value?)
-        'include': value,
-      if (instance.episodeId case final value?) 'episode': value,
+      'expanded': ?_$JsonConverterToJson<int, bool>(
+        instance.expanded,
+        const BoolBinaryConverter().toJson,
+      ),
+      'include': ?includeListToString(instance.include),
+      'episode': ?instance.episodeId,
     };
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

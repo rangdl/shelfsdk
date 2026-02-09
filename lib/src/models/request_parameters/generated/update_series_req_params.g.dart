@@ -7,8 +7,8 @@ part of '../update_series_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$UpdateSeriesReqParamsToJson(
-        UpdateSeriesReqParams instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'description': instance.description,
-    };
+  UpdateSeriesReqParams instance,
+) => <String, dynamic>{
+  'name': instance.name,
+  'description': instance.description,
+};

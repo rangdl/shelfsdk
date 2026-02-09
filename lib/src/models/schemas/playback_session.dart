@@ -16,7 +16,7 @@ part 'generated/playback_session.g.dart';
 
 /// See [Playback Session](https://api.audiobookshelf.org/#playback-session)
 @freezed
-class PlaybackSession with _$PlaybackSession {
+abstract class PlaybackSession with _$PlaybackSession {
   const PlaybackSession._();
 
   @jsonConverters
@@ -44,7 +44,7 @@ class PlaybackSession with _$PlaybackSession {
     required DateTime startedAt,
     required DateTime updatedAt,
     SessionUser? user,
-  }) = _PlaybackSession;
+  }) = PlaybackSessionBase;
 
   @jsonConverters
   const factory PlaybackSession.expanded({
@@ -103,7 +103,7 @@ class PlaybackSessionConverter
     switch (variant) {
       case SchemaVariant.minified:
       case SchemaVariant.base:
-        return _PlaybackSession.fromJson(json);
+        return PlaybackSessionBase.fromJson(json);
       case SchemaVariant.expanded:
         return PlaybackSessionExpanded.fromJson(json);
     }

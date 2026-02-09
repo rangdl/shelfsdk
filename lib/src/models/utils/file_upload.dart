@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'generated/file_upload.freezed.dart';
 
 @freezed
-class FileUpload with _$FileUpload {
+abstract class FileUpload with _$FileUpload {
   const factory FileUpload({
     required String filename,
     required Stream<List<int>> byteStream,

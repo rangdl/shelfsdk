@@ -8,7 +8,7 @@ part 'generated/audio_track.g.dart';
 
 /// See [Audio Track](https://api.audiobookshelf.org/#audio-track)
 @freezed
-class AudioTrack with _$AudioTrack {
+abstract class AudioTrack with _$AudioTrack {
   @jsonConverters
   const factory AudioTrack({
     required int index,

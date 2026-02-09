@@ -5,7 +5,7 @@ part 'generated/batch_update_item_response.g.dart';
 
 /// See [Batch Update Library Items](https://api.audiobookshelf.org/#batch-update-library-items)
 @freezed
-class BatchUpdateItemResponse with _$BatchUpdateItemResponse {
+abstract class BatchUpdateItemResponse with _$BatchUpdateItemResponse {
   const factory BatchUpdateItemResponse({
     required bool success,
     required int updates,

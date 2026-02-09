@@ -11,7 +11,7 @@ part 'generated/media_metadata.g.dart';
 /// See [Book Metadata](https://api.audiobookshelf.org/#book-metadata)
 /// and [Podcast Metadata](https://api.audiobookshelf.org/#podcast-metadata)
 @freezed
-class MediaMetadata with _$MediaMetadata {
+abstract class MediaMetadata with _$MediaMetadata {
   const MediaMetadata._();
 
   const factory MediaMetadata.book({

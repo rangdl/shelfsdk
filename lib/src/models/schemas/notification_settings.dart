@@ -8,7 +8,7 @@ part 'generated/notification_settings.g.dart';
 
 /// See [Notification Settings](https://api.audiobookshelf.org/#notification-settings)
 @freezed
-class NotificationSettings with _$NotificationSettings {
+abstract class NotificationSettings with _$NotificationSettings {
   const factory NotificationSettings({
     required String id,
     required String appriseType,

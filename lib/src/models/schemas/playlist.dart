@@ -8,7 +8,7 @@ part 'generated/playlist.g.dart';
 
 /// See [Playlist](https://api.audiobookshelf.org/#playlist)
 @freezed
-class Playlist with _$Playlist {
+abstract class Playlist with _$Playlist {
   @jsonConverters
   const factory Playlist({
     required String id,

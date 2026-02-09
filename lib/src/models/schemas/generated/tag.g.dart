@@ -6,12 +6,10 @@ part of '../tag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TagImpl _$$TagImplFromJson(Map<String, dynamic> json) => _$TagImpl(
-      name: json['name'] as String,
-      numItems: json['numItems'] as num,
-    );
+_Tag _$TagFromJson(Map<String, dynamic> json) =>
+    _Tag(name: json['name'] as String, numItems: json['numItems'] as num);
 
-Map<String, dynamic> _$$TagImplToJson(_$TagImpl instance) => <String, dynamic>{
-      'name': instance.name,
-      'numItems': instance.numItems,
-    };
+Map<String, dynamic> _$TagToJson(_Tag instance) => <String, dynamic>{
+  'name': instance.name,
+  'numItems': instance.numItems,
+};

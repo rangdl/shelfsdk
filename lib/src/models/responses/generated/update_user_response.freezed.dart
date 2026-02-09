@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,190 +9,290 @@ part of '../update_user_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-UpdateUserResponse _$UpdateUserResponseFromJson(Map<String, dynamic> json) {
-  return _UpdateUserResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UpdateUserResponse {
-  bool get success => throw _privateConstructorUsedError;
-  User get user => throw _privateConstructorUsedError;
+
+ bool get success; User get user;
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UpdateUserResponseCopyWith<UpdateUserResponse> get copyWith => _$UpdateUserResponseCopyWithImpl<UpdateUserResponse>(this as UpdateUserResponse, _$identity);
 
   /// Serializes this UpdateUserResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UpdateUserResponseCopyWith<UpdateUserResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UpdateUserResponse&&(identical(other.success, success) || other.success == success)&&(identical(other.user, user) || other.user == user));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,success,user);
+
+@override
+String toString() {
+  return 'UpdateUserResponse(success: $success, user: $user)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UpdateUserResponseCopyWith<$Res> {
-  factory $UpdateUserResponseCopyWith(
-          UpdateUserResponse value, $Res Function(UpdateUserResponse) then) =
-      _$UpdateUserResponseCopyWithImpl<$Res, UpdateUserResponse>;
-  @useResult
-  $Res call({bool success, User user});
+abstract mixin class $UpdateUserResponseCopyWith<$Res>  {
+  factory $UpdateUserResponseCopyWith(UpdateUserResponse value, $Res Function(UpdateUserResponse) _then) = _$UpdateUserResponseCopyWithImpl;
+@useResult
+$Res call({
+ bool success, User user
+});
 
-  $UserCopyWith<$Res> get user;
+
+$UserCopyWith<$Res> get user;
+
 }
-
 /// @nodoc
-class _$UpdateUserResponseCopyWithImpl<$Res, $Val extends UpdateUserResponse>
+class _$UpdateUserResponseCopyWithImpl<$Res>
     implements $UpdateUserResponseCopyWith<$Res> {
-  _$UpdateUserResponseCopyWithImpl(this._value, this._then);
+  _$UpdateUserResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UpdateUserResponse _self;
+  final $Res Function(UpdateUserResponse) _then;
 
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? success = null,
-    Object? user = null,
-  }) {
-    return _then(_value.copyWith(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
-    ) as $Val);
-  }
-
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserCopyWith<$Res> get user {
-    return $UserCopyWith<$Res>(_value.user, (value) {
-      return _then(_value.copyWith(user: value) as $Val);
-    });
-  }
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? success = null,Object? user = null,}) {
+  return _then(_self.copyWith(
+success: null == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
+as bool,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
+as User,
+  ));
+}
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UserCopyWith<$Res> get user {
+  
+  return $UserCopyWith<$Res>(_self.user, (value) {
+    return _then(_self.copyWith(user: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$UpdateUserResponseImplCopyWith<$Res>
-    implements $UpdateUserResponseCopyWith<$Res> {
-  factory _$$UpdateUserResponseImplCopyWith(_$UpdateUserResponseImpl value,
-          $Res Function(_$UpdateUserResponseImpl) then) =
-      __$$UpdateUserResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({bool success, User user});
 
-  @override
-  $UserCopyWith<$Res> get user;
+/// Adds pattern-matching-related methods to [UpdateUserResponse].
+extension UpdateUserResponsePatterns on UpdateUserResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UpdateUserResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UpdateUserResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UpdateUserResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _UpdateUserResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UpdateUserResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UpdateUserResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool success,  User user)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UpdateUserResponse() when $default != null:
+return $default(_that.success,_that.user);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool success,  User user)  $default,) {final _that = this;
+switch (_that) {
+case _UpdateUserResponse():
+return $default(_that.success,_that.user);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool success,  User user)?  $default,) {final _that = this;
+switch (_that) {
+case _UpdateUserResponse() when $default != null:
+return $default(_that.success,_that.user);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$UpdateUserResponseImplCopyWithImpl<$Res>
-    extends _$UpdateUserResponseCopyWithImpl<$Res, _$UpdateUserResponseImpl>
-    implements _$$UpdateUserResponseImplCopyWith<$Res> {
-  __$$UpdateUserResponseImplCopyWithImpl(_$UpdateUserResponseImpl _value,
-      $Res Function(_$UpdateUserResponseImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? success = null,
-    Object? user = null,
-  }) {
-    return _then(_$UpdateUserResponseImpl(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user: null == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as User,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$UpdateUserResponseImpl implements _UpdateUserResponse {
-  const _$UpdateUserResponseImpl({required this.success, required this.user});
 
-  factory _$UpdateUserResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UpdateUserResponseImplFromJson(json);
+class _UpdateUserResponse implements UpdateUserResponse {
+  const _UpdateUserResponse({required this.success, required this.user});
+  factory _UpdateUserResponse.fromJson(Map<String, dynamic> json) => _$UpdateUserResponseFromJson(json);
 
-  @override
-  final bool success;
-  @override
-  final User user;
+@override final  bool success;
+@override final  User user;
 
-  @override
-  String toString() {
-    return 'UpdateUserResponse(success: $success, user: $user)';
-  }
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UpdateUserResponseCopyWith<_UpdateUserResponse> get copyWith => __$UpdateUserResponseCopyWithImpl<_UpdateUserResponse>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateUserResponseImpl &&
-            (identical(other.success, success) || other.success == success) &&
-            (identical(other.user, user) || other.user == user));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, success, user);
-
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateUserResponseImplCopyWith<_$UpdateUserResponseImpl> get copyWith =>
-      __$$UpdateUserResponseImplCopyWithImpl<_$UpdateUserResponseImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UpdateUserResponseImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UpdateUserResponseToJson(this, );
 }
 
-abstract class _UpdateUserResponse implements UpdateUserResponse {
-  const factory _UpdateUserResponse(
-      {required final bool success,
-      required final User user}) = _$UpdateUserResponseImpl;
-
-  factory _UpdateUserResponse.fromJson(Map<String, dynamic> json) =
-      _$UpdateUserResponseImpl.fromJson;
-
-  @override
-  bool get success;
-  @override
-  User get user;
-
-  /// Create a copy of UpdateUserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateUserResponseImplCopyWith<_$UpdateUserResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UpdateUserResponse&&(identical(other.success, success) || other.success == success)&&(identical(other.user, user) || other.user == user));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,success,user);
+
+@override
+String toString() {
+  return 'UpdateUserResponse(success: $success, user: $user)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UpdateUserResponseCopyWith<$Res> implements $UpdateUserResponseCopyWith<$Res> {
+  factory _$UpdateUserResponseCopyWith(_UpdateUserResponse value, $Res Function(_UpdateUserResponse) _then) = __$UpdateUserResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ bool success, User user
+});
+
+
+@override $UserCopyWith<$Res> get user;
+
+}
+/// @nodoc
+class __$UpdateUserResponseCopyWithImpl<$Res>
+    implements _$UpdateUserResponseCopyWith<$Res> {
+  __$UpdateUserResponseCopyWithImpl(this._self, this._then);
+
+  final _UpdateUserResponse _self;
+  final $Res Function(_UpdateUserResponse) _then;
+
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? success = null,Object? user = null,}) {
+  return _then(_UpdateUserResponse(
+success: null == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
+as bool,user: null == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
+as User,
+  ));
+}
+
+/// Create a copy of UpdateUserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UserCopyWith<$Res> get user {
+  
+  return $UserCopyWith<$Res>(_self.user, (value) {
+    return _then(_self.copyWith(user: value));
+  });
+}
+}
+
+// dart format on

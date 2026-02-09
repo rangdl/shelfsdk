@@ -7,7 +7,7 @@ part 'generated/match_author_response.g.dart';
 
 /// See [Match an Author](https://api.audiobookshelf.org/#match-an-author)
 @freezed
-class MatchAuthorResponse with _$MatchAuthorResponse {
+abstract class MatchAuthorResponse with _$MatchAuthorResponse {
   const factory MatchAuthorResponse({
     required bool updated,
     required Author author,

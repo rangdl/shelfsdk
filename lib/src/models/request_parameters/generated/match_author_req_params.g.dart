@@ -7,8 +7,5 @@ part of '../match_author_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$MatchAuthorReqParamsToJson(
-        MatchAuthorReqParams instance) =>
-    <String, dynamic>{
-      if (instance.asin case final value?) 'asin': value,
-      if (instance.name case final value?) 'q': value,
-    };
+  MatchAuthorReqParams instance,
+) => <String, dynamic>{'asin': ?instance.asin, 'q': ?instance.name};

@@ -9,9 +9,7 @@ const _converters = <JsonConverter<dynamic, dynamic>>[
   CronExpressionConverter(),
 ];
 
-const jsonConverters = JsonSerializable(
-  converters: _converters,
-);
+const jsonConverters = JsonSerializable(converters: _converters);
 
 const requestToJson = JsonSerializable(
   createFactory: false,

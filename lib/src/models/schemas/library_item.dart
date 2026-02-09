@@ -16,7 +16,7 @@ part 'generated/library_item.g.dart';
 
 /// See [Library Item](https://api.audiobookshelf.org/#library-item)
 @freezed
-class LibraryItem with _$LibraryItem {
+abstract class LibraryItem with _$LibraryItem {
   const LibraryItem._();
 
   @jsonConverters
@@ -47,7 +47,7 @@ class LibraryItem with _$LibraryItem {
     RssFeed? rssFeed,
     String? sequence,
     String? seriesSequence,
-  }) = _LibraryItem;
+  }) = LibraryItemBase;
 
   @jsonConverters
   const factory LibraryItem.minified({
@@ -148,7 +148,7 @@ class LibraryItemConverter
 
     switch (variant) {
       case SchemaVariant.base:
-        return _LibraryItem.fromJson(json);
+        return LibraryItemBase.fromJson(json);
       case SchemaVariant.minified:
         return LibraryItemMinified.fromJson(json);
       case SchemaVariant.expanded:

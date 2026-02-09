@@ -9,13 +9,13 @@ part 'generated/podcast_feed.g.dart';
 
 /// See [Podcast Feed](https://api.audiobookshelf.org/#podcast-feed)
 @freezed
-class PodcastFeed with _$PodcastFeed {
+abstract class PodcastFeed with _$PodcastFeed {
   const PodcastFeed._();
 
   const factory PodcastFeed({
     required PodcastFeedMetadata metadata,
     required List<PodcastFeedEpisode> episodes,
-  }) = _PodcastFeed;
+  }) = PodcastFeedBase;
 
   const factory PodcastFeed.minified({
     required PodcastFeedMetadata metadata,
@@ -51,7 +51,7 @@ class PodcastFeedConverter
     switch (variant) {
       case SchemaVariant.expanded:
       case SchemaVariant.base:
-        return _PodcastFeed.fromJson(json);
+        return PodcastFeedBase.fromJson(json);
       case SchemaVariant.minified:
         return PodcastFeedMinified.fromJson(json);
     }

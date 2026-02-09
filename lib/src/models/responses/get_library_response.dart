@@ -8,7 +8,7 @@ part 'generated/get_library_response.g.dart';
 
 /// See [Get a Library](https://api.audiobookshelf.org/#get-a-library)
 @freezed
-class GetLibraryResponse with _$GetLibraryResponse {
+abstract class GetLibraryResponse with _$GetLibraryResponse {
   @JsonSerializable(createToJson: false)
   const factory GetLibraryResponse.filterData({
     @JsonKey(name: 'filterdata') required LibraryFilterData filterData,
@@ -17,13 +17,12 @@ class GetLibraryResponse with _$GetLibraryResponse {
     required Library library,
   }) = GetLibraryResponseFilterData;
 
-  const factory GetLibraryResponse.library({
-    required Library library,
-  }) = GetLibraryResponseLibrary;
+  const factory GetLibraryResponse.library({required Library library}) =
+      GetLibraryResponseLibrary;
 
   factory GetLibraryResponse.fromJson(Map<String, dynamic> json) {
     if (json.containsKey('issues')) {
-      return _$$GetLibraryResponseFilterDataImplFromJson(json);
+      return _$GetLibraryResponseFilterDataFromJson(json);
     }
     return GetLibraryResponse.library(library: Library.fromJson(json));
   }

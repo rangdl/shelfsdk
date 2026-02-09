@@ -5,7 +5,7 @@ part 'generated/get_item_tone_response.g.dart';
 
 /// See [Get a Library Item's Tone Metadata Object](https://api.audiobookshelf.org/#get-a-library-item-39-s-tone-metadata-object)
 @freezed
-class GetItemToneResponse with _$GetItemToneResponse {
+abstract class GetItemToneResponse with _$GetItemToneResponse {
   @JsonSerializable(fieldRename: FieldRename.pascal)
   const factory GetItemToneResponse({
     required String title,

@@ -6,28 +6,29 @@ part of '../rss_feed.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RssFeedImpl _$$RssFeedImplFromJson(Map<String, dynamic> json) =>
-    _$RssFeedImpl(
-      id: json['id'] as String,
-      slug: json['slug'] as String,
-      userId: json['userId'] as String,
-      entityType: json['entityType'] as String,
-      entityId: json['entityId'] as String,
-      coverPath: json['coverPath'] as String,
-      serverAddress: Uri.parse(json['serverAddress'] as String),
-      feedUrl: Uri.parse(json['feedUrl'] as String),
-      meta: RssFeedMetadata.fromJson(json['meta'] as Map<String, dynamic>),
-      episodes: (json['episodes'] as List<dynamic>)
-          .map((e) => RssFeedEpisode.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      createdAt: const DateTimeEpochConverter()
-          .fromJson((json['createdAt'] as num).toInt()),
-      updatedAt: const DateTimeEpochConverter()
-          .fromJson((json['updatedAt'] as num).toInt()),
-      $type: json['runtimeType'] as String?,
-    );
+RssFeedBase _$RssFeedBaseFromJson(Map<String, dynamic> json) => RssFeedBase(
+  id: json['id'] as String,
+  slug: json['slug'] as String,
+  userId: json['userId'] as String,
+  entityType: json['entityType'] as String,
+  entityId: json['entityId'] as String,
+  coverPath: json['coverPath'] as String,
+  serverAddress: Uri.parse(json['serverAddress'] as String),
+  feedUrl: Uri.parse(json['feedUrl'] as String),
+  meta: RssFeedMetadata.fromJson(json['meta'] as Map<String, dynamic>),
+  episodes: (json['episodes'] as List<dynamic>)
+      .map((e) => RssFeedEpisode.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  createdAt: const DateTimeEpochConverter().fromJson(
+    (json['createdAt'] as num).toInt(),
+  ),
+  updatedAt: const DateTimeEpochConverter().fromJson(
+    (json['updatedAt'] as num).toInt(),
+  ),
+  $type: json['runtimeType'] as String?,
+);
 
-Map<String, dynamic> _$$RssFeedImplToJson(_$RssFeedImpl instance) =>
+Map<String, dynamic> _$RssFeedBaseToJson(RssFeedBase instance) =>
     <String, dynamic>{
       'id': instance.id,
       'slug': instance.slug,
@@ -44,9 +45,8 @@ Map<String, dynamic> _$$RssFeedImplToJson(_$RssFeedImpl instance) =>
       'runtimeType': instance.$type,
     };
 
-_$RssFeedMinifiedImpl _$$RssFeedMinifiedImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RssFeedMinifiedImpl(
+RssFeedMinified _$RssFeedMinifiedFromJson(Map<String, dynamic> json) =>
+    RssFeedMinified(
       id: json['id'] as String,
       entityType: json['entityType'] as String,
       entityId: json['entityId'] as String,
@@ -54,8 +54,7 @@ _$RssFeedMinifiedImpl _$$RssFeedMinifiedImplFromJson(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$RssFeedMinifiedImplToJson(
-        _$RssFeedMinifiedImpl instance) =>
+Map<String, dynamic> _$RssFeedMinifiedToJson(RssFeedMinified instance) =>
     <String, dynamic>{
       'id': instance.id,
       'entityType': instance.entityType,

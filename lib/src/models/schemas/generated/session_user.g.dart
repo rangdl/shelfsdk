@@ -6,14 +6,10 @@ part of '../session_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SessionUserImpl _$$SessionUserImplFromJson(Map<String, dynamic> json) =>
-    _$SessionUserImpl(
-      id: json['id'] as String,
-      username: json['username'] as String,
-    );
+_SessionUser _$SessionUserFromJson(Map<String, dynamic> json) => _SessionUser(
+  id: json['id'] as String,
+  username: json['username'] as String,
+);
 
-Map<String, dynamic> _$$SessionUserImplToJson(_$SessionUserImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'username': instance.username,
-    };
+Map<String, dynamic> _$SessionUserToJson(_SessionUser instance) =>
+    <String, dynamic>{'id': instance.id, 'username': instance.username};

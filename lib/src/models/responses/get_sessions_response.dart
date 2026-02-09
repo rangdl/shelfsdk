@@ -7,7 +7,7 @@ part 'generated/get_sessions_response.g.dart';
 
 /// See [Get All Sessions](https://api.audiobookshelf.org/#get-all-sessions)
 @freezed
-class GetSessionsResponse with _$GetSessionsResponse {
+abstract class GetSessionsResponse with _$GetSessionsResponse {
   const factory GetSessionsResponse({
     required int total,
     required int numPages,

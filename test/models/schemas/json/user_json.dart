@@ -38,21 +38,21 @@ const json = {
   'librariesAccessible': librariesAccessible,
 };
 
-final user = User(
-  id: id,
-  username: username,
-  type: type,
-  token: token,
-  mediaProgress: mediaProgress,
-  seriesHideFromContinueListening: seriesHideFromContinueListening,
-  bookmarks: bookmarks,
-  isActive: isActive,
-  isLocked: isLocked,
-  lastSeen: lastSeen,
-  createdAt: createdAt,
-  permissions: user_permissions.userPermissions,
-  librariesAccessible: librariesAccessible,
-);
+final user = User.fromJson({
+  "id": id,
+  "username": username,
+  "type": type,
+  "token": token,
+  "mediaProgress": mediaProgress,
+  "seriesHideFromContinueListening": seriesHideFromContinueListening,
+  "bookmarks": bookmarks,
+  "isActive": isActive,
+  "isLocked": isLocked,
+  "lastSeen": lastSeen,
+  "createdAt": createdAt,
+  "permissions": user_permissions.userPermissions,
+  "librariesAccessible": librariesAccessible,
+});
 
 const jsonWithSessionAndMostRecentProgress = {
   'id': id,
@@ -66,11 +66,11 @@ const jsonWithSessionAndMostRecentProgress = {
 
 final userWithSessionAndMostRecentProgress =
     User.withSessionAndMostRecentProgress(
-  id: id,
-  username: username,
-  type: type,
-  session: playback_session.playbackSession,
-  mostRecent: media_progress.mediaProgress,
-  lastSeen: lastSeen,
-  createdAt: createdAt,
-);
+      id: id,
+      username: username,
+      type: type,
+      session: playback_session.playbackSession,
+      mostRecent: media_progress.mediaProgress,
+      lastSeen: lastSeen,
+      createdAt: createdAt,
+    );

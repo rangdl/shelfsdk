@@ -9,7 +9,7 @@ part of '../get_image_req_params.dart';
 Map<String, dynamic> _$GetImageReqParamsToJson(GetImageReqParams instance) =>
     <String, dynamic>{
       'width': instance.width,
-      if (instance.height case final value?) 'height': value,
-      if (instance.format case final value?) 'format': value,
+      'height': ?instance.height,
+      'format': ?instance.format,
       'raw': const BoolBinaryConverter().toJson(instance.raw),
     };

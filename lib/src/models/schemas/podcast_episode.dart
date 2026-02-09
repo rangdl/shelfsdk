@@ -12,7 +12,7 @@ part 'generated/podcast_episode.g.dart';
 
 /// See [Podcast Episode](https://api.audiobookshelf.org/#podcast-episode)
 @freezed
-class PodcastEpisode with _$PodcastEpisode {
+abstract class PodcastEpisode with _$PodcastEpisode {
   const PodcastEpisode._();
 
   @jsonConverters
@@ -32,7 +32,7 @@ class PodcastEpisode with _$PodcastEpisode {
     required DateTime publishedAt,
     required DateTime addedAt,
     required DateTime updatedAt,
-  }) = _PodcastEpisode;
+  }) = PodcastEpisodeBase;
 
   @jsonConverters
   const factory PodcastEpisode.expanded({
@@ -86,7 +86,7 @@ class PodcastEpisodeConverter
     switch (variant) {
       case SchemaVariant.minified:
       case SchemaVariant.base:
-        return _PodcastEpisode.fromJson(json);
+        return PodcastEpisodeBase.fromJson(json);
       case SchemaVariant.expanded:
         return PodcastEpisodeExpanded.fromJson(json);
     }

@@ -7,7 +7,7 @@ part 'generated/tone_scan_item_response.g.dart';
 
 /// See [Tone Scan a Library Item](https://api.audiobookshelf.org/#tone-scan-a-library-item)
 @freezed
-class ToneScanItemResponse with _$ToneScanItemResponse {
+abstract class ToneScanItemResponse with _$ToneScanItemResponse {
   const factory ToneScanItemResponse({
     required ToneScanAudioResponse audio,
     required Map<String, dynamic> meta,
@@ -19,7 +19,7 @@ class ToneScanItemResponse with _$ToneScanItemResponse {
 }
 
 @freezed
-class ToneScanAudioResponse with _$ToneScanAudioResponse {
+abstract class ToneScanAudioResponse with _$ToneScanAudioResponse {
   const factory ToneScanAudioResponse({
     required int bitrate,
     required String format,
@@ -35,7 +35,8 @@ class ToneScanAudioResponse with _$ToneScanAudioResponse {
 }
 
 @freezed
-class ToneScanAudioChannelsResponse with _$ToneScanAudioChannelsResponse {
+abstract class ToneScanAudioChannelsResponse
+    with _$ToneScanAudioChannelsResponse {
   const factory ToneScanAudioChannelsResponse({
     required int count,
     required String description,
@@ -46,7 +47,7 @@ class ToneScanAudioChannelsResponse with _$ToneScanAudioChannelsResponse {
 }
 
 @freezed
-class ToneScanAudioFramesResponse with _$ToneScanAudioFramesResponse {
+abstract class ToneScanAudioFramesResponse with _$ToneScanAudioFramesResponse {
   const factory ToneScanAudioFramesResponse({
     required int offset,
     required int length,
@@ -57,7 +58,7 @@ class ToneScanAudioFramesResponse with _$ToneScanAudioFramesResponse {
 }
 
 @freezed
-class ToneScanFileResponse with _$ToneScanFileResponse {
+abstract class ToneScanFileResponse with _$ToneScanFileResponse {
   const factory ToneScanFileResponse({
     required int size,
     required DateTime created,

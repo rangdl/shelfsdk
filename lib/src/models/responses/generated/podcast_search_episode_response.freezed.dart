@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,204 +9,290 @@ part of '../podcast_search_episode_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-PodcastSearchEpisodeResponse _$PodcastSearchEpisodeResponseFromJson(
-    Map<String, dynamic> json) {
-  return _PodcastSearchEpisodeResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PodcastSearchEpisodeResponse {
-  PodcastFeedEpisode get episode => throw _privateConstructorUsedError;
-  int get levenshtein => throw _privateConstructorUsedError;
+
+ PodcastFeedEpisode get episode; int get levenshtein;
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PodcastSearchEpisodeResponseCopyWith<PodcastSearchEpisodeResponse> get copyWith => _$PodcastSearchEpisodeResponseCopyWithImpl<PodcastSearchEpisodeResponse>(this as PodcastSearchEpisodeResponse, _$identity);
 
   /// Serializes this PodcastSearchEpisodeResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PodcastSearchEpisodeResponseCopyWith<PodcastSearchEpisodeResponse>
-      get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PodcastSearchEpisodeResponse&&(identical(other.episode, episode) || other.episode == episode)&&(identical(other.levenshtein, levenshtein) || other.levenshtein == levenshtein));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,episode,levenshtein);
+
+@override
+String toString() {
+  return 'PodcastSearchEpisodeResponse(episode: $episode, levenshtein: $levenshtein)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PodcastSearchEpisodeResponseCopyWith<$Res> {
-  factory $PodcastSearchEpisodeResponseCopyWith(
-          PodcastSearchEpisodeResponse value,
-          $Res Function(PodcastSearchEpisodeResponse) then) =
-      _$PodcastSearchEpisodeResponseCopyWithImpl<$Res,
-          PodcastSearchEpisodeResponse>;
-  @useResult
-  $Res call({PodcastFeedEpisode episode, int levenshtein});
+abstract mixin class $PodcastSearchEpisodeResponseCopyWith<$Res>  {
+  factory $PodcastSearchEpisodeResponseCopyWith(PodcastSearchEpisodeResponse value, $Res Function(PodcastSearchEpisodeResponse) _then) = _$PodcastSearchEpisodeResponseCopyWithImpl;
+@useResult
+$Res call({
+ PodcastFeedEpisode episode, int levenshtein
+});
 
-  $PodcastFeedEpisodeCopyWith<$Res> get episode;
+
+$PodcastFeedEpisodeCopyWith<$Res> get episode;
+
 }
-
 /// @nodoc
-class _$PodcastSearchEpisodeResponseCopyWithImpl<$Res,
-        $Val extends PodcastSearchEpisodeResponse>
+class _$PodcastSearchEpisodeResponseCopyWithImpl<$Res>
     implements $PodcastSearchEpisodeResponseCopyWith<$Res> {
-  _$PodcastSearchEpisodeResponseCopyWithImpl(this._value, this._then);
+  _$PodcastSearchEpisodeResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PodcastSearchEpisodeResponse _self;
+  final $Res Function(PodcastSearchEpisodeResponse) _then;
 
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? episode = null,
-    Object? levenshtein = null,
-  }) {
-    return _then(_value.copyWith(
-      episode: null == episode
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as PodcastFeedEpisode,
-      levenshtein: null == levenshtein
-          ? _value.levenshtein
-          : levenshtein // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
-
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PodcastFeedEpisodeCopyWith<$Res> get episode {
-    return $PodcastFeedEpisodeCopyWith<$Res>(_value.episode, (value) {
-      return _then(_value.copyWith(episode: value) as $Val);
-    });
-  }
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? episode = null,Object? levenshtein = null,}) {
+  return _then(_self.copyWith(
+episode: null == episode ? _self.episode : episode // ignore: cast_nullable_to_non_nullable
+as PodcastFeedEpisode,levenshtein: null == levenshtein ? _self.levenshtein : levenshtein // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PodcastFeedEpisodeCopyWith<$Res> get episode {
+  
+  return $PodcastFeedEpisodeCopyWith<$Res>(_self.episode, (value) {
+    return _then(_self.copyWith(episode: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$PodcastSearchEpisodeResponseImplCopyWith<$Res>
-    implements $PodcastSearchEpisodeResponseCopyWith<$Res> {
-  factory _$$PodcastSearchEpisodeResponseImplCopyWith(
-          _$PodcastSearchEpisodeResponseImpl value,
-          $Res Function(_$PodcastSearchEpisodeResponseImpl) then) =
-      __$$PodcastSearchEpisodeResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PodcastFeedEpisode episode, int levenshtein});
 
-  @override
-  $PodcastFeedEpisodeCopyWith<$Res> get episode;
+/// Adds pattern-matching-related methods to [PodcastSearchEpisodeResponse].
+extension PodcastSearchEpisodeResponsePatterns on PodcastSearchEpisodeResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PodcastSearchEpisodeResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PodcastSearchEpisodeResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PodcastSearchEpisodeResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PodcastFeedEpisode episode,  int levenshtein)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse() when $default != null:
+return $default(_that.episode,_that.levenshtein);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PodcastFeedEpisode episode,  int levenshtein)  $default,) {final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse():
+return $default(_that.episode,_that.levenshtein);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PodcastFeedEpisode episode,  int levenshtein)?  $default,) {final _that = this;
+switch (_that) {
+case _PodcastSearchEpisodeResponse() when $default != null:
+return $default(_that.episode,_that.levenshtein);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$PodcastSearchEpisodeResponseImplCopyWithImpl<$Res>
-    extends _$PodcastSearchEpisodeResponseCopyWithImpl<$Res,
-        _$PodcastSearchEpisodeResponseImpl>
-    implements _$$PodcastSearchEpisodeResponseImplCopyWith<$Res> {
-  __$$PodcastSearchEpisodeResponseImplCopyWithImpl(
-      _$PodcastSearchEpisodeResponseImpl _value,
-      $Res Function(_$PodcastSearchEpisodeResponseImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? episode = null,
-    Object? levenshtein = null,
-  }) {
-    return _then(_$PodcastSearchEpisodeResponseImpl(
-      episode: null == episode
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as PodcastFeedEpisode,
-      levenshtein: null == levenshtein
-          ? _value.levenshtein
-          : levenshtein // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PodcastSearchEpisodeResponseImpl
-    implements _PodcastSearchEpisodeResponse {
-  const _$PodcastSearchEpisodeResponseImpl(
-      {required this.episode, required this.levenshtein});
 
-  factory _$PodcastSearchEpisodeResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$PodcastSearchEpisodeResponseImplFromJson(json);
+class _PodcastSearchEpisodeResponse implements PodcastSearchEpisodeResponse {
+  const _PodcastSearchEpisodeResponse({required this.episode, required this.levenshtein});
+  factory _PodcastSearchEpisodeResponse.fromJson(Map<String, dynamic> json) => _$PodcastSearchEpisodeResponseFromJson(json);
 
-  @override
-  final PodcastFeedEpisode episode;
-  @override
-  final int levenshtein;
+@override final  PodcastFeedEpisode episode;
+@override final  int levenshtein;
 
-  @override
-  String toString() {
-    return 'PodcastSearchEpisodeResponse(episode: $episode, levenshtein: $levenshtein)';
-  }
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PodcastSearchEpisodeResponseCopyWith<_PodcastSearchEpisodeResponse> get copyWith => __$PodcastSearchEpisodeResponseCopyWithImpl<_PodcastSearchEpisodeResponse>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PodcastSearchEpisodeResponseImpl &&
-            (identical(other.episode, episode) || other.episode == episode) &&
-            (identical(other.levenshtein, levenshtein) ||
-                other.levenshtein == levenshtein));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, episode, levenshtein);
-
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PodcastSearchEpisodeResponseImplCopyWith<
-          _$PodcastSearchEpisodeResponseImpl>
-      get copyWith => __$$PodcastSearchEpisodeResponseImplCopyWithImpl<
-          _$PodcastSearchEpisodeResponseImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PodcastSearchEpisodeResponseImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PodcastSearchEpisodeResponseToJson(this, );
 }
 
-abstract class _PodcastSearchEpisodeResponse
-    implements PodcastSearchEpisodeResponse {
-  const factory _PodcastSearchEpisodeResponse(
-      {required final PodcastFeedEpisode episode,
-      required final int levenshtein}) = _$PodcastSearchEpisodeResponseImpl;
-
-  factory _PodcastSearchEpisodeResponse.fromJson(Map<String, dynamic> json) =
-      _$PodcastSearchEpisodeResponseImpl.fromJson;
-
-  @override
-  PodcastFeedEpisode get episode;
-  @override
-  int get levenshtein;
-
-  /// Create a copy of PodcastSearchEpisodeResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PodcastSearchEpisodeResponseImplCopyWith<
-          _$PodcastSearchEpisodeResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PodcastSearchEpisodeResponse&&(identical(other.episode, episode) || other.episode == episode)&&(identical(other.levenshtein, levenshtein) || other.levenshtein == levenshtein));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,episode,levenshtein);
+
+@override
+String toString() {
+  return 'PodcastSearchEpisodeResponse(episode: $episode, levenshtein: $levenshtein)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PodcastSearchEpisodeResponseCopyWith<$Res> implements $PodcastSearchEpisodeResponseCopyWith<$Res> {
+  factory _$PodcastSearchEpisodeResponseCopyWith(_PodcastSearchEpisodeResponse value, $Res Function(_PodcastSearchEpisodeResponse) _then) = __$PodcastSearchEpisodeResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ PodcastFeedEpisode episode, int levenshtein
+});
+
+
+@override $PodcastFeedEpisodeCopyWith<$Res> get episode;
+
+}
+/// @nodoc
+class __$PodcastSearchEpisodeResponseCopyWithImpl<$Res>
+    implements _$PodcastSearchEpisodeResponseCopyWith<$Res> {
+  __$PodcastSearchEpisodeResponseCopyWithImpl(this._self, this._then);
+
+  final _PodcastSearchEpisodeResponse _self;
+  final $Res Function(_PodcastSearchEpisodeResponse) _then;
+
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? episode = null,Object? levenshtein = null,}) {
+  return _then(_PodcastSearchEpisodeResponse(
+episode: null == episode ? _self.episode : episode // ignore: cast_nullable_to_non_nullable
+as PodcastFeedEpisode,levenshtein: null == levenshtein ? _self.levenshtein : levenshtein // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+/// Create a copy of PodcastSearchEpisodeResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PodcastFeedEpisodeCopyWith<$Res> get episode {
+  
+  return $PodcastFeedEpisodeCopyWith<$Res>(_self.episode, (value) {
+    return _then(_self.copyWith(episode: value));
+  });
+}
+}
+
+// dart format on

@@ -10,7 +10,7 @@ part 'generated/series.g.dart';
 
 /// See [Series](https://api.audiobookshelf.org/#series)
 @freezed
-class Series with _$Series {
+abstract class Series with _$Series {
   const Series._();
 
   @jsonConverters
@@ -24,7 +24,7 @@ class Series with _$Series {
     SeriesProgress? progress,
     // From [Get a Series](https://api.audiobookshelf.org/#get-a-series)
     RssFeed? rssFeed,
-  }) = _Series;
+  }) = SeriesBase;
 
   const factory Series.numBooks({
     required String id,
@@ -127,7 +127,7 @@ class SeriesConverter implements JsonConverter<Series, Map<String, dynamic>> {
 
     switch (variant) {
       case SeriesVariant.base:
-        return _Series.fromJson(json);
+        return SeriesBase.fromJson(json);
       case SeriesVariant.numBooks:
         return SeriesNumBooks.fromJson(json);
       case SeriesVariant.books:

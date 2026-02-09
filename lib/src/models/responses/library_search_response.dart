@@ -11,7 +11,7 @@ part 'generated/library_search_response.g.dart';
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed
-class LibrarySearchResponse with _$LibrarySearchResponse {
+abstract class LibrarySearchResponse with _$LibrarySearchResponse {
   const factory LibrarySearchResponse.book({
     required List<LibraryItemSearchResult> book,
     required List<Narrator> narrators,
@@ -33,7 +33,7 @@ class LibrarySearchResponse with _$LibrarySearchResponse {
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed
-class LibraryItemSearchResult with _$LibraryItemSearchResult {
+abstract class LibraryItemSearchResult with _$LibraryItemSearchResult {
   const factory LibraryItemSearchResult({
     required LibraryItem libraryItem,
     String? matchKey,

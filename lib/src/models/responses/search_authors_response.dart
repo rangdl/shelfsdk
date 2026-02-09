@@ -5,7 +5,7 @@ part 'generated/search_authors_response.g.dart';
 
 /// See [Search for an Author](https://api.audiobookshelf.org/#search-for-an-author)
 @freezed
-class SearchAuthorsResponse with _$SearchAuthorsResponse {
+abstract class SearchAuthorsResponse with _$SearchAuthorsResponse {
   const factory SearchAuthorsResponse({
     required String asin,
     required String description,

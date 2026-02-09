@@ -5,7 +5,7 @@ part 'generated/series_progress.g.dart';
 
 /// See [Get a Series](https://api.audiobookshelf.org/#get-a-series)
 @freezed
-class SeriesProgress with _$SeriesProgress {
+abstract class SeriesProgress with _$SeriesProgress {
   const factory SeriesProgress({
     required List<String> libraryItemIds,
     required List<String> libraryItemIdsFinished,

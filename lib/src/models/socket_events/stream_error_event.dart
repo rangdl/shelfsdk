@@ -5,7 +5,7 @@ part 'generated/stream_error_event.g.dart';
 
 /// See [Stream Error Event](https://api.audiobookshelf.org/#stream-error-event)
 @freezed
-class StreamErrorEvent with _$StreamErrorEvent {
+abstract class StreamErrorEvent with _$StreamErrorEvent {
   const factory StreamErrorEvent({
     @JsonKey(name: 'id') required String streamId,
     required String error,

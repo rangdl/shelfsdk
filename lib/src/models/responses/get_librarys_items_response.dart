@@ -9,7 +9,7 @@ part 'generated/get_librarys_items_response.g.dart';
 
 /// See [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
 @freezed
-class GetLibrarysItemsResponse with _$GetLibrarysItemsResponse {
+abstract class GetLibrarysItemsResponse with _$GetLibrarysItemsResponse {
   @FilterConverter()
   const factory GetLibrarysItemsResponse({
     required List<LibraryItem> results,

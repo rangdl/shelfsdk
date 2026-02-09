@@ -5,7 +5,7 @@ part 'generated/batch_quick_match_result.g.dart';
 
 /// See [Batch Quick Match Result](https://api.audiobookshelf.org/#batch-quick-match-result)
 @freezed
-class BatchQuickMatchResult with _$BatchQuickMatchResult {
+abstract class BatchQuickMatchResult with _$BatchQuickMatchResult {
   const factory BatchQuickMatchResult({
     required bool success,
     required int updates,

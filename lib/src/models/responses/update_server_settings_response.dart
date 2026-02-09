@@ -7,7 +7,8 @@ part 'generated/update_server_settings_response.g.dart';
 
 /// See [Update Server Settings](https://api.audiobookshelf.org/#update-server-settings)
 @freezed
-class UpdateServerSettingsResponse with _$UpdateServerSettingsResponse {
+abstract class UpdateServerSettingsResponse
+    with _$UpdateServerSettingsResponse {
   const factory UpdateServerSettingsResponse({
     required bool success,
     required ServerSettings serverSettings,

@@ -5,7 +5,7 @@ part 'generated/audio_file_metadata_event.g.dart';
 
 /// See [Audio File Metadata Event](https://api.audiobookshelf.org/#audio-file-metadata-started-event)
 @freezed
-class AudioFileMetadataEvent with _$AudioFileMetadataEvent {
+abstract class AudioFileMetadataEvent with _$AudioFileMetadataEvent {
   const AudioFileMetadataEvent._();
 
   const factory AudioFileMetadataEvent.started({

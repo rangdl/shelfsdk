@@ -8,7 +8,7 @@ part 'generated/login_response.g.dart';
 
 /// See [Login](https://api.audiobookshelf.org/#login)
 @freezed
-class LoginResponse with _$LoginResponse {
+abstract class LoginResponse with _$LoginResponse {
   const factory LoginResponse({
     required User user,
     String? userDefaultLibraryId,

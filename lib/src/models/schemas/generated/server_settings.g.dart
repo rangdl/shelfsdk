@@ -6,44 +6,50 @@ part of '../server_settings.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ServerSettingsImpl _$$ServerSettingsImplFromJson(Map<String, dynamic> json) =>
-    _$ServerSettingsImpl(
-      id: json['id'] as String?,
-      scannerFindCovers: json['scannerFindCovers'] as bool?,
-      scannerCoverProvider: $enumDecodeNullable(
-          _$MetadataProviderEnumMap, json['scannerCoverProvider']),
-      scannerParseSubtitle: json['scannerParseSubtitle'] as bool?,
-      scannerPreferMatchedMetadata:
-          json['scannerPreferMatchedMetadata'] as bool?,
-      scannerDisableWatcher: json['scannerDisableWatcher'] as bool?,
-      storeCoverWithItem: json['storeCoverWithItem'] as bool?,
-      storeMetadataWithItem: json['storeMetadataWithItem'] as bool?,
-      metadataFileFormat: json['metadataFileFormat'] as String?,
-      rateLimitLoginRequests: (json['rateLimitLoginRequests'] as num?)?.toInt(),
-      rateLimitLoginWindow: _$JsonConverterFromJson<int, Duration>(
-          json['rateLimitLoginWindow'], const DurationMsConverter().fromJson),
-      backupsToKeep: (json['backupsToKeep'] as num?)?.toInt(),
-      maxBackupSize: (json['maxBackupSize'] as num?)?.toInt(),
-      loggerDailyLogsToKeep: (json['loggerDailyLogsToKeep'] as num?)?.toInt(),
-      loggerScannerLogsToKeep:
-          (json['loggerScannerLogsToKeep'] as num?)?.toInt(),
-      homeBookshelfView: _$JsonConverterFromJson<int, bool>(
-          json['homeBookshelfView'], const BoolBinaryConverter().fromJson),
-      bookshelfView: _$JsonConverterFromJson<int, bool>(
-          json['bookshelfView'], const BoolBinaryConverter().fromJson),
-      sortingIgnorePrefix: json['sortingIgnorePrefix'] as bool?,
-      sortingPrefixes: (json['sortingPrefixes'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      chromecastEnabled: json['chromecastEnabled'] as bool?,
-      dateFormat: json['dateFormat'] as String?,
-      language: json['language'] as String?,
-      logLevel: $enumDecodeNullable(_$LogLevelEnumMap, json['logLevel']),
-      version: json['version'] as String?,
-    );
+_ServerSettings _$ServerSettingsFromJson(
+  Map<String, dynamic> json,
+) => _ServerSettings(
+  id: json['id'] as String?,
+  scannerFindCovers: json['scannerFindCovers'] as bool?,
+  scannerCoverProvider: $enumDecodeNullable(
+    _$MetadataProviderEnumMap,
+    json['scannerCoverProvider'],
+  ),
+  scannerParseSubtitle: json['scannerParseSubtitle'] as bool?,
+  scannerPreferMatchedMetadata: json['scannerPreferMatchedMetadata'] as bool?,
+  scannerDisableWatcher: json['scannerDisableWatcher'] as bool?,
+  storeCoverWithItem: json['storeCoverWithItem'] as bool?,
+  storeMetadataWithItem: json['storeMetadataWithItem'] as bool?,
+  metadataFileFormat: json['metadataFileFormat'] as String?,
+  rateLimitLoginRequests: (json['rateLimitLoginRequests'] as num?)?.toInt(),
+  rateLimitLoginWindow: _$JsonConverterFromJson<int, Duration>(
+    json['rateLimitLoginWindow'],
+    const DurationMsConverter().fromJson,
+  ),
+  backupsToKeep: (json['backupsToKeep'] as num?)?.toInt(),
+  maxBackupSize: (json['maxBackupSize'] as num?)?.toInt(),
+  loggerDailyLogsToKeep: (json['loggerDailyLogsToKeep'] as num?)?.toInt(),
+  loggerScannerLogsToKeep: (json['loggerScannerLogsToKeep'] as num?)?.toInt(),
+  homeBookshelfView: _$JsonConverterFromJson<int, bool>(
+    json['homeBookshelfView'],
+    const BoolBinaryConverter().fromJson,
+  ),
+  bookshelfView: _$JsonConverterFromJson<int, bool>(
+    json['bookshelfView'],
+    const BoolBinaryConverter().fromJson,
+  ),
+  sortingIgnorePrefix: json['sortingIgnorePrefix'] as bool?,
+  sortingPrefixes: (json['sortingPrefixes'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  chromecastEnabled: json['chromecastEnabled'] as bool?,
+  dateFormat: json['dateFormat'] as String?,
+  language: json['language'] as String?,
+  logLevel: $enumDecodeNullable(_$LogLevelEnumMap, json['logLevel']),
+  version: json['version'] as String?,
+);
 
-Map<String, dynamic> _$$ServerSettingsImplToJson(
-        _$ServerSettingsImpl instance) =>
+Map<String, dynamic> _$ServerSettingsToJson(_ServerSettings instance) =>
     <String, dynamic>{
       'id': instance.id,
       'scannerFindCovers': instance.scannerFindCovers,
@@ -57,15 +63,21 @@ Map<String, dynamic> _$$ServerSettingsImplToJson(
       'metadataFileFormat': instance.metadataFileFormat,
       'rateLimitLoginRequests': instance.rateLimitLoginRequests,
       'rateLimitLoginWindow': _$JsonConverterToJson<int, Duration>(
-          instance.rateLimitLoginWindow, const DurationMsConverter().toJson),
+        instance.rateLimitLoginWindow,
+        const DurationMsConverter().toJson,
+      ),
       'backupsToKeep': instance.backupsToKeep,
       'maxBackupSize': instance.maxBackupSize,
       'loggerDailyLogsToKeep': instance.loggerDailyLogsToKeep,
       'loggerScannerLogsToKeep': instance.loggerScannerLogsToKeep,
       'homeBookshelfView': _$JsonConverterToJson<int, bool>(
-          instance.homeBookshelfView, const BoolBinaryConverter().toJson),
+        instance.homeBookshelfView,
+        const BoolBinaryConverter().toJson,
+      ),
       'bookshelfView': _$JsonConverterToJson<int, bool>(
-          instance.bookshelfView, const BoolBinaryConverter().toJson),
+        instance.bookshelfView,
+        const BoolBinaryConverter().toJson,
+      ),
       'sortingIgnorePrefix': instance.sortingIgnorePrefix,
       'sortingPrefixes': instance.sortingPrefixes,
       'chromecastEnabled': instance.chromecastEnabled,
@@ -95,8 +107,7 @@ const _$MetadataProviderEnumMap = {
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
   Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
+) => json == null ? null : fromJson(json as Json);
 
 const _$LogLevelEnumMap = {
   LogLevel.debug: 1,
@@ -108,5 +119,4 @@ const _$LogLevelEnumMap = {
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

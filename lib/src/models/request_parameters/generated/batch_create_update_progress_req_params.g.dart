@@ -7,8 +7,8 @@ part of '../batch_create_update_progress_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$BatchCreateUpdateProgressReqParamsToJson(
-        BatchCreateUpdateProgressReqParams instance) =>
-    <String, dynamic>{
-      'libraryItemId': instance.libraryItemId,
-      if (instance.episodeId case final value?) 'episodeId': value,
-    };
+  BatchCreateUpdateProgressReqParams instance,
+) => <String, dynamic>{
+  'libraryItemId': instance.libraryItemId,
+  'episodeId': ?instance.episodeId,
+};

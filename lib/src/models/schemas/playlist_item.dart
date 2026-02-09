@@ -9,13 +9,13 @@ part 'generated/playlist_item.g.dart';
 
 /// See [Playlist Item](https://api.audiobookshelf.org/#playlist-item)
 @freezed
-class PlaylistItem with _$PlaylistItem {
+abstract class PlaylistItem with _$PlaylistItem {
   const PlaylistItem._();
 
   const factory PlaylistItem({
     required String libraryItemId,
     String? episodeId,
-  }) = _PlaylistItem;
+  }) = PlaylistItemBase;
 
   const factory PlaylistItem.expanded({
     required String libraryItemId,
@@ -53,7 +53,7 @@ class PlaylistItemConverter
     switch (variant) {
       case SchemaVariant.minified:
       case SchemaVariant.base:
-        return _PlaylistItem.fromJson(json);
+        return PlaylistItemBase.fromJson(json);
       case SchemaVariant.expanded:
         return PlaylistItemExpanded.fromJson(json);
     }

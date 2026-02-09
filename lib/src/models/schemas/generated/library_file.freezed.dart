@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,260 +9,299 @@ part of '../library_file.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-LibraryFile _$LibraryFileFromJson(Map<String, dynamic> json) {
-  return _LibraryFile.fromJson(json);
-}
 
 /// @nodoc
 mixin _$LibraryFile {
-  String get ino => throw _privateConstructorUsedError;
-  FileMetadata get metadata => throw _privateConstructorUsedError;
-  DateTime get addedAt => throw _privateConstructorUsedError;
-  DateTime get updatedAt => throw _privateConstructorUsedError;
-  FileType get fileType => throw _privateConstructorUsedError;
+
+ String get ino; FileMetadata get metadata; DateTime get addedAt; DateTime get updatedAt; FileType get fileType;
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LibraryFileCopyWith<LibraryFile> get copyWith => _$LibraryFileCopyWithImpl<LibraryFile>(this as LibraryFile, _$identity);
 
   /// Serializes this LibraryFile to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LibraryFileCopyWith<LibraryFile> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LibraryFile&&(identical(other.ino, ino) || other.ino == ino)&&(identical(other.metadata, metadata) || other.metadata == metadata)&&(identical(other.addedAt, addedAt) || other.addedAt == addedAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.fileType, fileType) || other.fileType == fileType));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,ino,metadata,addedAt,updatedAt,fileType);
+
+@override
+String toString() {
+  return 'LibraryFile(ino: $ino, metadata: $metadata, addedAt: $addedAt, updatedAt: $updatedAt, fileType: $fileType)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $LibraryFileCopyWith<$Res> {
-  factory $LibraryFileCopyWith(
-          LibraryFile value, $Res Function(LibraryFile) then) =
-      _$LibraryFileCopyWithImpl<$Res, LibraryFile>;
-  @useResult
-  $Res call(
-      {String ino,
-      FileMetadata metadata,
-      DateTime addedAt,
-      DateTime updatedAt,
-      FileType fileType});
+abstract mixin class $LibraryFileCopyWith<$Res>  {
+  factory $LibraryFileCopyWith(LibraryFile value, $Res Function(LibraryFile) _then) = _$LibraryFileCopyWithImpl;
+@useResult
+$Res call({
+ String ino, FileMetadata metadata, DateTime addedAt, DateTime updatedAt, FileType fileType
+});
 
-  $FileMetadataCopyWith<$Res> get metadata;
+
+$FileMetadataCopyWith<$Res> get metadata;
+
 }
-
 /// @nodoc
-class _$LibraryFileCopyWithImpl<$Res, $Val extends LibraryFile>
+class _$LibraryFileCopyWithImpl<$Res>
     implements $LibraryFileCopyWith<$Res> {
-  _$LibraryFileCopyWithImpl(this._value, this._then);
+  _$LibraryFileCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final LibraryFile _self;
+  final $Res Function(LibraryFile) _then;
 
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? ino = null,
-    Object? metadata = null,
-    Object? addedAt = null,
-    Object? updatedAt = null,
-    Object? fileType = null,
-  }) {
-    return _then(_value.copyWith(
-      ino: null == ino
-          ? _value.ino
-          : ino // ignore: cast_nullable_to_non_nullable
-              as String,
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as FileMetadata,
-      addedAt: null == addedAt
-          ? _value.addedAt
-          : addedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      fileType: null == fileType
-          ? _value.fileType
-          : fileType // ignore: cast_nullable_to_non_nullable
-              as FileType,
-    ) as $Val);
-  }
-
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $FileMetadataCopyWith<$Res> get metadata {
-    return $FileMetadataCopyWith<$Res>(_value.metadata, (value) {
-      return _then(_value.copyWith(metadata: value) as $Val);
-    });
-  }
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? ino = null,Object? metadata = null,Object? addedAt = null,Object? updatedAt = null,Object? fileType = null,}) {
+  return _then(_self.copyWith(
+ino: null == ino ? _self.ino : ino // ignore: cast_nullable_to_non_nullable
+as String,metadata: null == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as FileMetadata,addedAt: null == addedAt ? _self.addedAt : addedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,fileType: null == fileType ? _self.fileType : fileType // ignore: cast_nullable_to_non_nullable
+as FileType,
+  ));
+}
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FileMetadataCopyWith<$Res> get metadata {
+  
+  return $FileMetadataCopyWith<$Res>(_self.metadata, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$LibraryFileImplCopyWith<$Res>
-    implements $LibraryFileCopyWith<$Res> {
-  factory _$$LibraryFileImplCopyWith(
-          _$LibraryFileImpl value, $Res Function(_$LibraryFileImpl) then) =
-      __$$LibraryFileImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String ino,
-      FileMetadata metadata,
-      DateTime addedAt,
-      DateTime updatedAt,
-      FileType fileType});
 
-  @override
-  $FileMetadataCopyWith<$Res> get metadata;
+/// Adds pattern-matching-related methods to [LibraryFile].
+extension LibraryFilePatterns on LibraryFile {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LibraryFile value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _LibraryFile() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LibraryFile value)  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryFile():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LibraryFile value)?  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryFile() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String ino,  FileMetadata metadata,  DateTime addedAt,  DateTime updatedAt,  FileType fileType)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _LibraryFile() when $default != null:
+return $default(_that.ino,_that.metadata,_that.addedAt,_that.updatedAt,_that.fileType);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String ino,  FileMetadata metadata,  DateTime addedAt,  DateTime updatedAt,  FileType fileType)  $default,) {final _that = this;
+switch (_that) {
+case _LibraryFile():
+return $default(_that.ino,_that.metadata,_that.addedAt,_that.updatedAt,_that.fileType);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String ino,  FileMetadata metadata,  DateTime addedAt,  DateTime updatedAt,  FileType fileType)?  $default,) {final _that = this;
+switch (_that) {
+case _LibraryFile() when $default != null:
+return $default(_that.ino,_that.metadata,_that.addedAt,_that.updatedAt,_that.fileType);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$LibraryFileImplCopyWithImpl<$Res>
-    extends _$LibraryFileCopyWithImpl<$Res, _$LibraryFileImpl>
-    implements _$$LibraryFileImplCopyWith<$Res> {
-  __$$LibraryFileImplCopyWithImpl(
-      _$LibraryFileImpl _value, $Res Function(_$LibraryFileImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? ino = null,
-    Object? metadata = null,
-    Object? addedAt = null,
-    Object? updatedAt = null,
-    Object? fileType = null,
-  }) {
-    return _then(_$LibraryFileImpl(
-      ino: null == ino
-          ? _value.ino
-          : ino // ignore: cast_nullable_to_non_nullable
-              as String,
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as FileMetadata,
-      addedAt: null == addedAt
-          ? _value.addedAt
-          : addedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      fileType: null == fileType
-          ? _value.fileType
-          : fileType // ignore: cast_nullable_to_non_nullable
-              as FileType,
-    ));
-  }
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$LibraryFileImpl implements _LibraryFile {
-  const _$LibraryFileImpl(
-      {required this.ino,
-      required this.metadata,
-      required this.addedAt,
-      required this.updatedAt,
-      required this.fileType});
+class _LibraryFile implements LibraryFile {
+  const _LibraryFile({required this.ino, required this.metadata, required this.addedAt, required this.updatedAt, required this.fileType});
+  factory _LibraryFile.fromJson(Map<String, dynamic> json) => _$LibraryFileFromJson(json);
 
-  factory _$LibraryFileImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LibraryFileImplFromJson(json);
+@override final  String ino;
+@override final  FileMetadata metadata;
+@override final  DateTime addedAt;
+@override final  DateTime updatedAt;
+@override final  FileType fileType;
 
-  @override
-  final String ino;
-  @override
-  final FileMetadata metadata;
-  @override
-  final DateTime addedAt;
-  @override
-  final DateTime updatedAt;
-  @override
-  final FileType fileType;
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$LibraryFileCopyWith<_LibraryFile> get copyWith => __$LibraryFileCopyWithImpl<_LibraryFile>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'LibraryFile(ino: $ino, metadata: $metadata, addedAt: $addedAt, updatedAt: $updatedAt, fileType: $fileType)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LibraryFileImpl &&
-            (identical(other.ino, ino) || other.ino == ino) &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata) &&
-            (identical(other.addedAt, addedAt) || other.addedAt == addedAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
-            (identical(other.fileType, fileType) ||
-                other.fileType == fileType));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, ino, metadata, addedAt, updatedAt, fileType);
-
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LibraryFileImplCopyWith<_$LibraryFileImpl> get copyWith =>
-      __$$LibraryFileImplCopyWithImpl<_$LibraryFileImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LibraryFileImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$LibraryFileToJson(this, );
 }
 
-abstract class _LibraryFile implements LibraryFile {
-  const factory _LibraryFile(
-      {required final String ino,
-      required final FileMetadata metadata,
-      required final DateTime addedAt,
-      required final DateTime updatedAt,
-      required final FileType fileType}) = _$LibraryFileImpl;
-
-  factory _LibraryFile.fromJson(Map<String, dynamic> json) =
-      _$LibraryFileImpl.fromJson;
-
-  @override
-  String get ino;
-  @override
-  FileMetadata get metadata;
-  @override
-  DateTime get addedAt;
-  @override
-  DateTime get updatedAt;
-  @override
-  FileType get fileType;
-
-  /// Create a copy of LibraryFile
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LibraryFileImplCopyWith<_$LibraryFileImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LibraryFile&&(identical(other.ino, ino) || other.ino == ino)&&(identical(other.metadata, metadata) || other.metadata == metadata)&&(identical(other.addedAt, addedAt) || other.addedAt == addedAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.fileType, fileType) || other.fileType == fileType));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,ino,metadata,addedAt,updatedAt,fileType);
+
+@override
+String toString() {
+  return 'LibraryFile(ino: $ino, metadata: $metadata, addedAt: $addedAt, updatedAt: $updatedAt, fileType: $fileType)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$LibraryFileCopyWith<$Res> implements $LibraryFileCopyWith<$Res> {
+  factory _$LibraryFileCopyWith(_LibraryFile value, $Res Function(_LibraryFile) _then) = __$LibraryFileCopyWithImpl;
+@override @useResult
+$Res call({
+ String ino, FileMetadata metadata, DateTime addedAt, DateTime updatedAt, FileType fileType
+});
+
+
+@override $FileMetadataCopyWith<$Res> get metadata;
+
+}
+/// @nodoc
+class __$LibraryFileCopyWithImpl<$Res>
+    implements _$LibraryFileCopyWith<$Res> {
+  __$LibraryFileCopyWithImpl(this._self, this._then);
+
+  final _LibraryFile _self;
+  final $Res Function(_LibraryFile) _then;
+
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? ino = null,Object? metadata = null,Object? addedAt = null,Object? updatedAt = null,Object? fileType = null,}) {
+  return _then(_LibraryFile(
+ino: null == ino ? _self.ino : ino // ignore: cast_nullable_to_non_nullable
+as String,metadata: null == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as FileMetadata,addedAt: null == addedAt ? _self.addedAt : addedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,fileType: null == fileType ? _self.fileType : fileType // ignore: cast_nullable_to_non_nullable
+as FileType,
+  ));
+}
+
+/// Create a copy of LibraryFile
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FileMetadataCopyWith<$Res> get metadata {
+  
+  return $FileMetadataCopyWith<$Res>(_self.metadata, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
+}
+
+// dart format on

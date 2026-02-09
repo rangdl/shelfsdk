@@ -8,7 +8,7 @@ part 'generated/get_librarys_series_response.g.dart';
 
 /// See [Get a Library's Series](https://api.audiobookshelf.org/#get-a-library-39-s-series)
 @freezed
-class GetLibrarysSeriesResponse with _$GetLibrarysSeriesResponse {
+abstract class GetLibrarysSeriesResponse with _$GetLibrarysSeriesResponse {
   @FilterConverter()
   const factory GetLibrarysSeriesResponse({
     required List<Series> results,

@@ -5,7 +5,7 @@ part 'generated/podcast_episode_enclosure.g.dart';
 
 /// See [Podcast Episode Enclosure](https://api.audiobookshelf.org/#podcast-episode-enclosure)
 @freezed
-class PodcastEpisodeEnclosure with _$PodcastEpisodeEnclosure {
+abstract class PodcastEpisodeEnclosure with _$PodcastEpisodeEnclosure {
   const factory PodcastEpisodeEnclosure({
     required Uri url,
     required String type,

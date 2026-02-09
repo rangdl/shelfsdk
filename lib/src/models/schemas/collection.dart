@@ -9,7 +9,7 @@ part 'generated/collection.g.dart';
 
 /// See [Collection](https://api.audiobookshelf.org/#collection)
 @freezed
-class Collection with _$Collection {
+abstract class Collection with _$Collection {
   @jsonConverters
   const factory Collection({
     required String id,

@@ -7,9 +7,9 @@ part of '../get_sessions_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$GetSessionsReqParamsToJson(
-        GetSessionsReqParams instance) =>
-    <String, dynamic>{
-      if (instance.userId case final value?) 'user': value,
-      'itemsPerPage': instance.itemsPerPage,
-      'page': instance.page,
-    };
+  GetSessionsReqParams instance,
+) => <String, dynamic>{
+  'user': ?instance.userId,
+  'itemsPerPage': instance.itemsPerPage,
+  'page': instance.page,
+};

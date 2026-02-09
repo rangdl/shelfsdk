@@ -8,7 +8,7 @@ part 'generated/rss_feed_episode.g.dart';
 
 /// See [RSS Feed Episode](https://api.audiobookshelf.org/#rss-feed-episode)
 @freezed
-class RssFeedEpisode with _$RssFeedEpisode {
+abstract class RssFeedEpisode with _$RssFeedEpisode {
   @jsonConverters
   const factory RssFeedEpisode({
     required String id,

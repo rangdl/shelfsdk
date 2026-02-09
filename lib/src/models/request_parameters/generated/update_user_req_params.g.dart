@@ -7,21 +7,17 @@ part of '../update_user_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$UpdateUserReqParamsToJson(
-        UpdateUserReqParams instance) =>
-    <String, dynamic>{
-      if (instance.username case final value?) 'username': value,
-      if (instance.password case final value?) 'password': value,
-      if (_$UserTypeEnumMap[instance.type] case final value?) 'type': value,
-      if (instance.seriesHideFromContinueListening case final value?)
-        'seriesHideFromContinueListening': value,
-      if (instance.isActive case final value?) 'isActive': value,
-      if (instance.permissions?.toJson() case final value?)
-        'permissions': value,
-      if (instance.librariesAccessible case final value?)
-        'librariesAccessible': value,
-      if (instance.itemTagsAccessible case final value?)
-        'itemTagsAccessible': value,
-    };
+  UpdateUserReqParams instance,
+) => <String, dynamic>{
+  'username': ?instance.username,
+  'password': ?instance.password,
+  'type': ?_$UserTypeEnumMap[instance.type],
+  'seriesHideFromContinueListening': ?instance.seriesHideFromContinueListening,
+  'isActive': ?instance.isActive,
+  'permissions': ?instance.permissions?.toJson(),
+  'librariesAccessible': ?instance.librariesAccessible,
+  'itemTagsAccessible': ?instance.itemTagsAccessible,
+};
 
 const _$UserTypeEnumMap = {
   UserType.root: 'root',
@@ -31,15 +27,13 @@ const _$UserTypeEnumMap = {
 };
 
 Map<String, dynamic> _$UpdateUserPermissionsReqParamsToJson(
-        UpdateUserPermissionsReqParams instance) =>
-    <String, dynamic>{
-      if (instance.download case final value?) 'download': value,
-      if (instance.update case final value?) 'update': value,
-      if (instance.delete case final value?) 'delete': value,
-      if (instance.upload case final value?) 'upload': value,
-      if (instance.accessAllLibraries case final value?)
-        'accessAllLibraries': value,
-      if (instance.accessAllTags case final value?) 'accessAllTags': value,
-      if (instance.accessExplicitContent case final value?)
-        'accessExplicitContent': value,
-    };
+  UpdateUserPermissionsReqParams instance,
+) => <String, dynamic>{
+  'download': ?instance.download,
+  'update': ?instance.update,
+  'delete': ?instance.delete,
+  'upload': ?instance.upload,
+  'accessAllLibraries': ?instance.accessAllLibraries,
+  'accessAllTags': ?instance.accessAllTags,
+  'accessExplicitContent': ?instance.accessExplicitContent,
+};

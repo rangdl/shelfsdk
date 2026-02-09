@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:shelfsdk/src/models/schemas/user.dart';
+
 import '../models/responses/login_response.dart';
 import '../models/responses/server_status_response.dart';
 import '../utils/from_json.dart';
@@ -17,10 +19,7 @@ class ServerService extends Service {
   }) async {
     final loginResponse = await api.postJson(
       path: 'login',
-      jsonObject: {
-        'username': username,
-        'password': password,
-      },
+      jsonObject: {'username': username, 'password': password},
       responseErrorHandler: responseErrorHandler,
       fromJson: (json) => fromJson(json, LoginResponse.fromJson),
     );
@@ -104,15 +103,16 @@ class ServerService extends Service {
     ResponseErrorHandler? responseErrorHandler,
   }) async {
     final loginResponse = await api.getJson(
-        path: 'auth/openid/callback',
-        queryParameters: {
-          'code': code,
-          'state': state,
-          'code_verifier': codeVerifier,
-        },
-        responseErrorHandler: responseErrorHandler,
-        cookie: cookie,
-        fromJson: (json) => fromJson(json, LoginResponse.fromJson));
+      path: 'auth/openid/callback',
+      queryParameters: {
+        'code': code,
+        'state': state,
+        'code_verifier': codeVerifier,
+      },
+      responseErrorHandler: responseErrorHandler,
+      cookie: cookie,
+      fromJson: (json) => fromJson(json, LoginResponse.fromJson),
+    );
 
     if (loginResponse != null) {
       final token = loginResponse.user.mapOrNull((user) => user.token);
@@ -132,10 +132,7 @@ class ServerService extends Service {
     return api.post(
       path: 'init',
       jsonObject: {
-        'newRoot': {
-          'username': newRootUsername,
-          'password': newRootPassword,
-        }
+        'newRoot': {'username': newRootUsername, 'password': newRootPassword},
       },
       responseErrorHandler: responseErrorHandler,
     );

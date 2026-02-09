@@ -7,7 +7,7 @@ part 'generated/podcast_episode_download.g.dart';
 
 /// See [Podcast Episode Download](https://api.audiobookshelf.org/#podcast-episode-download)
 @freezed
-class PodcastEpisodeDownload with _$PodcastEpisodeDownload {
+abstract class PodcastEpisodeDownload with _$PodcastEpisodeDownload {
   @jsonConverters
   const factory PodcastEpisodeDownload({
     required String id,

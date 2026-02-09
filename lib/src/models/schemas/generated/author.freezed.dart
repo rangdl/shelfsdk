@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,1105 +9,507 @@ part of '../author.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Author _$AuthorFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'default':
-      return _Author.fromJson(json);
-    case 'minified':
-      return AuthorMinified.fromJson(json);
-    case 'expanded':
-      return AuthorExpanded.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'Author',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+Author _$AuthorFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'default':
+          return AuthorBase.fromJson(
+            json
+          );
+                case 'minified':
+          return AuthorMinified.fromJson(
+            json
+          );
+                case 'expanded':
+          return AuthorExpanded.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'Author',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
 mixin _$Author {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)
-        $default, {
-    required TResult Function(String id, String name) minified,
-    required TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)
-        expanded,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult? Function(String id, String name)? minified,
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult Function(String id, String name)? minified,
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_Author value) $default, {
-    required TResult Function(AuthorMinified value) minified,
-    required TResult Function(AuthorExpanded value) expanded,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_Author value)? $default, {
-    TResult? Function(AuthorMinified value)? minified,
-    TResult? Function(AuthorExpanded value)? expanded,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_Author value)? $default, {
-    TResult Function(AuthorMinified value)? minified,
-    TResult Function(AuthorExpanded value)? expanded,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+ String get id; String get name;
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthorCopyWith<Author> get copyWith => _$AuthorCopyWithImpl<Author>(this as Author, _$identity);
 
   /// Serializes this Author to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthorCopyWith<Author> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Author&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name);
+
+@override
+String toString() {
+  return 'Author(id: $id, name: $name)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AuthorCopyWith<$Res> {
-  factory $AuthorCopyWith(Author value, $Res Function(Author) then) =
-      _$AuthorCopyWithImpl<$Res, Author>;
-  @useResult
-  $Res call({String id, String name});
-}
+abstract mixin class $AuthorCopyWith<$Res>  {
+  factory $AuthorCopyWith(Author value, $Res Function(Author) _then) = _$AuthorCopyWithImpl;
+@useResult
+$Res call({
+ String id, String name
+});
 
+
+
+
+}
 /// @nodoc
-class _$AuthorCopyWithImpl<$Res, $Val extends Author>
+class _$AuthorCopyWithImpl<$Res>
     implements $AuthorCopyWith<$Res> {
-  _$AuthorCopyWithImpl(this._value, this._then);
+  _$AuthorCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Author _self;
+  final $Res Function(Author) _then;
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AuthorImplCopyWith<$Res> implements $AuthorCopyWith<$Res> {
-  factory _$$AuthorImplCopyWith(
-          _$AuthorImpl value, $Res Function(_$AuthorImpl) then) =
-      __$$AuthorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String? asin,
-      String name,
-      String? description,
-      String? imagePath,
-      DateTime addedAt,
-      DateTime updatedAt,
-      List<LibraryItem>? libraryItems,
-      List<Series>? series});
 }
 
-/// @nodoc
-class __$$AuthorImplCopyWithImpl<$Res>
-    extends _$AuthorCopyWithImpl<$Res, _$AuthorImpl>
-    implements _$$AuthorImplCopyWith<$Res> {
-  __$$AuthorImplCopyWithImpl(
-      _$AuthorImpl _value, $Res Function(_$AuthorImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? asin = freezed,
-    Object? name = null,
-    Object? description = freezed,
-    Object? imagePath = freezed,
-    Object? addedAt = null,
-    Object? updatedAt = null,
-    Object? libraryItems = freezed,
-    Object? series = freezed,
-  }) {
-    return _then(_$AuthorImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      asin: freezed == asin
-          ? _value.asin
-          : asin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imagePath: freezed == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addedAt: null == addedAt
-          ? _value.addedAt
-          : addedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      libraryItems: freezed == libraryItems
-          ? _value._libraryItems
-          : libraryItems // ignore: cast_nullable_to_non_nullable
-              as List<LibraryItem>?,
-      series: freezed == series
-          ? _value._series
-          : series // ignore: cast_nullable_to_non_nullable
-              as List<Series>?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [Author].
+extension AuthorPatterns on Author {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( AuthorBase value)?  $default,{TResult Function( AuthorMinified value)?  minified,TResult Function( AuthorExpanded value)?  expanded,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case AuthorBase() when $default != null:
+return $default(_that);case AuthorMinified() when minified != null:
+return minified(_that);case AuthorExpanded() when expanded != null:
+return expanded(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( AuthorBase value)  $default,{required TResult Function( AuthorMinified value)  minified,required TResult Function( AuthorExpanded value)  expanded,}){
+final _that = this;
+switch (_that) {
+case AuthorBase():
+return $default(_that);case AuthorMinified():
+return minified(_that);case AuthorExpanded():
+return expanded(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( AuthorBase value)?  $default,{TResult? Function( AuthorMinified value)?  minified,TResult? Function( AuthorExpanded value)?  expanded,}){
+final _that = this;
+switch (_that) {
+case AuthorBase() when $default != null:
+return $default(_that);case AuthorMinified() when minified != null:
+return minified(_that);case AuthorExpanded() when expanded != null:
+return expanded(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  List<LibraryItem>? libraryItems,  List<Series>? series)?  $default,{TResult Function( String id,  String name)?  minified,TResult Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  int numBooks)?  expanded,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case AuthorBase() when $default != null:
+return $default(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.libraryItems,_that.series);case AuthorMinified() when minified != null:
+return minified(_that.id,_that.name);case AuthorExpanded() when expanded != null:
+return expanded(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.numBooks);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  List<LibraryItem>? libraryItems,  List<Series>? series)  $default,{required TResult Function( String id,  String name)  minified,required TResult Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  int numBooks)  expanded,}) {final _that = this;
+switch (_that) {
+case AuthorBase():
+return $default(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.libraryItems,_that.series);case AuthorMinified():
+return minified(_that.id,_that.name);case AuthorExpanded():
+return expanded(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.numBooks);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  List<LibraryItem>? libraryItems,  List<Series>? series)?  $default,{TResult? Function( String id,  String name)?  minified,TResult? Function( String id,  String? asin,  String name,  String? description,  String? imagePath,  DateTime addedAt,  DateTime updatedAt,  int numBooks)?  expanded,}) {final _that = this;
+switch (_that) {
+case AuthorBase() when $default != null:
+return $default(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.libraryItems,_that.series);case AuthorMinified() when minified != null:
+return minified(_that.id,_that.name);case AuthorExpanded() when expanded != null:
+return expanded(_that.id,_that.asin,_that.name,_that.description,_that.imagePath,_that.addedAt,_that.updatedAt,_that.numBooks);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AuthorImpl extends _Author {
-  const _$AuthorImpl(
-      {required this.id,
-      this.asin,
-      required this.name,
-      this.description,
-      this.imagePath,
-      required this.addedAt,
-      required this.updatedAt,
-      final List<LibraryItem>? libraryItems,
-      final List<Series>? series,
-      final String? $type})
-      : _libraryItems = libraryItems,
-        _series = series,
-        $type = $type ?? 'default',
-        super._();
+class AuthorBase extends Author {
+  const AuthorBase({required this.id, this.asin, required this.name, this.description, this.imagePath, required this.addedAt, required this.updatedAt, final  List<LibraryItem>? libraryItems, final  List<Series>? series, final  String? $type}): _libraryItems = libraryItems,_series = series,$type = $type ?? 'default',super._();
+  factory AuthorBase.fromJson(Map<String, dynamic> json) => _$AuthorBaseFromJson(json);
 
-  factory _$AuthorImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthorImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  final String? asin;
-  @override
-  final String name;
-  @override
-  final String? description;
-  @override
-  final String? imagePath;
-  @override
-  final DateTime addedAt;
-  @override
-  final DateTime updatedAt;
-  final List<LibraryItem>? _libraryItems;
-  @override
-  List<LibraryItem>? get libraryItems {
-    final value = _libraryItems;
-    if (value == null) return null;
-    if (_libraryItems is EqualUnmodifiableListView) return _libraryItems;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Series>? _series;
-  @override
-  List<Series>? get series {
-    final value = _series;
-    if (value == null) return null;
-    if (_series is EqualUnmodifiableListView) return _series;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'Author(id: $id, asin: $asin, name: $name, description: $description, imagePath: $imagePath, addedAt: $addedAt, updatedAt: $updatedAt, libraryItems: $libraryItems, series: $series)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthorImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.asin, asin) || other.asin == asin) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.imagePath, imagePath) ||
-                other.imagePath == imagePath) &&
-            (identical(other.addedAt, addedAt) || other.addedAt == addedAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
-            const DeepCollectionEquality()
-                .equals(other._libraryItems, _libraryItems) &&
-            const DeepCollectionEquality().equals(other._series, _series));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      asin,
-      name,
-      description,
-      imagePath,
-      addedAt,
-      updatedAt,
-      const DeepCollectionEquality().hash(_libraryItems),
-      const DeepCollectionEquality().hash(_series));
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
-      __$$AuthorImplCopyWithImpl<_$AuthorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)
-        $default, {
-    required TResult Function(String id, String name) minified,
-    required TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)
-        expanded,
-  }) {
-    return $default(id, asin, name, description, imagePath, addedAt, updatedAt,
-        libraryItems, series);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult? Function(String id, String name)? minified,
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-  }) {
-    return $default?.call(id, asin, name, description, imagePath, addedAt,
-        updatedAt, libraryItems, series);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult Function(String id, String name)? minified,
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(id, asin, name, description, imagePath, addedAt,
-          updatedAt, libraryItems, series);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_Author value) $default, {
-    required TResult Function(AuthorMinified value) minified,
-    required TResult Function(AuthorExpanded value) expanded,
-  }) {
-    return $default(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_Author value)? $default, {
-    TResult? Function(AuthorMinified value)? minified,
-    TResult? Function(AuthorExpanded value)? expanded,
-  }) {
-    return $default?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_Author value)? $default, {
-    TResult Function(AuthorMinified value)? minified,
-    TResult Function(AuthorExpanded value)? expanded,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthorImplToJson(
-      this,
-    );
-  }
+@override final  String id;
+ final  String? asin;
+@override final  String name;
+ final  String? description;
+ final  String? imagePath;
+ final  DateTime addedAt;
+ final  DateTime updatedAt;
+ final  List<LibraryItem>? _libraryItems;
+ List<LibraryItem>? get libraryItems {
+  final value = _libraryItems;
+  if (value == null) return null;
+  if (_libraryItems is EqualUnmodifiableListView) return _libraryItems;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _Author extends Author {
-  const factory _Author(
-      {required final String id,
-      final String? asin,
-      required final String name,
-      final String? description,
-      final String? imagePath,
-      required final DateTime addedAt,
-      required final DateTime updatedAt,
-      final List<LibraryItem>? libraryItems,
-      final List<Series>? series}) = _$AuthorImpl;
-  const _Author._() : super._();
+ final  List<Series>? _series;
+ List<Series>? get series {
+  final value = _series;
+  if (value == null) return null;
+  if (_series is EqualUnmodifiableListView) return _series;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  factory _Author.fromJson(Map<String, dynamic> json) = _$AuthorImpl.fromJson;
 
-  @override
-  String get id;
-  String? get asin;
-  @override
-  String get name;
-  String? get description;
-  String? get imagePath;
-  DateTime get addedAt;
-  DateTime get updatedAt;
-  List<LibraryItem>? get libraryItems;
-  List<Series>? get series;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthorBaseCopyWith<AuthorBase> get copyWith => _$AuthorBaseCopyWithImpl<AuthorBase>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AuthorBaseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthorBase&&(identical(other.id, id) || other.id == id)&&(identical(other.asin, asin) || other.asin == asin)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.addedAt, addedAt) || other.addedAt == addedAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._libraryItems, _libraryItems)&&const DeepCollectionEquality().equals(other._series, _series));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,asin,name,description,imagePath,addedAt,updatedAt,const DeepCollectionEquality().hash(_libraryItems),const DeepCollectionEquality().hash(_series));
+
+@override
+String toString() {
+  return 'Author(id: $id, asin: $asin, name: $name, description: $description, imagePath: $imagePath, addedAt: $addedAt, updatedAt: $updatedAt, libraryItems: $libraryItems, series: $series)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$AuthorMinifiedImplCopyWith<$Res>
-    implements $AuthorCopyWith<$Res> {
-  factory _$$AuthorMinifiedImplCopyWith(_$AuthorMinifiedImpl value,
-          $Res Function(_$AuthorMinifiedImpl) then) =
-      __$$AuthorMinifiedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String id, String name});
+abstract mixin class $AuthorBaseCopyWith<$Res> implements $AuthorCopyWith<$Res> {
+  factory $AuthorBaseCopyWith(AuthorBase value, $Res Function(AuthorBase) _then) = _$AuthorBaseCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String? asin, String name, String? description, String? imagePath, DateTime addedAt, DateTime updatedAt, List<LibraryItem>? libraryItems, List<Series>? series
+});
+
+
+
+
+}
+/// @nodoc
+class _$AuthorBaseCopyWithImpl<$Res>
+    implements $AuthorBaseCopyWith<$Res> {
+  _$AuthorBaseCopyWithImpl(this._self, this._then);
+
+  final AuthorBase _self;
+  final $Res Function(AuthorBase) _then;
+
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? asin = freezed,Object? name = null,Object? description = freezed,Object? imagePath = freezed,Object? addedAt = null,Object? updatedAt = null,Object? libraryItems = freezed,Object? series = freezed,}) {
+  return _then(AuthorBase(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,asin: freezed == asin ? _self.asin : asin // ignore: cast_nullable_to_non_nullable
+as String?,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,imagePath: freezed == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String?,addedAt: null == addedAt ? _self.addedAt : addedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,libraryItems: freezed == libraryItems ? _self._libraryItems : libraryItems // ignore: cast_nullable_to_non_nullable
+as List<LibraryItem>?,series: freezed == series ? _self._series : series // ignore: cast_nullable_to_non_nullable
+as List<Series>?,
+  ));
 }
 
-/// @nodoc
-class __$$AuthorMinifiedImplCopyWithImpl<$Res>
-    extends _$AuthorCopyWithImpl<$Res, _$AuthorMinifiedImpl>
-    implements _$$AuthorMinifiedImplCopyWith<$Res> {
-  __$$AuthorMinifiedImplCopyWithImpl(
-      _$AuthorMinifiedImpl _value, $Res Function(_$AuthorMinifiedImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-  }) {
-    return _then(_$AuthorMinifiedImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AuthorMinifiedImpl extends AuthorMinified {
-  const _$AuthorMinifiedImpl(
-      {required this.id, required this.name, final String? $type})
-      : $type = $type ?? 'minified',
-        super._();
+class AuthorMinified extends Author {
+  const AuthorMinified({required this.id, required this.name, final  String? $type}): $type = $type ?? 'minified',super._();
+  factory AuthorMinified.fromJson(Map<String, dynamic> json) => _$AuthorMinifiedFromJson(json);
 
-  factory _$AuthorMinifiedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthorMinifiedImplFromJson(json);
+@override final  String id;
+@override final  String name;
 
-  @override
-  final String id;
-  @override
-  final String name;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
-  @override
-  String toString() {
-    return 'Author.minified(id: $id, name: $name)';
-  }
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthorMinifiedCopyWith<AuthorMinified> get copyWith => _$AuthorMinifiedCopyWithImpl<AuthorMinified>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthorMinifiedImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, name);
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthorMinifiedImplCopyWith<_$AuthorMinifiedImpl> get copyWith =>
-      __$$AuthorMinifiedImplCopyWithImpl<_$AuthorMinifiedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)
-        $default, {
-    required TResult Function(String id, String name) minified,
-    required TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)
-        expanded,
-  }) {
-    return minified(id, name);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult? Function(String id, String name)? minified,
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-  }) {
-    return minified?.call(id, name);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult Function(String id, String name)? minified,
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(id, name);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_Author value) $default, {
-    required TResult Function(AuthorMinified value) minified,
-    required TResult Function(AuthorExpanded value) expanded,
-  }) {
-    return minified(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_Author value)? $default, {
-    TResult? Function(AuthorMinified value)? minified,
-    TResult? Function(AuthorExpanded value)? expanded,
-  }) {
-    return minified?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_Author value)? $default, {
-    TResult Function(AuthorMinified value)? minified,
-    TResult Function(AuthorExpanded value)? expanded,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthorMinifiedImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AuthorMinifiedToJson(this, );
 }
 
-abstract class AuthorMinified extends Author {
-  const factory AuthorMinified(
-      {required final String id,
-      required final String name}) = _$AuthorMinifiedImpl;
-  const AuthorMinified._() : super._();
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthorMinified&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name));
+}
 
-  factory AuthorMinified.fromJson(Map<String, dynamic> json) =
-      _$AuthorMinifiedImpl.fromJson;
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name);
 
-  @override
-  String get id;
-  @override
-  String get name;
+@override
+String toString() {
+  return 'Author.minified(id: $id, name: $name)';
+}
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthorMinifiedImplCopyWith<_$AuthorMinifiedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+
 }
 
 /// @nodoc
-abstract class _$$AuthorExpandedImplCopyWith<$Res>
-    implements $AuthorCopyWith<$Res> {
-  factory _$$AuthorExpandedImplCopyWith(_$AuthorExpandedImpl value,
-          $Res Function(_$AuthorExpandedImpl) then) =
-      __$$AuthorExpandedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String? asin,
-      String name,
-      String? description,
-      String? imagePath,
-      DateTime addedAt,
-      DateTime updatedAt,
-      int numBooks});
+abstract mixin class $AuthorMinifiedCopyWith<$Res> implements $AuthorCopyWith<$Res> {
+  factory $AuthorMinifiedCopyWith(AuthorMinified value, $Res Function(AuthorMinified) _then) = _$AuthorMinifiedCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String name
+});
+
+
+
+
+}
+/// @nodoc
+class _$AuthorMinifiedCopyWithImpl<$Res>
+    implements $AuthorMinifiedCopyWith<$Res> {
+  _$AuthorMinifiedCopyWithImpl(this._self, this._then);
+
+  final AuthorMinified _self;
+  final $Res Function(AuthorMinified) _then;
+
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,}) {
+  return _then(AuthorMinified(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$AuthorExpandedImplCopyWithImpl<$Res>
-    extends _$AuthorCopyWithImpl<$Res, _$AuthorExpandedImpl>
-    implements _$$AuthorExpandedImplCopyWith<$Res> {
-  __$$AuthorExpandedImplCopyWithImpl(
-      _$AuthorExpandedImpl _value, $Res Function(_$AuthorExpandedImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? asin = freezed,
-    Object? name = null,
-    Object? description = freezed,
-    Object? imagePath = freezed,
-    Object? addedAt = null,
-    Object? updatedAt = null,
-    Object? numBooks = null,
-  }) {
-    return _then(_$AuthorExpandedImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      asin: freezed == asin
-          ? _value.asin
-          : asin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imagePath: freezed == imagePath
-          ? _value.imagePath
-          : imagePath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      addedAt: null == addedAt
-          ? _value.addedAt
-          : addedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      numBooks: null == numBooks
-          ? _value.numBooks
-          : numBooks // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AuthorExpandedImpl extends AuthorExpanded {
-  const _$AuthorExpandedImpl(
-      {required this.id,
-      this.asin,
-      required this.name,
-      this.description,
-      this.imagePath,
-      required this.addedAt,
-      required this.updatedAt,
-      required this.numBooks,
-      final String? $type})
-      : $type = $type ?? 'expanded',
-        super._();
+class AuthorExpanded extends Author {
+  const AuthorExpanded({required this.id, this.asin, required this.name, this.description, this.imagePath, required this.addedAt, required this.updatedAt, required this.numBooks, final  String? $type}): $type = $type ?? 'expanded',super._();
+  factory AuthorExpanded.fromJson(Map<String, dynamic> json) => _$AuthorExpandedFromJson(json);
 
-  factory _$AuthorExpandedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthorExpandedImplFromJson(json);
+@override final  String id;
+ final  String? asin;
+@override final  String name;
+ final  String? description;
+ final  String? imagePath;
+ final  DateTime addedAt;
+ final  DateTime updatedAt;
+ final  int numBooks;
 
-  @override
-  final String id;
-  @override
-  final String? asin;
-  @override
-  final String name;
-  @override
-  final String? description;
-  @override
-  final String? imagePath;
-  @override
-  final DateTime addedAt;
-  @override
-  final DateTime updatedAt;
-  @override
-  final int numBooks;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
-  @override
-  String toString() {
-    return 'Author.expanded(id: $id, asin: $asin, name: $name, description: $description, imagePath: $imagePath, addedAt: $addedAt, updatedAt: $updatedAt, numBooks: $numBooks)';
-  }
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthorExpandedCopyWith<AuthorExpanded> get copyWith => _$AuthorExpandedCopyWithImpl<AuthorExpanded>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthorExpandedImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.asin, asin) || other.asin == asin) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.imagePath, imagePath) ||
-                other.imagePath == imagePath) &&
-            (identical(other.addedAt, addedAt) || other.addedAt == addedAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
-            (identical(other.numBooks, numBooks) ||
-                other.numBooks == numBooks));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, asin, name, description,
-      imagePath, addedAt, updatedAt, numBooks);
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthorExpandedImplCopyWith<_$AuthorExpandedImpl> get copyWith =>
-      __$$AuthorExpandedImplCopyWithImpl<_$AuthorExpandedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)
-        $default, {
-    required TResult Function(String id, String name) minified,
-    required TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)
-        expanded,
-  }) {
-    return expanded(
-        id, asin, name, description, imagePath, addedAt, updatedAt, numBooks);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult? Function(String id, String name)? minified,
-    TResult? Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-  }) {
-    return expanded?.call(
-        id, asin, name, description, imagePath, addedAt, updatedAt, numBooks);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            List<LibraryItem>? libraryItems,
-            List<Series>? series)?
-        $default, {
-    TResult Function(String id, String name)? minified,
-    TResult Function(
-            String id,
-            String? asin,
-            String name,
-            String? description,
-            String? imagePath,
-            DateTime addedAt,
-            DateTime updatedAt,
-            int numBooks)?
-        expanded,
-    required TResult orElse(),
-  }) {
-    if (expanded != null) {
-      return expanded(
-          id, asin, name, description, imagePath, addedAt, updatedAt, numBooks);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_Author value) $default, {
-    required TResult Function(AuthorMinified value) minified,
-    required TResult Function(AuthorExpanded value) expanded,
-  }) {
-    return expanded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_Author value)? $default, {
-    TResult? Function(AuthorMinified value)? minified,
-    TResult? Function(AuthorExpanded value)? expanded,
-  }) {
-    return expanded?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_Author value)? $default, {
-    TResult Function(AuthorMinified value)? minified,
-    TResult Function(AuthorExpanded value)? expanded,
-    required TResult orElse(),
-  }) {
-    if (expanded != null) {
-      return expanded(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthorExpandedImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AuthorExpandedToJson(this, );
 }
 
-abstract class AuthorExpanded extends Author {
-  const factory AuthorExpanded(
-      {required final String id,
-      final String? asin,
-      required final String name,
-      final String? description,
-      final String? imagePath,
-      required final DateTime addedAt,
-      required final DateTime updatedAt,
-      required final int numBooks}) = _$AuthorExpandedImpl;
-  const AuthorExpanded._() : super._();
-
-  factory AuthorExpanded.fromJson(Map<String, dynamic> json) =
-      _$AuthorExpandedImpl.fromJson;
-
-  @override
-  String get id;
-  String? get asin;
-  @override
-  String get name;
-  String? get description;
-  String? get imagePath;
-  DateTime get addedAt;
-  DateTime get updatedAt;
-  int get numBooks;
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthorExpandedImplCopyWith<_$AuthorExpandedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthorExpanded&&(identical(other.id, id) || other.id == id)&&(identical(other.asin, asin) || other.asin == asin)&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&(identical(other.imagePath, imagePath) || other.imagePath == imagePath)&&(identical(other.addedAt, addedAt) || other.addedAt == addedAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.numBooks, numBooks) || other.numBooks == numBooks));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,asin,name,description,imagePath,addedAt,updatedAt,numBooks);
+
+@override
+String toString() {
+  return 'Author.expanded(id: $id, asin: $asin, name: $name, description: $description, imagePath: $imagePath, addedAt: $addedAt, updatedAt: $updatedAt, numBooks: $numBooks)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $AuthorExpandedCopyWith<$Res> implements $AuthorCopyWith<$Res> {
+  factory $AuthorExpandedCopyWith(AuthorExpanded value, $Res Function(AuthorExpanded) _then) = _$AuthorExpandedCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String? asin, String name, String? description, String? imagePath, DateTime addedAt, DateTime updatedAt, int numBooks
+});
+
+
+
+
+}
+/// @nodoc
+class _$AuthorExpandedCopyWithImpl<$Res>
+    implements $AuthorExpandedCopyWith<$Res> {
+  _$AuthorExpandedCopyWithImpl(this._self, this._then);
+
+  final AuthorExpanded _self;
+  final $Res Function(AuthorExpanded) _then;
+
+/// Create a copy of Author
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? asin = freezed,Object? name = null,Object? description = freezed,Object? imagePath = freezed,Object? addedAt = null,Object? updatedAt = null,Object? numBooks = null,}) {
+  return _then(AuthorExpanded(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,asin: freezed == asin ? _self.asin : asin // ignore: cast_nullable_to_non_nullable
+as String?,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,imagePath: freezed == imagePath ? _self.imagePath : imagePath // ignore: cast_nullable_to_non_nullable
+as String?,addedAt: null == addedAt ? _self.addedAt : addedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,numBooks: null == numBooks ? _self.numBooks : numBooks // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,306 +9,311 @@ part of '../audio_track.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-AudioTrack _$AudioTrackFromJson(Map<String, dynamic> json) {
-  return _AudioTrack.fromJson(json);
-}
 
 /// @nodoc
 mixin _$AudioTrack {
-  int get index => throw _privateConstructorUsedError;
-  Duration get startOffset => throw _privateConstructorUsedError;
-  Duration get duration => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String get contentUrl => throw _privateConstructorUsedError;
-  String get mimeType => throw _privateConstructorUsedError;
-  FileMetadata? get metadata => throw _privateConstructorUsedError;
+
+ int get index; Duration get startOffset; Duration get duration; String get title; String get contentUrl; String get mimeType; FileMetadata? get metadata;
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AudioTrackCopyWith<AudioTrack> get copyWith => _$AudioTrackCopyWithImpl<AudioTrack>(this as AudioTrack, _$identity);
 
   /// Serializes this AudioTrack to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AudioTrackCopyWith<AudioTrack> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AudioTrack&&(identical(other.index, index) || other.index == index)&&(identical(other.startOffset, startOffset) || other.startOffset == startOffset)&&(identical(other.duration, duration) || other.duration == duration)&&(identical(other.title, title) || other.title == title)&&(identical(other.contentUrl, contentUrl) || other.contentUrl == contentUrl)&&(identical(other.mimeType, mimeType) || other.mimeType == mimeType)&&(identical(other.metadata, metadata) || other.metadata == metadata));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,index,startOffset,duration,title,contentUrl,mimeType,metadata);
+
+@override
+String toString() {
+  return 'AudioTrack(index: $index, startOffset: $startOffset, duration: $duration, title: $title, contentUrl: $contentUrl, mimeType: $mimeType, metadata: $metadata)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AudioTrackCopyWith<$Res> {
-  factory $AudioTrackCopyWith(
-          AudioTrack value, $Res Function(AudioTrack) then) =
-      _$AudioTrackCopyWithImpl<$Res, AudioTrack>;
-  @useResult
-  $Res call(
-      {int index,
-      Duration startOffset,
-      Duration duration,
-      String title,
-      String contentUrl,
-      String mimeType,
-      FileMetadata? metadata});
+abstract mixin class $AudioTrackCopyWith<$Res>  {
+  factory $AudioTrackCopyWith(AudioTrack value, $Res Function(AudioTrack) _then) = _$AudioTrackCopyWithImpl;
+@useResult
+$Res call({
+ int index, Duration startOffset, Duration duration, String title, String contentUrl, String mimeType, FileMetadata? metadata
+});
 
-  $FileMetadataCopyWith<$Res>? get metadata;
+
+$FileMetadataCopyWith<$Res>? get metadata;
+
 }
-
 /// @nodoc
-class _$AudioTrackCopyWithImpl<$Res, $Val extends AudioTrack>
+class _$AudioTrackCopyWithImpl<$Res>
     implements $AudioTrackCopyWith<$Res> {
-  _$AudioTrackCopyWithImpl(this._value, this._then);
+  _$AudioTrackCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AudioTrack _self;
+  final $Res Function(AudioTrack) _then;
 
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-    Object? startOffset = null,
-    Object? duration = null,
-    Object? title = null,
-    Object? contentUrl = null,
-    Object? mimeType = null,
-    Object? metadata = freezed,
-  }) {
-    return _then(_value.copyWith(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      startOffset: null == startOffset
-          ? _value.startOffset
-          : startOffset // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      duration: null == duration
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      contentUrl: null == contentUrl
-          ? _value.contentUrl
-          : contentUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mimeType: null == mimeType
-          ? _value.mimeType
-          : mimeType // ignore: cast_nullable_to_non_nullable
-              as String,
-      metadata: freezed == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as FileMetadata?,
-    ) as $Val);
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? index = null,Object? startOffset = null,Object? duration = null,Object? title = null,Object? contentUrl = null,Object? mimeType = null,Object? metadata = freezed,}) {
+  return _then(_self.copyWith(
+index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,startOffset: null == startOffset ? _self.startOffset : startOffset // ignore: cast_nullable_to_non_nullable
+as Duration,duration: null == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
+as Duration,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,contentUrl: null == contentUrl ? _self.contentUrl : contentUrl // ignore: cast_nullable_to_non_nullable
+as String,mimeType: null == mimeType ? _self.mimeType : mimeType // ignore: cast_nullable_to_non_nullable
+as String,metadata: freezed == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as FileMetadata?,
+  ));
+}
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FileMetadataCopyWith<$Res>? get metadata {
+    if (_self.metadata == null) {
+    return null;
   }
 
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $FileMetadataCopyWith<$Res>? get metadata {
-    if (_value.metadata == null) {
-      return null;
-    }
-
-    return $FileMetadataCopyWith<$Res>(_value.metadata!, (value) {
-      return _then(_value.copyWith(metadata: value) as $Val);
-    });
-  }
+  return $FileMetadataCopyWith<$Res>(_self.metadata!, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$AudioTrackImplCopyWith<$Res>
-    implements $AudioTrackCopyWith<$Res> {
-  factory _$$AudioTrackImplCopyWith(
-          _$AudioTrackImpl value, $Res Function(_$AudioTrackImpl) then) =
-      __$$AudioTrackImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {int index,
-      Duration startOffset,
-      Duration duration,
-      String title,
-      String contentUrl,
-      String mimeType,
-      FileMetadata? metadata});
 
-  @override
-  $FileMetadataCopyWith<$Res>? get metadata;
+/// Adds pattern-matching-related methods to [AudioTrack].
+extension AudioTrackPatterns on AudioTrack {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AudioTrack value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AudioTrack() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AudioTrack value)  $default,){
+final _that = this;
+switch (_that) {
+case _AudioTrack():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AudioTrack value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AudioTrack() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int index,  Duration startOffset,  Duration duration,  String title,  String contentUrl,  String mimeType,  FileMetadata? metadata)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AudioTrack() when $default != null:
+return $default(_that.index,_that.startOffset,_that.duration,_that.title,_that.contentUrl,_that.mimeType,_that.metadata);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int index,  Duration startOffset,  Duration duration,  String title,  String contentUrl,  String mimeType,  FileMetadata? metadata)  $default,) {final _that = this;
+switch (_that) {
+case _AudioTrack():
+return $default(_that.index,_that.startOffset,_that.duration,_that.title,_that.contentUrl,_that.mimeType,_that.metadata);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int index,  Duration startOffset,  Duration duration,  String title,  String contentUrl,  String mimeType,  FileMetadata? metadata)?  $default,) {final _that = this;
+switch (_that) {
+case _AudioTrack() when $default != null:
+return $default(_that.index,_that.startOffset,_that.duration,_that.title,_that.contentUrl,_that.mimeType,_that.metadata);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$AudioTrackImplCopyWithImpl<$Res>
-    extends _$AudioTrackCopyWithImpl<$Res, _$AudioTrackImpl>
-    implements _$$AudioTrackImplCopyWith<$Res> {
-  __$$AudioTrackImplCopyWithImpl(
-      _$AudioTrackImpl _value, $Res Function(_$AudioTrackImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-    Object? startOffset = null,
-    Object? duration = null,
-    Object? title = null,
-    Object? contentUrl = null,
-    Object? mimeType = null,
-    Object? metadata = freezed,
-  }) {
-    return _then(_$AudioTrackImpl(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      startOffset: null == startOffset
-          ? _value.startOffset
-          : startOffset // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      duration: null == duration
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      contentUrl: null == contentUrl
-          ? _value.contentUrl
-          : contentUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mimeType: null == mimeType
-          ? _value.mimeType
-          : mimeType // ignore: cast_nullable_to_non_nullable
-              as String,
-      metadata: freezed == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as FileMetadata?,
-    ));
-  }
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AudioTrackImpl implements _AudioTrack {
-  const _$AudioTrackImpl(
-      {required this.index,
-      required this.startOffset,
-      required this.duration,
-      required this.title,
-      required this.contentUrl,
-      required this.mimeType,
-      this.metadata});
+class _AudioTrack implements AudioTrack {
+  const _AudioTrack({required this.index, required this.startOffset, required this.duration, required this.title, required this.contentUrl, required this.mimeType, this.metadata});
+  factory _AudioTrack.fromJson(Map<String, dynamic> json) => _$AudioTrackFromJson(json);
 
-  factory _$AudioTrackImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AudioTrackImplFromJson(json);
+@override final  int index;
+@override final  Duration startOffset;
+@override final  Duration duration;
+@override final  String title;
+@override final  String contentUrl;
+@override final  String mimeType;
+@override final  FileMetadata? metadata;
 
-  @override
-  final int index;
-  @override
-  final Duration startOffset;
-  @override
-  final Duration duration;
-  @override
-  final String title;
-  @override
-  final String contentUrl;
-  @override
-  final String mimeType;
-  @override
-  final FileMetadata? metadata;
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AudioTrackCopyWith<_AudioTrack> get copyWith => __$AudioTrackCopyWithImpl<_AudioTrack>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'AudioTrack(index: $index, startOffset: $startOffset, duration: $duration, title: $title, contentUrl: $contentUrl, mimeType: $mimeType, metadata: $metadata)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AudioTrackImpl &&
-            (identical(other.index, index) || other.index == index) &&
-            (identical(other.startOffset, startOffset) ||
-                other.startOffset == startOffset) &&
-            (identical(other.duration, duration) ||
-                other.duration == duration) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.contentUrl, contentUrl) ||
-                other.contentUrl == contentUrl) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, index, startOffset, duration,
-      title, contentUrl, mimeType, metadata);
-
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AudioTrackImplCopyWith<_$AudioTrackImpl> get copyWith =>
-      __$$AudioTrackImplCopyWithImpl<_$AudioTrackImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AudioTrackImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AudioTrackToJson(this, );
 }
 
-abstract class _AudioTrack implements AudioTrack {
-  const factory _AudioTrack(
-      {required final int index,
-      required final Duration startOffset,
-      required final Duration duration,
-      required final String title,
-      required final String contentUrl,
-      required final String mimeType,
-      final FileMetadata? metadata}) = _$AudioTrackImpl;
-
-  factory _AudioTrack.fromJson(Map<String, dynamic> json) =
-      _$AudioTrackImpl.fromJson;
-
-  @override
-  int get index;
-  @override
-  Duration get startOffset;
-  @override
-  Duration get duration;
-  @override
-  String get title;
-  @override
-  String get contentUrl;
-  @override
-  String get mimeType;
-  @override
-  FileMetadata? get metadata;
-
-  /// Create a copy of AudioTrack
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AudioTrackImplCopyWith<_$AudioTrackImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioTrack&&(identical(other.index, index) || other.index == index)&&(identical(other.startOffset, startOffset) || other.startOffset == startOffset)&&(identical(other.duration, duration) || other.duration == duration)&&(identical(other.title, title) || other.title == title)&&(identical(other.contentUrl, contentUrl) || other.contentUrl == contentUrl)&&(identical(other.mimeType, mimeType) || other.mimeType == mimeType)&&(identical(other.metadata, metadata) || other.metadata == metadata));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,index,startOffset,duration,title,contentUrl,mimeType,metadata);
+
+@override
+String toString() {
+  return 'AudioTrack(index: $index, startOffset: $startOffset, duration: $duration, title: $title, contentUrl: $contentUrl, mimeType: $mimeType, metadata: $metadata)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AudioTrackCopyWith<$Res> implements $AudioTrackCopyWith<$Res> {
+  factory _$AudioTrackCopyWith(_AudioTrack value, $Res Function(_AudioTrack) _then) = __$AudioTrackCopyWithImpl;
+@override @useResult
+$Res call({
+ int index, Duration startOffset, Duration duration, String title, String contentUrl, String mimeType, FileMetadata? metadata
+});
+
+
+@override $FileMetadataCopyWith<$Res>? get metadata;
+
+}
+/// @nodoc
+class __$AudioTrackCopyWithImpl<$Res>
+    implements _$AudioTrackCopyWith<$Res> {
+  __$AudioTrackCopyWithImpl(this._self, this._then);
+
+  final _AudioTrack _self;
+  final $Res Function(_AudioTrack) _then;
+
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? index = null,Object? startOffset = null,Object? duration = null,Object? title = null,Object? contentUrl = null,Object? mimeType = null,Object? metadata = freezed,}) {
+  return _then(_AudioTrack(
+index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,startOffset: null == startOffset ? _self.startOffset : startOffset // ignore: cast_nullable_to_non_nullable
+as Duration,duration: null == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
+as Duration,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,contentUrl: null == contentUrl ? _self.contentUrl : contentUrl // ignore: cast_nullable_to_non_nullable
+as String,mimeType: null == mimeType ? _self.mimeType : mimeType // ignore: cast_nullable_to_non_nullable
+as String,metadata: freezed == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as FileMetadata?,
+  ));
+}
+
+/// Create a copy of AudioTrack
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FileMetadataCopyWith<$Res>? get metadata {
+    if (_self.metadata == null) {
+    return null;
+  }
+
+  return $FileMetadataCopyWith<$Res>(_self.metadata!, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
+}
+
+// dart format on

@@ -4,7 +4,7 @@ part 'generated/rss_feed_episode_enclosure.freezed.dart';
 part 'generated/rss_feed_episode_enclosure.g.dart';
 
 @freezed
-class RssFeedEpisodeEnclosure with _$RssFeedEpisodeEnclosure {
+abstract class RssFeedEpisodeEnclosure with _$RssFeedEpisodeEnclosure {
   const factory RssFeedEpisodeEnclosure({
     required Uri url,
     required String type,

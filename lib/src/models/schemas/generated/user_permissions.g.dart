@@ -6,9 +6,8 @@ part of '../user_permissions.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserPermissionsImpl _$$UserPermissionsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UserPermissionsImpl(
+_UserPermissions _$UserPermissionsFromJson(Map<String, dynamic> json) =>
+    _UserPermissions(
       download: json['download'] as bool,
       update: json['update'] as bool,
       delete: json['delete'] as bool,
@@ -18,8 +17,7 @@ _$UserPermissionsImpl _$$UserPermissionsImplFromJson(
       accessExplicitContent: json['accessExplicitContent'] as bool,
     );
 
-Map<String, dynamic> _$$UserPermissionsImplToJson(
-        _$UserPermissionsImpl instance) =>
+Map<String, dynamic> _$UserPermissionsToJson(_UserPermissions instance) =>
     <String, dynamic>{
       'download': instance.download,
       'update': instance.update,

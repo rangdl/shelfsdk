@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,429 +9,571 @@ part of '../library_scan.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-LibraryScan _$LibraryScanFromJson(Map<String, dynamic> json) {
-  return _LibraryScan.fromJson(json);
-}
 
 /// @nodoc
 mixin _$LibraryScan {
-  @JsonKey(name: 'id')
-  String get libraryId => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  LibraryScanResults? get results => throw _privateConstructorUsedError;
+
+@JsonKey(name: 'id') String get libraryId; String get type; String get name; LibraryScanResults? get results;
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LibraryScanCopyWith<LibraryScan> get copyWith => _$LibraryScanCopyWithImpl<LibraryScan>(this as LibraryScan, _$identity);
 
   /// Serializes this LibraryScan to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LibraryScanCopyWith<LibraryScan> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LibraryScan&&(identical(other.libraryId, libraryId) || other.libraryId == libraryId)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.results, results) || other.results == results));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,libraryId,type,name,results);
+
+@override
+String toString() {
+  return 'LibraryScan(libraryId: $libraryId, type: $type, name: $name, results: $results)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $LibraryScanCopyWith<$Res> {
-  factory $LibraryScanCopyWith(
-          LibraryScan value, $Res Function(LibraryScan) then) =
-      _$LibraryScanCopyWithImpl<$Res, LibraryScan>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String libraryId,
-      String type,
-      String name,
-      LibraryScanResults? results});
+abstract mixin class $LibraryScanCopyWith<$Res>  {
+  factory $LibraryScanCopyWith(LibraryScan value, $Res Function(LibraryScan) _then) = _$LibraryScanCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'id') String libraryId, String type, String name, LibraryScanResults? results
+});
 
-  $LibraryScanResultsCopyWith<$Res>? get results;
+
+$LibraryScanResultsCopyWith<$Res>? get results;
+
 }
-
 /// @nodoc
-class _$LibraryScanCopyWithImpl<$Res, $Val extends LibraryScan>
+class _$LibraryScanCopyWithImpl<$Res>
     implements $LibraryScanCopyWith<$Res> {
-  _$LibraryScanCopyWithImpl(this._value, this._then);
+  _$LibraryScanCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final LibraryScan _self;
+  final $Res Function(LibraryScan) _then;
 
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? libraryId = null,
-    Object? type = null,
-    Object? name = null,
-    Object? results = freezed,
-  }) {
-    return _then(_value.copyWith(
-      libraryId: null == libraryId
-          ? _value.libraryId
-          : libraryId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      results: freezed == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as LibraryScanResults?,
-    ) as $Val);
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? libraryId = null,Object? type = null,Object? name = null,Object? results = freezed,}) {
+  return _then(_self.copyWith(
+libraryId: null == libraryId ? _self.libraryId : libraryId // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,results: freezed == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as LibraryScanResults?,
+  ));
+}
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryScanResultsCopyWith<$Res>? get results {
+    if (_self.results == null) {
+    return null;
   }
 
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LibraryScanResultsCopyWith<$Res>? get results {
-    if (_value.results == null) {
-      return null;
-    }
-
-    return $LibraryScanResultsCopyWith<$Res>(_value.results!, (value) {
-      return _then(_value.copyWith(results: value) as $Val);
-    });
-  }
+  return $LibraryScanResultsCopyWith<$Res>(_self.results!, (value) {
+    return _then(_self.copyWith(results: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$LibraryScanImplCopyWith<$Res>
-    implements $LibraryScanCopyWith<$Res> {
-  factory _$$LibraryScanImplCopyWith(
-          _$LibraryScanImpl value, $Res Function(_$LibraryScanImpl) then) =
-      __$$LibraryScanImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String libraryId,
-      String type,
-      String name,
-      LibraryScanResults? results});
 
-  @override
-  $LibraryScanResultsCopyWith<$Res>? get results;
+/// Adds pattern-matching-related methods to [LibraryScan].
+extension LibraryScanPatterns on LibraryScan {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LibraryScan value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _LibraryScan() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LibraryScan value)  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryScan():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LibraryScan value)?  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryScan() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String libraryId,  String type,  String name,  LibraryScanResults? results)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _LibraryScan() when $default != null:
+return $default(_that.libraryId,_that.type,_that.name,_that.results);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String libraryId,  String type,  String name,  LibraryScanResults? results)  $default,) {final _that = this;
+switch (_that) {
+case _LibraryScan():
+return $default(_that.libraryId,_that.type,_that.name,_that.results);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'id')  String libraryId,  String type,  String name,  LibraryScanResults? results)?  $default,) {final _that = this;
+switch (_that) {
+case _LibraryScan() when $default != null:
+return $default(_that.libraryId,_that.type,_that.name,_that.results);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$LibraryScanImplCopyWithImpl<$Res>
-    extends _$LibraryScanCopyWithImpl<$Res, _$LibraryScanImpl>
-    implements _$$LibraryScanImplCopyWith<$Res> {
-  __$$LibraryScanImplCopyWithImpl(
-      _$LibraryScanImpl _value, $Res Function(_$LibraryScanImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? libraryId = null,
-    Object? type = null,
-    Object? name = null,
-    Object? results = freezed,
-  }) {
-    return _then(_$LibraryScanImpl(
-      libraryId: null == libraryId
-          ? _value.libraryId
-          : libraryId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      results: freezed == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as LibraryScanResults?,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LibraryScanImpl implements _LibraryScan {
-  const _$LibraryScanImpl(
-      {@JsonKey(name: 'id') required this.libraryId,
-      required this.type,
-      required this.name,
-      this.results});
 
-  factory _$LibraryScanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LibraryScanImplFromJson(json);
+class _LibraryScan implements LibraryScan {
+  const _LibraryScan({@JsonKey(name: 'id') required this.libraryId, required this.type, required this.name, this.results});
+  factory _LibraryScan.fromJson(Map<String, dynamic> json) => _$LibraryScanFromJson(json);
 
-  @override
-  @JsonKey(name: 'id')
-  final String libraryId;
-  @override
-  final String type;
-  @override
-  final String name;
-  @override
-  final LibraryScanResults? results;
+@override@JsonKey(name: 'id') final  String libraryId;
+@override final  String type;
+@override final  String name;
+@override final  LibraryScanResults? results;
 
-  @override
-  String toString() {
-    return 'LibraryScan(libraryId: $libraryId, type: $type, name: $name, results: $results)';
-  }
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$LibraryScanCopyWith<_LibraryScan> get copyWith => __$LibraryScanCopyWithImpl<_LibraryScan>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LibraryScanImpl &&
-            (identical(other.libraryId, libraryId) ||
-                other.libraryId == libraryId) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.results, results) || other.results == results));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, libraryId, type, name, results);
-
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LibraryScanImplCopyWith<_$LibraryScanImpl> get copyWith =>
-      __$$LibraryScanImplCopyWithImpl<_$LibraryScanImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LibraryScanImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$LibraryScanToJson(this, );
 }
 
-abstract class _LibraryScan implements LibraryScan {
-  const factory _LibraryScan(
-      {@JsonKey(name: 'id') required final String libraryId,
-      required final String type,
-      required final String name,
-      final LibraryScanResults? results}) = _$LibraryScanImpl;
-
-  factory _LibraryScan.fromJson(Map<String, dynamic> json) =
-      _$LibraryScanImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'id')
-  String get libraryId;
-  @override
-  String get type;
-  @override
-  String get name;
-  @override
-  LibraryScanResults? get results;
-
-  /// Create a copy of LibraryScan
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LibraryScanImplCopyWith<_$LibraryScanImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LibraryScan&&(identical(other.libraryId, libraryId) || other.libraryId == libraryId)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.results, results) || other.results == results));
 }
 
-LibraryScanResults _$LibraryScanResultsFromJson(Map<String, dynamic> json) {
-  return _LibraryScanResults.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,libraryId,type,name,results);
+
+@override
+String toString() {
+  return 'LibraryScan(libraryId: $libraryId, type: $type, name: $name, results: $results)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$LibraryScanCopyWith<$Res> implements $LibraryScanCopyWith<$Res> {
+  factory _$LibraryScanCopyWith(_LibraryScan value, $Res Function(_LibraryScan) _then) = __$LibraryScanCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'id') String libraryId, String type, String name, LibraryScanResults? results
+});
+
+
+@override $LibraryScanResultsCopyWith<$Res>? get results;
+
+}
+/// @nodoc
+class __$LibraryScanCopyWithImpl<$Res>
+    implements _$LibraryScanCopyWith<$Res> {
+  __$LibraryScanCopyWithImpl(this._self, this._then);
+
+  final _LibraryScan _self;
+  final $Res Function(_LibraryScan) _then;
+
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? libraryId = null,Object? type = null,Object? name = null,Object? results = freezed,}) {
+  return _then(_LibraryScan(
+libraryId: null == libraryId ? _self.libraryId : libraryId // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,results: freezed == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as LibraryScanResults?,
+  ));
+}
+
+/// Create a copy of LibraryScan
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryScanResultsCopyWith<$Res>? get results {
+    if (_self.results == null) {
+    return null;
+  }
+
+  return $LibraryScanResultsCopyWith<$Res>(_self.results!, (value) {
+    return _then(_self.copyWith(results: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$LibraryScanResults {
-  int get added => throw _privateConstructorUsedError;
-  int get updated => throw _privateConstructorUsedError;
-  int get missing => throw _privateConstructorUsedError;
+
+ int get added; int get updated; int get missing;
+/// Create a copy of LibraryScanResults
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LibraryScanResultsCopyWith<LibraryScanResults> get copyWith => _$LibraryScanResultsCopyWithImpl<LibraryScanResults>(this as LibraryScanResults, _$identity);
 
   /// Serializes this LibraryScanResults to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of LibraryScanResults
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LibraryScanResultsCopyWith<LibraryScanResults> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LibraryScanResults&&(identical(other.added, added) || other.added == added)&&(identical(other.updated, updated) || other.updated == updated)&&(identical(other.missing, missing) || other.missing == missing));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,added,updated,missing);
+
+@override
+String toString() {
+  return 'LibraryScanResults(added: $added, updated: $updated, missing: $missing)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $LibraryScanResultsCopyWith<$Res> {
-  factory $LibraryScanResultsCopyWith(
-          LibraryScanResults value, $Res Function(LibraryScanResults) then) =
-      _$LibraryScanResultsCopyWithImpl<$Res, LibraryScanResults>;
-  @useResult
-  $Res call({int added, int updated, int missing});
-}
+abstract mixin class $LibraryScanResultsCopyWith<$Res>  {
+  factory $LibraryScanResultsCopyWith(LibraryScanResults value, $Res Function(LibraryScanResults) _then) = _$LibraryScanResultsCopyWithImpl;
+@useResult
+$Res call({
+ int added, int updated, int missing
+});
 
+
+
+
+}
 /// @nodoc
-class _$LibraryScanResultsCopyWithImpl<$Res, $Val extends LibraryScanResults>
+class _$LibraryScanResultsCopyWithImpl<$Res>
     implements $LibraryScanResultsCopyWith<$Res> {
-  _$LibraryScanResultsCopyWithImpl(this._value, this._then);
+  _$LibraryScanResultsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final LibraryScanResults _self;
+  final $Res Function(LibraryScanResults) _then;
 
-  /// Create a copy of LibraryScanResults
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? added = null,
-    Object? updated = null,
-    Object? missing = null,
-  }) {
-    return _then(_value.copyWith(
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as int,
-      updated: null == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as int,
-      missing: null == missing
-          ? _value.missing
-          : missing // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of LibraryScanResults
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? added = null,Object? updated = null,Object? missing = null,}) {
+  return _then(_self.copyWith(
+added: null == added ? _self.added : added // ignore: cast_nullable_to_non_nullable
+as int,updated: null == updated ? _self.updated : updated // ignore: cast_nullable_to_non_nullable
+as int,missing: null == missing ? _self.missing : missing // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$LibraryScanResultsImplCopyWith<$Res>
-    implements $LibraryScanResultsCopyWith<$Res> {
-  factory _$$LibraryScanResultsImplCopyWith(_$LibraryScanResultsImpl value,
-          $Res Function(_$LibraryScanResultsImpl) then) =
-      __$$LibraryScanResultsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int added, int updated, int missing});
 }
 
-/// @nodoc
-class __$$LibraryScanResultsImplCopyWithImpl<$Res>
-    extends _$LibraryScanResultsCopyWithImpl<$Res, _$LibraryScanResultsImpl>
-    implements _$$LibraryScanResultsImplCopyWith<$Res> {
-  __$$LibraryScanResultsImplCopyWithImpl(_$LibraryScanResultsImpl _value,
-      $Res Function(_$LibraryScanResultsImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of LibraryScanResults
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? added = null,
-    Object? updated = null,
-    Object? missing = null,
-  }) {
-    return _then(_$LibraryScanResultsImpl(
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as int,
-      updated: null == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as int,
-      missing: null == missing
-          ? _value.missing
-          : missing // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
+/// Adds pattern-matching-related methods to [LibraryScanResults].
+extension LibraryScanResultsPatterns on LibraryScanResults {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LibraryScanResults value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _LibraryScanResults() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LibraryScanResults value)  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryScanResults():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LibraryScanResults value)?  $default,){
+final _that = this;
+switch (_that) {
+case _LibraryScanResults() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int added,  int updated,  int missing)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _LibraryScanResults() when $default != null:
+return $default(_that.added,_that.updated,_that.missing);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int added,  int updated,  int missing)  $default,) {final _that = this;
+switch (_that) {
+case _LibraryScanResults():
+return $default(_that.added,_that.updated,_that.missing);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int added,  int updated,  int missing)?  $default,) {final _that = this;
+switch (_that) {
+case _LibraryScanResults() when $default != null:
+return $default(_that.added,_that.updated,_that.missing);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LibraryScanResultsImpl implements _LibraryScanResults {
-  const _$LibraryScanResultsImpl(
-      {required this.added, required this.updated, required this.missing});
 
-  factory _$LibraryScanResultsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LibraryScanResultsImplFromJson(json);
+class _LibraryScanResults implements LibraryScanResults {
+  const _LibraryScanResults({required this.added, required this.updated, required this.missing});
+  factory _LibraryScanResults.fromJson(Map<String, dynamic> json) => _$LibraryScanResultsFromJson(json);
 
-  @override
-  final int added;
-  @override
-  final int updated;
-  @override
-  final int missing;
+@override final  int added;
+@override final  int updated;
+@override final  int missing;
 
-  @override
-  String toString() {
-    return 'LibraryScanResults(added: $added, updated: $updated, missing: $missing)';
-  }
+/// Create a copy of LibraryScanResults
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$LibraryScanResultsCopyWith<_LibraryScanResults> get copyWith => __$LibraryScanResultsCopyWithImpl<_LibraryScanResults>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LibraryScanResultsImpl &&
-            (identical(other.added, added) || other.added == added) &&
-            (identical(other.updated, updated) || other.updated == updated) &&
-            (identical(other.missing, missing) || other.missing == missing));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, added, updated, missing);
-
-  /// Create a copy of LibraryScanResults
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LibraryScanResultsImplCopyWith<_$LibraryScanResultsImpl> get copyWith =>
-      __$$LibraryScanResultsImplCopyWithImpl<_$LibraryScanResultsImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LibraryScanResultsImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$LibraryScanResultsToJson(this, );
 }
 
-abstract class _LibraryScanResults implements LibraryScanResults {
-  const factory _LibraryScanResults(
-      {required final int added,
-      required final int updated,
-      required final int missing}) = _$LibraryScanResultsImpl;
-
-  factory _LibraryScanResults.fromJson(Map<String, dynamic> json) =
-      _$LibraryScanResultsImpl.fromJson;
-
-  @override
-  int get added;
-  @override
-  int get updated;
-  @override
-  int get missing;
-
-  /// Create a copy of LibraryScanResults
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LibraryScanResultsImplCopyWith<_$LibraryScanResultsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LibraryScanResults&&(identical(other.added, added) || other.added == added)&&(identical(other.updated, updated) || other.updated == updated)&&(identical(other.missing, missing) || other.missing == missing));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,added,updated,missing);
+
+@override
+String toString() {
+  return 'LibraryScanResults(added: $added, updated: $updated, missing: $missing)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$LibraryScanResultsCopyWith<$Res> implements $LibraryScanResultsCopyWith<$Res> {
+  factory _$LibraryScanResultsCopyWith(_LibraryScanResults value, $Res Function(_LibraryScanResults) _then) = __$LibraryScanResultsCopyWithImpl;
+@override @useResult
+$Res call({
+ int added, int updated, int missing
+});
+
+
+
+
+}
+/// @nodoc
+class __$LibraryScanResultsCopyWithImpl<$Res>
+    implements _$LibraryScanResultsCopyWith<$Res> {
+  __$LibraryScanResultsCopyWithImpl(this._self, this._then);
+
+  final _LibraryScanResults _self;
+  final $Res Function(_LibraryScanResults) _then;
+
+/// Create a copy of LibraryScanResults
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? added = null,Object? updated = null,Object? missing = null,}) {
+  return _then(_LibraryScanResults(
+added: null == added ? _self.added : added // ignore: cast_nullable_to_non_nullable
+as int,updated: null == updated ? _self.updated : updated // ignore: cast_nullable_to_non_nullable
+as int,missing: null == missing ? _self.missing : missing // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

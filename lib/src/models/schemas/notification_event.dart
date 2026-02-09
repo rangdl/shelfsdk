@@ -7,7 +7,7 @@ part 'generated/notification_event.g.dart';
 
 /// See [Notification Event](https://api.audiobookshelf.org/#notification-event)
 @freezed
-class NotificationEvent with _$NotificationEvent {
+abstract class NotificationEvent with _$NotificationEvent {
   const factory NotificationEvent({
     required String name,
     required bool requiresLibrary,
@@ -23,7 +23,7 @@ class NotificationEvent with _$NotificationEvent {
 }
 
 @freezed
-class NotificationEventDefaults with _$NotificationEventDefaults {
+abstract class NotificationEventDefaults with _$NotificationEventDefaults {
   const factory NotificationEventDefaults({
     required String title,
     required String body,

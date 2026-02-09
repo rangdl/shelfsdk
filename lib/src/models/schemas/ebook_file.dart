@@ -8,7 +8,7 @@ part 'generated/ebook_file.g.dart';
 
 /// See [EBook File](https://api.audiobookshelf.org/#ebook-file)
 @freezed
-class EBookFile with _$EBookFile {
+abstract class EBookFile with _$EBookFile {
   @jsonConverters
   const factory EBookFile({
     required String ino,

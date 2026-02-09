@@ -8,7 +8,7 @@ part 'generated/audio_metadata_event.g.dart';
 
 /// See [Audio Metadata Event](https://api.audiobookshelf.org/#audio-metadata-started-event)
 @freezed
-class AudioMetadataEvent with _$AudioMetadataEvent {
+abstract class AudioMetadataEvent with _$AudioMetadataEvent {
   const AudioMetadataEvent._();
 
   @jsonConverters
@@ -45,7 +45,7 @@ enum AudioMetadataEventVariant { started, finished }
 
 /// See [Event Audio File](https://api.audiobookshelf.org/#event-audio-file)
 @freezed
-class EventAudioFile with _$EventAudioFile {
+abstract class EventAudioFile with _$EventAudioFile {
   const factory EventAudioFile({
     required int index,
     required String ino,

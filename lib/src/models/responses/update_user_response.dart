@@ -7,7 +7,7 @@ part 'generated/update_user_response.g.dart';
 
 /// See [Update a User](https://api.audiobookshelf.org/#update-a-user)
 @freezed
-class UpdateUserResponse with _$UpdateUserResponse {
+abstract class UpdateUserResponse with _$UpdateUserResponse {
   const factory UpdateUserResponse({
     required bool success,
     required User user,

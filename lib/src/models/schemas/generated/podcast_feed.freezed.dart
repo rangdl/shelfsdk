@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,511 +9,412 @@ part of '../podcast_feed.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-PodcastFeed _$PodcastFeedFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'default':
-      return _PodcastFeed.fromJson(json);
-    case 'minified':
-      return PodcastFeedMinified.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'PodcastFeed',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+PodcastFeed _$PodcastFeedFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'default':
+          return PodcastFeedBase.fromJson(
+            json
+          );
+                case 'minified':
+          return PodcastFeedMinified.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'PodcastFeed',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
 mixin _$PodcastFeed {
-  PodcastFeedMetadata get metadata => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)
-        $default, {
-    required TResult Function(PodcastFeedMetadata metadata, int numEpisodes)
-        minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult? Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_PodcastFeed value) $default, {
-    required TResult Function(PodcastFeedMinified value) minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_PodcastFeed value)? $default, {
-    TResult? Function(PodcastFeedMinified value)? minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_PodcastFeed value)? $default, {
-    TResult Function(PodcastFeedMinified value)? minified,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+ PodcastFeedMetadata get metadata;
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PodcastFeedCopyWith<PodcastFeed> get copyWith => _$PodcastFeedCopyWithImpl<PodcastFeed>(this as PodcastFeed, _$identity);
 
   /// Serializes this PodcastFeed to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PodcastFeedCopyWith<PodcastFeed> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PodcastFeed&&(identical(other.metadata, metadata) || other.metadata == metadata));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,metadata);
+
+@override
+String toString() {
+  return 'PodcastFeed(metadata: $metadata)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PodcastFeedCopyWith<$Res> {
-  factory $PodcastFeedCopyWith(
-          PodcastFeed value, $Res Function(PodcastFeed) then) =
-      _$PodcastFeedCopyWithImpl<$Res, PodcastFeed>;
-  @useResult
-  $Res call({PodcastFeedMetadata metadata});
+abstract mixin class $PodcastFeedCopyWith<$Res>  {
+  factory $PodcastFeedCopyWith(PodcastFeed value, $Res Function(PodcastFeed) _then) = _$PodcastFeedCopyWithImpl;
+@useResult
+$Res call({
+ PodcastFeedMetadata metadata
+});
 
-  $PodcastFeedMetadataCopyWith<$Res> get metadata;
+
+$PodcastFeedMetadataCopyWith<$Res> get metadata;
+
 }
-
 /// @nodoc
-class _$PodcastFeedCopyWithImpl<$Res, $Val extends PodcastFeed>
+class _$PodcastFeedCopyWithImpl<$Res>
     implements $PodcastFeedCopyWith<$Res> {
-  _$PodcastFeedCopyWithImpl(this._value, this._then);
+  _$PodcastFeedCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PodcastFeed _self;
+  final $Res Function(PodcastFeed) _then;
 
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? metadata = null,
-  }) {
-    return _then(_value.copyWith(
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as PodcastFeedMetadata,
-    ) as $Val);
-  }
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PodcastFeedMetadataCopyWith<$Res> get metadata {
-    return $PodcastFeedMetadataCopyWith<$Res>(_value.metadata, (value) {
-      return _then(_value.copyWith(metadata: value) as $Val);
-    });
-  }
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? metadata = null,}) {
+  return _then(_self.copyWith(
+metadata: null == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as PodcastFeedMetadata,
+  ));
+}
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PodcastFeedMetadataCopyWith<$Res> get metadata {
+  
+  return $PodcastFeedMetadataCopyWith<$Res>(_self.metadata, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$PodcastFeedImplCopyWith<$Res>
-    implements $PodcastFeedCopyWith<$Res> {
-  factory _$$PodcastFeedImplCopyWith(
-          _$PodcastFeedImpl value, $Res Function(_$PodcastFeedImpl) then) =
-      __$$PodcastFeedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes});
 
-  @override
-  $PodcastFeedMetadataCopyWith<$Res> get metadata;
+/// Adds pattern-matching-related methods to [PodcastFeed].
+extension PodcastFeedPatterns on PodcastFeed {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( PodcastFeedBase value)?  $default,{TResult Function( PodcastFeedMinified value)?  minified,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case PodcastFeedBase() when $default != null:
+return $default(_that);case PodcastFeedMinified() when minified != null:
+return minified(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( PodcastFeedBase value)  $default,{required TResult Function( PodcastFeedMinified value)  minified,}){
+final _that = this;
+switch (_that) {
+case PodcastFeedBase():
+return $default(_that);case PodcastFeedMinified():
+return minified(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( PodcastFeedBase value)?  $default,{TResult? Function( PodcastFeedMinified value)?  minified,}){
+final _that = this;
+switch (_that) {
+case PodcastFeedBase() when $default != null:
+return $default(_that);case PodcastFeedMinified() when minified != null:
+return minified(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PodcastFeedMetadata metadata,  List<PodcastFeedEpisode> episodes)?  $default,{TResult Function( PodcastFeedMetadata metadata,  int numEpisodes)?  minified,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case PodcastFeedBase() when $default != null:
+return $default(_that.metadata,_that.episodes);case PodcastFeedMinified() when minified != null:
+return minified(_that.metadata,_that.numEpisodes);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PodcastFeedMetadata metadata,  List<PodcastFeedEpisode> episodes)  $default,{required TResult Function( PodcastFeedMetadata metadata,  int numEpisodes)  minified,}) {final _that = this;
+switch (_that) {
+case PodcastFeedBase():
+return $default(_that.metadata,_that.episodes);case PodcastFeedMinified():
+return minified(_that.metadata,_that.numEpisodes);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PodcastFeedMetadata metadata,  List<PodcastFeedEpisode> episodes)?  $default,{TResult? Function( PodcastFeedMetadata metadata,  int numEpisodes)?  minified,}) {final _that = this;
+switch (_that) {
+case PodcastFeedBase() when $default != null:
+return $default(_that.metadata,_that.episodes);case PodcastFeedMinified() when minified != null:
+return minified(_that.metadata,_that.numEpisodes);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$PodcastFeedImplCopyWithImpl<$Res>
-    extends _$PodcastFeedCopyWithImpl<$Res, _$PodcastFeedImpl>
-    implements _$$PodcastFeedImplCopyWith<$Res> {
-  __$$PodcastFeedImplCopyWithImpl(
-      _$PodcastFeedImpl _value, $Res Function(_$PodcastFeedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? metadata = null,
-    Object? episodes = null,
-  }) {
-    return _then(_$PodcastFeedImpl(
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as PodcastFeedMetadata,
-      episodes: null == episodes
-          ? _value._episodes
-          : episodes // ignore: cast_nullable_to_non_nullable
-              as List<PodcastFeedEpisode>,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PodcastFeedImpl extends _PodcastFeed {
-  const _$PodcastFeedImpl(
-      {required this.metadata,
-      required final List<PodcastFeedEpisode> episodes,
-      final String? $type})
-      : _episodes = episodes,
-        $type = $type ?? 'default',
-        super._();
 
-  factory _$PodcastFeedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PodcastFeedImplFromJson(json);
+class PodcastFeedBase extends PodcastFeed {
+  const PodcastFeedBase({required this.metadata, required final  List<PodcastFeedEpisode> episodes, final  String? $type}): _episodes = episodes,$type = $type ?? 'default',super._();
+  factory PodcastFeedBase.fromJson(Map<String, dynamic> json) => _$PodcastFeedBaseFromJson(json);
 
-  @override
-  final PodcastFeedMetadata metadata;
-  final List<PodcastFeedEpisode> _episodes;
-  @override
-  List<PodcastFeedEpisode> get episodes {
-    if (_episodes is EqualUnmodifiableListView) return _episodes;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_episodes);
-  }
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'PodcastFeed(metadata: $metadata, episodes: $episodes)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PodcastFeedImpl &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata) &&
-            const DeepCollectionEquality().equals(other._episodes, _episodes));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, metadata, const DeepCollectionEquality().hash(_episodes));
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PodcastFeedImplCopyWith<_$PodcastFeedImpl> get copyWith =>
-      __$$PodcastFeedImplCopyWithImpl<_$PodcastFeedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)
-        $default, {
-    required TResult Function(PodcastFeedMetadata metadata, int numEpisodes)
-        minified,
-  }) {
-    return $default(metadata, episodes);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult? Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-  }) {
-    return $default?.call(metadata, episodes);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(metadata, episodes);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_PodcastFeed value) $default, {
-    required TResult Function(PodcastFeedMinified value) minified,
-  }) {
-    return $default(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_PodcastFeed value)? $default, {
-    TResult? Function(PodcastFeedMinified value)? minified,
-  }) {
-    return $default?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_PodcastFeed value)? $default, {
-    TResult Function(PodcastFeedMinified value)? minified,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PodcastFeedImplToJson(
-      this,
-    );
-  }
+@override final  PodcastFeedMetadata metadata;
+ final  List<PodcastFeedEpisode> _episodes;
+ List<PodcastFeedEpisode> get episodes {
+  if (_episodes is EqualUnmodifiableListView) return _episodes;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_episodes);
 }
 
-abstract class _PodcastFeed extends PodcastFeed {
-  const factory _PodcastFeed(
-      {required final PodcastFeedMetadata metadata,
-      required final List<PodcastFeedEpisode> episodes}) = _$PodcastFeedImpl;
-  const _PodcastFeed._() : super._();
 
-  factory _PodcastFeed.fromJson(Map<String, dynamic> json) =
-      _$PodcastFeedImpl.fromJson;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  PodcastFeedMetadata get metadata;
-  List<PodcastFeedEpisode> get episodes;
 
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PodcastFeedImplCopyWith<_$PodcastFeedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PodcastFeedBaseCopyWith<PodcastFeedBase> get copyWith => _$PodcastFeedBaseCopyWithImpl<PodcastFeedBase>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$PodcastFeedBaseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PodcastFeedBase&&(identical(other.metadata, metadata) || other.metadata == metadata)&&const DeepCollectionEquality().equals(other._episodes, _episodes));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,metadata,const DeepCollectionEquality().hash(_episodes));
+
+@override
+String toString() {
+  return 'PodcastFeed(metadata: $metadata, episodes: $episodes)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$PodcastFeedMinifiedImplCopyWith<$Res>
-    implements $PodcastFeedCopyWith<$Res> {
-  factory _$$PodcastFeedMinifiedImplCopyWith(_$PodcastFeedMinifiedImpl value,
-          $Res Function(_$PodcastFeedMinifiedImpl) then) =
-      __$$PodcastFeedMinifiedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PodcastFeedMetadata metadata, int numEpisodes});
+abstract mixin class $PodcastFeedBaseCopyWith<$Res> implements $PodcastFeedCopyWith<$Res> {
+  factory $PodcastFeedBaseCopyWith(PodcastFeedBase value, $Res Function(PodcastFeedBase) _then) = _$PodcastFeedBaseCopyWithImpl;
+@override @useResult
+$Res call({
+ PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes
+});
 
-  @override
-  $PodcastFeedMetadataCopyWith<$Res> get metadata;
+
+@override $PodcastFeedMetadataCopyWith<$Res> get metadata;
+
+}
+/// @nodoc
+class _$PodcastFeedBaseCopyWithImpl<$Res>
+    implements $PodcastFeedBaseCopyWith<$Res> {
+  _$PodcastFeedBaseCopyWithImpl(this._self, this._then);
+
+  final PodcastFeedBase _self;
+  final $Res Function(PodcastFeedBase) _then;
+
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? metadata = null,Object? episodes = null,}) {
+  return _then(PodcastFeedBase(
+metadata: null == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as PodcastFeedMetadata,episodes: null == episodes ? _self._episodes : episodes // ignore: cast_nullable_to_non_nullable
+as List<PodcastFeedEpisode>,
+  ));
 }
 
-/// @nodoc
-class __$$PodcastFeedMinifiedImplCopyWithImpl<$Res>
-    extends _$PodcastFeedCopyWithImpl<$Res, _$PodcastFeedMinifiedImpl>
-    implements _$$PodcastFeedMinifiedImplCopyWith<$Res> {
-  __$$PodcastFeedMinifiedImplCopyWithImpl(_$PodcastFeedMinifiedImpl _value,
-      $Res Function(_$PodcastFeedMinifiedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? metadata = null,
-    Object? numEpisodes = null,
-  }) {
-    return _then(_$PodcastFeedMinifiedImpl(
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as PodcastFeedMetadata,
-      numEpisodes: null == numEpisodes
-          ? _value.numEpisodes
-          : numEpisodes // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PodcastFeedMetadataCopyWith<$Res> get metadata {
+  
+  return $PodcastFeedMetadataCopyWith<$Res>(_self.metadata, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PodcastFeedMinifiedImpl extends PodcastFeedMinified {
-  const _$PodcastFeedMinifiedImpl(
-      {required this.metadata, required this.numEpisodes, final String? $type})
-      : $type = $type ?? 'minified',
-        super._();
 
-  factory _$PodcastFeedMinifiedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PodcastFeedMinifiedImplFromJson(json);
+class PodcastFeedMinified extends PodcastFeed {
+  const PodcastFeedMinified({required this.metadata, required this.numEpisodes, final  String? $type}): $type = $type ?? 'minified',super._();
+  factory PodcastFeedMinified.fromJson(Map<String, dynamic> json) => _$PodcastFeedMinifiedFromJson(json);
 
-  @override
-  final PodcastFeedMetadata metadata;
-  @override
-  final int numEpisodes;
+@override final  PodcastFeedMetadata metadata;
+ final  int numEpisodes;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String toString() {
-    return 'PodcastFeed.minified(metadata: $metadata, numEpisodes: $numEpisodes)';
-  }
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PodcastFeedMinifiedImpl &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata) &&
-            (identical(other.numEpisodes, numEpisodes) ||
-                other.numEpisodes == numEpisodes));
-  }
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PodcastFeedMinifiedCopyWith<PodcastFeedMinified> get copyWith => _$PodcastFeedMinifiedCopyWithImpl<PodcastFeedMinified>(this, _$identity);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, metadata, numEpisodes);
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PodcastFeedMinifiedImplCopyWith<_$PodcastFeedMinifiedImpl> get copyWith =>
-      __$$PodcastFeedMinifiedImplCopyWithImpl<_$PodcastFeedMinifiedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)
-        $default, {
-    required TResult Function(PodcastFeedMetadata metadata, int numEpisodes)
-        minified,
-  }) {
-    return minified(metadata, numEpisodes);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult? Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-  }) {
-    return minified?.call(metadata, numEpisodes);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            PodcastFeedMetadata metadata, List<PodcastFeedEpisode> episodes)?
-        $default, {
-    TResult Function(PodcastFeedMetadata metadata, int numEpisodes)? minified,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(metadata, numEpisodes);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_PodcastFeed value) $default, {
-    required TResult Function(PodcastFeedMinified value) minified,
-  }) {
-    return minified(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_PodcastFeed value)? $default, {
-    TResult? Function(PodcastFeedMinified value)? minified,
-  }) {
-    return minified?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_PodcastFeed value)? $default, {
-    TResult Function(PodcastFeedMinified value)? minified,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PodcastFeedMinifiedImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PodcastFeedMinifiedToJson(this, );
 }
 
-abstract class PodcastFeedMinified extends PodcastFeed {
-  const factory PodcastFeedMinified(
-      {required final PodcastFeedMetadata metadata,
-      required final int numEpisodes}) = _$PodcastFeedMinifiedImpl;
-  const PodcastFeedMinified._() : super._();
-
-  factory PodcastFeedMinified.fromJson(Map<String, dynamic> json) =
-      _$PodcastFeedMinifiedImpl.fromJson;
-
-  @override
-  PodcastFeedMetadata get metadata;
-  int get numEpisodes;
-
-  /// Create a copy of PodcastFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PodcastFeedMinifiedImplCopyWith<_$PodcastFeedMinifiedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PodcastFeedMinified&&(identical(other.metadata, metadata) || other.metadata == metadata)&&(identical(other.numEpisodes, numEpisodes) || other.numEpisodes == numEpisodes));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,metadata,numEpisodes);
+
+@override
+String toString() {
+  return 'PodcastFeed.minified(metadata: $metadata, numEpisodes: $numEpisodes)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $PodcastFeedMinifiedCopyWith<$Res> implements $PodcastFeedCopyWith<$Res> {
+  factory $PodcastFeedMinifiedCopyWith(PodcastFeedMinified value, $Res Function(PodcastFeedMinified) _then) = _$PodcastFeedMinifiedCopyWithImpl;
+@override @useResult
+$Res call({
+ PodcastFeedMetadata metadata, int numEpisodes
+});
+
+
+@override $PodcastFeedMetadataCopyWith<$Res> get metadata;
+
+}
+/// @nodoc
+class _$PodcastFeedMinifiedCopyWithImpl<$Res>
+    implements $PodcastFeedMinifiedCopyWith<$Res> {
+  _$PodcastFeedMinifiedCopyWithImpl(this._self, this._then);
+
+  final PodcastFeedMinified _self;
+  final $Res Function(PodcastFeedMinified) _then;
+
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? metadata = null,Object? numEpisodes = null,}) {
+  return _then(PodcastFeedMinified(
+metadata: null == metadata ? _self.metadata : metadata // ignore: cast_nullable_to_non_nullable
+as PodcastFeedMetadata,numEpisodes: null == numEpisodes ? _self.numEpisodes : numEpisodes // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+/// Create a copy of PodcastFeed
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PodcastFeedMetadataCopyWith<$Res> get metadata {
+  
+  return $PodcastFeedMetadataCopyWith<$Res>(_self.metadata, (value) {
+    return _then(_self.copyWith(metadata: value));
+  });
+}
+}
+
+// dart format on

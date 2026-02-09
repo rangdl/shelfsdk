@@ -7,7 +7,7 @@ part 'generated/notification.g.dart';
 
 /// See [Notification](https://api.audiobookshelf.org/#notification)
 @freezed
-class Notification with _$Notification {
+abstract class Notification with _$Notification {
   @jsonConverters
   const factory Notification({
     required String id,

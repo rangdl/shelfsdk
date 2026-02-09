@@ -6,18 +6,19 @@ part of '../ebook_file.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$EBookFileImpl _$$EBookFileImplFromJson(Map<String, dynamic> json) =>
-    _$EBookFileImpl(
-      ino: json['ino'] as String,
-      metadata: FileMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
-      ebookFormat: json['ebookFormat'] as String,
-      addedAt: const DateTimeEpochConverter()
-          .fromJson((json['addedAt'] as num).toInt()),
-      updatedAt: const DateTimeEpochConverter()
-          .fromJson((json['updatedAt'] as num).toInt()),
-    );
+_EBookFile _$EBookFileFromJson(Map<String, dynamic> json) => _EBookFile(
+  ino: json['ino'] as String,
+  metadata: FileMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
+  ebookFormat: json['ebookFormat'] as String,
+  addedAt: const DateTimeEpochConverter().fromJson(
+    (json['addedAt'] as num).toInt(),
+  ),
+  updatedAt: const DateTimeEpochConverter().fromJson(
+    (json['updatedAt'] as num).toInt(),
+  ),
+);
 
-Map<String, dynamic> _$$EBookFileImplToJson(_$EBookFileImpl instance) =>
+Map<String, dynamic> _$EBookFileToJson(_EBookFile instance) =>
     <String, dynamic>{
       'ino': instance.ino,
       'metadata': instance.metadata.toJson(),

@@ -9,11 +9,11 @@ part of '../match_item_req_params.dart';
 Map<String, dynamic> _$MatchItemReqParamsToJson(MatchItemReqParams instance) =>
     <String, dynamic>{
       'provider': _$MetadataProviderEnumMap[instance.provider]!,
-      if (instance.title case final value?) 'title': value,
-      if (instance.author case final value?) 'author': value,
+      'title': ?instance.title,
+      'author': ?instance.author,
       'overrideDefaults': instance.overrideDefaults,
-      if (instance.isbn case final value?) 'isbn': value,
-      if (instance.asin case final value?) 'asin': value,
+      'isbn': ?instance.isbn,
+      'asin': ?instance.asin,
     };
 
 const _$MetadataProviderEnumMap = {

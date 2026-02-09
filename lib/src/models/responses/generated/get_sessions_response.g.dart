@@ -6,9 +6,8 @@ part of '../get_sessions_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetSessionsResponseImpl _$$GetSessionsResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetSessionsResponseImpl(
+_GetSessionsResponse _$GetSessionsResponseFromJson(Map<String, dynamic> json) =>
+    _GetSessionsResponse(
       total: (json['total'] as num).toInt(),
       numPages: (json['numPages'] as num).toInt(),
       itemsPerPage: (json['itemsPerPage'] as num).toInt(),
@@ -18,12 +17,12 @@ _$GetSessionsResponseImpl _$$GetSessionsResponseImplFromJson(
       userFilter: json['userFilter'] as String?,
     );
 
-Map<String, dynamic> _$$GetSessionsResponseImplToJson(
-        _$GetSessionsResponseImpl instance) =>
-    <String, dynamic>{
-      'total': instance.total,
-      'numPages': instance.numPages,
-      'itemsPerPage': instance.itemsPerPage,
-      'sessions': instance.sessions.map((e) => e.toJson()).toList(),
-      'userFilter': instance.userFilter,
-    };
+Map<String, dynamic> _$GetSessionsResponseToJson(
+  _GetSessionsResponse instance,
+) => <String, dynamic>{
+  'total': instance.total,
+  'numPages': instance.numPages,
+  'itemsPerPage': instance.itemsPerPage,
+  'sessions': instance.sessions.map((e) => e.toJson()).toList(),
+  'userFilter': instance.userFilter,
+};

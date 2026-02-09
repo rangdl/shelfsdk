@@ -9,7 +9,7 @@ part 'generated/stream_schema.g.dart';
 
 /// See [Stream Schema](https://api.audiobookshelf.org/#stream)
 @freezed
-class StreamSchema with _$StreamSchema {
+abstract class StreamSchema with _$StreamSchema {
   const factory StreamSchema({
     required String id,
     required String userId,

@@ -5,7 +5,7 @@ part 'generated/rename_genre_response.g.dart';
 
 /// See [Rename a Genre](https://api.audiobookshelf.org/#rename-a-genre)
 @freezed
-class RenameGenreResponse with _$RenameGenreResponse {
+abstract class RenameGenreResponse with _$RenameGenreResponse {
   const factory RenameGenreResponse({
     required bool genreMerged,
     required int numItemsUpdated,

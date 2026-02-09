@@ -8,7 +8,7 @@ part 'generated/sync_local_progress_response.g.dart';
 /// See [Sync Local Media Progress](https://api.audiobookshelf.org/#sync-local-media-progress)
 @freezed
 @Deprecated('Deprecated with "Sync Local Media Progress".')
-class SyncLocalProgressResponse with _$SyncLocalProgressResponse {
+abstract class SyncLocalProgressResponse with _$SyncLocalProgressResponse {
   const factory SyncLocalProgressResponse({
     required int numServerProgressUpdates,
     required List<MediaProgress> localProgressUpdates,

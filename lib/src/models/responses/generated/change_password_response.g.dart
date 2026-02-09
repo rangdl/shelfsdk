@@ -6,16 +6,13 @@ part of '../change_password_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChangePasswordResponseImpl _$$ChangePasswordResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ChangePasswordResponseImpl(
-      success: json['success'] as bool?,
-      error: json['error'] as String?,
-    );
+_ChangePasswordResponse _$ChangePasswordResponseFromJson(
+  Map<String, dynamic> json,
+) => _ChangePasswordResponse(
+  success: json['success'] as bool?,
+  error: json['error'] as String?,
+);
 
-Map<String, dynamic> _$$ChangePasswordResponseImplToJson(
-        _$ChangePasswordResponseImpl instance) =>
-    <String, dynamic>{
-      if (instance.success case final value?) 'success': value,
-      if (instance.error case final value?) 'error': value,
-    };
+Map<String, dynamic> _$ChangePasswordResponseToJson(
+  _ChangePasswordResponse instance,
+) => <String, dynamic>{'success': ?instance.success, 'error': ?instance.error};

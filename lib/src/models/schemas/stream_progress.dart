@@ -5,7 +5,7 @@ part 'generated/stream_progress.g.dart';
 
 /// See [Stream Progress](https://api.audiobookshelf.org/#stream-progress)
 @freezed
-class StreamProgress with _$StreamProgress {
+abstract class StreamProgress with _$StreamProgress {
   const factory StreamProgress({
     @JsonKey(name: 'stream') required String streamId,
     required String percent,

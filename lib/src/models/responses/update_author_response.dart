@@ -7,7 +7,7 @@ part 'generated/update_author_response.g.dart';
 
 /// See [Update an Author](https://api.audiobookshelf.org/#update-an-author)
 @freezed
-class UpdateAuthorResponse with _$UpdateAuthorResponse {
+abstract class UpdateAuthorResponse with _$UpdateAuthorResponse {
   const factory UpdateAuthorResponse({
     required Author author,
     bool? merged,

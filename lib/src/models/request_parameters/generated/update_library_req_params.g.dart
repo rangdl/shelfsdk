@@ -7,15 +7,14 @@ part of '../update_library_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$UpdateLibraryReqParamsToJson(
-        UpdateLibraryReqParams instance) =>
-    <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.displayOrder case final value?) 'displayOrder': value,
-      if (instance.icon case final value?) 'icon': value,
-      if (_$MetadataProviderEnumMap[instance.provider] case final value?)
-        'provider': value,
-      if (instance.settings?.toJson() case final value?) 'settings': value,
-    };
+  UpdateLibraryReqParams instance,
+) => <String, dynamic>{
+  'name': ?instance.name,
+  'displayOrder': ?instance.displayOrder,
+  'icon': ?instance.icon,
+  'provider': ?_$MetadataProviderEnumMap[instance.provider],
+  'settings': ?instance.settings?.toJson(),
+};
 
 const _$MetadataProviderEnumMap = {
   MetadataProvider.google: 'google',
@@ -35,22 +34,19 @@ const _$MetadataProviderEnumMap = {
 };
 
 Map<String, dynamic> _$UpdateLibrarySettingsReqParamsToJson(
-        UpdateLibrarySettingsReqParams instance) =>
-    <String, dynamic>{
-      if (instance.coverAspectRatio case final value?)
-        'coverAspectRatio': value,
-      if (instance.disableWatcher case final value?) 'disableWatcher': value,
-      if (instance.skipMatchingMediaWithAsin case final value?)
-        'skipMatchingMediaWithAsin': value,
-      if (instance.skipMatchingMediaWithIsbn case final value?)
-        'skipMatchingMediaWithIsbn': value,
-      'autoScanCronExpression': _$JsonConverterToJson<String, CronExpression>(
-          instance.autoScanCronExpression,
-          const CronExpressionConverter().toJson),
-    };
+  UpdateLibrarySettingsReqParams instance,
+) => <String, dynamic>{
+  'coverAspectRatio': ?instance.coverAspectRatio,
+  'disableWatcher': ?instance.disableWatcher,
+  'skipMatchingMediaWithAsin': ?instance.skipMatchingMediaWithAsin,
+  'skipMatchingMediaWithIsbn': ?instance.skipMatchingMediaWithIsbn,
+  'autoScanCronExpression': _$JsonConverterToJson<String, CronExpression>(
+    instance.autoScanCronExpression,
+    const CronExpressionConverter().toJson,
+  ),
+};
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

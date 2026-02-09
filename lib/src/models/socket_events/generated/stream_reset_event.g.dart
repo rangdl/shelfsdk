@@ -6,18 +6,18 @@ part of '../stream_reset_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StreamResetEventImpl _$$StreamResetEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$StreamResetEventImpl(
-      startTime: const DurationPreciseSecondsConverter()
-          .fromJson(json['startTime'] as num),
+_StreamResetEvent _$StreamResetEventFromJson(Map<String, dynamic> json) =>
+    _StreamResetEvent(
+      startTime: const DurationPreciseSecondsConverter().fromJson(
+        json['startTime'] as num,
+      ),
       streamId: json['streamId'] as String,
     );
 
-Map<String, dynamic> _$$StreamResetEventImplToJson(
-        _$StreamResetEventImpl instance) =>
+Map<String, dynamic> _$StreamResetEventToJson(_StreamResetEvent instance) =>
     <String, dynamic>{
-      'startTime':
-          const DurationPreciseSecondsConverter().toJson(instance.startTime),
+      'startTime': const DurationPreciseSecondsConverter().toJson(
+        instance.startTime,
+      ),
       'streamId': instance.streamId,
     };

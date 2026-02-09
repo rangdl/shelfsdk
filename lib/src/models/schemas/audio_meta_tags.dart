@@ -5,7 +5,7 @@ part 'generated/audio_meta_tags.g.dart';
 
 /// See [Audio Meta Tags](https://api.audiobookshelf.org/#audio-meta-tags)
 @freezed
-class AudioMetaTags with _$AudioMetaTags {
+abstract class AudioMetaTags with _$AudioMetaTags {
   @JsonSerializable(includeIfNull: false)
   const factory AudioMetaTags({
     String? tagAlbum,

@@ -10,7 +10,7 @@ part 'generated/audio_file.g.dart';
 
 /// See [Audio File](https://api.audiobookshelf.org/#audio-file)
 @freezed
-class AudioFile with _$AudioFile {
+abstract class AudioFile with _$AudioFile {
   @jsonConverters
   const factory AudioFile({
     required int index,

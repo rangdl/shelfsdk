@@ -9,7 +9,7 @@ part 'generated/media_progress.g.dart';
 
 /// See [Media Progress](https://api.audiobookshelf.org/#media-progress)
 @freezed
-class MediaProgress with _$MediaProgress {
+abstract class MediaProgress with _$MediaProgress {
   const MediaProgress._();
 
   @jsonConverters
@@ -25,7 +25,7 @@ class MediaProgress with _$MediaProgress {
     required DateTime lastUpdate,
     required DateTime startedAt,
     DateTime? finishedAt,
-  }) = _MediaProgress;
+  }) = MediaProgressBase;
 
   @jsonConverters
   const factory MediaProgress.withMedia({
@@ -74,7 +74,7 @@ class MediaProgressConverter
 
     switch (variant) {
       case MediaProgressVariant.base:
-        return _MediaProgress.fromJson(json);
+        return MediaProgressBase.fromJson(json);
       case MediaProgressVariant.withMedia:
         return MediaProgressWithMedia.fromJson(json);
     }

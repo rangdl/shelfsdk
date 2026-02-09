@@ -5,7 +5,7 @@ part 'generated/tag.g.dart';
 
 /// See [Search a Library](https://api.audiobookshelf.org/#search-a-library)
 @freezed
-class Tag with _$Tag {
+abstract class Tag with _$Tag {
   const factory Tag({
     required String name,
 

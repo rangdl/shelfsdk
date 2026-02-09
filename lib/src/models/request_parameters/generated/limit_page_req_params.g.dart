@@ -7,7 +7,4 @@ part of '../limit_page_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$LimitPageReqParamsToJson(LimitPageReqParams instance) =>
-    <String, dynamic>{
-      if (instance.limit case final value?) 'limit': value,
-      if (instance.page case final value?) 'page': value,
-    };
+    <String, dynamic>{'limit': ?instance.limit, 'page': ?instance.page};

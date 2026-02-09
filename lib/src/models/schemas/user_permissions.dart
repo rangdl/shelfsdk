@@ -5,7 +5,7 @@ part 'generated/user_permissions.g.dart';
 
 /// See [User Permissions](https://api.audiobookshelf.org/#user-permissions)
 @freezed
-class UserPermissions with _$UserPermissions {
+abstract class UserPermissions with _$UserPermissions {
   const factory UserPermissions({
     required bool download,
     required bool update,

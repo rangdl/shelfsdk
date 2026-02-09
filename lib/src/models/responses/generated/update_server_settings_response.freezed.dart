@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,205 +9,290 @@ part of '../update_server_settings_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-UpdateServerSettingsResponse _$UpdateServerSettingsResponseFromJson(
-    Map<String, dynamic> json) {
-  return _UpdateServerSettingsResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UpdateServerSettingsResponse {
-  bool get success => throw _privateConstructorUsedError;
-  ServerSettings get serverSettings => throw _privateConstructorUsedError;
+
+ bool get success; ServerSettings get serverSettings;
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UpdateServerSettingsResponseCopyWith<UpdateServerSettingsResponse> get copyWith => _$UpdateServerSettingsResponseCopyWithImpl<UpdateServerSettingsResponse>(this as UpdateServerSettingsResponse, _$identity);
 
   /// Serializes this UpdateServerSettingsResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UpdateServerSettingsResponseCopyWith<UpdateServerSettingsResponse>
-      get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UpdateServerSettingsResponse&&(identical(other.success, success) || other.success == success)&&(identical(other.serverSettings, serverSettings) || other.serverSettings == serverSettings));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,success,serverSettings);
+
+@override
+String toString() {
+  return 'UpdateServerSettingsResponse(success: $success, serverSettings: $serverSettings)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UpdateServerSettingsResponseCopyWith<$Res> {
-  factory $UpdateServerSettingsResponseCopyWith(
-          UpdateServerSettingsResponse value,
-          $Res Function(UpdateServerSettingsResponse) then) =
-      _$UpdateServerSettingsResponseCopyWithImpl<$Res,
-          UpdateServerSettingsResponse>;
-  @useResult
-  $Res call({bool success, ServerSettings serverSettings});
+abstract mixin class $UpdateServerSettingsResponseCopyWith<$Res>  {
+  factory $UpdateServerSettingsResponseCopyWith(UpdateServerSettingsResponse value, $Res Function(UpdateServerSettingsResponse) _then) = _$UpdateServerSettingsResponseCopyWithImpl;
+@useResult
+$Res call({
+ bool success, ServerSettings serverSettings
+});
 
-  $ServerSettingsCopyWith<$Res> get serverSettings;
+
+$ServerSettingsCopyWith<$Res> get serverSettings;
+
 }
-
 /// @nodoc
-class _$UpdateServerSettingsResponseCopyWithImpl<$Res,
-        $Val extends UpdateServerSettingsResponse>
+class _$UpdateServerSettingsResponseCopyWithImpl<$Res>
     implements $UpdateServerSettingsResponseCopyWith<$Res> {
-  _$UpdateServerSettingsResponseCopyWithImpl(this._value, this._then);
+  _$UpdateServerSettingsResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UpdateServerSettingsResponse _self;
+  final $Res Function(UpdateServerSettingsResponse) _then;
 
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? success = null,
-    Object? serverSettings = null,
-  }) {
-    return _then(_value.copyWith(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      serverSettings: null == serverSettings
-          ? _value.serverSettings
-          : serverSettings // ignore: cast_nullable_to_non_nullable
-              as ServerSettings,
-    ) as $Val);
-  }
-
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $ServerSettingsCopyWith<$Res> get serverSettings {
-    return $ServerSettingsCopyWith<$Res>(_value.serverSettings, (value) {
-      return _then(_value.copyWith(serverSettings: value) as $Val);
-    });
-  }
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? success = null,Object? serverSettings = null,}) {
+  return _then(_self.copyWith(
+success: null == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
+as bool,serverSettings: null == serverSettings ? _self.serverSettings : serverSettings // ignore: cast_nullable_to_non_nullable
+as ServerSettings,
+  ));
+}
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ServerSettingsCopyWith<$Res> get serverSettings {
+  
+  return $ServerSettingsCopyWith<$Res>(_self.serverSettings, (value) {
+    return _then(_self.copyWith(serverSettings: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$UpdateServerSettingsResponseImplCopyWith<$Res>
-    implements $UpdateServerSettingsResponseCopyWith<$Res> {
-  factory _$$UpdateServerSettingsResponseImplCopyWith(
-          _$UpdateServerSettingsResponseImpl value,
-          $Res Function(_$UpdateServerSettingsResponseImpl) then) =
-      __$$UpdateServerSettingsResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({bool success, ServerSettings serverSettings});
 
-  @override
-  $ServerSettingsCopyWith<$Res> get serverSettings;
+/// Adds pattern-matching-related methods to [UpdateServerSettingsResponse].
+extension UpdateServerSettingsResponsePatterns on UpdateServerSettingsResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UpdateServerSettingsResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UpdateServerSettingsResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UpdateServerSettingsResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool success,  ServerSettings serverSettings)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse() when $default != null:
+return $default(_that.success,_that.serverSettings);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool success,  ServerSettings serverSettings)  $default,) {final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse():
+return $default(_that.success,_that.serverSettings);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool success,  ServerSettings serverSettings)?  $default,) {final _that = this;
+switch (_that) {
+case _UpdateServerSettingsResponse() when $default != null:
+return $default(_that.success,_that.serverSettings);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$UpdateServerSettingsResponseImplCopyWithImpl<$Res>
-    extends _$UpdateServerSettingsResponseCopyWithImpl<$Res,
-        _$UpdateServerSettingsResponseImpl>
-    implements _$$UpdateServerSettingsResponseImplCopyWith<$Res> {
-  __$$UpdateServerSettingsResponseImplCopyWithImpl(
-      _$UpdateServerSettingsResponseImpl _value,
-      $Res Function(_$UpdateServerSettingsResponseImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? success = null,
-    Object? serverSettings = null,
-  }) {
-    return _then(_$UpdateServerSettingsResponseImpl(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-      serverSettings: null == serverSettings
-          ? _value.serverSettings
-          : serverSettings // ignore: cast_nullable_to_non_nullable
-              as ServerSettings,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$UpdateServerSettingsResponseImpl
-    implements _UpdateServerSettingsResponse {
-  const _$UpdateServerSettingsResponseImpl(
-      {required this.success, required this.serverSettings});
 
-  factory _$UpdateServerSettingsResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UpdateServerSettingsResponseImplFromJson(json);
+class _UpdateServerSettingsResponse implements UpdateServerSettingsResponse {
+  const _UpdateServerSettingsResponse({required this.success, required this.serverSettings});
+  factory _UpdateServerSettingsResponse.fromJson(Map<String, dynamic> json) => _$UpdateServerSettingsResponseFromJson(json);
 
-  @override
-  final bool success;
-  @override
-  final ServerSettings serverSettings;
+@override final  bool success;
+@override final  ServerSettings serverSettings;
 
-  @override
-  String toString() {
-    return 'UpdateServerSettingsResponse(success: $success, serverSettings: $serverSettings)';
-  }
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UpdateServerSettingsResponseCopyWith<_UpdateServerSettingsResponse> get copyWith => __$UpdateServerSettingsResponseCopyWithImpl<_UpdateServerSettingsResponse>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateServerSettingsResponseImpl &&
-            (identical(other.success, success) || other.success == success) &&
-            (identical(other.serverSettings, serverSettings) ||
-                other.serverSettings == serverSettings));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, success, serverSettings);
-
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateServerSettingsResponseImplCopyWith<
-          _$UpdateServerSettingsResponseImpl>
-      get copyWith => __$$UpdateServerSettingsResponseImplCopyWithImpl<
-          _$UpdateServerSettingsResponseImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UpdateServerSettingsResponseImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UpdateServerSettingsResponseToJson(this, );
 }
 
-abstract class _UpdateServerSettingsResponse
-    implements UpdateServerSettingsResponse {
-  const factory _UpdateServerSettingsResponse(
-          {required final bool success,
-          required final ServerSettings serverSettings}) =
-      _$UpdateServerSettingsResponseImpl;
-
-  factory _UpdateServerSettingsResponse.fromJson(Map<String, dynamic> json) =
-      _$UpdateServerSettingsResponseImpl.fromJson;
-
-  @override
-  bool get success;
-  @override
-  ServerSettings get serverSettings;
-
-  /// Create a copy of UpdateServerSettingsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateServerSettingsResponseImplCopyWith<
-          _$UpdateServerSettingsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UpdateServerSettingsResponse&&(identical(other.success, success) || other.success == success)&&(identical(other.serverSettings, serverSettings) || other.serverSettings == serverSettings));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,success,serverSettings);
+
+@override
+String toString() {
+  return 'UpdateServerSettingsResponse(success: $success, serverSettings: $serverSettings)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UpdateServerSettingsResponseCopyWith<$Res> implements $UpdateServerSettingsResponseCopyWith<$Res> {
+  factory _$UpdateServerSettingsResponseCopyWith(_UpdateServerSettingsResponse value, $Res Function(_UpdateServerSettingsResponse) _then) = __$UpdateServerSettingsResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ bool success, ServerSettings serverSettings
+});
+
+
+@override $ServerSettingsCopyWith<$Res> get serverSettings;
+
+}
+/// @nodoc
+class __$UpdateServerSettingsResponseCopyWithImpl<$Res>
+    implements _$UpdateServerSettingsResponseCopyWith<$Res> {
+  __$UpdateServerSettingsResponseCopyWithImpl(this._self, this._then);
+
+  final _UpdateServerSettingsResponse _self;
+  final $Res Function(_UpdateServerSettingsResponse) _then;
+
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? success = null,Object? serverSettings = null,}) {
+  return _then(_UpdateServerSettingsResponse(
+success: null == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
+as bool,serverSettings: null == serverSettings ? _self.serverSettings : serverSettings // ignore: cast_nullable_to_non_nullable
+as ServerSettings,
+  ));
+}
+
+/// Create a copy of UpdateServerSettingsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ServerSettingsCopyWith<$Res> get serverSettings {
+  
+  return $ServerSettingsCopyWith<$Res>(_self.serverSettings, (value) {
+    return _then(_self.copyWith(serverSettings: value));
+  });
+}
+}
+
+// dart format on

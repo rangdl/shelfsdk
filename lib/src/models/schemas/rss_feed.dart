@@ -10,7 +10,7 @@ part 'generated/rss_feed.g.dart';
 
 /// See [RSS Feed](https://api.audiobookshelf.org/#rss-feed)
 @freezed
-class RssFeed with _$RssFeed {
+abstract class RssFeed with _$RssFeed {
   const RssFeed._();
 
   @jsonConverters
@@ -27,7 +27,7 @@ class RssFeed with _$RssFeed {
     required List<RssFeedEpisode> episodes,
     required DateTime createdAt,
     required DateTime updatedAt,
-  }) = _RssFeed;
+  }) = RssFeedBase;
 
   const factory RssFeed.minified({
     required String id,
@@ -64,7 +64,7 @@ class RssFeedConverter implements JsonConverter<RssFeed, Map<String, dynamic>> {
     switch (variant) {
       case SchemaVariant.expanded:
       case SchemaVariant.base:
-        return _RssFeed.fromJson(json);
+        return RssFeedBase.fromJson(json);
       case SchemaVariant.minified:
         return RssFeedMinified.fromJson(json);
     }

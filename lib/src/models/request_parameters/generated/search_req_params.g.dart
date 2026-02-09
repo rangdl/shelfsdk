@@ -7,7 +7,4 @@ part of '../search_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$SearchReqParamsToJson(SearchReqParams instance) =>
-    <String, dynamic>{
-      'q': instance.query,
-      'limit': instance.limit,
-    };
+    <String, dynamic>{'q': instance.query, 'limit': instance.limit};

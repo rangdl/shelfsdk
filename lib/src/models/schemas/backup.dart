@@ -7,7 +7,7 @@ part 'generated/backup.g.dart';
 
 /// See [Backup](https://api.audiobookshelf.org/#backup)
 @freezed
-class Backup with _$Backup {
+abstract class Backup with _$Backup {
   @jsonConverters
   const factory Backup({
     required String id,

@@ -7,7 +7,7 @@ part 'generated/server_status_response.g.dart';
 
 /// See [Check the Server's Status](https://api.audiobookshelf.org/#initialize-the-server)
 @freezed
-class ServerStatusResponse with _$ServerStatusResponse {
+abstract class ServerStatusResponse with _$ServerStatusResponse {
   const factory ServerStatusResponse({
     String? app,
     String? serverVersion,
@@ -29,7 +29,7 @@ class ServerStatusResponse with _$ServerStatusResponse {
 //   "authOpenIDAutoLaunch": false
 // }
 @freezed
-class AuthFormData with _$AuthFormData {
+abstract class AuthFormData with _$AuthFormData {
   const factory AuthFormData({
     String? authLoginCustomMessage,
     String? authOpenIDButtonText,

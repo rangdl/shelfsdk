@@ -7,7 +7,7 @@ part 'generated/get_librarys_stats_response.g.dart';
 
 /// See [Get a Library's Stats](https://api.audiobookshelf.org/#get-a-library-39-s-stats)
 @freezed
-sealed class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
+abstract class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
   @jsonConverters
   const factory GetLibrarysStatsResponse({
     required int totalItems,
@@ -27,7 +27,7 @@ sealed class GetLibrarysStatsResponse with _$GetLibrarysStatsResponse {
 }
 
 @freezed
-sealed class LibraryItemStats with _$LibraryItemStats {
+abstract class LibraryItemStats with _$LibraryItemStats {
   @jsonConverters
   const factory LibraryItemStats({
     required String id,
@@ -40,7 +40,7 @@ sealed class LibraryItemStats with _$LibraryItemStats {
 }
 
 @freezed
-sealed class LibraryItemSizeStats with _$LibraryItemSizeStats {
+abstract class LibraryItemSizeStats with _$LibraryItemSizeStats {
   @jsonConverters
   const factory LibraryItemSizeStats({
     required String id,
@@ -53,7 +53,7 @@ sealed class LibraryItemSizeStats with _$LibraryItemSizeStats {
 }
 
 @freezed
-sealed class AuthorStats with _$AuthorStats {
+abstract class AuthorStats with _$AuthorStats {
   const factory AuthorStats({
     required String id,
     required String name,
@@ -65,11 +65,9 @@ sealed class AuthorStats with _$AuthorStats {
 }
 
 @freezed
-sealed class GenreStats with _$GenreStats {
-  const factory GenreStats({
-    required String genre,
-    required int count,
-  }) = _GenreStats;
+abstract class GenreStats with _$GenreStats {
+  const factory GenreStats({required String genre, required int count}) =
+      _GenreStats;
 
   factory GenreStats.fromJson(Map<String, dynamic> json) =>
       _$GenreStatsFromJson(json);

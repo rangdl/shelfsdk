@@ -8,7 +8,7 @@ part 'generated/podcast_feed_episode.g.dart';
 
 /// See [Podcast Feed Episode](https://api.audiobookshelf.org/#podcast-feed-episode)
 @freezed
-class PodcastFeedEpisode with _$PodcastFeedEpisode {
+abstract class PodcastFeedEpisode with _$PodcastFeedEpisode {
   @jsonConverters
   const factory PodcastFeedEpisode({
     required String title,

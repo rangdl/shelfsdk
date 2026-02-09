@@ -6,14 +6,10 @@ part of '../narrator.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NarratorImpl _$$NarratorImplFromJson(Map<String, dynamic> json) =>
-    _$NarratorImpl(
-      name: json['name'] as String,
-      numBooks: json['numBooks'] as num,
-    );
+_Narrator _$NarratorFromJson(Map<String, dynamic> json) =>
+    _Narrator(name: json['name'] as String, numBooks: json['numBooks'] as num);
 
-Map<String, dynamic> _$$NarratorImplToJson(_$NarratorImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'numBooks': instance.numBooks,
-    };
+Map<String, dynamic> _$NarratorToJson(_Narrator instance) => <String, dynamic>{
+  'name': instance.name,
+  'numBooks': instance.numBooks,
+};

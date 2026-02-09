@@ -6,8 +6,8 @@ part of '../notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationImpl(
+_Notification _$NotificationFromJson(Map<String, dynamic> json) =>
+    _Notification(
       id: json['id'] as String,
       libraryId: json['libraryId'] as String?,
       eventName: json['eventName'] as String,
@@ -19,16 +19,19 @@ _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
       enabled: json['enabled'] as bool,
       type: json['type'] as String,
       lastFiredAt: _$JsonConverterFromJson<int, DateTime>(
-          json['lastFiredAt'], const DateTimeEpochConverter().fromJson),
+        json['lastFiredAt'],
+        const DateTimeEpochConverter().fromJson,
+      ),
       lastAttemptFailed: json['lastAttemptFailed'] as bool,
       numConsecutiveFailedAttempts:
           (json['numConsecutiveFailedAttempts'] as num).toInt(),
       numTimesFired: (json['numTimesFired'] as num).toInt(),
-      createdAt: const DateTimeEpochConverter()
-          .fromJson((json['createdAt'] as num).toInt()),
+      createdAt: const DateTimeEpochConverter().fromJson(
+        (json['createdAt'] as num).toInt(),
+      ),
     );
 
-Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
+Map<String, dynamic> _$NotificationToJson(_Notification instance) =>
     <String, dynamic>{
       'id': instance.id,
       'libraryId': instance.libraryId,
@@ -39,7 +42,9 @@ Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
       'enabled': instance.enabled,
       'type': instance.type,
       'lastFiredAt': _$JsonConverterToJson<int, DateTime>(
-          instance.lastFiredAt, const DateTimeEpochConverter().toJson),
+        instance.lastFiredAt,
+        const DateTimeEpochConverter().toJson,
+      ),
       'lastAttemptFailed': instance.lastAttemptFailed,
       'numConsecutiveFailedAttempts': instance.numConsecutiveFailedAttempts,
       'numTimesFired': instance.numTimesFired,
@@ -49,11 +54,9 @@ Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,
   Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
+) => json == null ? null : fromJson(json as Json);
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

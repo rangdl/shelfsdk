@@ -5,7 +5,7 @@ part 'generated/podcast_feed_metadata.g.dart';
 
 /// See [Podcast Feed Metadata](https://api.audiobookshelf.org/#podcast-feed-metadata)
 @freezed
-class PodcastFeedMetadata with _$PodcastFeedMetadata {
+abstract class PodcastFeedMetadata with _$PodcastFeedMetadata {
   const factory PodcastFeedMetadata({
     required Uri image,
     required List<String> categories,

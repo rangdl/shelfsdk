@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,808 +9,421 @@ part of '../rss_feed.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-RssFeed _$RssFeedFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'default':
-      return _RssFeed.fromJson(json);
-    case 'minified':
-      return RssFeedMinified.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'RssFeed',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+RssFeed _$RssFeedFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'default':
+          return RssFeedBase.fromJson(
+            json
+          );
+                case 'minified':
+          return RssFeedMinified.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'RssFeed',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
 mixin _$RssFeed {
-  String get id => throw _privateConstructorUsedError;
-  String get entityType => throw _privateConstructorUsedError;
-  String get entityId => throw _privateConstructorUsedError;
-  Uri get feedUrl => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)
-        $default, {
-    required TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)
-        minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult? Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_RssFeed value) $default, {
-    required TResult Function(RssFeedMinified value) minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_RssFeed value)? $default, {
-    TResult? Function(RssFeedMinified value)? minified,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_RssFeed value)? $default, {
-    TResult Function(RssFeedMinified value)? minified,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+ String get id; String get entityType; String get entityId; Uri get feedUrl;
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssFeedCopyWith<RssFeed> get copyWith => _$RssFeedCopyWithImpl<RssFeed>(this as RssFeed, _$identity);
 
   /// Serializes this RssFeed to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RssFeedCopyWith<RssFeed> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssFeed&&(identical(other.id, id) || other.id == id)&&(identical(other.entityType, entityType) || other.entityType == entityType)&&(identical(other.entityId, entityId) || other.entityId == entityId)&&(identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,entityType,entityId,feedUrl);
+
+@override
+String toString() {
+  return 'RssFeed(id: $id, entityType: $entityType, entityId: $entityId, feedUrl: $feedUrl)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RssFeedCopyWith<$Res> {
-  factory $RssFeedCopyWith(RssFeed value, $Res Function(RssFeed) then) =
-      _$RssFeedCopyWithImpl<$Res, RssFeed>;
-  @useResult
-  $Res call({String id, String entityType, String entityId, Uri feedUrl});
-}
+abstract mixin class $RssFeedCopyWith<$Res>  {
+  factory $RssFeedCopyWith(RssFeed value, $Res Function(RssFeed) _then) = _$RssFeedCopyWithImpl;
+@useResult
+$Res call({
+ String id, String entityType, String entityId, Uri feedUrl
+});
 
+
+
+
+}
 /// @nodoc
-class _$RssFeedCopyWithImpl<$Res, $Val extends RssFeed>
+class _$RssFeedCopyWithImpl<$Res>
     implements $RssFeedCopyWith<$Res> {
-  _$RssFeedCopyWithImpl(this._value, this._then);
+  _$RssFeedCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RssFeed _self;
+  final $Res Function(RssFeed) _then;
 
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? entityType = null,
-    Object? entityId = null,
-    Object? feedUrl = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityType: null == entityType
-          ? _value.entityType
-          : entityType // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityId: null == entityId
-          ? _value.entityId
-          : entityId // ignore: cast_nullable_to_non_nullable
-              as String,
-      feedUrl: null == feedUrl
-          ? _value.feedUrl
-          : feedUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
-    ) as $Val);
-  }
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? entityType = null,Object? entityId = null,Object? feedUrl = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,entityType: null == entityType ? _self.entityType : entityType // ignore: cast_nullable_to_non_nullable
+as String,entityId: null == entityId ? _self.entityId : entityId // ignore: cast_nullable_to_non_nullable
+as String,feedUrl: null == feedUrl ? _self.feedUrl : feedUrl // ignore: cast_nullable_to_non_nullable
+as Uri,
+  ));
 }
 
-/// @nodoc
-abstract class _$$RssFeedImplCopyWith<$Res> implements $RssFeedCopyWith<$Res> {
-  factory _$$RssFeedImplCopyWith(
-          _$RssFeedImpl value, $Res Function(_$RssFeedImpl) then) =
-      __$$RssFeedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String slug,
-      String userId,
-      String entityType,
-      String entityId,
-      String coverPath,
-      Uri serverAddress,
-      Uri feedUrl,
-      RssFeedMetadata meta,
-      List<RssFeedEpisode> episodes,
-      DateTime createdAt,
-      DateTime updatedAt});
-
-  $RssFeedMetadataCopyWith<$Res> get meta;
 }
 
-/// @nodoc
-class __$$RssFeedImplCopyWithImpl<$Res>
-    extends _$RssFeedCopyWithImpl<$Res, _$RssFeedImpl>
-    implements _$$RssFeedImplCopyWith<$Res> {
-  __$$RssFeedImplCopyWithImpl(
-      _$RssFeedImpl _value, $Res Function(_$RssFeedImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? slug = null,
-    Object? userId = null,
-    Object? entityType = null,
-    Object? entityId = null,
-    Object? coverPath = null,
-    Object? serverAddress = null,
-    Object? feedUrl = null,
-    Object? meta = null,
-    Object? episodes = null,
-    Object? createdAt = null,
-    Object? updatedAt = null,
-  }) {
-    return _then(_$RssFeedImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      slug: null == slug
-          ? _value.slug
-          : slug // ignore: cast_nullable_to_non_nullable
-              as String,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityType: null == entityType
-          ? _value.entityType
-          : entityType // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityId: null == entityId
-          ? _value.entityId
-          : entityId // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverPath: null == coverPath
-          ? _value.coverPath
-          : coverPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      serverAddress: null == serverAddress
-          ? _value.serverAddress
-          : serverAddress // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      feedUrl: null == feedUrl
-          ? _value.feedUrl
-          : feedUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      meta: null == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as RssFeedMetadata,
-      episodes: null == episodes
-          ? _value._episodes
-          : episodes // ignore: cast_nullable_to_non_nullable
-              as List<RssFeedEpisode>,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
+/// Adds pattern-matching-related methods to [RssFeed].
+extension RssFeedPatterns on RssFeed {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $RssFeedMetadataCopyWith<$Res> get meta {
-    return $RssFeedMetadataCopyWith<$Res>(_value.meta, (value) {
-      return _then(_value.copyWith(meta: value));
-    });
-  }
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( RssFeedBase value)?  $default,{TResult Function( RssFeedMinified value)?  minified,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case RssFeedBase() when $default != null:
+return $default(_that);case RssFeedMinified() when minified != null:
+return minified(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( RssFeedBase value)  $default,{required TResult Function( RssFeedMinified value)  minified,}){
+final _that = this;
+switch (_that) {
+case RssFeedBase():
+return $default(_that);case RssFeedMinified():
+return minified(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( RssFeedBase value)?  $default,{TResult? Function( RssFeedMinified value)?  minified,}){
+final _that = this;
+switch (_that) {
+case RssFeedBase() when $default != null:
+return $default(_that);case RssFeedMinified() when minified != null:
+return minified(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String slug,  String userId,  String entityType,  String entityId,  String coverPath,  Uri serverAddress,  Uri feedUrl,  RssFeedMetadata meta,  List<RssFeedEpisode> episodes,  DateTime createdAt,  DateTime updatedAt)?  $default,{TResult Function( String id,  String entityType,  String entityId,  Uri feedUrl)?  minified,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case RssFeedBase() when $default != null:
+return $default(_that.id,_that.slug,_that.userId,_that.entityType,_that.entityId,_that.coverPath,_that.serverAddress,_that.feedUrl,_that.meta,_that.episodes,_that.createdAt,_that.updatedAt);case RssFeedMinified() when minified != null:
+return minified(_that.id,_that.entityType,_that.entityId,_that.feedUrl);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String slug,  String userId,  String entityType,  String entityId,  String coverPath,  Uri serverAddress,  Uri feedUrl,  RssFeedMetadata meta,  List<RssFeedEpisode> episodes,  DateTime createdAt,  DateTime updatedAt)  $default,{required TResult Function( String id,  String entityType,  String entityId,  Uri feedUrl)  minified,}) {final _that = this;
+switch (_that) {
+case RssFeedBase():
+return $default(_that.id,_that.slug,_that.userId,_that.entityType,_that.entityId,_that.coverPath,_that.serverAddress,_that.feedUrl,_that.meta,_that.episodes,_that.createdAt,_that.updatedAt);case RssFeedMinified():
+return minified(_that.id,_that.entityType,_that.entityId,_that.feedUrl);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String slug,  String userId,  String entityType,  String entityId,  String coverPath,  Uri serverAddress,  Uri feedUrl,  RssFeedMetadata meta,  List<RssFeedEpisode> episodes,  DateTime createdAt,  DateTime updatedAt)?  $default,{TResult? Function( String id,  String entityType,  String entityId,  Uri feedUrl)?  minified,}) {final _that = this;
+switch (_that) {
+case RssFeedBase() when $default != null:
+return $default(_that.id,_that.slug,_that.userId,_that.entityType,_that.entityId,_that.coverPath,_that.serverAddress,_that.feedUrl,_that.meta,_that.episodes,_that.createdAt,_that.updatedAt);case RssFeedMinified() when minified != null:
+return minified(_that.id,_that.entityType,_that.entityId,_that.feedUrl);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$RssFeedImpl extends _RssFeed {
-  const _$RssFeedImpl(
-      {required this.id,
-      required this.slug,
-      required this.userId,
-      required this.entityType,
-      required this.entityId,
-      required this.coverPath,
-      required this.serverAddress,
-      required this.feedUrl,
-      required this.meta,
-      required final List<RssFeedEpisode> episodes,
-      required this.createdAt,
-      required this.updatedAt,
-      final String? $type})
-      : _episodes = episodes,
-        $type = $type ?? 'default',
-        super._();
+class RssFeedBase extends RssFeed {
+  const RssFeedBase({required this.id, required this.slug, required this.userId, required this.entityType, required this.entityId, required this.coverPath, required this.serverAddress, required this.feedUrl, required this.meta, required final  List<RssFeedEpisode> episodes, required this.createdAt, required this.updatedAt, final  String? $type}): _episodes = episodes,$type = $type ?? 'default',super._();
+  factory RssFeedBase.fromJson(Map<String, dynamic> json) => _$RssFeedBaseFromJson(json);
 
-  factory _$RssFeedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RssFeedImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  final String slug;
-  @override
-  final String userId;
-  @override
-  final String entityType;
-  @override
-  final String entityId;
-  @override
-  final String coverPath;
-  @override
-  final Uri serverAddress;
-  @override
-  final Uri feedUrl;
-  @override
-  final RssFeedMetadata meta;
-  final List<RssFeedEpisode> _episodes;
-  @override
-  List<RssFeedEpisode> get episodes {
-    if (_episodes is EqualUnmodifiableListView) return _episodes;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_episodes);
-  }
-
-  @override
-  final DateTime createdAt;
-  @override
-  final DateTime updatedAt;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'RssFeed(id: $id, slug: $slug, userId: $userId, entityType: $entityType, entityId: $entityId, coverPath: $coverPath, serverAddress: $serverAddress, feedUrl: $feedUrl, meta: $meta, episodes: $episodes, createdAt: $createdAt, updatedAt: $updatedAt)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RssFeedImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.slug, slug) || other.slug == slug) &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.entityType, entityType) ||
-                other.entityType == entityType) &&
-            (identical(other.entityId, entityId) ||
-                other.entityId == entityId) &&
-            (identical(other.coverPath, coverPath) ||
-                other.coverPath == coverPath) &&
-            (identical(other.serverAddress, serverAddress) ||
-                other.serverAddress == serverAddress) &&
-            (identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            const DeepCollectionEquality().equals(other._episodes, _episodes) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      slug,
-      userId,
-      entityType,
-      entityId,
-      coverPath,
-      serverAddress,
-      feedUrl,
-      meta,
-      const DeepCollectionEquality().hash(_episodes),
-      createdAt,
-      updatedAt);
-
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RssFeedImplCopyWith<_$RssFeedImpl> get copyWith =>
-      __$$RssFeedImplCopyWithImpl<_$RssFeedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)
-        $default, {
-    required TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)
-        minified,
-  }) {
-    return $default(id, slug, userId, entityType, entityId, coverPath,
-        serverAddress, feedUrl, meta, episodes, createdAt, updatedAt);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult? Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-  }) {
-    return $default?.call(id, slug, userId, entityType, entityId, coverPath,
-        serverAddress, feedUrl, meta, episodes, createdAt, updatedAt);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(id, slug, userId, entityType, entityId, coverPath,
-          serverAddress, feedUrl, meta, episodes, createdAt, updatedAt);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_RssFeed value) $default, {
-    required TResult Function(RssFeedMinified value) minified,
-  }) {
-    return $default(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_RssFeed value)? $default, {
-    TResult? Function(RssFeedMinified value)? minified,
-  }) {
-    return $default?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_RssFeed value)? $default, {
-    TResult Function(RssFeedMinified value)? minified,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RssFeedImplToJson(
-      this,
-    );
-  }
+@override final  String id;
+ final  String slug;
+ final  String userId;
+@override final  String entityType;
+@override final  String entityId;
+ final  String coverPath;
+ final  Uri serverAddress;
+@override final  Uri feedUrl;
+ final  RssFeedMetadata meta;
+ final  List<RssFeedEpisode> _episodes;
+ List<RssFeedEpisode> get episodes {
+  if (_episodes is EqualUnmodifiableListView) return _episodes;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_episodes);
 }
 
-abstract class _RssFeed extends RssFeed {
-  const factory _RssFeed(
-      {required final String id,
-      required final String slug,
-      required final String userId,
-      required final String entityType,
-      required final String entityId,
-      required final String coverPath,
-      required final Uri serverAddress,
-      required final Uri feedUrl,
-      required final RssFeedMetadata meta,
-      required final List<RssFeedEpisode> episodes,
-      required final DateTime createdAt,
-      required final DateTime updatedAt}) = _$RssFeedImpl;
-  const _RssFeed._() : super._();
+ final  DateTime createdAt;
+ final  DateTime updatedAt;
 
-  factory _RssFeed.fromJson(Map<String, dynamic> json) = _$RssFeedImpl.fromJson;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String get id;
-  String get slug;
-  String get userId;
-  @override
-  String get entityType;
-  @override
-  String get entityId;
-  String get coverPath;
-  Uri get serverAddress;
-  @override
-  Uri get feedUrl;
-  RssFeedMetadata get meta;
-  List<RssFeedEpisode> get episodes;
-  DateTime get createdAt;
-  DateTime get updatedAt;
 
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RssFeedImplCopyWith<_$RssFeedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssFeedBaseCopyWith<RssFeedBase> get copyWith => _$RssFeedBaseCopyWithImpl<RssFeedBase>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$RssFeedBaseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssFeedBase&&(identical(other.id, id) || other.id == id)&&(identical(other.slug, slug) || other.slug == slug)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.entityType, entityType) || other.entityType == entityType)&&(identical(other.entityId, entityId) || other.entityId == entityId)&&(identical(other.coverPath, coverPath) || other.coverPath == coverPath)&&(identical(other.serverAddress, serverAddress) || other.serverAddress == serverAddress)&&(identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl)&&(identical(other.meta, meta) || other.meta == meta)&&const DeepCollectionEquality().equals(other._episodes, _episodes)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,slug,userId,entityType,entityId,coverPath,serverAddress,feedUrl,meta,const DeepCollectionEquality().hash(_episodes),createdAt,updatedAt);
+
+@override
+String toString() {
+  return 'RssFeed(id: $id, slug: $slug, userId: $userId, entityType: $entityType, entityId: $entityId, coverPath: $coverPath, serverAddress: $serverAddress, feedUrl: $feedUrl, meta: $meta, episodes: $episodes, createdAt: $createdAt, updatedAt: $updatedAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$RssFeedMinifiedImplCopyWith<$Res>
-    implements $RssFeedCopyWith<$Res> {
-  factory _$$RssFeedMinifiedImplCopyWith(_$RssFeedMinifiedImpl value,
-          $Res Function(_$RssFeedMinifiedImpl) then) =
-      __$$RssFeedMinifiedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String id, String entityType, String entityId, Uri feedUrl});
+abstract mixin class $RssFeedBaseCopyWith<$Res> implements $RssFeedCopyWith<$Res> {
+  factory $RssFeedBaseCopyWith(RssFeedBase value, $Res Function(RssFeedBase) _then) = _$RssFeedBaseCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String slug, String userId, String entityType, String entityId, String coverPath, Uri serverAddress, Uri feedUrl, RssFeedMetadata meta, List<RssFeedEpisode> episodes, DateTime createdAt, DateTime updatedAt
+});
+
+
+$RssFeedMetadataCopyWith<$Res> get meta;
+
+}
+/// @nodoc
+class _$RssFeedBaseCopyWithImpl<$Res>
+    implements $RssFeedBaseCopyWith<$Res> {
+  _$RssFeedBaseCopyWithImpl(this._self, this._then);
+
+  final RssFeedBase _self;
+  final $Res Function(RssFeedBase) _then;
+
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? slug = null,Object? userId = null,Object? entityType = null,Object? entityId = null,Object? coverPath = null,Object? serverAddress = null,Object? feedUrl = null,Object? meta = null,Object? episodes = null,Object? createdAt = null,Object? updatedAt = null,}) {
+  return _then(RssFeedBase(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,slug: null == slug ? _self.slug : slug // ignore: cast_nullable_to_non_nullable
+as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,entityType: null == entityType ? _self.entityType : entityType // ignore: cast_nullable_to_non_nullable
+as String,entityId: null == entityId ? _self.entityId : entityId // ignore: cast_nullable_to_non_nullable
+as String,coverPath: null == coverPath ? _self.coverPath : coverPath // ignore: cast_nullable_to_non_nullable
+as String,serverAddress: null == serverAddress ? _self.serverAddress : serverAddress // ignore: cast_nullable_to_non_nullable
+as Uri,feedUrl: null == feedUrl ? _self.feedUrl : feedUrl // ignore: cast_nullable_to_non_nullable
+as Uri,meta: null == meta ? _self.meta : meta // ignore: cast_nullable_to_non_nullable
+as RssFeedMetadata,episodes: null == episodes ? _self._episodes : episodes // ignore: cast_nullable_to_non_nullable
+as List<RssFeedEpisode>,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,updatedAt: null == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,
+  ));
 }
 
-/// @nodoc
-class __$$RssFeedMinifiedImplCopyWithImpl<$Res>
-    extends _$RssFeedCopyWithImpl<$Res, _$RssFeedMinifiedImpl>
-    implements _$$RssFeedMinifiedImplCopyWith<$Res> {
-  __$$RssFeedMinifiedImplCopyWithImpl(
-      _$RssFeedMinifiedImpl _value, $Res Function(_$RssFeedMinifiedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? entityType = null,
-    Object? entityId = null,
-    Object? feedUrl = null,
-  }) {
-    return _then(_$RssFeedMinifiedImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityType: null == entityType
-          ? _value.entityType
-          : entityType // ignore: cast_nullable_to_non_nullable
-              as String,
-      entityId: null == entityId
-          ? _value.entityId
-          : entityId // ignore: cast_nullable_to_non_nullable
-              as String,
-      feedUrl: null == feedUrl
-          ? _value.feedUrl
-          : feedUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
-    ));
-  }
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$RssFeedMetadataCopyWith<$Res> get meta {
+  
+  return $RssFeedMetadataCopyWith<$Res>(_self.meta, (value) {
+    return _then(_self.copyWith(meta: value));
+  });
+}
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RssFeedMinifiedImpl extends RssFeedMinified {
-  const _$RssFeedMinifiedImpl(
-      {required this.id,
-      required this.entityType,
-      required this.entityId,
-      required this.feedUrl,
-      final String? $type})
-      : $type = $type ?? 'minified',
-        super._();
 
-  factory _$RssFeedMinifiedImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RssFeedMinifiedImplFromJson(json);
+class RssFeedMinified extends RssFeed {
+  const RssFeedMinified({required this.id, required this.entityType, required this.entityId, required this.feedUrl, final  String? $type}): $type = $type ?? 'minified',super._();
+  factory RssFeedMinified.fromJson(Map<String, dynamic> json) => _$RssFeedMinifiedFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String entityType;
-  @override
-  final String entityId;
-  @override
-  final Uri feedUrl;
+@override final  String id;
+@override final  String entityType;
+@override final  String entityId;
+@override final  Uri feedUrl;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String toString() {
-    return 'RssFeed.minified(id: $id, entityType: $entityType, entityId: $entityId, feedUrl: $feedUrl)';
-  }
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RssFeedMinifiedImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.entityType, entityType) ||
-                other.entityType == entityType) &&
-            (identical(other.entityId, entityId) ||
-                other.entityId == entityId) &&
-            (identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl));
-  }
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssFeedMinifiedCopyWith<RssFeedMinified> get copyWith => _$RssFeedMinifiedCopyWithImpl<RssFeedMinified>(this, _$identity);
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, entityType, entityId, feedUrl);
-
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RssFeedMinifiedImplCopyWith<_$RssFeedMinifiedImpl> get copyWith =>
-      __$$RssFeedMinifiedImplCopyWithImpl<_$RssFeedMinifiedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)
-        $default, {
-    required TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)
-        minified,
-  }) {
-    return minified(id, entityType, entityId, feedUrl);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult? Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-  }) {
-    return minified?.call(id, entityType, entityId, feedUrl);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String slug,
-            String userId,
-            String entityType,
-            String entityId,
-            String coverPath,
-            Uri serverAddress,
-            Uri feedUrl,
-            RssFeedMetadata meta,
-            List<RssFeedEpisode> episodes,
-            DateTime createdAt,
-            DateTime updatedAt)?
-        $default, {
-    TResult Function(
-            String id, String entityType, String entityId, Uri feedUrl)?
-        minified,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(id, entityType, entityId, feedUrl);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_RssFeed value) $default, {
-    required TResult Function(RssFeedMinified value) minified,
-  }) {
-    return minified(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_RssFeed value)? $default, {
-    TResult? Function(RssFeedMinified value)? minified,
-  }) {
-    return minified?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_RssFeed value)? $default, {
-    TResult Function(RssFeedMinified value)? minified,
-    required TResult orElse(),
-  }) {
-    if (minified != null) {
-      return minified(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RssFeedMinifiedImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$RssFeedMinifiedToJson(this, );
 }
 
-abstract class RssFeedMinified extends RssFeed {
-  const factory RssFeedMinified(
-      {required final String id,
-      required final String entityType,
-      required final String entityId,
-      required final Uri feedUrl}) = _$RssFeedMinifiedImpl;
-  const RssFeedMinified._() : super._();
-
-  factory RssFeedMinified.fromJson(Map<String, dynamic> json) =
-      _$RssFeedMinifiedImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get entityType;
-  @override
-  String get entityId;
-  @override
-  Uri get feedUrl;
-
-  /// Create a copy of RssFeed
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RssFeedMinifiedImplCopyWith<_$RssFeedMinifiedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssFeedMinified&&(identical(other.id, id) || other.id == id)&&(identical(other.entityType, entityType) || other.entityType == entityType)&&(identical(other.entityId, entityId) || other.entityId == entityId)&&(identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,entityType,entityId,feedUrl);
+
+@override
+String toString() {
+  return 'RssFeed.minified(id: $id, entityType: $entityType, entityId: $entityId, feedUrl: $feedUrl)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $RssFeedMinifiedCopyWith<$Res> implements $RssFeedCopyWith<$Res> {
+  factory $RssFeedMinifiedCopyWith(RssFeedMinified value, $Res Function(RssFeedMinified) _then) = _$RssFeedMinifiedCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String entityType, String entityId, Uri feedUrl
+});
+
+
+
+
+}
+/// @nodoc
+class _$RssFeedMinifiedCopyWithImpl<$Res>
+    implements $RssFeedMinifiedCopyWith<$Res> {
+  _$RssFeedMinifiedCopyWithImpl(this._self, this._then);
+
+  final RssFeedMinified _self;
+  final $Res Function(RssFeedMinified) _then;
+
+/// Create a copy of RssFeed
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? entityType = null,Object? entityId = null,Object? feedUrl = null,}) {
+  return _then(RssFeedMinified(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,entityType: null == entityType ? _self.entityType : entityType // ignore: cast_nullable_to_non_nullable
+as String,entityId: null == entityId ? _self.entityId : entityId // ignore: cast_nullable_to_non_nullable
+as String,feedUrl: null == feedUrl ? _self.feedUrl : feedUrl // ignore: cast_nullable_to_non_nullable
+as Uri,
+  ));
+}
+
+
+}
+
+// dart format on

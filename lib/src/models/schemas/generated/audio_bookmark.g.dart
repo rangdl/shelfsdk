@@ -6,17 +6,19 @@ part of '../audio_bookmark.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AudioBookmarkImpl _$$AudioBookmarkImplFromJson(Map<String, dynamic> json) =>
-    _$AudioBookmarkImpl(
+_AudioBookmark _$AudioBookmarkFromJson(Map<String, dynamic> json) =>
+    _AudioBookmark(
       libraryItemId: json['libraryItemId'] as String,
       title: json['title'] as String,
-      time:
-          const DurationSecConverter().fromJson((json['time'] as num).toInt()),
-      createdAt: const DateTimeEpochConverter()
-          .fromJson((json['createdAt'] as num).toInt()),
+      time: const DurationSecConverter().fromJson(
+        (json['time'] as num).toInt(),
+      ),
+      createdAt: const DateTimeEpochConverter().fromJson(
+        (json['createdAt'] as num).toInt(),
+      ),
     );
 
-Map<String, dynamic> _$$AudioBookmarkImplToJson(_$AudioBookmarkImpl instance) =>
+Map<String, dynamic> _$AudioBookmarkToJson(_AudioBookmark instance) =>
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
       'title': instance.title,

@@ -6,7 +6,7 @@ part 'generated/log_event.freezed.dart';
 part 'generated/log_event.g.dart';
 
 @freezed
-class LogEvent with _$LogEvent {
+abstract class LogEvent with _$LogEvent {
   const factory LogEvent({
     @JsonKey(toJson: _timestampToJson) required DateTime timestamp,
     required String message,

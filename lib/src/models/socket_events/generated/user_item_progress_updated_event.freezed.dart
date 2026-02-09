@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,203 +9,290 @@ part of '../user_item_progress_updated_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-UserItemProgressUpdatedEvent _$UserItemProgressUpdatedEventFromJson(
-    Map<String, dynamic> json) {
-  return _UserItemProgressUpdatedEvent.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UserItemProgressUpdatedEvent {
-  String get id => throw _privateConstructorUsedError;
-  MediaProgress get data => throw _privateConstructorUsedError;
+
+ String get id; MediaProgress get data;
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UserItemProgressUpdatedEventCopyWith<UserItemProgressUpdatedEvent> get copyWith => _$UserItemProgressUpdatedEventCopyWithImpl<UserItemProgressUpdatedEvent>(this as UserItemProgressUpdatedEvent, _$identity);
 
   /// Serializes this UserItemProgressUpdatedEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UserItemProgressUpdatedEventCopyWith<UserItemProgressUpdatedEvent>
-      get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserItemProgressUpdatedEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.data, data) || other.data == data));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,data);
+
+@override
+String toString() {
+  return 'UserItemProgressUpdatedEvent(id: $id, data: $data)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UserItemProgressUpdatedEventCopyWith<$Res> {
-  factory $UserItemProgressUpdatedEventCopyWith(
-          UserItemProgressUpdatedEvent value,
-          $Res Function(UserItemProgressUpdatedEvent) then) =
-      _$UserItemProgressUpdatedEventCopyWithImpl<$Res,
-          UserItemProgressUpdatedEvent>;
-  @useResult
-  $Res call({String id, MediaProgress data});
+abstract mixin class $UserItemProgressUpdatedEventCopyWith<$Res>  {
+  factory $UserItemProgressUpdatedEventCopyWith(UserItemProgressUpdatedEvent value, $Res Function(UserItemProgressUpdatedEvent) _then) = _$UserItemProgressUpdatedEventCopyWithImpl;
+@useResult
+$Res call({
+ String id, MediaProgress data
+});
 
-  $MediaProgressCopyWith<$Res> get data;
+
+$MediaProgressCopyWith<$Res> get data;
+
 }
-
 /// @nodoc
-class _$UserItemProgressUpdatedEventCopyWithImpl<$Res,
-        $Val extends UserItemProgressUpdatedEvent>
+class _$UserItemProgressUpdatedEventCopyWithImpl<$Res>
     implements $UserItemProgressUpdatedEventCopyWith<$Res> {
-  _$UserItemProgressUpdatedEventCopyWithImpl(this._value, this._then);
+  _$UserItemProgressUpdatedEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UserItemProgressUpdatedEvent _self;
+  final $Res Function(UserItemProgressUpdatedEvent) _then;
 
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as MediaProgress,
-    ) as $Val);
-  }
-
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $MediaProgressCopyWith<$Res> get data {
-    return $MediaProgressCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value) as $Val);
-    });
-  }
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? data = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as MediaProgress,
+  ));
+}
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MediaProgressCopyWith<$Res> get data {
+  
+  return $MediaProgressCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$UserItemProgressUpdatedEventImplCopyWith<$Res>
-    implements $UserItemProgressUpdatedEventCopyWith<$Res> {
-  factory _$$UserItemProgressUpdatedEventImplCopyWith(
-          _$UserItemProgressUpdatedEventImpl value,
-          $Res Function(_$UserItemProgressUpdatedEventImpl) then) =
-      __$$UserItemProgressUpdatedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String id, MediaProgress data});
 
-  @override
-  $MediaProgressCopyWith<$Res> get data;
+/// Adds pattern-matching-related methods to [UserItemProgressUpdatedEvent].
+extension UserItemProgressUpdatedEventPatterns on UserItemProgressUpdatedEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserItemProgressUpdatedEvent value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserItemProgressUpdatedEvent value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserItemProgressUpdatedEvent value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  MediaProgress data)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent() when $default != null:
+return $default(_that.id,_that.data);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  MediaProgress data)  $default,) {final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent():
+return $default(_that.id,_that.data);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  MediaProgress data)?  $default,) {final _that = this;
+switch (_that) {
+case _UserItemProgressUpdatedEvent() when $default != null:
+return $default(_that.id,_that.data);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$UserItemProgressUpdatedEventImplCopyWithImpl<$Res>
-    extends _$UserItemProgressUpdatedEventCopyWithImpl<$Res,
-        _$UserItemProgressUpdatedEventImpl>
-    implements _$$UserItemProgressUpdatedEventImplCopyWith<$Res> {
-  __$$UserItemProgressUpdatedEventImplCopyWithImpl(
-      _$UserItemProgressUpdatedEventImpl _value,
-      $Res Function(_$UserItemProgressUpdatedEventImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? data = null,
-  }) {
-    return _then(_$UserItemProgressUpdatedEventImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as MediaProgress,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$UserItemProgressUpdatedEventImpl
-    implements _UserItemProgressUpdatedEvent {
-  const _$UserItemProgressUpdatedEventImpl(
-      {required this.id, required this.data});
 
-  factory _$UserItemProgressUpdatedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UserItemProgressUpdatedEventImplFromJson(json);
+class _UserItemProgressUpdatedEvent implements UserItemProgressUpdatedEvent {
+  const _UserItemProgressUpdatedEvent({required this.id, required this.data});
+  factory _UserItemProgressUpdatedEvent.fromJson(Map<String, dynamic> json) => _$UserItemProgressUpdatedEventFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final MediaProgress data;
+@override final  String id;
+@override final  MediaProgress data;
 
-  @override
-  String toString() {
-    return 'UserItemProgressUpdatedEvent(id: $id, data: $data)';
-  }
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UserItemProgressUpdatedEventCopyWith<_UserItemProgressUpdatedEvent> get copyWith => __$UserItemProgressUpdatedEventCopyWithImpl<_UserItemProgressUpdatedEvent>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UserItemProgressUpdatedEventImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.data, data) || other.data == data));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, data);
-
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UserItemProgressUpdatedEventImplCopyWith<
-          _$UserItemProgressUpdatedEventImpl>
-      get copyWith => __$$UserItemProgressUpdatedEventImplCopyWithImpl<
-          _$UserItemProgressUpdatedEventImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UserItemProgressUpdatedEventImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$UserItemProgressUpdatedEventToJson(this, );
 }
 
-abstract class _UserItemProgressUpdatedEvent
-    implements UserItemProgressUpdatedEvent {
-  const factory _UserItemProgressUpdatedEvent(
-      {required final String id,
-      required final MediaProgress data}) = _$UserItemProgressUpdatedEventImpl;
-
-  factory _UserItemProgressUpdatedEvent.fromJson(Map<String, dynamic> json) =
-      _$UserItemProgressUpdatedEventImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  MediaProgress get data;
-
-  /// Create a copy of UserItemProgressUpdatedEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserItemProgressUpdatedEventImplCopyWith<
-          _$UserItemProgressUpdatedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserItemProgressUpdatedEvent&&(identical(other.id, id) || other.id == id)&&(identical(other.data, data) || other.data == data));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,data);
+
+@override
+String toString() {
+  return 'UserItemProgressUpdatedEvent(id: $id, data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$UserItemProgressUpdatedEventCopyWith<$Res> implements $UserItemProgressUpdatedEventCopyWith<$Res> {
+  factory _$UserItemProgressUpdatedEventCopyWith(_UserItemProgressUpdatedEvent value, $Res Function(_UserItemProgressUpdatedEvent) _then) = __$UserItemProgressUpdatedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, MediaProgress data
+});
+
+
+@override $MediaProgressCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class __$UserItemProgressUpdatedEventCopyWithImpl<$Res>
+    implements _$UserItemProgressUpdatedEventCopyWith<$Res> {
+  __$UserItemProgressUpdatedEventCopyWithImpl(this._self, this._then);
+
+  final _UserItemProgressUpdatedEvent _self;
+  final $Res Function(_UserItemProgressUpdatedEvent) _then;
+
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? data = null,}) {
+  return _then(_UserItemProgressUpdatedEvent(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as MediaProgress,
+  ));
+}
+
+/// Create a copy of UserItemProgressUpdatedEvent
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MediaProgressCopyWith<$Res> get data {
+  
+  return $MediaProgressCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+// dart format on

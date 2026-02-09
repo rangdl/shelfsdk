@@ -6,9 +6,8 @@ part of '../shelf.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LibraryItemShelfImpl _$$LibraryItemShelfImplFromJson(
-        Map<String, dynamic> json) =>
-    _$LibraryItemShelfImpl(
+LibraryItemShelf _$LibraryItemShelfFromJson(Map<String, dynamic> json) =>
+    LibraryItemShelf(
       id: json['id'] as String,
       label: json['label'] as String,
       labelStringKey: json['labelStringKey'] as String,
@@ -20,8 +19,7 @@ _$LibraryItemShelfImpl _$$LibraryItemShelfImplFromJson(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$LibraryItemShelfImplToJson(
-        _$LibraryItemShelfImpl instance) =>
+Map<String, dynamic> _$LibraryItemShelfToJson(LibraryItemShelf instance) =>
     <String, dynamic>{
       'id': instance.id,
       'label': instance.label,
@@ -40,20 +38,19 @@ const _$ShelfTypeEnumMap = {
   ShelfType.podcast: 'podcast',
 };
 
-_$SeriesShelfImpl _$$SeriesShelfImplFromJson(Map<String, dynamic> json) =>
-    _$SeriesShelfImpl(
-      id: json['id'] as String,
-      label: json['label'] as String,
-      labelStringKey: json['labelStringKey'] as String,
-      type: $enumDecode(_$ShelfTypeEnumMap, json['type']),
-      entities: (json['entities'] as List<dynamic>)
-          .map((e) => Series.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      total: (json['total'] as num).toInt(),
-      $type: json['runtimeType'] as String?,
-    );
+SeriesShelf _$SeriesShelfFromJson(Map<String, dynamic> json) => SeriesShelf(
+  id: json['id'] as String,
+  label: json['label'] as String,
+  labelStringKey: json['labelStringKey'] as String,
+  type: $enumDecode(_$ShelfTypeEnumMap, json['type']),
+  entities: (json['entities'] as List<dynamic>)
+      .map((e) => Series.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  total: (json['total'] as num).toInt(),
+  $type: json['runtimeType'] as String?,
+);
 
-Map<String, dynamic> _$$SeriesShelfImplToJson(_$SeriesShelfImpl instance) =>
+Map<String, dynamic> _$SeriesShelfToJson(SeriesShelf instance) =>
     <String, dynamic>{
       'id': instance.id,
       'label': instance.label,
@@ -64,20 +61,19 @@ Map<String, dynamic> _$$SeriesShelfImplToJson(_$SeriesShelfImpl instance) =>
       'runtimeType': instance.$type,
     };
 
-_$AuthorShelfImpl _$$AuthorShelfImplFromJson(Map<String, dynamic> json) =>
-    _$AuthorShelfImpl(
-      id: json['id'] as String,
-      label: json['label'] as String,
-      labelStringKey: json['labelStringKey'] as String,
-      type: $enumDecode(_$ShelfTypeEnumMap, json['type']),
-      entities: (json['entities'] as List<dynamic>)
-          .map((e) => Author.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      total: (json['total'] as num).toInt(),
-      $type: json['runtimeType'] as String?,
-    );
+AuthorShelf _$AuthorShelfFromJson(Map<String, dynamic> json) => AuthorShelf(
+  id: json['id'] as String,
+  label: json['label'] as String,
+  labelStringKey: json['labelStringKey'] as String,
+  type: $enumDecode(_$ShelfTypeEnumMap, json['type']),
+  entities: (json['entities'] as List<dynamic>)
+      .map((e) => Author.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  total: (json['total'] as num).toInt(),
+  $type: json['runtimeType'] as String?,
+);
 
-Map<String, dynamic> _$$AuthorShelfImplToJson(_$AuthorShelfImpl instance) =>
+Map<String, dynamic> _$AuthorShelfToJson(AuthorShelf instance) =>
     <String, dynamic>{
       'id': instance.id,
       'label': instance.label,

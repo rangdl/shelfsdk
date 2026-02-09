@@ -6,9 +6,8 @@ part of '../filesystem_directory.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FilesystemDirectoryImpl _$$FilesystemDirectoryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$FilesystemDirectoryImpl(
+_FilesystemDirectory _$FilesystemDirectoryFromJson(Map<String, dynamic> json) =>
+    _FilesystemDirectory(
       path: json['path'] as String,
       dirname: json['dirname'] as String,
       fullPath: json['fullPath'] as String,
@@ -18,12 +17,12 @@ _$FilesystemDirectoryImpl _$$FilesystemDirectoryImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$FilesystemDirectoryImplToJson(
-        _$FilesystemDirectoryImpl instance) =>
-    <String, dynamic>{
-      'path': instance.path,
-      'dirname': instance.dirname,
-      'fullPath': instance.fullPath,
-      'level': instance.level,
-      'dirs': instance.dirs.map((e) => e.toJson()).toList(),
-    };
+Map<String, dynamic> _$FilesystemDirectoryToJson(
+  _FilesystemDirectory instance,
+) => <String, dynamic>{
+  'path': instance.path,
+  'dirname': instance.dirname,
+  'fullPath': instance.fullPath,
+  'level': instance.level,
+  'dirs': instance.dirs.map((e) => e.toJson()).toList(),
+};

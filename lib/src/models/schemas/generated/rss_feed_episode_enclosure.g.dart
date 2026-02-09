@@ -6,18 +6,18 @@ part of '../rss_feed_episode_enclosure.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RssFeedEpisodeEnclosureImpl _$$RssFeedEpisodeEnclosureImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RssFeedEpisodeEnclosureImpl(
-      url: Uri.parse(json['url'] as String),
-      type: json['type'] as String,
-      size: (json['size'] as num).toInt(),
-    );
+_RssFeedEpisodeEnclosure _$RssFeedEpisodeEnclosureFromJson(
+  Map<String, dynamic> json,
+) => _RssFeedEpisodeEnclosure(
+  url: Uri.parse(json['url'] as String),
+  type: json['type'] as String,
+  size: (json['size'] as num).toInt(),
+);
 
-Map<String, dynamic> _$$RssFeedEpisodeEnclosureImplToJson(
-        _$RssFeedEpisodeEnclosureImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url.toString(),
-      'type': instance.type,
-      'size': instance.size,
-    };
+Map<String, dynamic> _$RssFeedEpisodeEnclosureToJson(
+  _RssFeedEpisodeEnclosure instance,
+) => <String, dynamic>{
+  'url': instance.url.toString(),
+  'type': instance.type,
+  'size': instance.size,
+};

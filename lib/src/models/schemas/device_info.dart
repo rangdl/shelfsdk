@@ -24,7 +24,7 @@ part 'generated/device_info.g.dart';
 ///
 
 @freezed
-class DeviceInfo with _$DeviceInfo {
+abstract class DeviceInfo with _$DeviceInfo {
   const factory DeviceInfo({
     String? id,
     String? userId,

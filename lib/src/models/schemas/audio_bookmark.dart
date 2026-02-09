@@ -7,7 +7,7 @@ part 'generated/audio_bookmark.g.dart';
 
 /// See [Audio Bookmark](https://api.audiobookshelf.org/#audio-bookmark)
 @freezed
-class AudioBookmark with _$AudioBookmark {
+abstract class AudioBookmark with _$AudioBookmark {
   @jsonConverters
   const factory AudioBookmark({
     required String libraryItemId,

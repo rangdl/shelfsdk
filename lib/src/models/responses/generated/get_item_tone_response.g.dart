@@ -6,9 +6,8 @@ part of '../get_item_tone_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetItemToneResponseImpl _$$GetItemToneResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetItemToneResponseImpl(
+_GetItemToneResponse _$GetItemToneResponseFromJson(Map<String, dynamic> json) =>
+    _GetItemToneResponse(
       title: json['Title'] as String,
       album: json['Album'] as String,
       trackTotal: (json['TrackTotal'] as num).toInt(),
@@ -29,23 +28,23 @@ _$GetItemToneResponseImpl _$$GetItemToneResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$GetItemToneResponseImplToJson(
-        _$GetItemToneResponseImpl instance) =>
-    <String, dynamic>{
-      'Title': instance.title,
-      'Album': instance.album,
-      'TrackTotal': instance.trackTotal,
-      'Artist': instance.artist,
-      'AlbumArtist': instance.albumArtist,
-      'Comment': instance.comment,
-      'Description': instance.description,
-      'Narrator': instance.narrator,
-      'Composer': instance.composer,
-      'MovementName': instance.movementName,
-      'Movement': instance.movement,
-      'Genre': instance.genre,
-      'Publisher': instance.publisher,
-      'CoverFile': instance.coverFile,
-      'PublishingDate': instance.publishingDate,
-      'AdditionalFields': instance.additionalFields,
-    };
+Map<String, dynamic> _$GetItemToneResponseToJson(
+  _GetItemToneResponse instance,
+) => <String, dynamic>{
+  'Title': instance.title,
+  'Album': instance.album,
+  'TrackTotal': instance.trackTotal,
+  'Artist': instance.artist,
+  'AlbumArtist': instance.albumArtist,
+  'Comment': instance.comment,
+  'Description': instance.description,
+  'Narrator': instance.narrator,
+  'Composer': instance.composer,
+  'MovementName': instance.movementName,
+  'Movement': instance.movement,
+  'Genre': instance.genre,
+  'Publisher': instance.publisher,
+  'CoverFile': instance.coverFile,
+  'PublishingDate': instance.publishingDate,
+  'AdditionalFields': instance.additionalFields,
+};

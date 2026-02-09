@@ -5,7 +5,7 @@ part 'generated/library_scan.g.dart';
 
 /// See [Library Scan](https://api.audiobookshelf.org/#library-scan)
 @freezed
-class LibraryScan with _$LibraryScan {
+abstract class LibraryScan with _$LibraryScan {
   const factory LibraryScan({
     @JsonKey(name: 'id') required String libraryId,
     required String type,
@@ -19,7 +19,7 @@ class LibraryScan with _$LibraryScan {
 
 /// See [Library Scan Results](https://api.audiobookshelf.org/#library-scan-results)
 @freezed
-class LibraryScanResults with _$LibraryScanResults {
+abstract class LibraryScanResults with _$LibraryScanResults {
   const factory LibraryScanResults({
     required int added,
     required int updated,

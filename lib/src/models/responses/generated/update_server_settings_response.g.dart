@@ -6,17 +6,18 @@ part of '../update_server_settings_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UpdateServerSettingsResponseImpl _$$UpdateServerSettingsResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UpdateServerSettingsResponseImpl(
-      success: json['success'] as bool,
-      serverSettings: ServerSettings.fromJson(
-          json['serverSettings'] as Map<String, dynamic>),
-    );
+_UpdateServerSettingsResponse _$UpdateServerSettingsResponseFromJson(
+  Map<String, dynamic> json,
+) => _UpdateServerSettingsResponse(
+  success: json['success'] as bool,
+  serverSettings: ServerSettings.fromJson(
+    json['serverSettings'] as Map<String, dynamic>,
+  ),
+);
 
-Map<String, dynamic> _$$UpdateServerSettingsResponseImplToJson(
-        _$UpdateServerSettingsResponseImpl instance) =>
-    <String, dynamic>{
-      'success': instance.success,
-      'serverSettings': instance.serverSettings.toJson(),
-    };
+Map<String, dynamic> _$UpdateServerSettingsResponseToJson(
+  _UpdateServerSettingsResponse instance,
+) => <String, dynamic>{
+  'success': instance.success,
+  'serverSettings': instance.serverSettings.toJson(),
+};

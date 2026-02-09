@@ -10,7 +10,7 @@ part 'generated/get_user_stats_response.g.dart';
 
 /// See [Get a User's Listening Stats](https://api.audiobookshelf.org/#get-a-user-39-s-listening-stats)
 @freezed
-class GetUserStatsResponse with _$GetUserStatsResponse {
+abstract class GetUserStatsResponse with _$GetUserStatsResponse {
   @DurationSecConverter()
   const factory GetUserStatsResponse({
     required Duration totalTime,
@@ -28,7 +28,7 @@ class GetUserStatsResponse with _$GetUserStatsResponse {
 Map<String, int> _daysToJson(Map<DateTime, Duration> days) {
   return {
     for (final day in days.entries)
-      _dateTimeToDateString(day.key): day.value.inSeconds
+      _dateTimeToDateString(day.key): day.value.inSeconds,
   };
 }
 
@@ -41,7 +41,7 @@ String _dateTimeToDateString(DateTime date) {
 
 /// See [Get a User's Listening Stats](https://api.audiobookshelf.org/#get-a-user-39-s-listening-stats)
 @freezed
-class ItemsListenedToResponse with _$ItemsListenedToResponse {
+abstract class ItemsListenedToResponse with _$ItemsListenedToResponse {
   @DurationSecConverter()
   const factory ItemsListenedToResponse({
     @JsonKey(name: 'id') required String libraryItemId,

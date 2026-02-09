@@ -12,7 +12,7 @@ part 'generated/user.g.dart';
 
 /// See [User](https://api.audiobookshelf.org/#user)
 @freezed
-class User with _$User {
+abstract class User with _$User {
   const User._();
 
   @jsonConverters
@@ -30,7 +30,11 @@ class User with _$User {
     required DateTime createdAt,
     required UserPermissions permissions,
     required List<String> librariesAccessible,
-  }) = _User;
+    required List<String> itemTagsAccessible,
+    required bool hasOpenIDLink,
+    required String? refreshToken,
+    required String accessToken,
+  }) = UserBase;
 
   @jsonConverters
   const factory User.withSessionAndMostRecentProgress({
@@ -74,7 +78,7 @@ class UserConverter implements JsonConverter<User, Map<String, dynamic>> {
 
     switch (variant) {
       case UserVariant.base:
-        return _User.fromJson(json);
+        return UserBase.fromJson(json);
       case UserVariant.withSessionAndMostRecentProgress:
         return UserWithSessionAndMostRecentProgress.fromJson(json);
     }

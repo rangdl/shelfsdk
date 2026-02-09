@@ -7,18 +7,18 @@ part of '../batch_match_items_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$BatchMatchItemsReqParamsToJson(
-        BatchMatchItemsReqParams instance) =>
-    <String, dynamic>{
-      if (instance.options?.toJson() case final value?) 'options': value,
-      'libraryItemIds': instance.libraryItemIds,
-    };
+  BatchMatchItemsReqParams instance,
+) => <String, dynamic>{
+  'options': ?instance.options?.toJson(),
+  'libraryItemIds': instance.libraryItemIds,
+};
 
 Map<String, dynamic> _$BatchMatchOptionsReqParamsToJson(
-        BatchMatchOptionsReqParams instance) =>
-    <String, dynamic>{
-      'provider': _$MetadataProviderEnumMap[instance.provider]!,
-      'overrideDefaults': instance.overrideDefaults,
-    };
+  BatchMatchOptionsReqParams instance,
+) => <String, dynamic>{
+  'provider': _$MetadataProviderEnumMap[instance.provider]!,
+  'overrideDefaults': instance.overrideDefaults,
+};
 
 const _$MetadataProviderEnumMap = {
   MetadataProvider.google: 'google',

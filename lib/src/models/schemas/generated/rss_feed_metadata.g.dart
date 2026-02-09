@@ -6,9 +6,8 @@ part of '../rss_feed_metadata.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RssFeedMetadataImpl _$$RssFeedMetadataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RssFeedMetadataImpl(
+_RssFeedMetadata _$RssFeedMetadataFromJson(Map<String, dynamic> json) =>
+    _RssFeedMetadata(
       title: json['title'] as String,
       description: json['description'] as String,
       author: json['author'] as String,
@@ -18,8 +17,7 @@ _$RssFeedMetadataImpl _$$RssFeedMetadataImplFromJson(
       explicit: json['explicit'] as bool,
     );
 
-Map<String, dynamic> _$$RssFeedMetadataImplToJson(
-        _$RssFeedMetadataImpl instance) =>
+Map<String, dynamic> _$RssFeedMetadataToJson(_RssFeedMetadata instance) =>
     <String, dynamic>{
       'title': instance.title,
       'description': instance.description,

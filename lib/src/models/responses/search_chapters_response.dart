@@ -7,12 +7,11 @@ part 'generated/search_chapters_response.g.dart';
 
 /// See [Search for a Book's Chapters](https://api.audiobookshelf.org/#search-for-a-book-39-s-chapters)
 @freezed
-class SearchChaptersResponse with _$SearchChaptersResponse {
+abstract class SearchChaptersResponse with _$SearchChaptersResponse {
   const SearchChaptersResponse._();
 
-  const factory SearchChaptersResponse.error({
-    required String error,
-  }) = SearchChaptersResponseError;
+  const factory SearchChaptersResponse.error({required String error}) =
+      SearchChaptersResponseError;
 
   @DurationMsConverter()
   const factory SearchChaptersResponse.response({
@@ -39,7 +38,7 @@ enum SearchChaptersResponseVariant { error, response }
 
 /// See [Search for a Book's Chapters](https://api.audiobookshelf.org/#search-for-a-book-39-s-chapters)
 @freezed
-class SearchResultChapter with _$SearchResultChapter {
+abstract class SearchResultChapter with _$SearchResultChapter {
   @DurationMsConverter()
   const factory SearchResultChapter({
     @JsonKey(name: 'lengthMs') required Duration length,

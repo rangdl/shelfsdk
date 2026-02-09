@@ -6,8 +6,8 @@ part of '../series_progress.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SeriesProgressImpl _$$SeriesProgressImplFromJson(Map<String, dynamic> json) =>
-    _$SeriesProgressImpl(
+_SeriesProgress _$SeriesProgressFromJson(Map<String, dynamic> json) =>
+    _SeriesProgress(
       libraryItemIds: (json['libraryItemIds'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
@@ -17,8 +17,7 @@ _$SeriesProgressImpl _$$SeriesProgressImplFromJson(Map<String, dynamic> json) =>
       isFinished: json['isFinished'] as bool,
     );
 
-Map<String, dynamic> _$$SeriesProgressImplToJson(
-        _$SeriesProgressImpl instance) =>
+Map<String, dynamic> _$SeriesProgressToJson(_SeriesProgress instance) =>
     <String, dynamic>{
       'libraryItemIds': instance.libraryItemIds,
       'libraryItemIdsFinished': instance.libraryItemIdsFinished,

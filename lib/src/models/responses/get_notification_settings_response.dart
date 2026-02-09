@@ -8,7 +8,8 @@ part 'generated/get_notification_settings_response.g.dart';
 
 /// See [Get Notification Settings](https://api.audiobookshelf.org/#get-notification-settings)
 @freezed
-class GetNotificationSettingsResponse with _$GetNotificationSettingsResponse {
+abstract class GetNotificationSettingsResponse
+    with _$GetNotificationSettingsResponse {
   const factory GetNotificationSettingsResponse({
     required NotificationData data,
     required NotificationSettings settings,
@@ -19,10 +20,9 @@ class GetNotificationSettingsResponse with _$GetNotificationSettingsResponse {
 }
 
 @freezed
-class NotificationData with _$NotificationData {
-  const factory NotificationData({
-    required List<NotificationEvent> events,
-  }) = _NotificationData;
+abstract class NotificationData with _$NotificationData {
+  const factory NotificationData({required List<NotificationEvent> events}) =
+      _NotificationData;
 
   factory NotificationData.fromJson(Map<String, dynamic> json) =>
       _$NotificationDataFromJson(json);

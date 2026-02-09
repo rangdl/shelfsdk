@@ -7,7 +7,7 @@ part 'generated/search_books_response.g.dart';
 
 /// See [Search for Books](https://api.audiobookshelf.org/#search-for-books)
 @freezed
-class SearchBooksResponse with _$SearchBooksResponse {
+abstract class SearchBooksResponse with _$SearchBooksResponse {
   const SearchBooksResponse._();
 
   const factory SearchBooksResponse.google({
@@ -106,7 +106,7 @@ enum SearchBooksResponseVariant {
 }
 
 @freezed
-class AudibleSeries with _$AudibleSeries {
+abstract class AudibleSeries with _$AudibleSeries {
   const factory AudibleSeries({
     required String series,
     required String sequence,

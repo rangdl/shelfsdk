@@ -5,7 +5,7 @@ part 'generated/rename_tag_response.g.dart';
 
 /// See [Rename a Tag](https://api.audiobookshelf.org/#rename-a-tag)
 @freezed
-class RenameTagResponse with _$RenameTagResponse {
+abstract class RenameTagResponse with _$RenameTagResponse {
   const factory RenameTagResponse({
     required bool tagMerged,
     required int numItemsUpdated,

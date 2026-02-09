@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,233 +9,284 @@ part of '../get_librarys_playlists_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-GetLibrarysPlaylistsResponse _$GetLibrarysPlaylistsResponseFromJson(
-    Map<String, dynamic> json) {
-  return _GetLibrarysPlaylistsResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$GetLibrarysPlaylistsResponse {
-  List<Playlist> get results => throw _privateConstructorUsedError;
-  int get total => throw _privateConstructorUsedError;
-  int get limit => throw _privateConstructorUsedError;
-  int get page => throw _privateConstructorUsedError;
+
+ List<Playlist> get results; int get total; int get limit; int get page;
+/// Create a copy of GetLibrarysPlaylistsResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GetLibrarysPlaylistsResponseCopyWith<GetLibrarysPlaylistsResponse> get copyWith => _$GetLibrarysPlaylistsResponseCopyWithImpl<GetLibrarysPlaylistsResponse>(this as GetLibrarysPlaylistsResponse, _$identity);
 
   /// Serializes this GetLibrarysPlaylistsResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of GetLibrarysPlaylistsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetLibrarysPlaylistsResponseCopyWith<GetLibrarysPlaylistsResponse>
-      get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetLibrarysPlaylistsResponse&&const DeepCollectionEquality().equals(other.results, results)&&(identical(other.total, total) || other.total == total)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.page, page) || other.page == page));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(results),total,limit,page);
+
+@override
+String toString() {
+  return 'GetLibrarysPlaylistsResponse(results: $results, total: $total, limit: $limit, page: $page)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $GetLibrarysPlaylistsResponseCopyWith<$Res> {
-  factory $GetLibrarysPlaylistsResponseCopyWith(
-          GetLibrarysPlaylistsResponse value,
-          $Res Function(GetLibrarysPlaylistsResponse) then) =
-      _$GetLibrarysPlaylistsResponseCopyWithImpl<$Res,
-          GetLibrarysPlaylistsResponse>;
-  @useResult
-  $Res call({List<Playlist> results, int total, int limit, int page});
-}
+abstract mixin class $GetLibrarysPlaylistsResponseCopyWith<$Res>  {
+  factory $GetLibrarysPlaylistsResponseCopyWith(GetLibrarysPlaylistsResponse value, $Res Function(GetLibrarysPlaylistsResponse) _then) = _$GetLibrarysPlaylistsResponseCopyWithImpl;
+@useResult
+$Res call({
+ List<Playlist> results, int total, int limit, int page
+});
 
+
+
+
+}
 /// @nodoc
-class _$GetLibrarysPlaylistsResponseCopyWithImpl<$Res,
-        $Val extends GetLibrarysPlaylistsResponse>
+class _$GetLibrarysPlaylistsResponseCopyWithImpl<$Res>
     implements $GetLibrarysPlaylistsResponseCopyWith<$Res> {
-  _$GetLibrarysPlaylistsResponseCopyWithImpl(this._value, this._then);
+  _$GetLibrarysPlaylistsResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final GetLibrarysPlaylistsResponse _self;
+  final $Res Function(GetLibrarysPlaylistsResponse) _then;
 
-  /// Create a copy of GetLibrarysPlaylistsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-    Object? total = null,
-    Object? limit = null,
-    Object? page = null,
-  }) {
-    return _then(_value.copyWith(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>,
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-      limit: null == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int,
-      page: null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of GetLibrarysPlaylistsResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? results = null,Object? total = null,Object? limit = null,Object? page = null,}) {
+  return _then(_self.copyWith(
+results: null == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as List<Playlist>,total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int,page: null == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$GetLibrarysPlaylistsResponseImplCopyWith<$Res>
-    implements $GetLibrarysPlaylistsResponseCopyWith<$Res> {
-  factory _$$GetLibrarysPlaylistsResponseImplCopyWith(
-          _$GetLibrarysPlaylistsResponseImpl value,
-          $Res Function(_$GetLibrarysPlaylistsResponseImpl) then) =
-      __$$GetLibrarysPlaylistsResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<Playlist> results, int total, int limit, int page});
 }
 
-/// @nodoc
-class __$$GetLibrarysPlaylistsResponseImplCopyWithImpl<$Res>
-    extends _$GetLibrarysPlaylistsResponseCopyWithImpl<$Res,
-        _$GetLibrarysPlaylistsResponseImpl>
-    implements _$$GetLibrarysPlaylistsResponseImplCopyWith<$Res> {
-  __$$GetLibrarysPlaylistsResponseImplCopyWithImpl(
-      _$GetLibrarysPlaylistsResponseImpl _value,
-      $Res Function(_$GetLibrarysPlaylistsResponseImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of GetLibrarysPlaylistsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? results = null,
-    Object? total = null,
-    Object? limit = null,
-    Object? page = null,
-  }) {
-    return _then(_$GetLibrarysPlaylistsResponseImpl(
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>,
-      total: null == total
-          ? _value.total
-          : total // ignore: cast_nullable_to_non_nullable
-              as int,
-      limit: null == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int,
-      page: null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
+/// Adds pattern-matching-related methods to [GetLibrarysPlaylistsResponse].
+extension GetLibrarysPlaylistsResponsePatterns on GetLibrarysPlaylistsResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetLibrarysPlaylistsResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetLibrarysPlaylistsResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetLibrarysPlaylistsResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Playlist> results,  int total,  int limit,  int page)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse() when $default != null:
+return $default(_that.results,_that.total,_that.limit,_that.page);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Playlist> results,  int total,  int limit,  int page)  $default,) {final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse():
+return $default(_that.results,_that.total,_that.limit,_that.page);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Playlist> results,  int total,  int limit,  int page)?  $default,) {final _that = this;
+switch (_that) {
+case _GetLibrarysPlaylistsResponse() when $default != null:
+return $default(_that.results,_that.total,_that.limit,_that.page);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$GetLibrarysPlaylistsResponseImpl
-    implements _GetLibrarysPlaylistsResponse {
-  const _$GetLibrarysPlaylistsResponseImpl(
-      {required final List<Playlist> results,
-      required this.total,
-      required this.limit,
-      required this.page})
-      : _results = results;
 
-  factory _$GetLibrarysPlaylistsResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetLibrarysPlaylistsResponseImplFromJson(json);
+class _GetLibrarysPlaylistsResponse implements GetLibrarysPlaylistsResponse {
+  const _GetLibrarysPlaylistsResponse({required final  List<Playlist> results, required this.total, required this.limit, required this.page}): _results = results;
+  factory _GetLibrarysPlaylistsResponse.fromJson(Map<String, dynamic> json) => _$GetLibrarysPlaylistsResponseFromJson(json);
 
-  final List<Playlist> _results;
-  @override
-  List<Playlist> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
-
-  @override
-  final int total;
-  @override
-  final int limit;
-  @override
-  final int page;
-
-  @override
-  String toString() {
-    return 'GetLibrarysPlaylistsResponse(results: $results, total: $total, limit: $limit, page: $page)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetLibrarysPlaylistsResponseImpl &&
-            const DeepCollectionEquality().equals(other._results, _results) &&
-            (identical(other.total, total) || other.total == total) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.page, page) || other.page == page));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_results), total, limit, page);
-
-  /// Create a copy of GetLibrarysPlaylistsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetLibrarysPlaylistsResponseImplCopyWith<
-          _$GetLibrarysPlaylistsResponseImpl>
-      get copyWith => __$$GetLibrarysPlaylistsResponseImplCopyWithImpl<
-          _$GetLibrarysPlaylistsResponseImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$GetLibrarysPlaylistsResponseImplToJson(
-      this,
-    );
-  }
+ final  List<Playlist> _results;
+@override List<Playlist> get results {
+  if (_results is EqualUnmodifiableListView) return _results;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_results);
 }
 
-abstract class _GetLibrarysPlaylistsResponse
-    implements GetLibrarysPlaylistsResponse {
-  const factory _GetLibrarysPlaylistsResponse(
-      {required final List<Playlist> results,
-      required final int total,
-      required final int limit,
-      required final int page}) = _$GetLibrarysPlaylistsResponseImpl;
+@override final  int total;
+@override final  int limit;
+@override final  int page;
 
-  factory _GetLibrarysPlaylistsResponse.fromJson(Map<String, dynamic> json) =
-      _$GetLibrarysPlaylistsResponseImpl.fromJson;
+/// Create a copy of GetLibrarysPlaylistsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$GetLibrarysPlaylistsResponseCopyWith<_GetLibrarysPlaylistsResponse> get copyWith => __$GetLibrarysPlaylistsResponseCopyWithImpl<_GetLibrarysPlaylistsResponse>(this, _$identity);
 
-  @override
-  List<Playlist> get results;
-  @override
-  int get total;
-  @override
-  int get limit;
-  @override
-  int get page;
-
-  /// Create a copy of GetLibrarysPlaylistsResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetLibrarysPlaylistsResponseImplCopyWith<
-          _$GetLibrarysPlaylistsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$GetLibrarysPlaylistsResponseToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetLibrarysPlaylistsResponse&&const DeepCollectionEquality().equals(other._results, _results)&&(identical(other.total, total) || other.total == total)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.page, page) || other.page == page));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_results),total,limit,page);
+
+@override
+String toString() {
+  return 'GetLibrarysPlaylistsResponse(results: $results, total: $total, limit: $limit, page: $page)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$GetLibrarysPlaylistsResponseCopyWith<$Res> implements $GetLibrarysPlaylistsResponseCopyWith<$Res> {
+  factory _$GetLibrarysPlaylistsResponseCopyWith(_GetLibrarysPlaylistsResponse value, $Res Function(_GetLibrarysPlaylistsResponse) _then) = __$GetLibrarysPlaylistsResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ List<Playlist> results, int total, int limit, int page
+});
+
+
+
+
+}
+/// @nodoc
+class __$GetLibrarysPlaylistsResponseCopyWithImpl<$Res>
+    implements _$GetLibrarysPlaylistsResponseCopyWith<$Res> {
+  __$GetLibrarysPlaylistsResponseCopyWithImpl(this._self, this._then);
+
+  final _GetLibrarysPlaylistsResponse _self;
+  final $Res Function(_GetLibrarysPlaylistsResponse) _then;
+
+/// Create a copy of GetLibrarysPlaylistsResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? results = null,Object? total = null,Object? limit = null,Object? page = null,}) {
+  return _then(_GetLibrarysPlaylistsResponse(
+results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
+as List<Playlist>,total: null == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as int,page: null == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

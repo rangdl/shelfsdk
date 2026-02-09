@@ -5,7 +5,7 @@ part 'generated/filesystem_directory.g.dart';
 
 /// See [Get All Filesystem Paths](https://api.audiobookshelf.org/#get-all-filesystem-paths)
 @freezed
-class FilesystemDirectory with _$FilesystemDirectory {
+abstract class FilesystemDirectory with _$FilesystemDirectory {
   const factory FilesystemDirectory({
     required String path,
     required String dirname,

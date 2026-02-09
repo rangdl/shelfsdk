@@ -6,9 +6,8 @@ part of '../podcast_feed_metadata.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PodcastFeedMetadataImpl _$$PodcastFeedMetadataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PodcastFeedMetadataImpl(
+_PodcastFeedMetadata _$PodcastFeedMetadataFromJson(Map<String, dynamic> json) =>
+    _PodcastFeedMetadata(
       image: Uri.parse(json['image'] as String),
       categories: (json['categories'] as List<dynamic>)
           .map((e) => e as String)
@@ -24,18 +23,18 @@ _$PodcastFeedMetadataImpl _$$PodcastFeedMetadataImplFromJson(
       link: Uri.parse(json['link'] as String),
     );
 
-Map<String, dynamic> _$$PodcastFeedMetadataImplToJson(
-        _$PodcastFeedMetadataImpl instance) =>
-    <String, dynamic>{
-      'image': instance.image.toString(),
-      'categories': instance.categories,
-      'feedUrl': instance.feedUrl.toString(),
-      'description': instance.description,
-      'descriptionPlain': instance.descriptionPlain,
-      'title': instance.title,
-      'language': instance.language,
-      'explicit': instance.explicit,
-      'author': instance.author,
-      'pubDate': instance.pubDate,
-      'link': instance.link.toString(),
-    };
+Map<String, dynamic> _$PodcastFeedMetadataToJson(
+  _PodcastFeedMetadata instance,
+) => <String, dynamic>{
+  'image': instance.image.toString(),
+  'categories': instance.categories,
+  'feedUrl': instance.feedUrl.toString(),
+  'description': instance.description,
+  'descriptionPlain': instance.descriptionPlain,
+  'title': instance.title,
+  'language': instance.language,
+  'explicit': instance.explicit,
+  'author': instance.author,
+  'pubDate': instance.pubDate,
+  'link': instance.link.toString(),
+};

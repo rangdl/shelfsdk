@@ -6,21 +6,19 @@ part of '../log_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LogEventImpl _$$LogEventImplFromJson(Map<String, dynamic> json) =>
-    _$LogEventImpl(
-      timestamp: DateTime.parse(json['timestamp'] as String),
-      message: json['message'] as String,
-      levelName: json['levelName'] as String,
-      level: $enumDecode(_$LogLevelEnumMap, json['level']),
-    );
+_LogEvent _$LogEventFromJson(Map<String, dynamic> json) => _LogEvent(
+  timestamp: DateTime.parse(json['timestamp'] as String),
+  message: json['message'] as String,
+  levelName: json['levelName'] as String,
+  level: $enumDecode(_$LogLevelEnumMap, json['level']),
+);
 
-Map<String, dynamic> _$$LogEventImplToJson(_$LogEventImpl instance) =>
-    <String, dynamic>{
-      'timestamp': _timestampToJson(instance.timestamp),
-      'message': instance.message,
-      'levelName': instance.levelName,
-      'level': _$LogLevelEnumMap[instance.level]!,
-    };
+Map<String, dynamic> _$LogEventToJson(_LogEvent instance) => <String, dynamic>{
+  'timestamp': _timestampToJson(instance.timestamp),
+  'message': instance.message,
+  'levelName': instance.levelName,
+  'level': _$LogLevelEnumMap[instance.level]!,
+};
 
 const _$LogLevelEnumMap = {
   LogLevel.debug: 1,

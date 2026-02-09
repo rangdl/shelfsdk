@@ -7,12 +7,12 @@ part of '../search_books_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$SearchBooksReqParamsToJson(
-        SearchBooksReqParams instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'author': instance.author,
-      'provider': _$MetadataProviderEnumMap[instance.provider]!,
-    };
+  SearchBooksReqParams instance,
+) => <String, dynamic>{
+  'title': instance.title,
+  'author': instance.author,
+  'provider': _$MetadataProviderEnumMap[instance.provider]!,
+};
 
 const _$MetadataProviderEnumMap = {
   MetadataProvider.google: 'google',

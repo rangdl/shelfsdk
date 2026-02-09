@@ -5,7 +5,7 @@ part 'generated/search_podcasts_response.g.dart';
 
 /// See [Search for Podcasts](https://api.audiobookshelf.org/#search-for-podcasts)
 @freezed
-class SearchPodcastsResponse with _$SearchPodcastsResponse {
+abstract class SearchPodcastsResponse with _$SearchPodcastsResponse {
   const factory SearchPodcastsResponse({
     required int id,
     required int artistId,

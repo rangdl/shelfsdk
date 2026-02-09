@@ -15,7 +15,7 @@ part 'generated/cron_expression.freezed.dart';
 ///
 /// [daysOfMonth] will be constrained to 1-31
 @Freezed(toStringOverride: false)
-class CronExpression with _$CronExpression {
+abstract class CronExpression with _$CronExpression {
   const CronExpression._();
 
   const factory CronExpression({
@@ -130,7 +130,7 @@ extension on String {
       }
 
       output.addAll({
-        for (int i = intervalStart; i <= intervalEnd; i += intervalDivisor) i
+        for (int i = intervalStart; i <= intervalEnd; i += intervalDivisor) i,
       });
     }
 

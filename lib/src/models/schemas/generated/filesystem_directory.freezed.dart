@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,250 +9,287 @@ part of '../filesystem_directory.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-FilesystemDirectory _$FilesystemDirectoryFromJson(Map<String, dynamic> json) {
-  return _FilesystemDirectory.fromJson(json);
-}
 
 /// @nodoc
 mixin _$FilesystemDirectory {
-  String get path => throw _privateConstructorUsedError;
-  String get dirname => throw _privateConstructorUsedError;
-  String get fullPath => throw _privateConstructorUsedError;
-  int get level => throw _privateConstructorUsedError;
-  List<FilesystemDirectory> get dirs => throw _privateConstructorUsedError;
+
+ String get path; String get dirname; String get fullPath; int get level; List<FilesystemDirectory> get dirs;
+/// Create a copy of FilesystemDirectory
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$FilesystemDirectoryCopyWith<FilesystemDirectory> get copyWith => _$FilesystemDirectoryCopyWithImpl<FilesystemDirectory>(this as FilesystemDirectory, _$identity);
 
   /// Serializes this FilesystemDirectory to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of FilesystemDirectory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $FilesystemDirectoryCopyWith<FilesystemDirectory> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FilesystemDirectory&&(identical(other.path, path) || other.path == path)&&(identical(other.dirname, dirname) || other.dirname == dirname)&&(identical(other.fullPath, fullPath) || other.fullPath == fullPath)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other.dirs, dirs));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,path,dirname,fullPath,level,const DeepCollectionEquality().hash(dirs));
+
+@override
+String toString() {
+  return 'FilesystemDirectory(path: $path, dirname: $dirname, fullPath: $fullPath, level: $level, dirs: $dirs)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FilesystemDirectoryCopyWith<$Res> {
-  factory $FilesystemDirectoryCopyWith(
-          FilesystemDirectory value, $Res Function(FilesystemDirectory) then) =
-      _$FilesystemDirectoryCopyWithImpl<$Res, FilesystemDirectory>;
-  @useResult
-  $Res call(
-      {String path,
-      String dirname,
-      String fullPath,
-      int level,
-      List<FilesystemDirectory> dirs});
-}
+abstract mixin class $FilesystemDirectoryCopyWith<$Res>  {
+  factory $FilesystemDirectoryCopyWith(FilesystemDirectory value, $Res Function(FilesystemDirectory) _then) = _$FilesystemDirectoryCopyWithImpl;
+@useResult
+$Res call({
+ String path, String dirname, String fullPath, int level, List<FilesystemDirectory> dirs
+});
 
+
+
+
+}
 /// @nodoc
-class _$FilesystemDirectoryCopyWithImpl<$Res, $Val extends FilesystemDirectory>
+class _$FilesystemDirectoryCopyWithImpl<$Res>
     implements $FilesystemDirectoryCopyWith<$Res> {
-  _$FilesystemDirectoryCopyWithImpl(this._value, this._then);
+  _$FilesystemDirectoryCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final FilesystemDirectory _self;
+  final $Res Function(FilesystemDirectory) _then;
 
-  /// Create a copy of FilesystemDirectory
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? path = null,
-    Object? dirname = null,
-    Object? fullPath = null,
-    Object? level = null,
-    Object? dirs = null,
-  }) {
-    return _then(_value.copyWith(
-      path: null == path
-          ? _value.path
-          : path // ignore: cast_nullable_to_non_nullable
-              as String,
-      dirname: null == dirname
-          ? _value.dirname
-          : dirname // ignore: cast_nullable_to_non_nullable
-              as String,
-      fullPath: null == fullPath
-          ? _value.fullPath
-          : fullPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      level: null == level
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as int,
-      dirs: null == dirs
-          ? _value.dirs
-          : dirs // ignore: cast_nullable_to_non_nullable
-              as List<FilesystemDirectory>,
-    ) as $Val);
-  }
+/// Create a copy of FilesystemDirectory
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? path = null,Object? dirname = null,Object? fullPath = null,Object? level = null,Object? dirs = null,}) {
+  return _then(_self.copyWith(
+path: null == path ? _self.path : path // ignore: cast_nullable_to_non_nullable
+as String,dirname: null == dirname ? _self.dirname : dirname // ignore: cast_nullable_to_non_nullable
+as String,fullPath: null == fullPath ? _self.fullPath : fullPath // ignore: cast_nullable_to_non_nullable
+as String,level: null == level ? _self.level : level // ignore: cast_nullable_to_non_nullable
+as int,dirs: null == dirs ? _self.dirs : dirs // ignore: cast_nullable_to_non_nullable
+as List<FilesystemDirectory>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$FilesystemDirectoryImplCopyWith<$Res>
-    implements $FilesystemDirectoryCopyWith<$Res> {
-  factory _$$FilesystemDirectoryImplCopyWith(_$FilesystemDirectoryImpl value,
-          $Res Function(_$FilesystemDirectoryImpl) then) =
-      __$$FilesystemDirectoryImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String path,
-      String dirname,
-      String fullPath,
-      int level,
-      List<FilesystemDirectory> dirs});
 }
 
-/// @nodoc
-class __$$FilesystemDirectoryImplCopyWithImpl<$Res>
-    extends _$FilesystemDirectoryCopyWithImpl<$Res, _$FilesystemDirectoryImpl>
-    implements _$$FilesystemDirectoryImplCopyWith<$Res> {
-  __$$FilesystemDirectoryImplCopyWithImpl(_$FilesystemDirectoryImpl _value,
-      $Res Function(_$FilesystemDirectoryImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of FilesystemDirectory
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? path = null,
-    Object? dirname = null,
-    Object? fullPath = null,
-    Object? level = null,
-    Object? dirs = null,
-  }) {
-    return _then(_$FilesystemDirectoryImpl(
-      path: null == path
-          ? _value.path
-          : path // ignore: cast_nullable_to_non_nullable
-              as String,
-      dirname: null == dirname
-          ? _value.dirname
-          : dirname // ignore: cast_nullable_to_non_nullable
-              as String,
-      fullPath: null == fullPath
-          ? _value.fullPath
-          : fullPath // ignore: cast_nullable_to_non_nullable
-              as String,
-      level: null == level
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as int,
-      dirs: null == dirs
-          ? _value._dirs
-          : dirs // ignore: cast_nullable_to_non_nullable
-              as List<FilesystemDirectory>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [FilesystemDirectory].
+extension FilesystemDirectoryPatterns on FilesystemDirectory {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FilesystemDirectory value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _FilesystemDirectory() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FilesystemDirectory value)  $default,){
+final _that = this;
+switch (_that) {
+case _FilesystemDirectory():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FilesystemDirectory value)?  $default,){
+final _that = this;
+switch (_that) {
+case _FilesystemDirectory() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String path,  String dirname,  String fullPath,  int level,  List<FilesystemDirectory> dirs)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _FilesystemDirectory() when $default != null:
+return $default(_that.path,_that.dirname,_that.fullPath,_that.level,_that.dirs);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String path,  String dirname,  String fullPath,  int level,  List<FilesystemDirectory> dirs)  $default,) {final _that = this;
+switch (_that) {
+case _FilesystemDirectory():
+return $default(_that.path,_that.dirname,_that.fullPath,_that.level,_that.dirs);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String path,  String dirname,  String fullPath,  int level,  List<FilesystemDirectory> dirs)?  $default,) {final _that = this;
+switch (_that) {
+case _FilesystemDirectory() when $default != null:
+return $default(_that.path,_that.dirname,_that.fullPath,_that.level,_that.dirs);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FilesystemDirectoryImpl implements _FilesystemDirectory {
-  const _$FilesystemDirectoryImpl(
-      {required this.path,
-      required this.dirname,
-      required this.fullPath,
-      required this.level,
-      required final List<FilesystemDirectory> dirs})
-      : _dirs = dirs;
 
-  factory _$FilesystemDirectoryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FilesystemDirectoryImplFromJson(json);
+class _FilesystemDirectory implements FilesystemDirectory {
+  const _FilesystemDirectory({required this.path, required this.dirname, required this.fullPath, required this.level, required final  List<FilesystemDirectory> dirs}): _dirs = dirs;
+  factory _FilesystemDirectory.fromJson(Map<String, dynamic> json) => _$FilesystemDirectoryFromJson(json);
 
-  @override
-  final String path;
-  @override
-  final String dirname;
-  @override
-  final String fullPath;
-  @override
-  final int level;
-  final List<FilesystemDirectory> _dirs;
-  @override
-  List<FilesystemDirectory> get dirs {
-    if (_dirs is EqualUnmodifiableListView) return _dirs;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_dirs);
-  }
-
-  @override
-  String toString() {
-    return 'FilesystemDirectory(path: $path, dirname: $dirname, fullPath: $fullPath, level: $level, dirs: $dirs)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FilesystemDirectoryImpl &&
-            (identical(other.path, path) || other.path == path) &&
-            (identical(other.dirname, dirname) || other.dirname == dirname) &&
-            (identical(other.fullPath, fullPath) ||
-                other.fullPath == fullPath) &&
-            (identical(other.level, level) || other.level == level) &&
-            const DeepCollectionEquality().equals(other._dirs, _dirs));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, path, dirname, fullPath, level,
-      const DeepCollectionEquality().hash(_dirs));
-
-  /// Create a copy of FilesystemDirectory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FilesystemDirectoryImplCopyWith<_$FilesystemDirectoryImpl> get copyWith =>
-      __$$FilesystemDirectoryImplCopyWithImpl<_$FilesystemDirectoryImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FilesystemDirectoryImplToJson(
-      this,
-    );
-  }
+@override final  String path;
+@override final  String dirname;
+@override final  String fullPath;
+@override final  int level;
+ final  List<FilesystemDirectory> _dirs;
+@override List<FilesystemDirectory> get dirs {
+  if (_dirs is EqualUnmodifiableListView) return _dirs;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_dirs);
 }
 
-abstract class _FilesystemDirectory implements FilesystemDirectory {
-  const factory _FilesystemDirectory(
-          {required final String path,
-          required final String dirname,
-          required final String fullPath,
-          required final int level,
-          required final List<FilesystemDirectory> dirs}) =
-      _$FilesystemDirectoryImpl;
 
-  factory _FilesystemDirectory.fromJson(Map<String, dynamic> json) =
-      _$FilesystemDirectoryImpl.fromJson;
+/// Create a copy of FilesystemDirectory
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FilesystemDirectoryCopyWith<_FilesystemDirectory> get copyWith => __$FilesystemDirectoryCopyWithImpl<_FilesystemDirectory>(this, _$identity);
 
-  @override
-  String get path;
-  @override
-  String get dirname;
-  @override
-  String get fullPath;
-  @override
-  int get level;
-  @override
-  List<FilesystemDirectory> get dirs;
-
-  /// Create a copy of FilesystemDirectory
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FilesystemDirectoryImplCopyWith<_$FilesystemDirectoryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$FilesystemDirectoryToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FilesystemDirectory&&(identical(other.path, path) || other.path == path)&&(identical(other.dirname, dirname) || other.dirname == dirname)&&(identical(other.fullPath, fullPath) || other.fullPath == fullPath)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other._dirs, _dirs));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,path,dirname,fullPath,level,const DeepCollectionEquality().hash(_dirs));
+
+@override
+String toString() {
+  return 'FilesystemDirectory(path: $path, dirname: $dirname, fullPath: $fullPath, level: $level, dirs: $dirs)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$FilesystemDirectoryCopyWith<$Res> implements $FilesystemDirectoryCopyWith<$Res> {
+  factory _$FilesystemDirectoryCopyWith(_FilesystemDirectory value, $Res Function(_FilesystemDirectory) _then) = __$FilesystemDirectoryCopyWithImpl;
+@override @useResult
+$Res call({
+ String path, String dirname, String fullPath, int level, List<FilesystemDirectory> dirs
+});
+
+
+
+
+}
+/// @nodoc
+class __$FilesystemDirectoryCopyWithImpl<$Res>
+    implements _$FilesystemDirectoryCopyWith<$Res> {
+  __$FilesystemDirectoryCopyWithImpl(this._self, this._then);
+
+  final _FilesystemDirectory _self;
+  final $Res Function(_FilesystemDirectory) _then;
+
+/// Create a copy of FilesystemDirectory
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? path = null,Object? dirname = null,Object? fullPath = null,Object? level = null,Object? dirs = null,}) {
+  return _then(_FilesystemDirectory(
+path: null == path ? _self.path : path // ignore: cast_nullable_to_non_nullable
+as String,dirname: null == dirname ? _self.dirname : dirname // ignore: cast_nullable_to_non_nullable
+as String,fullPath: null == fullPath ? _self.fullPath : fullPath // ignore: cast_nullable_to_non_nullable
+as String,level: null == level ? _self.level : level // ignore: cast_nullable_to_non_nullable
+as int,dirs: null == dirs ? _self._dirs : dirs // ignore: cast_nullable_to_non_nullable
+as List<FilesystemDirectory>,
+  ));
+}
+
+
+}
+
+// dart format on

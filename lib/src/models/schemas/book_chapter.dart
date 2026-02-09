@@ -7,7 +7,7 @@ part 'generated/book_chapter.g.dart';
 
 /// See [Book Chapter](https://api.audiobookshelf.org/#book-chapter)
 @freezed
-class BookChapter with _$BookChapter {
+abstract class BookChapter with _$BookChapter {
   @jsonConverters
   const factory BookChapter({
     required int id,

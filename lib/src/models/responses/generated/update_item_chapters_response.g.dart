@@ -6,16 +6,16 @@ part of '../update_item_chapters_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UpdateItemChaptersResponseImpl _$$UpdateItemChaptersResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UpdateItemChaptersResponseImpl(
-      success: json['success'] as bool,
-      updated: json['updated'] as bool,
-    );
+_UpdateItemChaptersResponse _$UpdateItemChaptersResponseFromJson(
+  Map<String, dynamic> json,
+) => _UpdateItemChaptersResponse(
+  success: json['success'] as bool,
+  updated: json['updated'] as bool,
+);
 
-Map<String, dynamic> _$$UpdateItemChaptersResponseImplToJson(
-        _$UpdateItemChaptersResponseImpl instance) =>
-    <String, dynamic>{
-      'success': instance.success,
-      'updated': instance.updated,
-    };
+Map<String, dynamic> _$UpdateItemChaptersResponseToJson(
+  _UpdateItemChaptersResponse instance,
+) => <String, dynamic>{
+  'success': instance.success,
+  'updated': instance.updated,
+};

@@ -9,7 +9,7 @@ part 'generated/library_file.g.dart';
 
 /// See [Library File](https://api.audiobookshelf.org/#library-file)
 @freezed
-class LibraryFile with _$LibraryFile {
+abstract class LibraryFile with _$LibraryFile {
   @jsonConverters
   const factory LibraryFile({
     required String ino,

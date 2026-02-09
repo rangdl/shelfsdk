@@ -6,31 +6,30 @@ part of '../get_notification_settings_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetNotificationSettingsResponseImpl
-    _$$GetNotificationSettingsResponseImplFromJson(Map<String, dynamic> json) =>
-        _$GetNotificationSettingsResponseImpl(
-          data: NotificationData.fromJson(json['data'] as Map<String, dynamic>),
-          settings: NotificationSettings.fromJson(
-              json['settings'] as Map<String, dynamic>),
-        );
+_GetNotificationSettingsResponse _$GetNotificationSettingsResponseFromJson(
+  Map<String, dynamic> json,
+) => _GetNotificationSettingsResponse(
+  data: NotificationData.fromJson(json['data'] as Map<String, dynamic>),
+  settings: NotificationSettings.fromJson(
+    json['settings'] as Map<String, dynamic>,
+  ),
+);
 
-Map<String, dynamic> _$$GetNotificationSettingsResponseImplToJson(
-        _$GetNotificationSettingsResponseImpl instance) =>
-    <String, dynamic>{
-      'data': instance.data.toJson(),
-      'settings': instance.settings.toJson(),
-    };
+Map<String, dynamic> _$GetNotificationSettingsResponseToJson(
+  _GetNotificationSettingsResponse instance,
+) => <String, dynamic>{
+  'data': instance.data.toJson(),
+  'settings': instance.settings.toJson(),
+};
 
-_$NotificationDataImpl _$$NotificationDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationDataImpl(
+_NotificationData _$NotificationDataFromJson(Map<String, dynamic> json) =>
+    _NotificationData(
       events: (json['events'] as List<dynamic>)
           .map((e) => NotificationEvent.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$NotificationDataImplToJson(
-        _$NotificationDataImpl instance) =>
+Map<String, dynamic> _$NotificationDataToJson(_NotificationData instance) =>
     <String, dynamic>{
       'events': instance.events.map((e) => e.toJson()).toList(),
     };

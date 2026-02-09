@@ -7,7 +7,7 @@ part 'generated/match_item_response.g.dart';
 
 /// See [Match a Library Item](https://api.audiobookshelf.org/#match-a-library-item)
 @freezed
-class MatchItemResponse with _$MatchItemResponse {
+abstract class MatchItemResponse with _$MatchItemResponse {
   const factory MatchItemResponse({
     required bool updated,
     required LibraryItem libraryItem,

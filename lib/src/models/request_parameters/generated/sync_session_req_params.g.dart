@@ -7,12 +7,13 @@ part of '../sync_session_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$SyncSessionReqParamsToJson(
-        SyncSessionReqParams instance) =>
-    <String, dynamic>{
-      'currentTime':
-          const DurationPreciseSecondsConverter().toJson(instance.currentTime),
-      'timeListened':
-          const DurationPreciseSecondsConverter().toJson(instance.timeListened),
-      'duration':
-          const DurationPreciseSecondsConverter().toJson(instance.duration),
-    };
+  SyncSessionReqParams instance,
+) => <String, dynamic>{
+  'currentTime': const DurationPreciseSecondsConverter().toJson(
+    instance.currentTime,
+  ),
+  'timeListened': const DurationPreciseSecondsConverter().toJson(
+    instance.timeListened,
+  ),
+  'duration': const DurationPreciseSecondsConverter().toJson(instance.duration),
+};

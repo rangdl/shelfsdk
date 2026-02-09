@@ -6,15 +6,13 @@ part of '../update_user_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UpdateUserResponseImpl _$$UpdateUserResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UpdateUserResponseImpl(
+_UpdateUserResponse _$UpdateUserResponseFromJson(Map<String, dynamic> json) =>
+    _UpdateUserResponse(
       success: json['success'] as bool,
       user: User.fromJson(json['user'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$UpdateUserResponseImplToJson(
-        _$UpdateUserResponseImpl instance) =>
+Map<String, dynamic> _$UpdateUserResponseToJson(_UpdateUserResponse instance) =>
     <String, dynamic>{
       'success': instance.success,
       'user': instance.user.toJson(),

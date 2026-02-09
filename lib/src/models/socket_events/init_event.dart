@@ -6,7 +6,7 @@ part 'generated/init_event.freezed.dart';
 part 'generated/init_event.g.dart';
 
 @freezed
-class InitEvent with _$InitEvent {
+abstract class InitEvent with _$InitEvent {
   const factory InitEvent({
     required String userId,
     required String username,

@@ -17,7 +17,7 @@ part 'generated/media.g.dart';
 /// See [Book](https://api.audiobookshelf.org/#book)
 /// and [Podcast](https://api.audiobookshelf.org/#podcast)
 @freezed
-class Media with _$Media {
+abstract class Media with _$Media {
   const Media._();
 
   const factory Media.book({

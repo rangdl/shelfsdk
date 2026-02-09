@@ -7,12 +7,11 @@ part of '../create_playlist_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$CreatePlaylistReqParamsToJson(
-        CreatePlaylistReqParams instance) =>
-    <String, dynamic>{
-      'libraryId': instance.libraryId,
-      'name': instance.name,
-      if (instance.description case final value?) 'description': value,
-      if (instance.coverPath case final value?) 'coverPath': value,
-      if (instance.items?.map((e) => e.toJson()).toList() case final value?)
-        'items': value,
-    };
+  CreatePlaylistReqParams instance,
+) => <String, dynamic>{
+  'libraryId': instance.libraryId,
+  'name': instance.name,
+  'description': ?instance.description,
+  'coverPath': ?instance.coverPath,
+  'items': ?instance.items?.map((e) => e.toJson()).toList(),
+};

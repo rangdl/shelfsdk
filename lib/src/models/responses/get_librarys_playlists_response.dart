@@ -7,7 +7,8 @@ part 'generated/get_librarys_playlists_response.g.dart';
 
 /// See [Get a Library's User Playlists](https://api.audiobookshelf.org/#get-a-library-39-s-user-playlists)
 @freezed
-class GetLibrarysPlaylistsResponse with _$GetLibrarysPlaylistsResponse {
+abstract class GetLibrarysPlaylistsResponse
+    with _$GetLibrarysPlaylistsResponse {
   const factory GetLibrarysPlaylistsResponse({
     required List<Playlist> results,
     required int total,

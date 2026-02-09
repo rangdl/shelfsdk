@@ -6,15 +6,13 @@ part of '../rename_tag_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RenameTagResponseImpl _$$RenameTagResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RenameTagResponseImpl(
+_RenameTagResponse _$RenameTagResponseFromJson(Map<String, dynamic> json) =>
+    _RenameTagResponse(
       tagMerged: json['tagMerged'] as bool,
       numItemsUpdated: (json['numItemsUpdated'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$RenameTagResponseImplToJson(
-        _$RenameTagResponseImpl instance) =>
+Map<String, dynamic> _$RenameTagResponseToJson(_RenameTagResponse instance) =>
     <String, dynamic>{
       'tagMerged': instance.tagMerged,
       'numItemsUpdated': instance.numItemsUpdated,

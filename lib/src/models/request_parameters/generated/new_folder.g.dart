@@ -7,5 +7,5 @@ part of '../new_folder.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$NewFolderToJson(NewFolder instance) => <String, dynamic>{
-      'fullPath': instance.fullPath,
-    };
+  'fullPath': instance.fullPath,
+};

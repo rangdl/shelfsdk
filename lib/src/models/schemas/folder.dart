@@ -7,7 +7,7 @@ part 'generated/folder.g.dart';
 
 /// See [Folder](https://api.audiobookshelf.org/#folder)
 @freezed
-class Folder with _$Folder {
+abstract class Folder with _$Folder {
   @jsonConverters
   const factory Folder({
     required String id,

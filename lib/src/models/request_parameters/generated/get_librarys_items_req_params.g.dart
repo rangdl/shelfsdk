@@ -7,31 +7,30 @@ part of '../get_librarys_items_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$GetLibrarysItemsReqParamsToJson(
-        GetLibrarysItemsReqParams instance) =>
-    <String, dynamic>{
-      if (instance.limit case final value?) 'limit': value,
-      if (instance.page case final value?) 'page': value,
-      if (instance.sort case final value?) 'sort': value,
-      if (_$JsonConverterToJson<int, bool>(
-              instance.desc, const BoolBinaryConverter().toJson)
-          case final value?)
-        'desc': value,
-      if (_$JsonConverterToJson<String, Filter>(
-              instance.filter, const FilterConverter().toJson)
-          case final value?)
-        'filter': value,
-      if (_$JsonConverterToJson<int, bool>(
-              instance.minified, const BoolBinaryConverter().toJson)
-          case final value?)
-        'minified': value,
-      if (_$JsonConverterToJson<int, bool>(
-              instance.collapseSeries, const BoolBinaryConverter().toJson)
-          case final value?)
-        'collapseseries': value,
-    };
+  GetLibrarysItemsReqParams instance,
+) => <String, dynamic>{
+  'limit': ?instance.limit,
+  'page': ?instance.page,
+  'sort': ?instance.sort,
+  'desc': ?_$JsonConverterToJson<int, bool>(
+    instance.desc,
+    const BoolBinaryConverter().toJson,
+  ),
+  'filter': ?_$JsonConverterToJson<String, Filter>(
+    instance.filter,
+    const FilterConverter().toJson,
+  ),
+  'minified': ?_$JsonConverterToJson<int, bool>(
+    instance.minified,
+    const BoolBinaryConverter().toJson,
+  ),
+  'collapseseries': ?_$JsonConverterToJson<int, bool>(
+    instance.collapseSeries,
+    const BoolBinaryConverter().toJson,
+  ),
+};
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

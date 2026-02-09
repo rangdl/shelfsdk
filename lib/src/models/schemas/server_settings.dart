@@ -9,7 +9,7 @@ part 'generated/server_settings.g.dart';
 
 /// See [Server Settings](https://api.audiobookshelf.org/#server-settings)
 @freezed
-class ServerSettings with _$ServerSettings {
+abstract class ServerSettings with _$ServerSettings {
   @jsonConverters
   const factory ServerSettings({
     String? id,

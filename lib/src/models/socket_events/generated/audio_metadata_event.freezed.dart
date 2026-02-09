@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,909 +9,683 @@ part of '../audio_metadata_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-AudioMetadataEvent _$AudioMetadataEventFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'started':
-      return AudioMetadataStartedEvent.fromJson(json);
-    case 'finished':
-      return AudioMetadataFinishedEvent.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'AudioMetadataEvent',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+AudioMetadataEvent _$AudioMetadataEventFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'started':
+          return AudioMetadataStartedEvent.fromJson(
+            json
+          );
+                case 'finished':
+          return AudioMetadataFinishedEvent.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'AudioMetadataEvent',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
 mixin _$AudioMetadataEvent {
-  String get userId => throw _privateConstructorUsedError;
-  String get libraryItemId => throw _privateConstructorUsedError;
-  DateTime get startedAt => throw _privateConstructorUsedError;
-  List<EventAudioFile> get audioFiles => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String userId, String libraryItemId,
-            DateTime startedAt, List<EventAudioFile> audioFiles)
-        started,
-    required TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)
-        finished,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult? Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(AudioMetadataStartedEvent value) started,
-    required TResult Function(AudioMetadataFinishedEvent value) finished,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AudioMetadataStartedEvent value)? started,
-    TResult? Function(AudioMetadataFinishedEvent value)? finished,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(AudioMetadataStartedEvent value)? started,
-    TResult Function(AudioMetadataFinishedEvent value)? finished,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+ String get userId; String get libraryItemId; DateTime get startedAt; List<EventAudioFile> get audioFiles;
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AudioMetadataEventCopyWith<AudioMetadataEvent> get copyWith => _$AudioMetadataEventCopyWithImpl<AudioMetadataEvent>(this as AudioMetadataEvent, _$identity);
 
   /// Serializes this AudioMetadataEvent to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AudioMetadataEventCopyWith<AudioMetadataEvent> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AudioMetadataEvent&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.libraryItemId, libraryItemId) || other.libraryItemId == libraryItemId)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&const DeepCollectionEquality().equals(other.audioFiles, audioFiles));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,libraryItemId,startedAt,const DeepCollectionEquality().hash(audioFiles));
+
+@override
+String toString() {
+  return 'AudioMetadataEvent(userId: $userId, libraryItemId: $libraryItemId, startedAt: $startedAt, audioFiles: $audioFiles)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AudioMetadataEventCopyWith<$Res> {
-  factory $AudioMetadataEventCopyWith(
-          AudioMetadataEvent value, $Res Function(AudioMetadataEvent) then) =
-      _$AudioMetadataEventCopyWithImpl<$Res, AudioMetadataEvent>;
-  @useResult
-  $Res call(
-      {String userId,
-      String libraryItemId,
-      DateTime startedAt,
-      List<EventAudioFile> audioFiles});
-}
+abstract mixin class $AudioMetadataEventCopyWith<$Res>  {
+  factory $AudioMetadataEventCopyWith(AudioMetadataEvent value, $Res Function(AudioMetadataEvent) _then) = _$AudioMetadataEventCopyWithImpl;
+@useResult
+$Res call({
+ String userId, String libraryItemId, DateTime startedAt, List<EventAudioFile> audioFiles
+});
 
+
+
+
+}
 /// @nodoc
-class _$AudioMetadataEventCopyWithImpl<$Res, $Val extends AudioMetadataEvent>
+class _$AudioMetadataEventCopyWithImpl<$Res>
     implements $AudioMetadataEventCopyWith<$Res> {
-  _$AudioMetadataEventCopyWithImpl(this._value, this._then);
+  _$AudioMetadataEventCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AudioMetadataEvent _self;
+  final $Res Function(AudioMetadataEvent) _then;
 
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? libraryItemId = null,
-    Object? startedAt = null,
-    Object? audioFiles = null,
-  }) {
-    return _then(_value.copyWith(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      libraryItemId: null == libraryItemId
-          ? _value.libraryItemId
-          : libraryItemId // ignore: cast_nullable_to_non_nullable
-              as String,
-      startedAt: null == startedAt
-          ? _value.startedAt
-          : startedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      audioFiles: null == audioFiles
-          ? _value.audioFiles
-          : audioFiles // ignore: cast_nullable_to_non_nullable
-              as List<EventAudioFile>,
-    ) as $Val);
-  }
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? userId = null,Object? libraryItemId = null,Object? startedAt = null,Object? audioFiles = null,}) {
+  return _then(_self.copyWith(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,libraryItemId: null == libraryItemId ? _self.libraryItemId : libraryItemId // ignore: cast_nullable_to_non_nullable
+as String,startedAt: null == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,audioFiles: null == audioFiles ? _self.audioFiles : audioFiles // ignore: cast_nullable_to_non_nullable
+as List<EventAudioFile>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AudioMetadataStartedEventImplCopyWith<$Res>
-    implements $AudioMetadataEventCopyWith<$Res> {
-  factory _$$AudioMetadataStartedEventImplCopyWith(
-          _$AudioMetadataStartedEventImpl value,
-          $Res Function(_$AudioMetadataStartedEventImpl) then) =
-      __$$AudioMetadataStartedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String userId,
-      String libraryItemId,
-      DateTime startedAt,
-      List<EventAudioFile> audioFiles});
 }
 
-/// @nodoc
-class __$$AudioMetadataStartedEventImplCopyWithImpl<$Res>
-    extends _$AudioMetadataEventCopyWithImpl<$Res,
-        _$AudioMetadataStartedEventImpl>
-    implements _$$AudioMetadataStartedEventImplCopyWith<$Res> {
-  __$$AudioMetadataStartedEventImplCopyWithImpl(
-      _$AudioMetadataStartedEventImpl _value,
-      $Res Function(_$AudioMetadataStartedEventImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? libraryItemId = null,
-    Object? startedAt = null,
-    Object? audioFiles = null,
-  }) {
-    return _then(_$AudioMetadataStartedEventImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      libraryItemId: null == libraryItemId
-          ? _value.libraryItemId
-          : libraryItemId // ignore: cast_nullable_to_non_nullable
-              as String,
-      startedAt: null == startedAt
-          ? _value.startedAt
-          : startedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      audioFiles: null == audioFiles
-          ? _value._audioFiles
-          : audioFiles // ignore: cast_nullable_to_non_nullable
-              as List<EventAudioFile>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [AudioMetadataEvent].
+extension AudioMetadataEventPatterns on AudioMetadataEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( AudioMetadataStartedEvent value)?  started,TResult Function( AudioMetadataFinishedEvent value)?  finished,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent() when started != null:
+return started(_that);case AudioMetadataFinishedEvent() when finished != null:
+return finished(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( AudioMetadataStartedEvent value)  started,required TResult Function( AudioMetadataFinishedEvent value)  finished,}){
+final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent():
+return started(_that);case AudioMetadataFinishedEvent():
+return finished(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( AudioMetadataStartedEvent value)?  started,TResult? Function( AudioMetadataFinishedEvent value)?  finished,}){
+final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent() when started != null:
+return started(_that);case AudioMetadataFinishedEvent() when finished != null:
+return finished(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles)?  started,TResult Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles,  List<AudioFileMetadataEvent> results, @DurationMsConverter()  Duration elapsed,  DateTime finishedAt)?  finished,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent() when started != null:
+return started(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles);case AudioMetadataFinishedEvent() when finished != null:
+return finished(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles,_that.results,_that.elapsed,_that.finishedAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles)  started,required TResult Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles,  List<AudioFileMetadataEvent> results, @DurationMsConverter()  Duration elapsed,  DateTime finishedAt)  finished,}) {final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent():
+return started(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles);case AudioMetadataFinishedEvent():
+return finished(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles,_that.results,_that.elapsed,_that.finishedAt);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles)?  started,TResult? Function( String userId,  String libraryItemId,  DateTime startedAt,  List<EventAudioFile> audioFiles,  List<AudioFileMetadataEvent> results, @DurationMsConverter()  Duration elapsed,  DateTime finishedAt)?  finished,}) {final _that = this;
+switch (_that) {
+case AudioMetadataStartedEvent() when started != null:
+return started(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles);case AudioMetadataFinishedEvent() when finished != null:
+return finished(_that.userId,_that.libraryItemId,_that.startedAt,_that.audioFiles,_that.results,_that.elapsed,_that.finishedAt);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AudioMetadataStartedEventImpl extends AudioMetadataStartedEvent {
-  const _$AudioMetadataStartedEventImpl(
-      {required this.userId,
-      required this.libraryItemId,
-      required this.startedAt,
-      required final List<EventAudioFile> audioFiles,
-      final String? $type})
-      : _audioFiles = audioFiles,
-        $type = $type ?? 'started',
-        super._();
+class AudioMetadataStartedEvent extends AudioMetadataEvent {
+  const AudioMetadataStartedEvent({required this.userId, required this.libraryItemId, required this.startedAt, required final  List<EventAudioFile> audioFiles, final  String? $type}): _audioFiles = audioFiles,$type = $type ?? 'started',super._();
+  factory AudioMetadataStartedEvent.fromJson(Map<String, dynamic> json) => _$AudioMetadataStartedEventFromJson(json);
 
-  factory _$AudioMetadataStartedEventImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AudioMetadataStartedEventImplFromJson(json);
-
-  @override
-  final String userId;
-  @override
-  final String libraryItemId;
-  @override
-  final DateTime startedAt;
-  final List<EventAudioFile> _audioFiles;
-  @override
-  List<EventAudioFile> get audioFiles {
-    if (_audioFiles is EqualUnmodifiableListView) return _audioFiles;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_audioFiles);
-  }
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'AudioMetadataEvent.started(userId: $userId, libraryItemId: $libraryItemId, startedAt: $startedAt, audioFiles: $audioFiles)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AudioMetadataStartedEventImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.libraryItemId, libraryItemId) ||
-                other.libraryItemId == libraryItemId) &&
-            (identical(other.startedAt, startedAt) ||
-                other.startedAt == startedAt) &&
-            const DeepCollectionEquality()
-                .equals(other._audioFiles, _audioFiles));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, userId, libraryItemId, startedAt,
-      const DeepCollectionEquality().hash(_audioFiles));
-
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AudioMetadataStartedEventImplCopyWith<_$AudioMetadataStartedEventImpl>
-      get copyWith => __$$AudioMetadataStartedEventImplCopyWithImpl<
-          _$AudioMetadataStartedEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String userId, String libraryItemId,
-            DateTime startedAt, List<EventAudioFile> audioFiles)
-        started,
-    required TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)
-        finished,
-  }) {
-    return started(userId, libraryItemId, startedAt, audioFiles);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult? Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-  }) {
-    return started?.call(userId, libraryItemId, startedAt, audioFiles);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started(userId, libraryItemId, startedAt, audioFiles);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(AudioMetadataStartedEvent value) started,
-    required TResult Function(AudioMetadataFinishedEvent value) finished,
-  }) {
-    return started(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AudioMetadataStartedEvent value)? started,
-    TResult? Function(AudioMetadataFinishedEvent value)? finished,
-  }) {
-    return started?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(AudioMetadataStartedEvent value)? started,
-    TResult Function(AudioMetadataFinishedEvent value)? finished,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AudioMetadataStartedEventImplToJson(
-      this,
-    );
-  }
+@override final  String userId;
+@override final  String libraryItemId;
+@override final  DateTime startedAt;
+ final  List<EventAudioFile> _audioFiles;
+@override List<EventAudioFile> get audioFiles {
+  if (_audioFiles is EqualUnmodifiableListView) return _audioFiles;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_audioFiles);
 }
 
-abstract class AudioMetadataStartedEvent extends AudioMetadataEvent {
-  const factory AudioMetadataStartedEvent(
-          {required final String userId,
-          required final String libraryItemId,
-          required final DateTime startedAt,
-          required final List<EventAudioFile> audioFiles}) =
-      _$AudioMetadataStartedEventImpl;
-  const AudioMetadataStartedEvent._() : super._();
 
-  factory AudioMetadataStartedEvent.fromJson(Map<String, dynamic> json) =
-      _$AudioMetadataStartedEventImpl.fromJson;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String get userId;
-  @override
-  String get libraryItemId;
-  @override
-  DateTime get startedAt;
-  @override
-  List<EventAudioFile> get audioFiles;
 
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AudioMetadataStartedEventImplCopyWith<_$AudioMetadataStartedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AudioMetadataStartedEventCopyWith<AudioMetadataStartedEvent> get copyWith => _$AudioMetadataStartedEventCopyWithImpl<AudioMetadataStartedEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AudioMetadataStartedEventToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AudioMetadataStartedEvent&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.libraryItemId, libraryItemId) || other.libraryItemId == libraryItemId)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&const DeepCollectionEquality().equals(other._audioFiles, _audioFiles));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,libraryItemId,startedAt,const DeepCollectionEquality().hash(_audioFiles));
+
+@override
+String toString() {
+  return 'AudioMetadataEvent.started(userId: $userId, libraryItemId: $libraryItemId, startedAt: $startedAt, audioFiles: $audioFiles)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$AudioMetadataFinishedEventImplCopyWith<$Res>
-    implements $AudioMetadataEventCopyWith<$Res> {
-  factory _$$AudioMetadataFinishedEventImplCopyWith(
-          _$AudioMetadataFinishedEventImpl value,
-          $Res Function(_$AudioMetadataFinishedEventImpl) then) =
-      __$$AudioMetadataFinishedEventImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String userId,
-      String libraryItemId,
-      DateTime startedAt,
-      List<EventAudioFile> audioFiles,
-      List<AudioFileMetadataEvent> results,
-      @DurationMsConverter() Duration elapsed,
-      DateTime finishedAt});
+abstract mixin class $AudioMetadataStartedEventCopyWith<$Res> implements $AudioMetadataEventCopyWith<$Res> {
+  factory $AudioMetadataStartedEventCopyWith(AudioMetadataStartedEvent value, $Res Function(AudioMetadataStartedEvent) _then) = _$AudioMetadataStartedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, String libraryItemId, DateTime startedAt, List<EventAudioFile> audioFiles
+});
+
+
+
+
+}
+/// @nodoc
+class _$AudioMetadataStartedEventCopyWithImpl<$Res>
+    implements $AudioMetadataStartedEventCopyWith<$Res> {
+  _$AudioMetadataStartedEventCopyWithImpl(this._self, this._then);
+
+  final AudioMetadataStartedEvent _self;
+  final $Res Function(AudioMetadataStartedEvent) _then;
+
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? libraryItemId = null,Object? startedAt = null,Object? audioFiles = null,}) {
+  return _then(AudioMetadataStartedEvent(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,libraryItemId: null == libraryItemId ? _self.libraryItemId : libraryItemId // ignore: cast_nullable_to_non_nullable
+as String,startedAt: null == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,audioFiles: null == audioFiles ? _self._audioFiles : audioFiles // ignore: cast_nullable_to_non_nullable
+as List<EventAudioFile>,
+  ));
 }
 
-/// @nodoc
-class __$$AudioMetadataFinishedEventImplCopyWithImpl<$Res>
-    extends _$AudioMetadataEventCopyWithImpl<$Res,
-        _$AudioMetadataFinishedEventImpl>
-    implements _$$AudioMetadataFinishedEventImplCopyWith<$Res> {
-  __$$AudioMetadataFinishedEventImplCopyWithImpl(
-      _$AudioMetadataFinishedEventImpl _value,
-      $Res Function(_$AudioMetadataFinishedEventImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? userId = null,
-    Object? libraryItemId = null,
-    Object? startedAt = null,
-    Object? audioFiles = null,
-    Object? results = null,
-    Object? elapsed = null,
-    Object? finishedAt = null,
-  }) {
-    return _then(_$AudioMetadataFinishedEventImpl(
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      libraryItemId: null == libraryItemId
-          ? _value.libraryItemId
-          : libraryItemId // ignore: cast_nullable_to_non_nullable
-              as String,
-      startedAt: null == startedAt
-          ? _value.startedAt
-          : startedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      audioFiles: null == audioFiles
-          ? _value._audioFiles
-          : audioFiles // ignore: cast_nullable_to_non_nullable
-              as List<EventAudioFile>,
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<AudioFileMetadataEvent>,
-      elapsed: null == elapsed
-          ? _value.elapsed
-          : elapsed // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      finishedAt: null == finishedAt
-          ? _value.finishedAt
-          : finishedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$AudioMetadataFinishedEventImpl extends AudioMetadataFinishedEvent {
-  const _$AudioMetadataFinishedEventImpl(
-      {required this.userId,
-      required this.libraryItemId,
-      required this.startedAt,
-      required final List<EventAudioFile> audioFiles,
-      required final List<AudioFileMetadataEvent> results,
-      @DurationMsConverter() required this.elapsed,
-      required this.finishedAt,
-      final String? $type})
-      : _audioFiles = audioFiles,
-        _results = results,
-        $type = $type ?? 'finished',
-        super._();
+class AudioMetadataFinishedEvent extends AudioMetadataEvent {
+  const AudioMetadataFinishedEvent({required this.userId, required this.libraryItemId, required this.startedAt, required final  List<EventAudioFile> audioFiles, required final  List<AudioFileMetadataEvent> results, @DurationMsConverter() required this.elapsed, required this.finishedAt, final  String? $type}): _audioFiles = audioFiles,_results = results,$type = $type ?? 'finished',super._();
+  factory AudioMetadataFinishedEvent.fromJson(Map<String, dynamic> json) => _$AudioMetadataFinishedEventFromJson(json);
 
-  factory _$AudioMetadataFinishedEventImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$AudioMetadataFinishedEventImplFromJson(json);
-
-  @override
-  final String userId;
-  @override
-  final String libraryItemId;
-  @override
-  final DateTime startedAt;
-  final List<EventAudioFile> _audioFiles;
-  @override
-  List<EventAudioFile> get audioFiles {
-    if (_audioFiles is EqualUnmodifiableListView) return _audioFiles;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_audioFiles);
-  }
-
-  final List<AudioFileMetadataEvent> _results;
-  @override
-  List<AudioFileMetadataEvent> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
-
-  @override
-  @DurationMsConverter()
-  final Duration elapsed;
-  @override
-  final DateTime finishedAt;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'AudioMetadataEvent.finished(userId: $userId, libraryItemId: $libraryItemId, startedAt: $startedAt, audioFiles: $audioFiles, results: $results, elapsed: $elapsed, finishedAt: $finishedAt)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AudioMetadataFinishedEventImpl &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.libraryItemId, libraryItemId) ||
-                other.libraryItemId == libraryItemId) &&
-            (identical(other.startedAt, startedAt) ||
-                other.startedAt == startedAt) &&
-            const DeepCollectionEquality()
-                .equals(other._audioFiles, _audioFiles) &&
-            const DeepCollectionEquality().equals(other._results, _results) &&
-            (identical(other.elapsed, elapsed) || other.elapsed == elapsed) &&
-            (identical(other.finishedAt, finishedAt) ||
-                other.finishedAt == finishedAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      userId,
-      libraryItemId,
-      startedAt,
-      const DeepCollectionEquality().hash(_audioFiles),
-      const DeepCollectionEquality().hash(_results),
-      elapsed,
-      finishedAt);
-
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AudioMetadataFinishedEventImplCopyWith<_$AudioMetadataFinishedEventImpl>
-      get copyWith => __$$AudioMetadataFinishedEventImplCopyWithImpl<
-          _$AudioMetadataFinishedEventImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String userId, String libraryItemId,
-            DateTime startedAt, List<EventAudioFile> audioFiles)
-        started,
-    required TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)
-        finished,
-  }) {
-    return finished(userId, libraryItemId, startedAt, audioFiles, results,
-        elapsed, finishedAt);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult? Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-  }) {
-    return finished?.call(userId, libraryItemId, startedAt, audioFiles, results,
-        elapsed, finishedAt);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String userId, String libraryItemId, DateTime startedAt,
-            List<EventAudioFile> audioFiles)?
-        started,
-    TResult Function(
-            String userId,
-            String libraryItemId,
-            DateTime startedAt,
-            List<EventAudioFile> audioFiles,
-            List<AudioFileMetadataEvent> results,
-            @DurationMsConverter() Duration elapsed,
-            DateTime finishedAt)?
-        finished,
-    required TResult orElse(),
-  }) {
-    if (finished != null) {
-      return finished(userId, libraryItemId, startedAt, audioFiles, results,
-          elapsed, finishedAt);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(AudioMetadataStartedEvent value) started,
-    required TResult Function(AudioMetadataFinishedEvent value) finished,
-  }) {
-    return finished(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AudioMetadataStartedEvent value)? started,
-    TResult? Function(AudioMetadataFinishedEvent value)? finished,
-  }) {
-    return finished?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(AudioMetadataStartedEvent value)? started,
-    TResult Function(AudioMetadataFinishedEvent value)? finished,
-    required TResult orElse(),
-  }) {
-    if (finished != null) {
-      return finished(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AudioMetadataFinishedEventImplToJson(
-      this,
-    );
-  }
+@override final  String userId;
+@override final  String libraryItemId;
+@override final  DateTime startedAt;
+ final  List<EventAudioFile> _audioFiles;
+@override List<EventAudioFile> get audioFiles {
+  if (_audioFiles is EqualUnmodifiableListView) return _audioFiles;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_audioFiles);
 }
 
-abstract class AudioMetadataFinishedEvent extends AudioMetadataEvent {
-  const factory AudioMetadataFinishedEvent(
-      {required final String userId,
-      required final String libraryItemId,
-      required final DateTime startedAt,
-      required final List<EventAudioFile> audioFiles,
-      required final List<AudioFileMetadataEvent> results,
-      @DurationMsConverter() required final Duration elapsed,
-      required final DateTime finishedAt}) = _$AudioMetadataFinishedEventImpl;
-  const AudioMetadataFinishedEvent._() : super._();
-
-  factory AudioMetadataFinishedEvent.fromJson(Map<String, dynamic> json) =
-      _$AudioMetadataFinishedEventImpl.fromJson;
-
-  @override
-  String get userId;
-  @override
-  String get libraryItemId;
-  @override
-  DateTime get startedAt;
-  @override
-  List<EventAudioFile> get audioFiles;
-  List<AudioFileMetadataEvent> get results;
-  @DurationMsConverter()
-  Duration get elapsed;
-  DateTime get finishedAt;
-
-  /// Create a copy of AudioMetadataEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AudioMetadataFinishedEventImplCopyWith<_$AudioMetadataFinishedEventImpl>
-      get copyWith => throw _privateConstructorUsedError;
+ final  List<AudioFileMetadataEvent> _results;
+ List<AudioFileMetadataEvent> get results {
+  if (_results is EqualUnmodifiableListView) return _results;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_results);
 }
 
-EventAudioFile _$EventAudioFileFromJson(Map<String, dynamic> json) {
-  return _EventAudioFile.fromJson(json);
+@DurationMsConverter() final  Duration elapsed;
+ final  DateTime finishedAt;
+
+@JsonKey(name: 'runtimeType')
+final String $type;
+
+
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AudioMetadataFinishedEventCopyWith<AudioMetadataFinishedEvent> get copyWith => _$AudioMetadataFinishedEventCopyWithImpl<AudioMetadataFinishedEvent>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AudioMetadataFinishedEventToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AudioMetadataFinishedEvent&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.libraryItemId, libraryItemId) || other.libraryItemId == libraryItemId)&&(identical(other.startedAt, startedAt) || other.startedAt == startedAt)&&const DeepCollectionEquality().equals(other._audioFiles, _audioFiles)&&const DeepCollectionEquality().equals(other._results, _results)&&(identical(other.elapsed, elapsed) || other.elapsed == elapsed)&&(identical(other.finishedAt, finishedAt) || other.finishedAt == finishedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,userId,libraryItemId,startedAt,const DeepCollectionEquality().hash(_audioFiles),const DeepCollectionEquality().hash(_results),elapsed,finishedAt);
+
+@override
+String toString() {
+  return 'AudioMetadataEvent.finished(userId: $userId, libraryItemId: $libraryItemId, startedAt: $startedAt, audioFiles: $audioFiles, results: $results, elapsed: $elapsed, finishedAt: $finishedAt)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $AudioMetadataFinishedEventCopyWith<$Res> implements $AudioMetadataEventCopyWith<$Res> {
+  factory $AudioMetadataFinishedEventCopyWith(AudioMetadataFinishedEvent value, $Res Function(AudioMetadataFinishedEvent) _then) = _$AudioMetadataFinishedEventCopyWithImpl;
+@override @useResult
+$Res call({
+ String userId, String libraryItemId, DateTime startedAt, List<EventAudioFile> audioFiles, List<AudioFileMetadataEvent> results,@DurationMsConverter() Duration elapsed, DateTime finishedAt
+});
+
+
+
+
+}
+/// @nodoc
+class _$AudioMetadataFinishedEventCopyWithImpl<$Res>
+    implements $AudioMetadataFinishedEventCopyWith<$Res> {
+  _$AudioMetadataFinishedEventCopyWithImpl(this._self, this._then);
+
+  final AudioMetadataFinishedEvent _self;
+  final $Res Function(AudioMetadataFinishedEvent) _then;
+
+/// Create a copy of AudioMetadataEvent
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? userId = null,Object? libraryItemId = null,Object? startedAt = null,Object? audioFiles = null,Object? results = null,Object? elapsed = null,Object? finishedAt = null,}) {
+  return _then(AudioMetadataFinishedEvent(
+userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,libraryItemId: null == libraryItemId ? _self.libraryItemId : libraryItemId // ignore: cast_nullable_to_non_nullable
+as String,startedAt: null == startedAt ? _self.startedAt : startedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,audioFiles: null == audioFiles ? _self._audioFiles : audioFiles // ignore: cast_nullable_to_non_nullable
+as List<EventAudioFile>,results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
+as List<AudioFileMetadataEvent>,elapsed: null == elapsed ? _self.elapsed : elapsed // ignore: cast_nullable_to_non_nullable
+as Duration,finishedAt: null == finishedAt ? _self.finishedAt : finishedAt // ignore: cast_nullable_to_non_nullable
+as DateTime,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$EventAudioFile {
-  int get index => throw _privateConstructorUsedError;
-  String get ino => throw _privateConstructorUsedError;
-  String get filename => throw _privateConstructorUsedError;
+
+ int get index; String get ino; String get filename;
+/// Create a copy of EventAudioFile
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$EventAudioFileCopyWith<EventAudioFile> get copyWith => _$EventAudioFileCopyWithImpl<EventAudioFile>(this as EventAudioFile, _$identity);
 
   /// Serializes this EventAudioFile to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of EventAudioFile
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $EventAudioFileCopyWith<EventAudioFile> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EventAudioFile&&(identical(other.index, index) || other.index == index)&&(identical(other.ino, ino) || other.ino == ino)&&(identical(other.filename, filename) || other.filename == filename));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,index,ino,filename);
+
+@override
+String toString() {
+  return 'EventAudioFile(index: $index, ino: $ino, filename: $filename)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $EventAudioFileCopyWith<$Res> {
-  factory $EventAudioFileCopyWith(
-          EventAudioFile value, $Res Function(EventAudioFile) then) =
-      _$EventAudioFileCopyWithImpl<$Res, EventAudioFile>;
-  @useResult
-  $Res call({int index, String ino, String filename});
-}
+abstract mixin class $EventAudioFileCopyWith<$Res>  {
+  factory $EventAudioFileCopyWith(EventAudioFile value, $Res Function(EventAudioFile) _then) = _$EventAudioFileCopyWithImpl;
+@useResult
+$Res call({
+ int index, String ino, String filename
+});
 
+
+
+
+}
 /// @nodoc
-class _$EventAudioFileCopyWithImpl<$Res, $Val extends EventAudioFile>
+class _$EventAudioFileCopyWithImpl<$Res>
     implements $EventAudioFileCopyWith<$Res> {
-  _$EventAudioFileCopyWithImpl(this._value, this._then);
+  _$EventAudioFileCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final EventAudioFile _self;
+  final $Res Function(EventAudioFile) _then;
 
-  /// Create a copy of EventAudioFile
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-    Object? ino = null,
-    Object? filename = null,
-  }) {
-    return _then(_value.copyWith(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      ino: null == ino
-          ? _value.ino
-          : ino // ignore: cast_nullable_to_non_nullable
-              as String,
-      filename: null == filename
-          ? _value.filename
-          : filename // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
+/// Create a copy of EventAudioFile
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? index = null,Object? ino = null,Object? filename = null,}) {
+  return _then(_self.copyWith(
+index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,ino: null == ino ? _self.ino : ino // ignore: cast_nullable_to_non_nullable
+as String,filename: null == filename ? _self.filename : filename // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-abstract class _$$EventAudioFileImplCopyWith<$Res>
-    implements $EventAudioFileCopyWith<$Res> {
-  factory _$$EventAudioFileImplCopyWith(_$EventAudioFileImpl value,
-          $Res Function(_$EventAudioFileImpl) then) =
-      __$$EventAudioFileImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int index, String ino, String filename});
 }
 
-/// @nodoc
-class __$$EventAudioFileImplCopyWithImpl<$Res>
-    extends _$EventAudioFileCopyWithImpl<$Res, _$EventAudioFileImpl>
-    implements _$$EventAudioFileImplCopyWith<$Res> {
-  __$$EventAudioFileImplCopyWithImpl(
-      _$EventAudioFileImpl _value, $Res Function(_$EventAudioFileImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of EventAudioFile
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-    Object? ino = null,
-    Object? filename = null,
-  }) {
-    return _then(_$EventAudioFileImpl(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      ino: null == ino
-          ? _value.ino
-          : ino // ignore: cast_nullable_to_non_nullable
-              as String,
-      filename: null == filename
-          ? _value.filename
-          : filename // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
+/// Adds pattern-matching-related methods to [EventAudioFile].
+extension EventAudioFilePatterns on EventAudioFile {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EventAudioFile value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _EventAudioFile() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EventAudioFile value)  $default,){
+final _that = this;
+switch (_that) {
+case _EventAudioFile():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EventAudioFile value)?  $default,){
+final _that = this;
+switch (_that) {
+case _EventAudioFile() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int index,  String ino,  String filename)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _EventAudioFile() when $default != null:
+return $default(_that.index,_that.ino,_that.filename);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int index,  String ino,  String filename)  $default,) {final _that = this;
+switch (_that) {
+case _EventAudioFile():
+return $default(_that.index,_that.ino,_that.filename);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int index,  String ino,  String filename)?  $default,) {final _that = this;
+switch (_that) {
+case _EventAudioFile() when $default != null:
+return $default(_that.index,_that.ino,_that.filename);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$EventAudioFileImpl implements _EventAudioFile {
-  const _$EventAudioFileImpl(
-      {required this.index, required this.ino, required this.filename});
 
-  factory _$EventAudioFileImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EventAudioFileImplFromJson(json);
+class _EventAudioFile implements EventAudioFile {
+  const _EventAudioFile({required this.index, required this.ino, required this.filename});
+  factory _EventAudioFile.fromJson(Map<String, dynamic> json) => _$EventAudioFileFromJson(json);
 
-  @override
-  final int index;
-  @override
-  final String ino;
-  @override
-  final String filename;
+@override final  int index;
+@override final  String ino;
+@override final  String filename;
 
-  @override
-  String toString() {
-    return 'EventAudioFile(index: $index, ino: $ino, filename: $filename)';
-  }
+/// Create a copy of EventAudioFile
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$EventAudioFileCopyWith<_EventAudioFile> get copyWith => __$EventAudioFileCopyWithImpl<_EventAudioFile>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$EventAudioFileImpl &&
-            (identical(other.index, index) || other.index == index) &&
-            (identical(other.ino, ino) || other.ino == ino) &&
-            (identical(other.filename, filename) ||
-                other.filename == filename));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, index, ino, filename);
-
-  /// Create a copy of EventAudioFile
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$EventAudioFileImplCopyWith<_$EventAudioFileImpl> get copyWith =>
-      __$$EventAudioFileImplCopyWithImpl<_$EventAudioFileImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$EventAudioFileImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$EventAudioFileToJson(this, );
 }
 
-abstract class _EventAudioFile implements EventAudioFile {
-  const factory _EventAudioFile(
-      {required final int index,
-      required final String ino,
-      required final String filename}) = _$EventAudioFileImpl;
-
-  factory _EventAudioFile.fromJson(Map<String, dynamic> json) =
-      _$EventAudioFileImpl.fromJson;
-
-  @override
-  int get index;
-  @override
-  String get ino;
-  @override
-  String get filename;
-
-  /// Create a copy of EventAudioFile
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EventAudioFileImplCopyWith<_$EventAudioFileImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EventAudioFile&&(identical(other.index, index) || other.index == index)&&(identical(other.ino, ino) || other.ino == ino)&&(identical(other.filename, filename) || other.filename == filename));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,index,ino,filename);
+
+@override
+String toString() {
+  return 'EventAudioFile(index: $index, ino: $ino, filename: $filename)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$EventAudioFileCopyWith<$Res> implements $EventAudioFileCopyWith<$Res> {
+  factory _$EventAudioFileCopyWith(_EventAudioFile value, $Res Function(_EventAudioFile) _then) = __$EventAudioFileCopyWithImpl;
+@override @useResult
+$Res call({
+ int index, String ino, String filename
+});
+
+
+
+
+}
+/// @nodoc
+class __$EventAudioFileCopyWithImpl<$Res>
+    implements _$EventAudioFileCopyWith<$Res> {
+  __$EventAudioFileCopyWithImpl(this._self, this._then);
+
+  final _EventAudioFile _self;
+  final $Res Function(_EventAudioFile) _then;
+
+/// Create a copy of EventAudioFile
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? index = null,Object? ino = null,Object? filename = null,}) {
+  return _then(_EventAudioFile(
+index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
+as int,ino: null == ino ? _self.ino : ino // ignore: cast_nullable_to_non_nullable
+as String,filename: null == filename ? _self.filename : filename // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
+// dart format on

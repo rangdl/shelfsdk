@@ -7,32 +7,30 @@ part of '../create_update_progress_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$CreateUpdateProgressReqParamsToJson(
-        CreateUpdateProgressReqParams instance) =>
-    <String, dynamic>{
-      if (_$JsonConverterToJson<num, Duration>(
-              instance.duration, const DurationPreciseSecondsConverter().toJson)
-          case final value?)
-        'duration': value,
-      if (instance.progress case final value?) 'progress': value,
-      if (_$JsonConverterToJson<num, Duration>(instance.currentTime,
-              const DurationPreciseSecondsConverter().toJson)
-          case final value?)
-        'currentTime': value,
-      if (instance.isFinished case final value?) 'isFinished': value,
-      if (instance.hideFromContinueListening case final value?)
-        'hideFromContinueListening': value,
-      if (_$JsonConverterToJson<int, DateTime>(
-              instance.finishedAt, const DateTimeEpochConverter().toJson)
-          case final value?)
-        'finishedAt': value,
-      if (_$JsonConverterToJson<int, DateTime>(
-              instance.startedAt, const DateTimeEpochConverter().toJson)
-          case final value?)
-        'startedAt': value,
-    };
+  CreateUpdateProgressReqParams instance,
+) => <String, dynamic>{
+  'duration': ?_$JsonConverterToJson<num, Duration>(
+    instance.duration,
+    const DurationPreciseSecondsConverter().toJson,
+  ),
+  'progress': ?instance.progress,
+  'currentTime': ?_$JsonConverterToJson<num, Duration>(
+    instance.currentTime,
+    const DurationPreciseSecondsConverter().toJson,
+  ),
+  'isFinished': ?instance.isFinished,
+  'hideFromContinueListening': ?instance.hideFromContinueListening,
+  'finishedAt': ?_$JsonConverterToJson<int, DateTime>(
+    instance.finishedAt,
+    const DateTimeEpochConverter().toJson,
+  ),
+  'startedAt': ?_$JsonConverterToJson<int, DateTime>(
+    instance.startedAt,
+    const DateTimeEpochConverter().toJson,
+  ),
+};
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,
   Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+) => value == null ? null : toJson(value);

@@ -9,7 +9,7 @@ part 'generated/shelf.g.dart';
 
 /// See [Get a Library's Personalized View](https://api.audiobookshelf.org/#get-a-library-39-s-personalized-view)
 @freezed
-class Shelf with _$Shelf {
+abstract class Shelf with _$Shelf {
   const factory Shelf.libraryItem({
     required String id,
     required String label,

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,1102 +9,499 @@ part of '../user.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-User _$UserFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'default':
-      return _User.fromJson(json);
-    case 'withSessionAndMostRecentProgress':
-      return UserWithSessionAndMostRecentProgress.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'User',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+User _$UserFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'default':
+          return UserBase.fromJson(
+            json
+          );
+                case 'withSessionAndMostRecentProgress':
+          return UserWithSessionAndMostRecentProgress.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'User',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
 mixin _$User {
-  String get id => throw _privateConstructorUsedError;
-  String get username => throw _privateConstructorUsedError;
-  UserType get type => throw _privateConstructorUsedError;
-  List<MediaProgress>? get mediaProgress => throw _privateConstructorUsedError;
-  DateTime? get lastSeen => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)
-        $default, {
-    required TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)
-        withSessionAndMostRecentProgress,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_User value) $default, {
-    required TResult Function(UserWithSessionAndMostRecentProgress value)
-        withSessionAndMostRecentProgress,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_User value)? $default, {
-    TResult? Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_User value)? $default, {
-    TResult Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+ String get id; String get username; UserType get type; List<MediaProgress>? get mediaProgress; DateTime? get lastSeen; DateTime get createdAt;
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UserCopyWith<User> get copyWith => _$UserCopyWithImpl<User>(this as User, _$identity);
 
   /// Serializes this User to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is User&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.type, type) || other.type == type)&&const DeepCollectionEquality().equals(other.mediaProgress, mediaProgress)&&(identical(other.lastSeen, lastSeen) || other.lastSeen == lastSeen)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,username,type,const DeepCollectionEquality().hash(mediaProgress),lastSeen,createdAt);
+
+@override
+String toString() {
+  return 'User(id: $id, username: $username, type: $type, mediaProgress: $mediaProgress, lastSeen: $lastSeen, createdAt: $createdAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res, User>;
-  @useResult
-  $Res call(
-      {String id,
-      String username,
-      UserType type,
-      List<MediaProgress>? mediaProgress,
-      DateTime? lastSeen,
-      DateTime createdAt});
-}
+abstract mixin class $UserCopyWith<$Res>  {
+  factory $UserCopyWith(User value, $Res Function(User) _then) = _$UserCopyWithImpl;
+@useResult
+$Res call({
+ String id, String username, UserType type, List<MediaProgress>? mediaProgress, DateTime? lastSeen, DateTime createdAt
+});
 
+
+
+
+}
 /// @nodoc
-class _$UserCopyWithImpl<$Res, $Val extends User>
+class _$UserCopyWithImpl<$Res>
     implements $UserCopyWith<$Res> {
-  _$UserCopyWithImpl(this._value, this._then);
+  _$UserCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final User _self;
+  final $Res Function(User) _then;
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? type = null,
-    Object? mediaProgress = freezed,
-    Object? lastSeen = freezed,
-    Object? createdAt = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as UserType,
-      mediaProgress: freezed == mediaProgress
-          ? _value.mediaProgress
-          : mediaProgress // ignore: cast_nullable_to_non_nullable
-              as List<MediaProgress>?,
-      lastSeen: freezed == lastSeen
-          ? _value.lastSeen
-          : lastSeen // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
-  }
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? username = null,Object? type = null,Object? mediaProgress = freezed,Object? lastSeen = freezed,Object? createdAt = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as UserType,mediaProgress: freezed == mediaProgress ? _self.mediaProgress : mediaProgress // ignore: cast_nullable_to_non_nullable
+as List<MediaProgress>?,lastSeen: freezed == lastSeen ? _self.lastSeen : lastSeen // ignore: cast_nullable_to_non_nullable
+as DateTime?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$UserImplCopyWith(
-          _$UserImpl value, $Res Function(_$UserImpl) then) =
-      __$$UserImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String username,
-      UserType type,
-      String token,
-      List<MediaProgress>? mediaProgress,
-      List<String> seriesHideFromContinueListening,
-      List<AudioBookmark> bookmarks,
-      bool isActive,
-      bool isLocked,
-      DateTime? lastSeen,
-      DateTime createdAt,
-      UserPermissions permissions,
-      List<String> librariesAccessible});
-
-  $UserPermissionsCopyWith<$Res> get permissions;
 }
 
-/// @nodoc
-class __$$UserImplCopyWithImpl<$Res>
-    extends _$UserCopyWithImpl<$Res, _$UserImpl>
-    implements _$$UserImplCopyWith<$Res> {
-  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? type = null,
-    Object? token = null,
-    Object? mediaProgress = freezed,
-    Object? seriesHideFromContinueListening = null,
-    Object? bookmarks = null,
-    Object? isActive = null,
-    Object? isLocked = null,
-    Object? lastSeen = freezed,
-    Object? createdAt = null,
-    Object? permissions = null,
-    Object? librariesAccessible = null,
-  }) {
-    return _then(_$UserImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as UserType,
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaProgress: freezed == mediaProgress
-          ? _value._mediaProgress
-          : mediaProgress // ignore: cast_nullable_to_non_nullable
-              as List<MediaProgress>?,
-      seriesHideFromContinueListening: null == seriesHideFromContinueListening
-          ? _value._seriesHideFromContinueListening
-          : seriesHideFromContinueListening // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      bookmarks: null == bookmarks
-          ? _value._bookmarks
-          : bookmarks // ignore: cast_nullable_to_non_nullable
-              as List<AudioBookmark>,
-      isActive: null == isActive
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLocked: null == isLocked
-          ? _value.isLocked
-          : isLocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      lastSeen: freezed == lastSeen
-          ? _value.lastSeen
-          : lastSeen // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      permissions: null == permissions
-          ? _value.permissions
-          : permissions // ignore: cast_nullable_to_non_nullable
-              as UserPermissions,
-      librariesAccessible: null == librariesAccessible
-          ? _value._librariesAccessible
-          : librariesAccessible // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [User].
+extension UserPatterns on User {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserPermissionsCopyWith<$Res> get permissions {
-    return $UserPermissionsCopyWith<$Res>(_value.permissions, (value) {
-      return _then(_value.copyWith(permissions: value));
-    });
-  }
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( UserBase value)?  $default,{TResult Function( UserWithSessionAndMostRecentProgress value)?  withSessionAndMostRecentProgress,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case UserBase() when $default != null:
+return $default(_that);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
+return withSessionAndMostRecentProgress(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( UserBase value)  $default,{required TResult Function( UserWithSessionAndMostRecentProgress value)  withSessionAndMostRecentProgress,}){
+final _that = this;
+switch (_that) {
+case UserBase():
+return $default(_that);case UserWithSessionAndMostRecentProgress():
+return withSessionAndMostRecentProgress(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( UserBase value)?  $default,{TResult? Function( UserWithSessionAndMostRecentProgress value)?  withSessionAndMostRecentProgress,}){
+final _that = this;
+switch (_that) {
+case UserBase() when $default != null:
+return $default(_that);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
+return withSessionAndMostRecentProgress(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case UserBase() when $default != null:
+return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
+return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that.session,_that.mostRecent,_that.lastSeen,_that.createdAt,_that.mediaProgress);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)  $default,{required TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)  withSessionAndMostRecentProgress,}) {final _that = this;
+switch (_that) {
+case UserBase():
+return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress():
+return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that.session,_that.mostRecent,_that.lastSeen,_that.createdAt,_that.mediaProgress);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult? Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,}) {final _that = this;
+switch (_that) {
+case UserBase() when $default != null:
+return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
+return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that.session,_that.mostRecent,_that.lastSeen,_that.createdAt,_that.mediaProgress);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$UserImpl extends _User {
-  const _$UserImpl(
-      {required this.id,
-      required this.username,
-      required this.type,
-      required this.token,
-      final List<MediaProgress>? mediaProgress,
-      required final List<String> seriesHideFromContinueListening,
-      required final List<AudioBookmark> bookmarks,
-      required this.isActive,
-      required this.isLocked,
-      this.lastSeen,
-      required this.createdAt,
-      required this.permissions,
-      required final List<String> librariesAccessible,
-      final String? $type})
-      : _mediaProgress = mediaProgress,
-        _seriesHideFromContinueListening = seriesHideFromContinueListening,
-        _bookmarks = bookmarks,
-        _librariesAccessible = librariesAccessible,
-        $type = $type ?? 'default',
-        super._();
+class UserBase extends User {
+  const UserBase({required this.id, required this.username, required this.type, required this.token, final  List<MediaProgress>? mediaProgress, required final  List<String> seriesHideFromContinueListening, required final  List<AudioBookmark> bookmarks, required this.isActive, required this.isLocked, this.lastSeen, required this.createdAt, required this.permissions, required final  List<String> librariesAccessible, required final  List<String> itemTagsAccessible, required this.hasOpenIDLink, required this.refreshToken, required this.accessToken, final  String? $type}): _mediaProgress = mediaProgress,_seriesHideFromContinueListening = seriesHideFromContinueListening,_bookmarks = bookmarks,_librariesAccessible = librariesAccessible,_itemTagsAccessible = itemTagsAccessible,$type = $type ?? 'default',super._();
+  factory UserBase.fromJson(Map<String, dynamic> json) => _$UserBaseFromJson(json);
 
-  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UserImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  final String username;
-  @override
-  final UserType type;
-  @override
-  final String token;
-  final List<MediaProgress>? _mediaProgress;
-  @override
-  List<MediaProgress>? get mediaProgress {
-    final value = _mediaProgress;
-    if (value == null) return null;
-    if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String> _seriesHideFromContinueListening;
-  @override
-  List<String> get seriesHideFromContinueListening {
-    if (_seriesHideFromContinueListening is EqualUnmodifiableListView)
-      return _seriesHideFromContinueListening;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_seriesHideFromContinueListening);
-  }
-
-  final List<AudioBookmark> _bookmarks;
-  @override
-  List<AudioBookmark> get bookmarks {
-    if (_bookmarks is EqualUnmodifiableListView) return _bookmarks;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_bookmarks);
-  }
-
-  @override
-  final bool isActive;
-  @override
-  final bool isLocked;
-  @override
-  final DateTime? lastSeen;
-  @override
-  final DateTime createdAt;
-  @override
-  final UserPermissions permissions;
-  final List<String> _librariesAccessible;
-  @override
-  List<String> get librariesAccessible {
-    if (_librariesAccessible is EqualUnmodifiableListView)
-      return _librariesAccessible;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_librariesAccessible);
-  }
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'User(id: $id, username: $username, type: $type, token: $token, mediaProgress: $mediaProgress, seriesHideFromContinueListening: $seriesHideFromContinueListening, bookmarks: $bookmarks, isActive: $isActive, isLocked: $isLocked, lastSeen: $lastSeen, createdAt: $createdAt, permissions: $permissions, librariesAccessible: $librariesAccessible)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UserImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.token, token) || other.token == token) &&
-            const DeepCollectionEquality()
-                .equals(other._mediaProgress, _mediaProgress) &&
-            const DeepCollectionEquality().equals(
-                other._seriesHideFromContinueListening,
-                _seriesHideFromContinueListening) &&
-            const DeepCollectionEquality()
-                .equals(other._bookmarks, _bookmarks) &&
-            (identical(other.isActive, isActive) ||
-                other.isActive == isActive) &&
-            (identical(other.isLocked, isLocked) ||
-                other.isLocked == isLocked) &&
-            (identical(other.lastSeen, lastSeen) ||
-                other.lastSeen == lastSeen) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.permissions, permissions) ||
-                other.permissions == permissions) &&
-            const DeepCollectionEquality()
-                .equals(other._librariesAccessible, _librariesAccessible));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      username,
-      type,
-      token,
-      const DeepCollectionEquality().hash(_mediaProgress),
-      const DeepCollectionEquality().hash(_seriesHideFromContinueListening),
-      const DeepCollectionEquality().hash(_bookmarks),
-      isActive,
-      isLocked,
-      lastSeen,
-      createdAt,
-      permissions,
-      const DeepCollectionEquality().hash(_librariesAccessible));
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
-      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)
-        $default, {
-    required TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)
-        withSessionAndMostRecentProgress,
-  }) {
-    return $default(
-        id,
-        username,
-        type,
-        token,
-        mediaProgress,
-        seriesHideFromContinueListening,
-        bookmarks,
-        isActive,
-        isLocked,
-        lastSeen,
-        createdAt,
-        permissions,
-        librariesAccessible);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-  }) {
-    return $default?.call(
-        id,
-        username,
-        type,
-        token,
-        mediaProgress,
-        seriesHideFromContinueListening,
-        bookmarks,
-        isActive,
-        isLocked,
-        lastSeen,
-        createdAt,
-        permissions,
-        librariesAccessible);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(
-          id,
-          username,
-          type,
-          token,
-          mediaProgress,
-          seriesHideFromContinueListening,
-          bookmarks,
-          isActive,
-          isLocked,
-          lastSeen,
-          createdAt,
-          permissions,
-          librariesAccessible);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_User value) $default, {
-    required TResult Function(UserWithSessionAndMostRecentProgress value)
-        withSessionAndMostRecentProgress,
-  }) {
-    return $default(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_User value)? $default, {
-    TResult? Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-  }) {
-    return $default?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_User value)? $default, {
-    TResult Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UserImplToJson(
-      this,
-    );
-  }
+@override final  String id;
+@override final  String username;
+@override final  UserType type;
+ final  String token;
+ final  List<MediaProgress>? _mediaProgress;
+@override List<MediaProgress>? get mediaProgress {
+  final value = _mediaProgress;
+  if (value == null) return null;
+  if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _User extends User {
-  const factory _User(
-      {required final String id,
-      required final String username,
-      required final UserType type,
-      required final String token,
-      final List<MediaProgress>? mediaProgress,
-      required final List<String> seriesHideFromContinueListening,
-      required final List<AudioBookmark> bookmarks,
-      required final bool isActive,
-      required final bool isLocked,
-      final DateTime? lastSeen,
-      required final DateTime createdAt,
-      required final UserPermissions permissions,
-      required final List<String> librariesAccessible}) = _$UserImpl;
-  const _User._() : super._();
+ final  List<String> _seriesHideFromContinueListening;
+ List<String> get seriesHideFromContinueListening {
+  if (_seriesHideFromContinueListening is EqualUnmodifiableListView) return _seriesHideFromContinueListening;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_seriesHideFromContinueListening);
+}
 
-  factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
+ final  List<AudioBookmark> _bookmarks;
+ List<AudioBookmark> get bookmarks {
+  if (_bookmarks is EqualUnmodifiableListView) return _bookmarks;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_bookmarks);
+}
 
-  @override
-  String get id;
-  @override
-  String get username;
-  @override
-  UserType get type;
-  String get token;
-  @override
-  List<MediaProgress>? get mediaProgress;
-  List<String> get seriesHideFromContinueListening;
-  List<AudioBookmark> get bookmarks;
-  bool get isActive;
-  bool get isLocked;
-  @override
-  DateTime? get lastSeen;
-  @override
-  DateTime get createdAt;
-  UserPermissions get permissions;
-  List<String> get librariesAccessible;
+ final  bool isActive;
+ final  bool isLocked;
+@override final  DateTime? lastSeen;
+@override final  DateTime createdAt;
+ final  UserPermissions permissions;
+ final  List<String> _librariesAccessible;
+ List<String> get librariesAccessible {
+  if (_librariesAccessible is EqualUnmodifiableListView) return _librariesAccessible;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_librariesAccessible);
+}
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+ final  List<String> _itemTagsAccessible;
+ List<String> get itemTagsAccessible {
+  if (_itemTagsAccessible is EqualUnmodifiableListView) return _itemTagsAccessible;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_itemTagsAccessible);
+}
+
+ final  bool hasOpenIDLink;
+ final  String? refreshToken;
+ final  String accessToken;
+
+@JsonKey(name: 'runtimeType')
+final String $type;
+
+
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UserBaseCopyWith<UserBase> get copyWith => _$UserBaseCopyWithImpl<UserBase>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$UserBaseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserBase&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.type, type) || other.type == type)&&(identical(other.token, token) || other.token == token)&&const DeepCollectionEquality().equals(other._mediaProgress, _mediaProgress)&&const DeepCollectionEquality().equals(other._seriesHideFromContinueListening, _seriesHideFromContinueListening)&&const DeepCollectionEquality().equals(other._bookmarks, _bookmarks)&&(identical(other.isActive, isActive) || other.isActive == isActive)&&(identical(other.isLocked, isLocked) || other.isLocked == isLocked)&&(identical(other.lastSeen, lastSeen) || other.lastSeen == lastSeen)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.permissions, permissions) || other.permissions == permissions)&&const DeepCollectionEquality().equals(other._librariesAccessible, _librariesAccessible)&&const DeepCollectionEquality().equals(other._itemTagsAccessible, _itemTagsAccessible)&&(identical(other.hasOpenIDLink, hasOpenIDLink) || other.hasOpenIDLink == hasOpenIDLink)&&(identical(other.refreshToken, refreshToken) || other.refreshToken == refreshToken)&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,username,type,token,const DeepCollectionEquality().hash(_mediaProgress),const DeepCollectionEquality().hash(_seriesHideFromContinueListening),const DeepCollectionEquality().hash(_bookmarks),isActive,isLocked,lastSeen,createdAt,permissions,const DeepCollectionEquality().hash(_librariesAccessible),const DeepCollectionEquality().hash(_itemTagsAccessible),hasOpenIDLink,refreshToken,accessToken);
+
+@override
+String toString() {
+  return 'User(id: $id, username: $username, type: $type, token: $token, mediaProgress: $mediaProgress, seriesHideFromContinueListening: $seriesHideFromContinueListening, bookmarks: $bookmarks, isActive: $isActive, isLocked: $isLocked, lastSeen: $lastSeen, createdAt: $createdAt, permissions: $permissions, librariesAccessible: $librariesAccessible, itemTagsAccessible: $itemTagsAccessible, hasOpenIDLink: $hasOpenIDLink, refreshToken: $refreshToken, accessToken: $accessToken)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$UserWithSessionAndMostRecentProgressImplCopyWith<$Res>
-    implements $UserCopyWith<$Res> {
-  factory _$$UserWithSessionAndMostRecentProgressImplCopyWith(
-          _$UserWithSessionAndMostRecentProgressImpl value,
-          $Res Function(_$UserWithSessionAndMostRecentProgressImpl) then) =
-      __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String username,
-      UserType type,
-      PlaybackSession? session,
-      MediaProgress? mostRecent,
-      DateTime? lastSeen,
-      DateTime createdAt,
-      List<MediaProgress>? mediaProgress});
+abstract mixin class $UserBaseCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory $UserBaseCopyWith(UserBase value, $Res Function(UserBase) _then) = _$UserBaseCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String username, UserType type, String token, List<MediaProgress>? mediaProgress, List<String> seriesHideFromContinueListening, List<AudioBookmark> bookmarks, bool isActive, bool isLocked, DateTime? lastSeen, DateTime createdAt, UserPermissions permissions, List<String> librariesAccessible, List<String> itemTagsAccessible, bool hasOpenIDLink, String? refreshToken, String accessToken
+});
 
-  $PlaybackSessionCopyWith<$Res>? get session;
-  $MediaProgressCopyWith<$Res>? get mostRecent;
+
+$UserPermissionsCopyWith<$Res> get permissions;
+
+}
+/// @nodoc
+class _$UserBaseCopyWithImpl<$Res>
+    implements $UserBaseCopyWith<$Res> {
+  _$UserBaseCopyWithImpl(this._self, this._then);
+
+  final UserBase _self;
+  final $Res Function(UserBase) _then;
+
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? username = null,Object? type = null,Object? token = null,Object? mediaProgress = freezed,Object? seriesHideFromContinueListening = null,Object? bookmarks = null,Object? isActive = null,Object? isLocked = null,Object? lastSeen = freezed,Object? createdAt = null,Object? permissions = null,Object? librariesAccessible = null,Object? itemTagsAccessible = null,Object? hasOpenIDLink = null,Object? refreshToken = freezed,Object? accessToken = null,}) {
+  return _then(UserBase(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as UserType,token: null == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
+as String,mediaProgress: freezed == mediaProgress ? _self._mediaProgress : mediaProgress // ignore: cast_nullable_to_non_nullable
+as List<MediaProgress>?,seriesHideFromContinueListening: null == seriesHideFromContinueListening ? _self._seriesHideFromContinueListening : seriesHideFromContinueListening // ignore: cast_nullable_to_non_nullable
+as List<String>,bookmarks: null == bookmarks ? _self._bookmarks : bookmarks // ignore: cast_nullable_to_non_nullable
+as List<AudioBookmark>,isActive: null == isActive ? _self.isActive : isActive // ignore: cast_nullable_to_non_nullable
+as bool,isLocked: null == isLocked ? _self.isLocked : isLocked // ignore: cast_nullable_to_non_nullable
+as bool,lastSeen: freezed == lastSeen ? _self.lastSeen : lastSeen // ignore: cast_nullable_to_non_nullable
+as DateTime?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,permissions: null == permissions ? _self.permissions : permissions // ignore: cast_nullable_to_non_nullable
+as UserPermissions,librariesAccessible: null == librariesAccessible ? _self._librariesAccessible : librariesAccessible // ignore: cast_nullable_to_non_nullable
+as List<String>,itemTagsAccessible: null == itemTagsAccessible ? _self._itemTagsAccessible : itemTagsAccessible // ignore: cast_nullable_to_non_nullable
+as List<String>,hasOpenIDLink: null == hasOpenIDLink ? _self.hasOpenIDLink : hasOpenIDLink // ignore: cast_nullable_to_non_nullable
+as bool,refreshToken: freezed == refreshToken ? _self.refreshToken : refreshToken // ignore: cast_nullable_to_non_nullable
+as String?,accessToken: null == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
-    extends _$UserCopyWithImpl<$Res, _$UserWithSessionAndMostRecentProgressImpl>
-    implements _$$UserWithSessionAndMostRecentProgressImplCopyWith<$Res> {
-  __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl(
-      _$UserWithSessionAndMostRecentProgressImpl _value,
-      $Res Function(_$UserWithSessionAndMostRecentProgressImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? type = null,
-    Object? session = freezed,
-    Object? mostRecent = freezed,
-    Object? lastSeen = freezed,
-    Object? createdAt = null,
-    Object? mediaProgress = freezed,
-  }) {
-    return _then(_$UserWithSessionAndMostRecentProgressImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as UserType,
-      session: freezed == session
-          ? _value.session
-          : session // ignore: cast_nullable_to_non_nullable
-              as PlaybackSession?,
-      mostRecent: freezed == mostRecent
-          ? _value.mostRecent
-          : mostRecent // ignore: cast_nullable_to_non_nullable
-              as MediaProgress?,
-      lastSeen: freezed == lastSeen
-          ? _value.lastSeen
-          : lastSeen // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      mediaProgress: freezed == mediaProgress
-          ? _value._mediaProgress
-          : mediaProgress // ignore: cast_nullable_to_non_nullable
-              as List<MediaProgress>?,
-    ));
-  }
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PlaybackSessionCopyWith<$Res>? get session {
-    if (_value.session == null) {
-      return null;
-    }
-
-    return $PlaybackSessionCopyWith<$Res>(_value.session!, (value) {
-      return _then(_value.copyWith(session: value));
-    });
-  }
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $MediaProgressCopyWith<$Res>? get mostRecent {
-    if (_value.mostRecent == null) {
-      return null;
-    }
-
-    return $MediaProgressCopyWith<$Res>(_value.mostRecent!, (value) {
-      return _then(_value.copyWith(mostRecent: value));
-    });
-  }
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UserPermissionsCopyWith<$Res> get permissions {
+  
+  return $UserPermissionsCopyWith<$Res>(_self.permissions, (value) {
+    return _then(_self.copyWith(permissions: value));
+  });
+}
 }
 
 /// @nodoc
 
 @jsonConverters
-class _$UserWithSessionAndMostRecentProgressImpl
-    extends UserWithSessionAndMostRecentProgress {
-  const _$UserWithSessionAndMostRecentProgressImpl(
-      {required this.id,
-      required this.username,
-      required this.type,
-      this.session,
-      this.mostRecent,
-      this.lastSeen,
-      required this.createdAt,
-      final List<MediaProgress>? mediaProgress,
-      final String? $type})
-      : _mediaProgress = mediaProgress,
-        $type = $type ?? 'withSessionAndMostRecentProgress',
-        super._();
+class UserWithSessionAndMostRecentProgress extends User {
+  const UserWithSessionAndMostRecentProgress({required this.id, required this.username, required this.type, this.session, this.mostRecent, this.lastSeen, required this.createdAt, final  List<MediaProgress>? mediaProgress, final  String? $type}): _mediaProgress = mediaProgress,$type = $type ?? 'withSessionAndMostRecentProgress',super._();
+  factory UserWithSessionAndMostRecentProgress.fromJson(Map<String, dynamic> json) => _$UserWithSessionAndMostRecentProgressFromJson(json);
 
-  factory _$UserWithSessionAndMostRecentProgressImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$UserWithSessionAndMostRecentProgressImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  final String username;
-  @override
-  final UserType type;
-  @override
-  final PlaybackSession? session;
-  @override
-  final MediaProgress? mostRecent;
-  @override
-  final DateTime? lastSeen;
-  @override
-  final DateTime createdAt;
-  final List<MediaProgress>? _mediaProgress;
-  @override
-  List<MediaProgress>? get mediaProgress {
-    final value = _mediaProgress;
-    if (value == null) return null;
-    if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'User.withSessionAndMostRecentProgress(id: $id, username: $username, type: $type, session: $session, mostRecent: $mostRecent, lastSeen: $lastSeen, createdAt: $createdAt, mediaProgress: $mediaProgress)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UserWithSessionAndMostRecentProgressImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.session, session) || other.session == session) &&
-            (identical(other.mostRecent, mostRecent) ||
-                other.mostRecent == mostRecent) &&
-            (identical(other.lastSeen, lastSeen) ||
-                other.lastSeen == lastSeen) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            const DeepCollectionEquality()
-                .equals(other._mediaProgress, _mediaProgress));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      username,
-      type,
-      session,
-      mostRecent,
-      lastSeen,
-      createdAt,
-      const DeepCollectionEquality().hash(_mediaProgress));
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UserWithSessionAndMostRecentProgressImplCopyWith<
-          _$UserWithSessionAndMostRecentProgressImpl>
-      get copyWith => __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<
-          _$UserWithSessionAndMostRecentProgressImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)
-        $default, {
-    required TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)
-        withSessionAndMostRecentProgress,
-  }) {
-    return withSessionAndMostRecentProgress(id, username, type, session,
-        mostRecent, lastSeen, createdAt, mediaProgress);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult? Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-  }) {
-    return withSessionAndMostRecentProgress?.call(id, username, type, session,
-        mostRecent, lastSeen, createdAt, mediaProgress);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            String token,
-            List<MediaProgress>? mediaProgress,
-            List<String> seriesHideFromContinueListening,
-            List<AudioBookmark> bookmarks,
-            bool isActive,
-            bool isLocked,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            UserPermissions permissions,
-            List<String> librariesAccessible)?
-        $default, {
-    TResult Function(
-            String id,
-            String username,
-            UserType type,
-            PlaybackSession? session,
-            MediaProgress? mostRecent,
-            DateTime? lastSeen,
-            DateTime createdAt,
-            List<MediaProgress>? mediaProgress)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) {
-    if (withSessionAndMostRecentProgress != null) {
-      return withSessionAndMostRecentProgress(id, username, type, session,
-          mostRecent, lastSeen, createdAt, mediaProgress);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_User value) $default, {
-    required TResult Function(UserWithSessionAndMostRecentProgress value)
-        withSessionAndMostRecentProgress,
-  }) {
-    return withSessionAndMostRecentProgress(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_User value)? $default, {
-    TResult? Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-  }) {
-    return withSessionAndMostRecentProgress?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_User value)? $default, {
-    TResult Function(UserWithSessionAndMostRecentProgress value)?
-        withSessionAndMostRecentProgress,
-    required TResult orElse(),
-  }) {
-    if (withSessionAndMostRecentProgress != null) {
-      return withSessionAndMostRecentProgress(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UserWithSessionAndMostRecentProgressImplToJson(
-      this,
-    );
-  }
+@override final  String id;
+@override final  String username;
+@override final  UserType type;
+ final  PlaybackSession? session;
+ final  MediaProgress? mostRecent;
+@override final  DateTime? lastSeen;
+@override final  DateTime createdAt;
+ final  List<MediaProgress>? _mediaProgress;
+@override List<MediaProgress>? get mediaProgress {
+  final value = _mediaProgress;
+  if (value == null) return null;
+  if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class UserWithSessionAndMostRecentProgress extends User {
-  const factory UserWithSessionAndMostRecentProgress(
-          {required final String id,
-          required final String username,
-          required final UserType type,
-          final PlaybackSession? session,
-          final MediaProgress? mostRecent,
-          final DateTime? lastSeen,
-          required final DateTime createdAt,
-          final List<MediaProgress>? mediaProgress}) =
-      _$UserWithSessionAndMostRecentProgressImpl;
-  const UserWithSessionAndMostRecentProgress._() : super._();
 
-  factory UserWithSessionAndMostRecentProgress.fromJson(
-          Map<String, dynamic> json) =
-      _$UserWithSessionAndMostRecentProgressImpl.fromJson;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String get id;
-  @override
-  String get username;
-  @override
-  UserType get type;
-  PlaybackSession? get session;
-  MediaProgress? get mostRecent;
-  @override
-  DateTime? get lastSeen;
-  @override
-  DateTime get createdAt;
-  @override
-  List<MediaProgress>? get mediaProgress;
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserWithSessionAndMostRecentProgressImplCopyWith<
-          _$UserWithSessionAndMostRecentProgressImpl>
-      get copyWith => throw _privateConstructorUsedError;
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UserWithSessionAndMostRecentProgressCopyWith<UserWithSessionAndMostRecentProgress> get copyWith => _$UserWithSessionAndMostRecentProgressCopyWithImpl<UserWithSessionAndMostRecentProgress>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$UserWithSessionAndMostRecentProgressToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserWithSessionAndMostRecentProgress&&(identical(other.id, id) || other.id == id)&&(identical(other.username, username) || other.username == username)&&(identical(other.type, type) || other.type == type)&&(identical(other.session, session) || other.session == session)&&(identical(other.mostRecent, mostRecent) || other.mostRecent == mostRecent)&&(identical(other.lastSeen, lastSeen) || other.lastSeen == lastSeen)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&const DeepCollectionEquality().equals(other._mediaProgress, _mediaProgress));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,username,type,session,mostRecent,lastSeen,createdAt,const DeepCollectionEquality().hash(_mediaProgress));
+
+@override
+String toString() {
+  return 'User.withSessionAndMostRecentProgress(id: $id, username: $username, type: $type, session: $session, mostRecent: $mostRecent, lastSeen: $lastSeen, createdAt: $createdAt, mediaProgress: $mediaProgress)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UserWithSessionAndMostRecentProgressCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory $UserWithSessionAndMostRecentProgressCopyWith(UserWithSessionAndMostRecentProgress value, $Res Function(UserWithSessionAndMostRecentProgress) _then) = _$UserWithSessionAndMostRecentProgressCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String username, UserType type, PlaybackSession? session, MediaProgress? mostRecent, DateTime? lastSeen, DateTime createdAt, List<MediaProgress>? mediaProgress
+});
+
+
+$PlaybackSessionCopyWith<$Res>? get session;$MediaProgressCopyWith<$Res>? get mostRecent;
+
+}
+/// @nodoc
+class _$UserWithSessionAndMostRecentProgressCopyWithImpl<$Res>
+    implements $UserWithSessionAndMostRecentProgressCopyWith<$Res> {
+  _$UserWithSessionAndMostRecentProgressCopyWithImpl(this._self, this._then);
+
+  final UserWithSessionAndMostRecentProgress _self;
+  final $Res Function(UserWithSessionAndMostRecentProgress) _then;
+
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? username = null,Object? type = null,Object? session = freezed,Object? mostRecent = freezed,Object? lastSeen = freezed,Object? createdAt = null,Object? mediaProgress = freezed,}) {
+  return _then(UserWithSessionAndMostRecentProgress(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as UserType,session: freezed == session ? _self.session : session // ignore: cast_nullable_to_non_nullable
+as PlaybackSession?,mostRecent: freezed == mostRecent ? _self.mostRecent : mostRecent // ignore: cast_nullable_to_non_nullable
+as MediaProgress?,lastSeen: freezed == lastSeen ? _self.lastSeen : lastSeen // ignore: cast_nullable_to_non_nullable
+as DateTime?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime,mediaProgress: freezed == mediaProgress ? _self._mediaProgress : mediaProgress // ignore: cast_nullable_to_non_nullable
+as List<MediaProgress>?,
+  ));
+}
+
+/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PlaybackSessionCopyWith<$Res>? get session {
+    if (_self.session == null) {
+    return null;
+  }
+
+  return $PlaybackSessionCopyWith<$Res>(_self.session!, (value) {
+    return _then(_self.copyWith(session: value));
+  });
+}/// Create a copy of User
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MediaProgressCopyWith<$Res>? get mostRecent {
+    if (_self.mostRecent == null) {
+    return null;
+  }
+
+  return $MediaProgressCopyWith<$Res>(_self.mostRecent!, (value) {
+    return _then(_self.copyWith(mostRecent: value));
+  });
+}
+}
+
+// dart format on

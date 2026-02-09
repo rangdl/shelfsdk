@@ -7,7 +7,7 @@ part 'generated/file_metadata.g.dart';
 
 /// See [File Metadata](https://api.audiobookshelf.org/#file-metadata)
 @freezed
-class FileMetadata with _$FileMetadata {
+abstract class FileMetadata with _$FileMetadata {
   @jsonConverters
   const factory FileMetadata({
     required String filename,

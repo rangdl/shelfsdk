@@ -11,7 +11,7 @@ part 'generated/library.g.dart';
 
 /// See [Library](https://api.audiobookshelf.org/#library)
 @freezed
-class Library with _$Library {
+abstract class Library with _$Library {
   @jsonConverters
   const factory Library({
     required String id,

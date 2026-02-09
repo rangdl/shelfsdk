@@ -6,23 +6,25 @@ part of '../notification_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationEventImpl _$$NotificationEventImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationEventImpl(
+_NotificationEvent _$NotificationEventFromJson(Map<String, dynamic> json) =>
+    _NotificationEvent(
       name: json['name'] as String,
       requiresLibrary: json['requiresLibrary'] as bool,
-      libraryMediaType:
-          $enumDecodeNullable(_$MediaTypeEnumMap, json['libraryMediaType']),
+      libraryMediaType: $enumDecodeNullable(
+        _$MediaTypeEnumMap,
+        json['libraryMediaType'],
+      ),
       description: json['description'] as String,
-      variables:
-          (json['variables'] as List<dynamic>).map((e) => e as String).toList(),
+      variables: (json['variables'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
       defaults: NotificationEventDefaults.fromJson(
-          json['defaults'] as Map<String, dynamic>),
+        json['defaults'] as Map<String, dynamic>,
+      ),
       testData: Map<String, String>.from(json['testData'] as Map),
     );
 
-Map<String, dynamic> _$$NotificationEventImplToJson(
-        _$NotificationEventImpl instance) =>
+Map<String, dynamic> _$NotificationEventToJson(_NotificationEvent instance) =>
     <String, dynamic>{
       'name': instance.name,
       'requiresLibrary': instance.requiresLibrary,
@@ -38,16 +40,13 @@ const _$MediaTypeEnumMap = {
   MediaType.podcast: 'podcast',
 };
 
-_$NotificationEventDefaultsImpl _$$NotificationEventDefaultsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationEventDefaultsImpl(
-      title: json['title'] as String,
-      body: json['body'] as String,
-    );
+_NotificationEventDefaults _$NotificationEventDefaultsFromJson(
+  Map<String, dynamic> json,
+) => _NotificationEventDefaults(
+  title: json['title'] as String,
+  body: json['body'] as String,
+);
 
-Map<String, dynamic> _$$NotificationEventDefaultsImplToJson(
-        _$NotificationEventDefaultsImpl instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'body': instance.body,
-    };
+Map<String, dynamic> _$NotificationEventDefaultsToJson(
+  _NotificationEventDefaults instance,
+) => <String, dynamic>{'title': instance.title, 'body': instance.body};

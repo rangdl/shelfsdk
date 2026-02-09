@@ -5,7 +5,7 @@ part 'generated/sync_local_session_result.g.dart';
 
 /// See [Sync Local Sessions](https://api.audiobookshelf.org/#sync-local-sessions)
 @freezed
-class SyncLocalSessionResult with _$SyncLocalSessionResult {
+abstract class SyncLocalSessionResult with _$SyncLocalSessionResult {
   const factory SyncLocalSessionResult({
     required String id,
     required bool success,

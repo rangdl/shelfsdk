@@ -5,7 +5,7 @@ part 'generated/update_item_chapters_response.g.dart';
 
 /// See [Update a Library Item's Chapters](https://api.audiobookshelf.org/#update-a-library-item-39-s-chapters)
 @freezed
-class UpdateItemChaptersResponse with _$UpdateItemChaptersResponse {
+abstract class UpdateItemChaptersResponse with _$UpdateItemChaptersResponse {
   const factory UpdateItemChaptersResponse({
     required bool success,
     required bool updated,

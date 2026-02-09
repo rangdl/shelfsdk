@@ -5,7 +5,7 @@ part 'generated/rss_feed_metadata.g.dart';
 
 /// See [RSS Feed Metadata](https://api.audiobookshelf.org/#rss-feed-metadata)
 @freezed
-class RssFeedMetadata with _$RssFeedMetadata {
+abstract class RssFeedMetadata with _$RssFeedMetadata {
   const factory RssFeedMetadata({
     required String title,
     required String description,

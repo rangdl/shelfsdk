@@ -7,8 +7,5 @@ part of '../reorder_library_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$ReorderLibraryReqParamsToJson(
-        ReorderLibraryReqParams instance) =>
-    <String, dynamic>{
-      'id': instance.libraryId,
-      'newOrder': instance.newOrder,
-    };
+  ReorderLibraryReqParams instance,
+) => <String, dynamic>{'id': instance.libraryId, 'newOrder': instance.newOrder};

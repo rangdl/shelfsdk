@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,198 +9,275 @@ part of '../rss_feed_episode_enclosure.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-RssFeedEpisodeEnclosure _$RssFeedEpisodeEnclosureFromJson(
-    Map<String, dynamic> json) {
-  return _RssFeedEpisodeEnclosure.fromJson(json);
-}
 
 /// @nodoc
 mixin _$RssFeedEpisodeEnclosure {
-  Uri get url => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  int get size => throw _privateConstructorUsedError;
+
+ Uri get url; String get type; int get size;
+/// Create a copy of RssFeedEpisodeEnclosure
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RssFeedEpisodeEnclosureCopyWith<RssFeedEpisodeEnclosure> get copyWith => _$RssFeedEpisodeEnclosureCopyWithImpl<RssFeedEpisodeEnclosure>(this as RssFeedEpisodeEnclosure, _$identity);
 
   /// Serializes this RssFeedEpisodeEnclosure to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of RssFeedEpisodeEnclosure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RssFeedEpisodeEnclosureCopyWith<RssFeedEpisodeEnclosure> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RssFeedEpisodeEnclosure&&(identical(other.url, url) || other.url == url)&&(identical(other.type, type) || other.type == type)&&(identical(other.size, size) || other.size == size));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,url,type,size);
+
+@override
+String toString() {
+  return 'RssFeedEpisodeEnclosure(url: $url, type: $type, size: $size)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RssFeedEpisodeEnclosureCopyWith<$Res> {
-  factory $RssFeedEpisodeEnclosureCopyWith(RssFeedEpisodeEnclosure value,
-          $Res Function(RssFeedEpisodeEnclosure) then) =
-      _$RssFeedEpisodeEnclosureCopyWithImpl<$Res, RssFeedEpisodeEnclosure>;
-  @useResult
-  $Res call({Uri url, String type, int size});
-}
+abstract mixin class $RssFeedEpisodeEnclosureCopyWith<$Res>  {
+  factory $RssFeedEpisodeEnclosureCopyWith(RssFeedEpisodeEnclosure value, $Res Function(RssFeedEpisodeEnclosure) _then) = _$RssFeedEpisodeEnclosureCopyWithImpl;
+@useResult
+$Res call({
+ Uri url, String type, int size
+});
 
+
+
+
+}
 /// @nodoc
-class _$RssFeedEpisodeEnclosureCopyWithImpl<$Res,
-        $Val extends RssFeedEpisodeEnclosure>
+class _$RssFeedEpisodeEnclosureCopyWithImpl<$Res>
     implements $RssFeedEpisodeEnclosureCopyWith<$Res> {
-  _$RssFeedEpisodeEnclosureCopyWithImpl(this._value, this._then);
+  _$RssFeedEpisodeEnclosureCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final RssFeedEpisodeEnclosure _self;
+  final $Res Function(RssFeedEpisodeEnclosure) _then;
 
-  /// Create a copy of RssFeedEpisodeEnclosure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? url = null,
-    Object? type = null,
-    Object? size = null,
-  }) {
-    return _then(_value.copyWith(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      size: null == size
-          ? _value.size
-          : size // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of RssFeedEpisodeEnclosure
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? url = null,Object? type = null,Object? size = null,}) {
+  return _then(_self.copyWith(
+url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as Uri,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,size: null == size ? _self.size : size // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$RssFeedEpisodeEnclosureImplCopyWith<$Res>
-    implements $RssFeedEpisodeEnclosureCopyWith<$Res> {
-  factory _$$RssFeedEpisodeEnclosureImplCopyWith(
-          _$RssFeedEpisodeEnclosureImpl value,
-          $Res Function(_$RssFeedEpisodeEnclosureImpl) then) =
-      __$$RssFeedEpisodeEnclosureImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Uri url, String type, int size});
 }
 
-/// @nodoc
-class __$$RssFeedEpisodeEnclosureImplCopyWithImpl<$Res>
-    extends _$RssFeedEpisodeEnclosureCopyWithImpl<$Res,
-        _$RssFeedEpisodeEnclosureImpl>
-    implements _$$RssFeedEpisodeEnclosureImplCopyWith<$Res> {
-  __$$RssFeedEpisodeEnclosureImplCopyWithImpl(
-      _$RssFeedEpisodeEnclosureImpl _value,
-      $Res Function(_$RssFeedEpisodeEnclosureImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of RssFeedEpisodeEnclosure
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? url = null,
-    Object? type = null,
-    Object? size = null,
-  }) {
-    return _then(_$RssFeedEpisodeEnclosureImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as Uri,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      size: null == size
-          ? _value.size
-          : size // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
+/// Adds pattern-matching-related methods to [RssFeedEpisodeEnclosure].
+extension RssFeedEpisodeEnclosurePatterns on RssFeedEpisodeEnclosure {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RssFeedEpisodeEnclosure value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RssFeedEpisodeEnclosure value)  $default,){
+final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RssFeedEpisodeEnclosure value)?  $default,){
+final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Uri url,  String type,  int size)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure() when $default != null:
+return $default(_that.url,_that.type,_that.size);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Uri url,  String type,  int size)  $default,) {final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure():
+return $default(_that.url,_that.type,_that.size);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Uri url,  String type,  int size)?  $default,) {final _that = this;
+switch (_that) {
+case _RssFeedEpisodeEnclosure() when $default != null:
+return $default(_that.url,_that.type,_that.size);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RssFeedEpisodeEnclosureImpl implements _RssFeedEpisodeEnclosure {
-  const _$RssFeedEpisodeEnclosureImpl(
-      {required this.url, required this.type, required this.size});
 
-  factory _$RssFeedEpisodeEnclosureImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RssFeedEpisodeEnclosureImplFromJson(json);
+class _RssFeedEpisodeEnclosure implements RssFeedEpisodeEnclosure {
+  const _RssFeedEpisodeEnclosure({required this.url, required this.type, required this.size});
+  factory _RssFeedEpisodeEnclosure.fromJson(Map<String, dynamic> json) => _$RssFeedEpisodeEnclosureFromJson(json);
 
-  @override
-  final Uri url;
-  @override
-  final String type;
-  @override
-  final int size;
+@override final  Uri url;
+@override final  String type;
+@override final  int size;
 
-  @override
-  String toString() {
-    return 'RssFeedEpisodeEnclosure(url: $url, type: $type, size: $size)';
-  }
+/// Create a copy of RssFeedEpisodeEnclosure
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RssFeedEpisodeEnclosureCopyWith<_RssFeedEpisodeEnclosure> get copyWith => __$RssFeedEpisodeEnclosureCopyWithImpl<_RssFeedEpisodeEnclosure>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RssFeedEpisodeEnclosureImpl &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.size, size) || other.size == size));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, url, type, size);
-
-  /// Create a copy of RssFeedEpisodeEnclosure
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RssFeedEpisodeEnclosureImplCopyWith<_$RssFeedEpisodeEnclosureImpl>
-      get copyWith => __$$RssFeedEpisodeEnclosureImplCopyWithImpl<
-          _$RssFeedEpisodeEnclosureImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RssFeedEpisodeEnclosureImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$RssFeedEpisodeEnclosureToJson(this, );
 }
 
-abstract class _RssFeedEpisodeEnclosure implements RssFeedEpisodeEnclosure {
-  const factory _RssFeedEpisodeEnclosure(
-      {required final Uri url,
-      required final String type,
-      required final int size}) = _$RssFeedEpisodeEnclosureImpl;
-
-  factory _RssFeedEpisodeEnclosure.fromJson(Map<String, dynamic> json) =
-      _$RssFeedEpisodeEnclosureImpl.fromJson;
-
-  @override
-  Uri get url;
-  @override
-  String get type;
-  @override
-  int get size;
-
-  /// Create a copy of RssFeedEpisodeEnclosure
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RssFeedEpisodeEnclosureImplCopyWith<_$RssFeedEpisodeEnclosureImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RssFeedEpisodeEnclosure&&(identical(other.url, url) || other.url == url)&&(identical(other.type, type) || other.type == type)&&(identical(other.size, size) || other.size == size));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,url,type,size);
+
+@override
+String toString() {
+  return 'RssFeedEpisodeEnclosure(url: $url, type: $type, size: $size)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RssFeedEpisodeEnclosureCopyWith<$Res> implements $RssFeedEpisodeEnclosureCopyWith<$Res> {
+  factory _$RssFeedEpisodeEnclosureCopyWith(_RssFeedEpisodeEnclosure value, $Res Function(_RssFeedEpisodeEnclosure) _then) = __$RssFeedEpisodeEnclosureCopyWithImpl;
+@override @useResult
+$Res call({
+ Uri url, String type, int size
+});
+
+
+
+
+}
+/// @nodoc
+class __$RssFeedEpisodeEnclosureCopyWithImpl<$Res>
+    implements _$RssFeedEpisodeEnclosureCopyWith<$Res> {
+  __$RssFeedEpisodeEnclosureCopyWithImpl(this._self, this._then);
+
+  final _RssFeedEpisodeEnclosure _self;
+  final $Res Function(_RssFeedEpisodeEnclosure) _then;
+
+/// Create a copy of RssFeedEpisodeEnclosure
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? url = null,Object? type = null,Object? size = null,}) {
+  return _then(_RssFeedEpisodeEnclosure(
+url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as Uri,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,size: null == size ? _self.size : size // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

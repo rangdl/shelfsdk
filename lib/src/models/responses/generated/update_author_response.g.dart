@@ -6,18 +6,18 @@ part of '../update_author_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UpdateAuthorResponseImpl _$$UpdateAuthorResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UpdateAuthorResponseImpl(
-      author: Author.fromJson(json['author'] as Map<String, dynamic>),
-      merged: json['merged'] as bool?,
-      updated: json['updated'] as bool?,
-    );
+_UpdateAuthorResponse _$UpdateAuthorResponseFromJson(
+  Map<String, dynamic> json,
+) => _UpdateAuthorResponse(
+  author: Author.fromJson(json['author'] as Map<String, dynamic>),
+  merged: json['merged'] as bool?,
+  updated: json['updated'] as bool?,
+);
 
-Map<String, dynamic> _$$UpdateAuthorResponseImplToJson(
-        _$UpdateAuthorResponseImpl instance) =>
-    <String, dynamic>{
-      'author': instance.author.toJson(),
-      'merged': instance.merged,
-      'updated': instance.updated,
-    };
+Map<String, dynamic> _$UpdateAuthorResponseToJson(
+  _UpdateAuthorResponse instance,
+) => <String, dynamic>{
+  'author': instance.author.toJson(),
+  'merged': instance.merged,
+  'updated': instance.updated,
+};

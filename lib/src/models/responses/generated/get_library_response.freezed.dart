@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,494 +9,377 @@ part of '../get_library_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$GetLibraryResponse {
-  Library get library => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            @JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues,
-            int numUserPlaylists,
-            Library library)
-        filterData,
-    required TResult Function(Library library) library,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult? Function(Library library)? library,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult Function(Library library)? library,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(GetLibraryResponseFilterData value) filterData,
-    required TResult Function(GetLibraryResponseLibrary value) library,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(GetLibraryResponseFilterData value)? filterData,
-    TResult? Function(GetLibraryResponseLibrary value)? library,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(GetLibraryResponseFilterData value)? filterData,
-    TResult Function(GetLibraryResponseLibrary value)? library,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetLibraryResponseCopyWith<GetLibraryResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+ Library get library;
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GetLibraryResponseCopyWith<GetLibraryResponse> get copyWith => _$GetLibraryResponseCopyWithImpl<GetLibraryResponse>(this as GetLibraryResponse, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetLibraryResponse&&(identical(other.library, library) || other.library == library));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,library);
+
+@override
+String toString() {
+  return 'GetLibraryResponse(library: $library)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $GetLibraryResponseCopyWith<$Res> {
-  factory $GetLibraryResponseCopyWith(
-          GetLibraryResponse value, $Res Function(GetLibraryResponse) then) =
-      _$GetLibraryResponseCopyWithImpl<$Res, GetLibraryResponse>;
-  @useResult
-  $Res call({Library library});
+abstract mixin class $GetLibraryResponseCopyWith<$Res>  {
+  factory $GetLibraryResponseCopyWith(GetLibraryResponse value, $Res Function(GetLibraryResponse) _then) = _$GetLibraryResponseCopyWithImpl;
+@useResult
+$Res call({
+ Library library
+});
 
-  $LibraryCopyWith<$Res> get library;
+
+$LibraryCopyWith<$Res> get library;
+
 }
-
 /// @nodoc
-class _$GetLibraryResponseCopyWithImpl<$Res, $Val extends GetLibraryResponse>
+class _$GetLibraryResponseCopyWithImpl<$Res>
     implements $GetLibraryResponseCopyWith<$Res> {
-  _$GetLibraryResponseCopyWithImpl(this._value, this._then);
+  _$GetLibraryResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final GetLibraryResponse _self;
+  final $Res Function(GetLibraryResponse) _then;
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? library = null,
-  }) {
-    return _then(_value.copyWith(
-      library: null == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as Library,
-    ) as $Val);
-  }
-
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LibraryCopyWith<$Res> get library {
-    return $LibraryCopyWith<$Res>(_value.library, (value) {
-      return _then(_value.copyWith(library: value) as $Val);
-    });
-  }
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? library = null,}) {
+  return _then(_self.copyWith(
+library: null == library ? _self.library : library // ignore: cast_nullable_to_non_nullable
+as Library,
+  ));
+}
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryCopyWith<$Res> get library {
+  
+  return $LibraryCopyWith<$Res>(_self.library, (value) {
+    return _then(_self.copyWith(library: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$GetLibraryResponseFilterDataImplCopyWith<$Res>
-    implements $GetLibraryResponseCopyWith<$Res> {
-  factory _$$GetLibraryResponseFilterDataImplCopyWith(
-          _$GetLibraryResponseFilterDataImpl value,
-          $Res Function(_$GetLibraryResponseFilterDataImpl) then) =
-      __$$GetLibraryResponseFilterDataImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-      int issues,
-      int numUserPlaylists,
-      Library library});
 
-  $LibraryFilterDataCopyWith<$Res> get filterData;
-  @override
-  $LibraryCopyWith<$Res> get library;
+/// Adds pattern-matching-related methods to [GetLibraryResponse].
+extension GetLibraryResponsePatterns on GetLibraryResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( GetLibraryResponseFilterData value)?  filterData,TResult Function( GetLibraryResponseLibrary value)?  library,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData() when filterData != null:
+return filterData(_that);case GetLibraryResponseLibrary() when library != null:
+return library(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( GetLibraryResponseFilterData value)  filterData,required TResult Function( GetLibraryResponseLibrary value)  library,}){
+final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData():
+return filterData(_that);case GetLibraryResponseLibrary():
+return library(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( GetLibraryResponseFilterData value)?  filterData,TResult? Function( GetLibraryResponseLibrary value)?  library,}){
+final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData() when filterData != null:
+return filterData(_that);case GetLibraryResponseLibrary() when library != null:
+return library(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function(@JsonKey(name: 'filterdata')  LibraryFilterData filterData,  int issues,  int numUserPlaylists,  Library library)?  filterData,TResult Function( Library library)?  library,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData() when filterData != null:
+return filterData(_that.filterData,_that.issues,_that.numUserPlaylists,_that.library);case GetLibraryResponseLibrary() when library != null:
+return library(_that.library);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function(@JsonKey(name: 'filterdata')  LibraryFilterData filterData,  int issues,  int numUserPlaylists,  Library library)  filterData,required TResult Function( Library library)  library,}) {final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData():
+return filterData(_that.filterData,_that.issues,_that.numUserPlaylists,_that.library);case GetLibraryResponseLibrary():
+return library(_that.library);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function(@JsonKey(name: 'filterdata')  LibraryFilterData filterData,  int issues,  int numUserPlaylists,  Library library)?  filterData,TResult? Function( Library library)?  library,}) {final _that = this;
+switch (_that) {
+case GetLibraryResponseFilterData() when filterData != null:
+return filterData(_that.filterData,_that.issues,_that.numUserPlaylists,_that.library);case GetLibraryResponseLibrary() when library != null:
+return library(_that.library);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$GetLibraryResponseFilterDataImplCopyWithImpl<$Res>
-    extends _$GetLibraryResponseCopyWithImpl<$Res,
-        _$GetLibraryResponseFilterDataImpl>
-    implements _$$GetLibraryResponseFilterDataImplCopyWith<$Res> {
-  __$$GetLibraryResponseFilterDataImplCopyWithImpl(
-      _$GetLibraryResponseFilterDataImpl _value,
-      $Res Function(_$GetLibraryResponseFilterDataImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? filterData = null,
-    Object? issues = null,
-    Object? numUserPlaylists = null,
-    Object? library = null,
-  }) {
-    return _then(_$GetLibraryResponseFilterDataImpl(
-      filterData: null == filterData
-          ? _value.filterData
-          : filterData // ignore: cast_nullable_to_non_nullable
-              as LibraryFilterData,
-      issues: null == issues
-          ? _value.issues
-          : issues // ignore: cast_nullable_to_non_nullable
-              as int,
-      numUserPlaylists: null == numUserPlaylists
-          ? _value.numUserPlaylists
-          : numUserPlaylists // ignore: cast_nullable_to_non_nullable
-              as int,
-      library: null == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as Library,
-    ));
-  }
-
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $LibraryFilterDataCopyWith<$Res> get filterData {
-    return $LibraryFilterDataCopyWith<$Res>(_value.filterData, (value) {
-      return _then(_value.copyWith(filterData: value));
-    });
-  }
 }
 
 /// @nodoc
 
 @JsonSerializable(createToJson: false)
-class _$GetLibraryResponseFilterDataImpl
-    implements GetLibraryResponseFilterData {
-  const _$GetLibraryResponseFilterDataImpl(
-      {@JsonKey(name: 'filterdata') required this.filterData,
-      required this.issues,
-      required this.numUserPlaylists,
-      required this.library});
+class GetLibraryResponseFilterData implements GetLibraryResponse {
+  const GetLibraryResponseFilterData({@JsonKey(name: 'filterdata') required this.filterData, required this.issues, required this.numUserPlaylists, required this.library});
+  
 
-  @override
-  @JsonKey(name: 'filterdata')
-  final LibraryFilterData filterData;
-  @override
-  final int issues;
-  @override
-  final int numUserPlaylists;
-  @override
-  final Library library;
+@JsonKey(name: 'filterdata') final  LibraryFilterData filterData;
+ final  int issues;
+ final  int numUserPlaylists;
+@override final  Library library;
 
-  @override
-  String toString() {
-    return 'GetLibraryResponse.filterData(filterData: $filterData, issues: $issues, numUserPlaylists: $numUserPlaylists, library: $library)';
-  }
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GetLibraryResponseFilterDataCopyWith<GetLibraryResponseFilterData> get copyWith => _$GetLibraryResponseFilterDataCopyWithImpl<GetLibraryResponseFilterData>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetLibraryResponseFilterDataImpl &&
-            (identical(other.filterData, filterData) ||
-                other.filterData == filterData) &&
-            (identical(other.issues, issues) || other.issues == issues) &&
-            (identical(other.numUserPlaylists, numUserPlaylists) ||
-                other.numUserPlaylists == numUserPlaylists) &&
-            (identical(other.library, library) || other.library == library));
-  }
 
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, filterData, issues, numUserPlaylists, library);
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetLibraryResponseFilterDataImplCopyWith<
-          _$GetLibraryResponseFilterDataImpl>
-      get copyWith => __$$GetLibraryResponseFilterDataImplCopyWithImpl<
-          _$GetLibraryResponseFilterDataImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            @JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues,
-            int numUserPlaylists,
-            Library library)
-        filterData,
-    required TResult Function(Library library) library,
-  }) {
-    return filterData(this.filterData, issues, numUserPlaylists, this.library);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult? Function(Library library)? library,
-  }) {
-    return filterData?.call(
-        this.filterData, issues, numUserPlaylists, this.library);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult Function(Library library)? library,
-    required TResult orElse(),
-  }) {
-    if (filterData != null) {
-      return filterData(
-          this.filterData, issues, numUserPlaylists, this.library);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(GetLibraryResponseFilterData value) filterData,
-    required TResult Function(GetLibraryResponseLibrary value) library,
-  }) {
-    return filterData(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(GetLibraryResponseFilterData value)? filterData,
-    TResult? Function(GetLibraryResponseLibrary value)? library,
-  }) {
-    return filterData?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(GetLibraryResponseFilterData value)? filterData,
-    TResult Function(GetLibraryResponseLibrary value)? library,
-    required TResult orElse(),
-  }) {
-    if (filterData != null) {
-      return filterData(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetLibraryResponseFilterData&&(identical(other.filterData, filterData) || other.filterData == filterData)&&(identical(other.issues, issues) || other.issues == issues)&&(identical(other.numUserPlaylists, numUserPlaylists) || other.numUserPlaylists == numUserPlaylists)&&(identical(other.library, library) || other.library == library));
 }
 
-abstract class GetLibraryResponseFilterData implements GetLibraryResponse {
-  const factory GetLibraryResponseFilterData(
-      {@JsonKey(name: 'filterdata') required final LibraryFilterData filterData,
-      required final int issues,
-      required final int numUserPlaylists,
-      required final Library library}) = _$GetLibraryResponseFilterDataImpl;
 
-  @JsonKey(name: 'filterdata')
-  LibraryFilterData get filterData;
-  int get issues;
-  int get numUserPlaylists;
-  @override
-  Library get library;
+@override
+int get hashCode => Object.hash(runtimeType,filterData,issues,numUserPlaylists,library);
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetLibraryResponseFilterDataImplCopyWith<
-          _$GetLibraryResponseFilterDataImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'GetLibraryResponse.filterData(filterData: $filterData, issues: $issues, numUserPlaylists: $numUserPlaylists, library: $library)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$GetLibraryResponseLibraryImplCopyWith<$Res>
-    implements $GetLibraryResponseCopyWith<$Res> {
-  factory _$$GetLibraryResponseLibraryImplCopyWith(
-          _$GetLibraryResponseLibraryImpl value,
-          $Res Function(_$GetLibraryResponseLibraryImpl) then) =
-      __$$GetLibraryResponseLibraryImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Library library});
+abstract mixin class $GetLibraryResponseFilterDataCopyWith<$Res> implements $GetLibraryResponseCopyWith<$Res> {
+  factory $GetLibraryResponseFilterDataCopyWith(GetLibraryResponseFilterData value, $Res Function(GetLibraryResponseFilterData) _then) = _$GetLibraryResponseFilterDataCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'filterdata') LibraryFilterData filterData, int issues, int numUserPlaylists, Library library
+});
 
-  @override
-  $LibraryCopyWith<$Res> get library;
+
+$LibraryFilterDataCopyWith<$Res> get filterData;@override $LibraryCopyWith<$Res> get library;
+
+}
+/// @nodoc
+class _$GetLibraryResponseFilterDataCopyWithImpl<$Res>
+    implements $GetLibraryResponseFilterDataCopyWith<$Res> {
+  _$GetLibraryResponseFilterDataCopyWithImpl(this._self, this._then);
+
+  final GetLibraryResponseFilterData _self;
+  final $Res Function(GetLibraryResponseFilterData) _then;
+
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? filterData = null,Object? issues = null,Object? numUserPlaylists = null,Object? library = null,}) {
+  return _then(GetLibraryResponseFilterData(
+filterData: null == filterData ? _self.filterData : filterData // ignore: cast_nullable_to_non_nullable
+as LibraryFilterData,issues: null == issues ? _self.issues : issues // ignore: cast_nullable_to_non_nullable
+as int,numUserPlaylists: null == numUserPlaylists ? _self.numUserPlaylists : numUserPlaylists // ignore: cast_nullable_to_non_nullable
+as int,library: null == library ? _self.library : library // ignore: cast_nullable_to_non_nullable
+as Library,
+  ));
 }
 
-/// @nodoc
-class __$$GetLibraryResponseLibraryImplCopyWithImpl<$Res>
-    extends _$GetLibraryResponseCopyWithImpl<$Res,
-        _$GetLibraryResponseLibraryImpl>
-    implements _$$GetLibraryResponseLibraryImplCopyWith<$Res> {
-  __$$GetLibraryResponseLibraryImplCopyWithImpl(
-      _$GetLibraryResponseLibraryImpl _value,
-      $Res Function(_$GetLibraryResponseLibraryImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? library = null,
-  }) {
-    return _then(_$GetLibraryResponseLibraryImpl(
-      library: null == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as Library,
-    ));
-  }
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryFilterDataCopyWith<$Res> get filterData {
+  
+  return $LibraryFilterDataCopyWith<$Res>(_self.filterData, (value) {
+    return _then(_self.copyWith(filterData: value));
+  });
+}/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryCopyWith<$Res> get library {
+  
+  return $LibraryCopyWith<$Res>(_self.library, (value) {
+    return _then(_self.copyWith(library: value));
+  });
+}
 }
 
 /// @nodoc
 
-class _$GetLibraryResponseLibraryImpl implements GetLibraryResponseLibrary {
-  const _$GetLibraryResponseLibraryImpl({required this.library});
 
-  @override
-  final Library library;
+class GetLibraryResponseLibrary implements GetLibraryResponse {
+  const GetLibraryResponseLibrary({required this.library});
+  
 
-  @override
-  String toString() {
-    return 'GetLibraryResponse.library(library: $library)';
-  }
+@override final  Library library;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetLibraryResponseLibraryImpl &&
-            (identical(other.library, library) || other.library == library));
-  }
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GetLibraryResponseLibraryCopyWith<GetLibraryResponseLibrary> get copyWith => _$GetLibraryResponseLibraryCopyWithImpl<GetLibraryResponseLibrary>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, library);
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetLibraryResponseLibraryImplCopyWith<_$GetLibraryResponseLibraryImpl>
-      get copyWith => __$$GetLibraryResponseLibraryImplCopyWithImpl<
-          _$GetLibraryResponseLibraryImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            @JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues,
-            int numUserPlaylists,
-            Library library)
-        filterData,
-    required TResult Function(Library library) library,
-  }) {
-    return library(this.library);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult? Function(Library library)? library,
-  }) {
-    return library?.call(this.library);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'filterdata') LibraryFilterData filterData,
-            int issues, int numUserPlaylists, Library library)?
-        filterData,
-    TResult Function(Library library)? library,
-    required TResult orElse(),
-  }) {
-    if (library != null) {
-      return library(this.library);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(GetLibraryResponseFilterData value) filterData,
-    required TResult Function(GetLibraryResponseLibrary value) library,
-  }) {
-    return library(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(GetLibraryResponseFilterData value)? filterData,
-    TResult? Function(GetLibraryResponseLibrary value)? library,
-  }) {
-    return library?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(GetLibraryResponseFilterData value)? filterData,
-    TResult Function(GetLibraryResponseLibrary value)? library,
-    required TResult orElse(),
-  }) {
-    if (library != null) {
-      return library(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetLibraryResponseLibrary&&(identical(other.library, library) || other.library == library));
 }
 
-abstract class GetLibraryResponseLibrary implements GetLibraryResponse {
-  const factory GetLibraryResponseLibrary({required final Library library}) =
-      _$GetLibraryResponseLibraryImpl;
 
-  @override
-  Library get library;
+@override
+int get hashCode => Object.hash(runtimeType,library);
 
-  /// Create a copy of GetLibraryResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetLibraryResponseLibraryImplCopyWith<_$GetLibraryResponseLibraryImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'GetLibraryResponse.library(library: $library)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class $GetLibraryResponseLibraryCopyWith<$Res> implements $GetLibraryResponseCopyWith<$Res> {
+  factory $GetLibraryResponseLibraryCopyWith(GetLibraryResponseLibrary value, $Res Function(GetLibraryResponseLibrary) _then) = _$GetLibraryResponseLibraryCopyWithImpl;
+@override @useResult
+$Res call({
+ Library library
+});
+
+
+@override $LibraryCopyWith<$Res> get library;
+
+}
+/// @nodoc
+class _$GetLibraryResponseLibraryCopyWithImpl<$Res>
+    implements $GetLibraryResponseLibraryCopyWith<$Res> {
+  _$GetLibraryResponseLibraryCopyWithImpl(this._self, this._then);
+
+  final GetLibraryResponseLibrary _self;
+  final $Res Function(GetLibraryResponseLibrary) _then;
+
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? library = null,}) {
+  return _then(GetLibraryResponseLibrary(
+library: null == library ? _self.library : library // ignore: cast_nullable_to_non_nullable
+as Library,
+  ));
+}
+
+/// Create a copy of GetLibraryResponse
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LibraryCopyWith<$Res> get library {
+  
+  return $LibraryCopyWith<$Res>(_self.library, (value) {
+    return _then(_self.copyWith(library: value));
+  });
+}
+}
+
+// dart format on

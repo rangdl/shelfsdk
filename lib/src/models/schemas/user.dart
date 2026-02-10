@@ -30,10 +30,10 @@ abstract class User with _$User {
     required DateTime createdAt,
     required UserPermissions permissions,
     required List<String> librariesAccessible,
-    List<String>? itemTagsAccessible,
+    List<String>? itemTagsSelected,
     required bool hasOpenIDLink,
     String? refreshToken,
-    required String accessToken,
+    String? accessToken,
   }) = UserBase;
 
   @jsonConverters

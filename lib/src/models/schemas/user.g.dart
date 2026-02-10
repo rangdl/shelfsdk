@@ -36,12 +36,12 @@ UserBase _$UserBaseFromJson(Map<String, dynamic> json) => UserBase(
   librariesAccessible: (json['librariesAccessible'] as List<dynamic>)
       .map((e) => e as String)
       .toList(),
-  itemTagsAccessible: (json['itemTagsAccessible'] as List<dynamic>?)
+  itemTagsSelected: (json['itemTagsSelected'] as List<dynamic>?)
       ?.map((e) => e as String)
       .toList(),
   hasOpenIDLink: json['hasOpenIDLink'] as bool,
   refreshToken: json['refreshToken'] as String?,
-  accessToken: json['accessToken'] as String,
+  accessToken: json['accessToken'] as String?,
   $type: json['runtimeType'] as String?,
 );
 
@@ -62,7 +62,7 @@ Map<String, dynamic> _$UserBaseToJson(UserBase instance) => <String, dynamic>{
   'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
   'permissions': instance.permissions.toJson(),
   'librariesAccessible': instance.librariesAccessible,
-  'itemTagsAccessible': instance.itemTagsAccessible,
+  'itemTagsSelected': instance.itemTagsSelected,
   'hasOpenIDLink': instance.hasOpenIDLink,
   'refreshToken': instance.refreshToken,
   'accessToken': instance.accessToken,

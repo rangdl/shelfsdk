@@ -113,11 +113,12 @@ class HttpAudiobookshelfApi extends AudiobookshelfApi {
 
     baseRequest.followRedirects = followRedirects;
 
-    final streamedResponse = await client.send(baseRequest);
-    final response = await http.Response.fromStream(streamedResponse);
+    final response = await http.Response.fromStream(
+      await client.send(baseRequest),
+    );
 
     if (responseErrorHandler != null) {
-      responseErrorHandler(HttpResponse(response), null);
+      responseErrorHandler(HttpResponse(response));
     }
 
     return HttpResponse(response);

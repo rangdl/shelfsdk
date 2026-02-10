@@ -30,9 +30,9 @@ abstract class User with _$User {
     required DateTime createdAt,
     required UserPermissions permissions,
     required List<String> librariesAccessible,
-    required List<String> itemTagsAccessible,
+    List<String>? itemTagsAccessible,
     required bool hasOpenIDLink,
-    required String? refreshToken,
+    String? refreshToken,
     required String accessToken,
   }) = UserBase;
 

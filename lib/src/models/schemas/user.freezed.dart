@@ -184,7 +184,7 @@ return withSessionAndMostRecentProgress(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String>? itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case UserBase() when $default != null:
 return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
@@ -206,7 +206,7 @@ return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)  $default,{required TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)  withSessionAndMostRecentProgress,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String>? itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)  $default,{required TResult Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)  withSessionAndMostRecentProgress,}) {final _that = this;
 switch (_that) {
 case UserBase():
 return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress():
@@ -227,7 +227,7 @@ return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String> itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult? Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String username,  UserType type,  String token,  List<MediaProgress>? mediaProgress,  List<String> seriesHideFromContinueListening,  List<AudioBookmark> bookmarks,  bool isActive,  bool isLocked,  DateTime? lastSeen,  DateTime createdAt,  UserPermissions permissions,  List<String> librariesAccessible,  List<String>? itemTagsAccessible,  bool hasOpenIDLink,  String? refreshToken,  String accessToken)?  $default,{TResult? Function( String id,  String username,  UserType type,  PlaybackSession? session,  MediaProgress? mostRecent,  DateTime? lastSeen,  DateTime createdAt,  List<MediaProgress>? mediaProgress)?  withSessionAndMostRecentProgress,}) {final _that = this;
 switch (_that) {
 case UserBase() when $default != null:
 return $default(_that.id,_that.username,_that.type,_that.token,_that.mediaProgress,_that.seriesHideFromContinueListening,_that.bookmarks,_that.isActive,_that.isLocked,_that.lastSeen,_that.createdAt,_that.permissions,_that.librariesAccessible,_that.itemTagsAccessible,_that.hasOpenIDLink,_that.refreshToken,_that.accessToken);case UserWithSessionAndMostRecentProgress() when withSessionAndMostRecentProgress != null:
@@ -243,7 +243,7 @@ return withSessionAndMostRecentProgress(_that.id,_that.username,_that.type,_that
 
 @jsonConverters
 class UserBase extends User {
-  const UserBase({required this.id, required this.username, required this.type, required this.token, final  List<MediaProgress>? mediaProgress, required final  List<String> seriesHideFromContinueListening, required final  List<AudioBookmark> bookmarks, required this.isActive, required this.isLocked, this.lastSeen, required this.createdAt, required this.permissions, required final  List<String> librariesAccessible, required final  List<String> itemTagsAccessible, required this.hasOpenIDLink, required this.refreshToken, required this.accessToken, final  String? $type}): _mediaProgress = mediaProgress,_seriesHideFromContinueListening = seriesHideFromContinueListening,_bookmarks = bookmarks,_librariesAccessible = librariesAccessible,_itemTagsAccessible = itemTagsAccessible,$type = $type ?? 'default',super._();
+  const UserBase({required this.id, required this.username, required this.type, required this.token, final  List<MediaProgress>? mediaProgress, required final  List<String> seriesHideFromContinueListening, required final  List<AudioBookmark> bookmarks, required this.isActive, required this.isLocked, this.lastSeen, required this.createdAt, required this.permissions, required final  List<String> librariesAccessible, final  List<String>? itemTagsAccessible, required this.hasOpenIDLink, this.refreshToken, required this.accessToken, final  String? $type}): _mediaProgress = mediaProgress,_seriesHideFromContinueListening = seriesHideFromContinueListening,_bookmarks = bookmarks,_librariesAccessible = librariesAccessible,_itemTagsAccessible = itemTagsAccessible,$type = $type ?? 'default',super._();
   factory UserBase.fromJson(Map<String, dynamic> json) => _$UserBaseFromJson(json);
 
 @override final  String id;
@@ -285,11 +285,13 @@ class UserBase extends User {
   return EqualUnmodifiableListView(_librariesAccessible);
 }
 
- final  List<String> _itemTagsAccessible;
- List<String> get itemTagsAccessible {
+ final  List<String>? _itemTagsAccessible;
+ List<String>? get itemTagsAccessible {
+  final value = _itemTagsAccessible;
+  if (value == null) return null;
   if (_itemTagsAccessible is EqualUnmodifiableListView) return _itemTagsAccessible;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_itemTagsAccessible);
+  return EqualUnmodifiableListView(value);
 }
 
  final  bool hasOpenIDLink;
@@ -333,7 +335,7 @@ abstract mixin class $UserBaseCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory $UserBaseCopyWith(UserBase value, $Res Function(UserBase) _then) = _$UserBaseCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String username, UserType type, String token, List<MediaProgress>? mediaProgress, List<String> seriesHideFromContinueListening, List<AudioBookmark> bookmarks, bool isActive, bool isLocked, DateTime? lastSeen, DateTime createdAt, UserPermissions permissions, List<String> librariesAccessible, List<String> itemTagsAccessible, bool hasOpenIDLink, String? refreshToken, String accessToken
+ String id, String username, UserType type, String token, List<MediaProgress>? mediaProgress, List<String> seriesHideFromContinueListening, List<AudioBookmark> bookmarks, bool isActive, bool isLocked, DateTime? lastSeen, DateTime createdAt, UserPermissions permissions, List<String> librariesAccessible, List<String>? itemTagsAccessible, bool hasOpenIDLink, String? refreshToken, String accessToken
 });
 
 
@@ -350,7 +352,7 @@ class _$UserBaseCopyWithImpl<$Res>
 
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? username = null,Object? type = null,Object? token = null,Object? mediaProgress = freezed,Object? seriesHideFromContinueListening = null,Object? bookmarks = null,Object? isActive = null,Object? isLocked = null,Object? lastSeen = freezed,Object? createdAt = null,Object? permissions = null,Object? librariesAccessible = null,Object? itemTagsAccessible = null,Object? hasOpenIDLink = null,Object? refreshToken = freezed,Object? accessToken = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? username = null,Object? type = null,Object? token = null,Object? mediaProgress = freezed,Object? seriesHideFromContinueListening = null,Object? bookmarks = null,Object? isActive = null,Object? isLocked = null,Object? lastSeen = freezed,Object? createdAt = null,Object? permissions = null,Object? librariesAccessible = null,Object? itemTagsAccessible = freezed,Object? hasOpenIDLink = null,Object? refreshToken = freezed,Object? accessToken = null,}) {
   return _then(UserBase(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
@@ -365,8 +367,8 @@ as bool,lastSeen: freezed == lastSeen ? _self.lastSeen : lastSeen // ignore: cas
 as DateTime?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,permissions: null == permissions ? _self.permissions : permissions // ignore: cast_nullable_to_non_nullable
 as UserPermissions,librariesAccessible: null == librariesAccessible ? _self._librariesAccessible : librariesAccessible // ignore: cast_nullable_to_non_nullable
-as List<String>,itemTagsAccessible: null == itemTagsAccessible ? _self._itemTagsAccessible : itemTagsAccessible // ignore: cast_nullable_to_non_nullable
-as List<String>,hasOpenIDLink: null == hasOpenIDLink ? _self.hasOpenIDLink : hasOpenIDLink // ignore: cast_nullable_to_non_nullable
+as List<String>,itemTagsAccessible: freezed == itemTagsAccessible ? _self._itemTagsAccessible : itemTagsAccessible // ignore: cast_nullable_to_non_nullable
+as List<String>?,hasOpenIDLink: null == hasOpenIDLink ? _self.hasOpenIDLink : hasOpenIDLink // ignore: cast_nullable_to_non_nullable
 as bool,refreshToken: freezed == refreshToken ? _self.refreshToken : refreshToken // ignore: cast_nullable_to_non_nullable
 as String?,accessToken: null == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
 as String,

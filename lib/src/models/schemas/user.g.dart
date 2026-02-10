@@ -36,8 +36,8 @@ UserBase _$UserBaseFromJson(Map<String, dynamic> json) => UserBase(
   librariesAccessible: (json['librariesAccessible'] as List<dynamic>)
       .map((e) => e as String)
       .toList(),
-  itemTagsAccessible: (json['itemTagsAccessible'] as List<dynamic>)
-      .map((e) => e as String)
+  itemTagsAccessible: (json['itemTagsAccessible'] as List<dynamic>?)
+      ?.map((e) => e as String)
       .toList(),
   hasOpenIDLink: json['hasOpenIDLink'] as bool,
   refreshToken: json['refreshToken'] as String?,
